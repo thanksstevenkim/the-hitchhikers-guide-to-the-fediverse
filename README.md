@@ -37,7 +37,7 @@ python scripts/fetch_stats.py
 `scripts/fetch_stats.py`는 아래 순서로 인스턴스를 점검합니다.
 
 1. `https://{host}/.well-known/nodeinfo`를 호출해 최신 NodeInfo 문서를 찾습니다.
-   - NodeInfo 응답에서 소프트웨어 이름/버전, 가입 가능 여부, 사용자/활성 사용자/게시물 수를 우선 추출합니다.
+   - NodeInfo 응답에서 소프트웨어 이름, 가입 가능 여부, 사용자/활성 사용자/게시물 수를 우선 추출합니다.
 2. NodeInfo만으로 부족한 경우 소프트웨어별 보조 엔드포인트를 순차적으로 시도합니다.
    - Mastodon: `GET /api/v2/instance` → 실패 시 `GET /api/v1/instance`
    - Misskey: `POST /api/meta` (본문 `{}`)

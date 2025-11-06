@@ -17,7 +17,7 @@
       name: "이름",
       url: "주소",
       platform: "플랫폼",
-      software: "소프트웨어",
+      registration: "가입",
       languages: "언어",
       users_total: "총 사용자",
       users_active: "활성 사용자(월)",
@@ -25,9 +25,9 @@
       description: "설명",
       badge_verified_ok: "검증됨",
       badge_verified_fail: "검증 실패",
-      software_join_open: "가입 열림",
-      software_join_closed: "가입 닫힘",
-      software_join_unknown: "가입 상태 불명",
+      registration_open: "가입 열림",
+      registration_closed: "가입 닫힘",
+      registration_unknown: "가입 상태 불명",
       loading: "데이터를 불러오는 중입니다…",
       no_data: "데이터 없음",
       no_instances: "표시할 인스턴스가 없습니다.",
@@ -259,11 +259,11 @@
       const platformCell = document.createElement("td");
       platformCell.textContent = textOrFallback(instance.platform);
 
-      const softwareCell = document.createElement("td");
-      const softwareSummary = formatSoftware(stats, strings);
-      softwareCell.textContent = softwareSummary;
-      if (softwareSummary && softwareSummary !== strings.no_data) {
-        softwareCell.title = softwareSummary;
+      const registrationCell = document.createElement("td");
+      const registrationSummary = formatRegistration(stats, strings);
+      registrationCell.textContent = registrationSummary;
+      if (registrationSummary && registrationSummary !== strings.no_data) {
+        registrationCell.title = registrationSummary;
       }
 
       const languagesCell = document.createElement("td");
@@ -285,7 +285,7 @@
         nameCell,
         urlCell,
         platformCell,
-        softwareCell,
+        registrationCell,
         languagesCell,
         usersTotalCell,
         usersActiveCell,
@@ -465,35 +465,19 @@
     return null;
   }
 
-  function formatSoftware(stats, dict) {
+  function formatRegistration(stats, dict) {
     if (!stats || typeof stats !== "object") {
       return dict.no_data;
-    }
-    const segments = [];
-    const name = stringOrNull(stats.software?.name);
-    const version = stringOrNull(stats.software?.version);
-    if (name && version) {
-      segments.push(`${name} ${version}`);
-    } else if (name || version) {
-      segments.push(name || version);
     }
 
     const joinState = stats.open_registrations;
     if (joinState === true) {
-      segments.push(dict.software_join_open);
-    } else if (joinState === false) {
-      segments.push(dict.software_join_closed);
-    } else if (segments.length) {
-      segments.push(dict.software_join_unknown);
+      return dict.registration_open;
     }
-
-    if (!segments.length) {
-      if (joinState === true) return dict.software_join_open;
-      if (joinState === false) return dict.software_join_closed;
-      return dict.no_data;
+    if (joinState === false) {
+      return dict.registration_closed;
     }
-
-    return segments.join(" / ");
+    return dict.registration_unknown;
   }
 
   function formatLanguages(instance, stats, dict) {
@@ -615,7 +599,7 @@
     setColumnText("name", dict.name);
     setColumnText("url", dict.url);
     setColumnText("platform", dict.platform);
-    setColumnText("software", dict.software);
+    setColumnText("registration", dict.registration);
     setColumnText("languages", dict.languages);
     setColumnText("users_total", dict.users_total, dict.sort_users_total);
     setColumnText("users_active_month", dict.users_active, dict.sort_users_active);
