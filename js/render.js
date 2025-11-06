@@ -56,7 +56,7 @@
     sortableHeaders: Array.from(document.querySelectorAll("th[data-sort-key]")),
   };
 
-  const columnCount = elements.table.querySelectorAll("thead th").length || 7;
+  const columnCount = elements.table.querySelectorAll("thead th").length || 8;
 
   const stringsData = await loadStrings();
   const strings = resolveStrings(stringsData, locale);
@@ -84,6 +84,8 @@
         stats: host ? statsMap.get(host) ?? null : null,
       };
     });
+
+    updatePlatformOptions(baseRows, strings);
 
     if (baseRows.length === 0) {
       setStatusMessage(strings.no_instances);
@@ -155,7 +157,7 @@
     return rows.filter(({ instance }) => {
       const matchesPlatform =
         filters.platform === "all" ||
-        (instance.platform ?? "").toString().trim().toLowerCase() === filters.platform;
+        normalizePlatformValue(instance.platform) === filters.platform;
 
       if (!matchesPlatform) {
         return false;
@@ -238,10 +240,25 @@
 
       const nameCell = document.createElement("th");
       nameCell.scope = "row";
-      nameCell.textContent = textOrFallback(instance.name);
+      nameCell.className = "cell-name";
+
+      const nameHeading = document.createElement("div");
+      nameHeading.className = "cell-name__title";
+      nameHeading.textContent = textOrFallback(instance.name);
+
       const badge = createVerificationBadge(stats, strings);
       if (badge) {
-        nameCell.appendChild(badge);
+        nameHeading.appendChild(badge);
+      }
+
+      nameCell.appendChild(nameHeading);
+
+      const descriptionText = stringOrNull(instance.description);
+      if (descriptionText) {
+        const description = document.createElement("p");
+        description.className = "cell-name__description";
+        description.textContent = descriptionText;
+        nameCell.appendChild(description);
       }
 
       const urlCell = document.createElement("td");
@@ -278,9 +295,6 @@
       const statusesCell = document.createElement("td");
       statusesCell.textContent = formatNumber(stats?.statuses);
 
-      const descriptionCell = document.createElement("td");
-      descriptionCell.textContent = textOrFallback(instance.description);
-
       row.append(
         nameCell,
         urlCell,
@@ -289,8 +303,7 @@
         languagesCell,
         usersTotalCell,
         usersActiveCell,
-        statusesCell,
-        descriptionCell
+        statusesCell
       );
       fragment.appendChild(row);
     });
@@ -582,18 +595,12 @@
     if (elements.platformSelect) {
       elements.platformSelect.setAttribute("aria-label", dict.platform_filter_label);
       elements.platformSelect.innerHTML = "";
-      const options = [
-        { value: "all", label: dict.platform_all },
-        { value: "mastodon", label: dict.platform_mastodon },
-        { value: "misskey", label: dict.platform_misskey },
-      ];
-      options.forEach((option) => {
-        const opt = document.createElement("option");
-        opt.value = option.value;
-        opt.textContent = option.label;
-        elements.platformSelect.appendChild(opt);
-      });
+      const opt = document.createElement("option");
+      opt.value = "all";
+      opt.textContent = dict.platform_all;
+      elements.platformSelect.appendChild(opt);
       elements.platformSelect.value = "all";
+      filters.platform = "all";
     }
 
     setColumnText("name", dict.name);
@@ -604,7 +611,6 @@
     setColumnText("users_total", dict.users_total, dict.sort_users_total);
     setColumnText("users_active_month", dict.users_active, dict.sort_users_active);
     setColumnText("statuses", dict.statuses);
-    setColumnText("description", dict.description);
   }
 
   function setColumnText(columnKey, text, sortLabel) {
@@ -637,5 +643,49 @@
     row.appendChild(cell);
     elements.tableBody.appendChild(row);
     elements.table.setAttribute("aria-busy", busy ? "true" : "false");
+  }
+
+  function normalizePlatformValue(value) {
+    const text = stringOrNull(value);
+    return text ? text.toLowerCase() : "";
+  }
+
+  function updatePlatformOptions(rows, dict) {
+    if (!elements.platformSelect) return;
+
+    const currentValue = elements.platformSelect.value || filters.platform || "all";
+    const seen = new Map();
+
+    rows.forEach(({ instance }) => {
+      const label = stringOrNull(instance.platform);
+      if (!label) return;
+      const normalized = label.toLowerCase();
+      if (!seen.has(normalized)) {
+        seen.set(normalized, label);
+      }
+    });
+
+    const sorted = Array.from(seen.entries()).sort((a, b) =>
+      a[1].localeCompare(b[1], locale, { sensitivity: "base" })
+    );
+
+    elements.platformSelect.innerHTML = "";
+
+    const allOption = document.createElement("option");
+    allOption.value = "all";
+    allOption.textContent = dict.platform_all;
+    elements.platformSelect.appendChild(allOption);
+
+    sorted.forEach(([value, label]) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = dict[`platform_${value}`] || label;
+      elements.platformSelect.appendChild(option);
+    });
+
+    const validValues = new Set(["all", ...sorted.map(([value]) => value)]);
+    const nextValue = validValues.has(currentValue) ? currentValue : "all";
+    elements.platformSelect.value = nextValue;
+    filters.platform = nextValue;
   }
 })();

@@ -3,12 +3,14 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import logging
+import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Sequence, Set, Tuple
 from urllib.parse import urlparse
 
 TIMEOUT = 5
@@ -36,6 +38,7 @@ class FetchError(RuntimeError):
 
 
 def main() -> None:
+    args = parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
     instances = list(load_instances(INSTANCES_PATH))
@@ -50,9 +53,11 @@ def main() -> None:
         .replace("+00:00", "Z")
     )
     results: List[Dict[str, Any]] = []
+    discovered_hosts: Set[str] = set()
+    existing_hosts = {instance.host for instance in instances}
 
     for instance in instances:
-        record, errors = process_instance(instance, now)
+        record, errors, peers = process_instance(instance, now)
         results.append(record)
 
         if record["verified_activitypub"]:
@@ -66,11 +71,57 @@ def main() -> None:
                 reason,
             )
 
+        if args.discover_peers and peers:
+            discovered_hosts.update(peers)
+
     STATS_PATH.write_text(
         json.dumps(results, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     logging.info("Wrote %s", STATS_PATH.relative_to(BASE_DIR))
+
+    if args.discover_peers:
+        suggestions = sorted(host for host in discovered_hosts if host not in existing_hosts)
+        emit_peer_suggestions(suggestions, args.peer_output)
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Fetch ActivityPub stats for configured instances.")
+    parser.add_argument(
+        "--discover-peers",
+        action="store_true",
+        help="Attempt to gather federation peers for later curation.",
+    )
+    parser.add_argument(
+        "--peer-output",
+        default=str(BASE_DIR / "data" / "peer_suggestions.json"),
+        help="File path for discovered peers (use '-' for stdout).",
+    )
+    return parser.parse_args()
+
+
+def emit_peer_suggestions(hosts: Sequence[str], target: str) -> None:
+    if not hosts:
+        logging.info("No federation peers discovered.")
+        return
+
+    if target == "-":
+        json.dump(hosts, sys.stdout, ensure_ascii=False, indent=2)
+        sys.stdout.write("\n")
+        logging.info("Emitted %d peer suggestions to stdout", len(hosts))
+        return
+
+    path = Path(target)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(hosts, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    logging.info("Wrote %s", format_relative(path))
+
+
+def format_relative(path: Path) -> str:
+    try:
+        return str(path.relative_to(BASE_DIR))
+    except ValueError:
+        return str(path)
 
 
 def load_instances(path: Path) -> Iterable[Instance]:
@@ -138,7 +189,7 @@ def normalize_base_url(url: str, host: str) -> str:
     return rebuilt.rstrip("/")
 
 
-def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any], List[str]]:
+def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any], List[str], Set[str]]:
     record: Dict[str, Any] = {
         "host": instance.host,
         "verified_activitypub": False,
@@ -153,6 +204,7 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
     errors: List[str] = []
     languages: List[str] = []
     languages_seen = set()
+    peers: Set[str] = set()
 
     try:
         nodeinfo = fetch_nodeinfo(instance.host)
@@ -172,6 +224,7 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
         update_numeric(record, "statuses", coerce_int(usage, "localPosts"))
 
         append_languages(languages, languages_seen, usage.get("languages") if isinstance(usage, dict) else None)
+        peers.update(extract_peer_hosts_from_nodeinfo(nodeinfo))
 
     platform_data: Optional[Dict[str, Any]] = None
     if instance.platform == "mastodon":
@@ -198,9 +251,27 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
         update_numeric(record, "users_active_month", platform_data.get("users_active_month"))
         update_numeric(record, "statuses", platform_data.get("statuses"))
         append_languages(languages, languages_seen, platform_data.get("languages"))
+        peers.update(normalize_peer_list(platform_data.get("peers")))
 
     record["languages_detected"] = languages
-    return record, errors
+    return record, errors, peers
+
+
+def extract_peer_hosts_from_nodeinfo(document: Any) -> Set[str]:
+    hosts: Set[str] = set()
+    if not isinstance(document, dict):
+        return hosts
+    metadata = document.get("metadata")
+    if isinstance(metadata, dict):
+        if "peers" in metadata:
+            hosts.update(normalize_peer_list(metadata.get("peers")))
+        federation = metadata.get("federation")
+        if isinstance(federation, dict):
+            if "peers" in federation:
+                hosts.update(normalize_peer_list(federation.get("peers")))
+            if "domains" in federation:
+                hosts.update(normalize_peer_list(federation.get("domains")))
+    return hosts
 
 
 def fetch_nodeinfo(host: str) -> Optional[Dict[str, Any]]:
@@ -270,8 +341,18 @@ def fetch_mastodon(base_url: str) -> Dict[str, Any]:
             continue
         if not isinstance(payload, dict):
             continue
-        return parse_mastodon_payload(payload, path.endswith("v2/instance"))
+        result = parse_mastodon_payload(payload, path.endswith("v2/instance"))
+        result["peers"] = sorted(fetch_mastodon_peers(base_url))
+        return result
     raise FetchError("; ".join(errors) if errors else "instance API unavailable")
+
+
+def fetch_mastodon_peers(base_url: str) -> Set[str]:
+    try:
+        payload = request_json(f"{base_url}/api/v1/instance/peers")
+    except FetchError:
+        return set()
+    return normalize_peer_list(payload)
 
 
 def parse_mastodon_payload(payload: Dict[str, Any], is_v2: bool) -> Dict[str, Any]:
@@ -353,6 +434,9 @@ def fetch_misskey(base_url: str) -> Dict[str, Any]:
         "languages": [],
     }
 
+    federation = payload.get("federation") if isinstance(payload, dict) else None
+    if isinstance(federation, dict):
+        result["peers"] = sorted(normalize_peer_list(federation.get("peers")))
     return result
 
 
@@ -402,6 +486,42 @@ def append_languages(target: List[str], seen: set, values: Any) -> None:
             continue
         seen.add(code)
         target.append(code)
+
+
+def normalize_peer_list(values: Any) -> Set[str]:
+    hosts: Set[str] = set()
+    if values is None:
+        return hosts
+    if isinstance(values, dict):
+        for item in values.values():
+            hosts.update(normalize_peer_list(item))
+        return hosts
+    if isinstance(values, (list, tuple, set)):
+        for item in values:
+            hosts.update(normalize_peer_list(item))
+        return hosts
+    host = normalize_peer_host(values)
+    if host:
+        hosts.add(host)
+    return hosts
+
+
+def normalize_peer_host(value: Any) -> Optional[str]:
+    if value is None:
+        return None
+    text = str(value).strip()
+    if not text:
+        return None
+    text = text.rstrip("/")
+    if text.startswith("http://") or text.startswith("https://"):
+        parsed = urlparse(text)
+        if parsed.hostname:
+            host = parsed.hostname.lower()
+            if parsed.port:
+                return f"{host}:{parsed.port}"
+            return host
+        text = text.split("://", 1)[-1]
+    return text.lower()
 
 
 def normalize_language_code(value: Any) -> Optional[str]:

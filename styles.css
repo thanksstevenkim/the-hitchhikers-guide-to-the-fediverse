@@ -121,10 +121,28 @@ thead {
 
 th,
 td {
-  padding: 1rem 1.25rem;
+  padding: 1.25rem 1.5rem;
   border-bottom: 1px solid #e3e7ee;
   text-align: left;
   vertical-align: top;
+}
+
+.cell-name {
+  min-width: 16rem;
+}
+
+.cell-name__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.cell-name__description {
+  margin: 0.45rem 0 0;
+  font-size: 0.85rem;
+  color: #475569;
+  opacity: 0.8;
 }
 
 th[data-sort-key] {
@@ -257,6 +275,11 @@ a:focus {
   th,
   td {
     border-color: #1f2937;
+  }
+
+  .cell-name__description {
+    color: #cbd5f5;
+    opacity: 0.65;
   }
 
   a {

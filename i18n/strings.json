@@ -8,6 +8,7 @@
     "platform_all": "전체",
     "platform_mastodon": "Mastodon",
     "platform_misskey": "Misskey",
+    "platform_lemmy": "Lemmy",
     "table_heading": "인스턴스 목록",
     "table_caption": "한국어 Fediverse 인스턴스 목록",
     "table_aria": "한국어 Fediverse 인스턴스 목록",

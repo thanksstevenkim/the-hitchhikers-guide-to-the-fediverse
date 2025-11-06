@@ -24,13 +24,28 @@ python scripts/fetch_stats.py
 - `requests`를 설치하면 HTTPS 처리와 타임아웃 제어가 보다 견고해집니다. 설치하지 않아도 스크립트는 표준 라이브러리 `urllib`로
   동작합니다.
 
+### 연합 인스턴스 탐색(선택)
+
+기존 인스턴스와 연합 중인 도메인을 참고하려면 다음 명령으로 후보 목록을 생성할 수 있습니다.
+
+```bash
+python scripts/fetch_stats.py --discover-peers
+```
+
+- NodeInfo와 소프트웨어별 API에서 제공하는 `peers` 정보, Mastodon의 `GET /api/v1/instance/peers` 응답을 바탕으로
+  `data/peer_suggestions.json`이 생성됩니다.
+- 표준 출력으로 직접 확인하고 싶다면 `python scripts/fetch_stats.py --discover-peers --peer-output -` 처럼 `-`를 지정하세요.
+- 생성된 목록은 `data/instances.json`에 새 항목을 추가할 때 참고용으로 사용하고, 실제 이름(name)은 원본 인스턴스에서 확인한 뒤 입력합니다.
+
 ## 검색과 필터
 
 - 상단 검색 입력(`id="q"`)은 이름과 설명을 대상으로 부분 일치 검색을 수행합니다.
-- 플랫폼 드롭다운(`id="platformFilter"`)에서 `전체`, `Mastodon`, `Misskey` 중 하나를 선택해 필터링할 수 있습니다.
+- 플랫폼 드롭다운(`id="platformFilter"`)은 `data/instances.json`에 존재하는 플랫폼 목록을 자동으로 반영합니다.
 - 통계 열 헤더(총 사용자, 활성 사용자)는 클릭 시 오름차순/내림차순을 토글합니다.
 - `languages` 열은 `data/instances.json`의 수동 지정 언어와 `data/stats.json`에서 감지한 언어를 병합해 표시합니다.
 - ActivityPub 검증에 실패한 항목은 이름 옆에 “검증 실패” 뱃지가 붙습니다.
+- 가입 열은 NodeInfo/보조 API에서 확인한 가입 가능 여부를 “열림/닫힘/불명” 중 하나로 요약합니다.
+- 긴 설명은 이름 셀 하단에 작은 글씨로 표시되며, 테이블 간격을 넉넉하게 조정했습니다.
 
 ## ActivityPub 검증
 
@@ -45,6 +60,9 @@ python scripts/fetch_stats.py
 
 언어 정보는 NodeInfo `usage.languages`나 Mastodon `configuration.languages`로 감지되며, 누락된 언어는 `data/instances.json`의
 `languages` 필드로 수동 지정할 수 있습니다. 감지가 실패하더라도 UI는 `-` 또는 “데이터 없음”으로 표시됩니다.
+ 
+NodeInfo 메타데이터와 소프트웨어별 peers API 응답은 연합 도메인 후보를 수집하는 데에도 활용되며, 자세한 사용법은 위 “연합 인스턴스
+탐색” 절을 참고하세요.
 
 ## 문자열(i18n)
 
