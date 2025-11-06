@@ -17,10 +17,17 @@
       name: "이름",
       url: "주소",
       platform: "플랫폼",
+      software: "소프트웨어",
+      languages: "언어",
       users_total: "총 사용자",
       users_active: "활성 사용자(월)",
       statuses: "게시물 수",
       description: "설명",
+      badge_verified_ok: "검증됨",
+      badge_verified_fail: "검증 실패",
+      software_join_open: "가입 열림",
+      software_join_closed: "가입 닫힘",
+      software_join_unknown: "가입 상태 불명",
       loading: "데이터를 불러오는 중입니다…",
       no_data: "데이터 없음",
       no_instances: "표시할 인스턴스가 없습니다.",
@@ -68,11 +75,15 @@
     const [instances, stats] = await Promise.all([loadInstances(), loadStats()]);
     const statsMap = createStatsMap(stats);
 
-    baseRows = instances.map((instance, index) => ({
-      order: index,
-      instance,
-      stats: statsMap.get(normalizeUrl(instance.url)) ?? null,
-    }));
+    baseRows = instances.map((instance, index) => {
+      const host = extractHost(instance);
+      return {
+        order: index,
+        instance,
+        host,
+        stats: host ? statsMap.get(host) ?? null : null,
+      };
+    });
 
     if (baseRows.length === 0) {
       setStatusMessage(strings.no_instances);
@@ -228,6 +239,10 @@
       const nameCell = document.createElement("th");
       nameCell.scope = "row";
       nameCell.textContent = textOrFallback(instance.name);
+      const badge = createVerificationBadge(stats, strings);
+      if (badge) {
+        nameCell.appendChild(badge);
+      }
 
       const urlCell = document.createElement("td");
       if (instance.url) {
@@ -243,6 +258,16 @@
 
       const platformCell = document.createElement("td");
       platformCell.textContent = textOrFallback(instance.platform);
+
+      const softwareCell = document.createElement("td");
+      const softwareSummary = formatSoftware(stats, strings);
+      softwareCell.textContent = softwareSummary;
+      if (softwareSummary && softwareSummary !== strings.no_data) {
+        softwareCell.title = softwareSummary;
+      }
+
+      const languagesCell = document.createElement("td");
+      languagesCell.textContent = formatLanguages(instance, stats, strings);
 
       const usersTotalCell = document.createElement("td");
       usersTotalCell.textContent = formatNumber(stats?.users_total);
@@ -260,6 +285,8 @@
         nameCell,
         urlCell,
         platformCell,
+        softwareCell,
+        languagesCell,
         usersTotalCell,
         usersActiveCell,
         statusesCell,
@@ -305,35 +332,99 @@
   function createStatsMap(stats) {
     const map = new Map();
     stats.forEach((entry) => {
-      if (!entry?.url) return;
-      const key = normalizeUrl(entry.url);
+      if (!entry) return;
+      const key = normalizeHostValue(entry.host ?? entry.url);
       if (!key) return;
       map.set(key, {
         users_total: getNumericValue(entry.users_total),
         users_active_month: getNumericValue(entry.users_active_month),
         statuses: getNumericValue(entry.statuses),
+        verified_activitypub:
+          entry.verified_activitypub === true
+            ? true
+            : entry.verified_activitypub === false
+            ? false
+            : null,
+        open_registrations: parseBoolean(entry.open_registrations),
+        software: normalizeSoftware(entry.software),
+        languages_detected: normalizeLanguageList(entry.languages_detected),
         fetched_at: entry.fetched_at ?? null,
       });
     });
     return map;
   }
 
-  function normalizeUrl(url) {
-    if (!url || typeof url !== "string") return "";
-    try {
-      const parsed = new URL(url);
-      parsed.hash = "";
-      parsed.search = "";
-      return parsed.toString().replace(/\/+$/, "").toLowerCase();
-    } catch (error) {
-      return url.replace(/\/+$/, "").toLowerCase();
+  function extractHost(instance) {
+    if (!instance || typeof instance !== "object") return "";
+    if (instance.host && typeof instance.host === "string") {
+      const normalized = normalizeHostValue(instance.host);
+      if (normalized) return normalized;
     }
+    if (instance.url && typeof instance.url === "string") {
+      try {
+        const parsed = new URL(instance.url);
+        if (parsed.hostname) {
+          return parsed.hostname.toLowerCase();
+        }
+      } catch (error) {
+        // ignore parse errors and fall through
+      }
+      return normalizeHostValue(instance.url.replace(/^https?:\/\//, ""));
+    }
+    return "";
+  }
+
+  function normalizeHostValue(value) {
+    if (!value || typeof value !== "string") return "";
+    return value.trim().replace(/\s+/g, "").toLowerCase();
   }
 
   function getNumericValue(value) {
     if (value === null || value === undefined) return null;
     const numberValue = Number(value);
     return Number.isFinite(numberValue) ? numberValue : null;
+  }
+
+  function parseBoolean(value) {
+    if (value === true) return true;
+    if (value === false) return false;
+    return null;
+  }
+
+  function normalizeSoftware(software) {
+    if (!software || typeof software !== "object") return null;
+    const name = stringOrNull(software.name);
+    const version = stringOrNull(software.version);
+    if (!name && !version) {
+      return null;
+    }
+    return {
+      name: name ?? null,
+      version: version ?? null,
+    };
+  }
+
+  function normalizeLanguageList(values) {
+    if (!values) return [];
+    if (!Array.isArray(values)) {
+      values = [values];
+    }
+    const list = [];
+    const seen = new Set();
+    values.forEach((value) => {
+      const code = normalizeLanguageCode(value);
+      if (!code || seen.has(code)) return;
+      seen.add(code);
+      list.push(code);
+    });
+    return list;
+  }
+
+  function normalizeLanguageCode(value) {
+    if (value === null || value === undefined) return "";
+    const text = String(value).trim();
+    if (!text) return "";
+    return text.toLowerCase();
   }
 
   function formatNumber(value) {
@@ -345,6 +436,91 @@
       return strings.no_data;
     }
     return numberValue.toLocaleString(numberLocale);
+  }
+
+  function stringOrNull(value) {
+    if (value === null || value === undefined) {
+      return null;
+    }
+    const text = String(value).trim();
+    return text.length ? text : null;
+  }
+
+  function createVerificationBadge(stats, dict) {
+    if (!stats || typeof stats !== "object") return null;
+    if (stats.verified_activitypub === true) {
+      const badge = document.createElement("span");
+      badge.className = "badge badge--ok";
+      badge.textContent = dict.badge_verified_ok;
+      badge.title = dict.badge_verified_ok;
+      return badge;
+    }
+    if (stats.verified_activitypub === false) {
+      const badge = document.createElement("span");
+      badge.className = "badge badge--warn";
+      badge.textContent = dict.badge_verified_fail;
+      badge.title = dict.badge_verified_fail;
+      return badge;
+    }
+    return null;
+  }
+
+  function formatSoftware(stats, dict) {
+    if (!stats || typeof stats !== "object") {
+      return dict.no_data;
+    }
+    const segments = [];
+    const name = stringOrNull(stats.software?.name);
+    const version = stringOrNull(stats.software?.version);
+    if (name && version) {
+      segments.push(`${name} ${version}`);
+    } else if (name || version) {
+      segments.push(name || version);
+    }
+
+    const joinState = stats.open_registrations;
+    if (joinState === true) {
+      segments.push(dict.software_join_open);
+    } else if (joinState === false) {
+      segments.push(dict.software_join_closed);
+    } else if (segments.length) {
+      segments.push(dict.software_join_unknown);
+    }
+
+    if (!segments.length) {
+      if (joinState === true) return dict.software_join_open;
+      if (joinState === false) return dict.software_join_closed;
+      return dict.no_data;
+    }
+
+    return segments.join(" / ");
+  }
+
+  function formatLanguages(instance, stats, dict) {
+    const manual = Array.isArray(instance?.languages) ? instance.languages : [];
+    const detected = Array.isArray(stats?.languages_detected)
+      ? stats.languages_detected
+      : [];
+    const display = [];
+    const seen = new Set();
+
+    [manual, detected].forEach((collection) => {
+      collection.forEach((value) => {
+        const code = normalizeLanguageCode(value);
+        if (!code || seen.has(code)) return;
+        seen.add(code);
+        display.push(formatLanguageDisplay(code));
+      });
+    });
+
+    return display.length ? display.join(", ") : dict.no_data;
+  }
+
+  function formatLanguageDisplay(code) {
+    return code
+      .split("-")
+      .map((part, index) => (index === 0 ? part.toLowerCase() : part.toUpperCase()))
+      .join("-");
   }
 
   function textOrFallback(value) {
@@ -439,6 +615,8 @@
     setColumnText("name", dict.name);
     setColumnText("url", dict.url);
     setColumnText("platform", dict.platform);
+    setColumnText("software", dict.software);
+    setColumnText("languages", dict.languages);
     setColumnText("users_total", dict.users_total, dict.sort_users_total);
     setColumnText("users_active_month", dict.users_active, dict.sort_users_active);
     setColumnText("statuses", dict.statuses);
