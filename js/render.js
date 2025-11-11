@@ -4,7 +4,7 @@
   const numberLocale = locale || "ko-KR";
   const FALLBACK_STRINGS = {
     ko: {
-      title: "한국어 Fediverse 인스턴스 디렉토리",
+      title: "연합우주를 여행하는 히치하이커를 위한 안내서",
       intro: "한국어로 운영되는 페디버스 인스턴스를 수동으로 정리한 목록입니다.",
       search_label: "검색어",
       search_placeholder: "이름 또는 설명 검색",
@@ -37,7 +37,7 @@
         "데이터를 불러오는 중 오류가 발생했습니다. 로컬에서 테스트하는 경우 <code>python -m http.server</code>로 간단한 서버를 실행하세요.",
       sort_users_total: "총 사용자 수로 정렬",
       sort_users_active: "월간 활성 사용자 수로 정렬",
-      footer_note: "데이터는 data/instances.json과 data/stats.json 파일을 수정해 갱신할 수 있습니다.",
+      footer_note: "데이터는 data/instances.json과 data/stats.ok.json 파일을 수정해 갱신할 수 있습니다.",
     },
   };
 
@@ -344,7 +344,7 @@
 
   async function loadStats() {
     try {
-      const response = await fetch(resolveAssetUrl("data/stats.json"), {
+      const response = await fetch(resolveAssetUrl("data/stats.ok.json"), {
         cache: "no-store",
       });
       if (!response.ok) {

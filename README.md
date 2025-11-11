@@ -1,102 +1,139 @@
-# Fediverse 인스턴스 한국어 디렉토리
+# 연합우주를 여행하는 히치하이커를 위한 안내서
+# The Hitchhiker's Guide to the Fediverse
 
-정적 HTML, CSS, JS로 구성된 한국어 페디버스 인스턴스 목록입니다. `data/instances.json`의 기본 정보와 `data/stats.json`의 통계를
-병합해 한 화면에서 확인할 수 있으며, 검색/플랫폼 필터와 간단한 정렬 기능을 제공합니다. GitHub Pages에서 그대로 호스팅할 수 있습니다.
+정적 HTML, CSS, JS로 구성된 한국어 페디버스 인스턴스 목록입니다.  
+`data/instances.json`의 기본 정보와 `data/stats.ok.json`의 통계를 병합해 한 화면에서 확인할 수 있습니다.  
+GitHub Pages로 그대로 호스팅할 수 있으며, 검색·필터·정렬 기능을 기본 제공합니다.
 
-모든 데이터는 공개 API를 통해 수집되었으며, 개인정보는 포함되지 않습니다.
+모든 데이터는 공개 API를 통해 자동 수집되며, 개인정보는 포함되지 않습니다.
 
-## 데이터 편집
+---
 
-1. `data/instances.json`을 열어 항목을 추가하거나 수정합니다.
-2. 각 항목은 `name`, `host`, `url`, `platform`, `description`, `languages`(수동 언어 코드 배열) 필드를 포함합니다.
-3. 통계 수집이 언어 목록을 감지하지 못하는 경우를 대비해 `languages`에 우선 표시할 언어 코드를 지정할 수 있습니다.
-4. 저장 후 페이지를 새로고침하면 변경 내용이 반영됩니다.
+## 📁 데이터 구조
 
-## 통계 갱신
+| 파일 | 설명 |
+|------|------|
+| `data/instances.json` | 수동으로 등록한 인스턴스 목록 |
+| `data/stats.ok.json` | ActivityPub 검증 성공 및 통계 이상치 없는 정상 인스턴스 |
+| `data/stats.bad.json` | 검증 실패·네트워크 오류·이상치 등 비정상 인스턴스 |
+| `data/peer_suggestions.json` | 연합 관계를 통해 발견된 새 인스턴스 후보 |
+| `data/filtered_peers.json` | 스팸/광고 도메인을 걸러낸 최종 후보 |
+| `data/spam_filtered.log.json` | 스팸 필터에서 제외된 도메인과 이유 로그 |
 
-통계는 하루 1회 정도 갱신하도록 가정하며, 아래 명령으로 수동 실행할 수 있습니다.
+---
 
-```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install requests  # 선택: 설치하지 않으면 표준 라이브러리로 동작합니다.
-python scripts/fetch_stats.py
-```
+## ⚙️ 실행 순서 (추천 워크플로)
 
-명령을 실행하면 `data/stats.json`이 생성·갱신됩니다. 결과를 커밋하고 GitHub에 푸시하면 정적 페이지에도 통계가 반영됩니다.
-- `requests`를 설치하면 HTTPS 처리와 타임아웃 제어가 보다 견고해집니다. 설치하지 않아도 스크립트는 표준 라이브러리 `urllib`로
-  동작합니다.
+아래 세 단계를 순서대로 실행하면 됩니다.
 
-### 연합 인스턴스 탐색(선택)
+---
 
-기존 인스턴스와 연합 중인 도메인을 참고하려면 다음 명령으로 후보 목록을 생성할 수 있습니다.
+### ① 연합 피어 목록 생성
+
+기존 인스턴스에서 연합된 피어 도메인을 탐색합니다.
 
 ```bash
 python scripts/fetch_stats.py --discover-peers
+````
+
+* NodeInfo 및 소프트웨어별 API의 `peers` 정보를 수집합니다.
+* 결과: `data/peer_suggestions.json`
+* 이미 검사된(host가 `stats.ok.json` 또는 `stats.bad.json`에 존재하는) 도메인은 자동으로 제외됩니다.
+* 표준 출력으로 내보내려면 `--peer-output -`을 사용할 수 있습니다.
+
+---
+
+### ② 스팸·비정상 도메인 필터링
+
+`filter_spam.py`로 피어 목록에서 명백히 스팸·광고·비정상 도메인을 제거합니다.
+
+```bash
+python scripts/filter_spam.py
 ```
 
-- NodeInfo와 소프트웨어별 API에서 제공하는 `peers` 정보, Mastodon의 `GET /api/v1/instance/peers` 응답을 바탕으로
-  `data/peer_suggestions.json`이 생성됩니다.
-- 표준 출력으로 직접 확인하고 싶다면 `python scripts/fetch_stats.py --discover-peers --peer-output -` 처럼 `-`를 지정하세요.
-- 생성된 목록은 `data/instances.json`에 새 항목을 추가할 때 참고용으로 사용하고, 실제 이름(name)은 원본 인스턴스에서 확인한 뒤 입력합니다.
+* 입력: `data/peer_suggestions.json`
+* 출력:
 
-## 검색과 필터
+  * `data/filtered_peers.json` — 통과된 후보 (다음 단계 입력으로 사용)
+  * `data/spam_filtered.log.json` — 제외된 도메인과 사유 기록
+* 필터링 기준:
 
-- 상단 검색 입력(`id="q"`)은 이름과 설명을 대상으로 부분 일치 검색을 수행합니다.
-- 플랫폼 드롭다운(`id="platformFilter"`)은 `data/instances.json`에 존재하는 플랫폼 목록을 자동으로 반영합니다.
-- 통계 열 헤더(총 사용자, 활성 사용자)는 클릭 시 오름차순/내림차순을 토글합니다.
-- `languages` 열은 `data/instances.json`의 수동 지정 언어와 `data/stats.json`에서 감지한 언어를 병합해 표시합니다.
-- ActivityPub 검증에 실패한 항목은 이름 옆에 “검증 실패” 뱃지가 붙습니다.
-- 가입 열은 NodeInfo/보조 API에서 확인한 가입 가능 여부를 “열림/닫힘/불명” 중 하나로 요약합니다.
-- 긴 설명은 이름 셀 하단에 작은 글씨로 표시되며, 테이블 간격을 넉넉하게 조정했습니다.
+  * 의심스러운 TLD (`.tk`, `.ml`, `.xyz`, 등)
+  * 스팸/성인/도박/암호화폐 등 키워드
+  * 숫자·반복 패턴 도메인
+  * (존재 시) ActivityPub 검증 실패 또는 비정상 통계
+* 옵션:
 
-## ActivityPub 검증
+  * `--blocklist <파일>` : 추가 차단 목록 지정
+  * `--dry-run` : 결과를 파일로 저장하지 않고 콘솔로만 출력
 
-`scripts/fetch_stats.py`는 아래 순서로 인스턴스를 점검합니다.
+> 💡 이 단계에서 미리 걸러내면, `fetch_stats.py`가 불필요한 네트워크 요청을 하지 않아 훨씬 빠르게 동작합니다.
 
-1. `https://{host}/.well-known/nodeinfo`를 호출해 최신 NodeInfo 문서를 찾습니다.
-   - NodeInfo 응답에서 소프트웨어 이름, 가입 가능 여부, 사용자/활성 사용자/게시물 수를 우선 추출합니다.
-2. NodeInfo만으로 부족한 경우 소프트웨어별 보조 엔드포인트를 순차적으로 시도합니다.
-   - Mastodon: `GET /api/v2/instance` → 실패 시 `GET /api/v1/instance`
-   - Misskey: `POST /api/meta` (본문 `{}`)
-3. 어떤 단계든 성공하면 `verified_activitypub`이 `true`로 기록되고, 실패가 이어지면 `false`와 함께 로그에 이유가 남습니다.
+---
 
-언어 정보는 NodeInfo `usage.languages`나 Mastodon `configuration.languages`로 감지되며, 누락된 언어는 `data/instances.json`의
-`languages` 필드로 수동 지정할 수 있습니다. 감지가 실패하더라도 UI는 `-` 또는 “데이터 없음”으로 표시됩니다.
- 
-NodeInfo 메타데이터와 소프트웨어별 peers API 응답은 연합 도메인 후보를 수집하는 데에도 활용되며, 자세한 사용법은 위 “연합 인스턴스
-탐색” 절을 참고하세요.
+### ③ 통계 수집 (정상 도메인만)
 
-## 문자열(i18n)
+스팸 필터를 통과한 인스턴스만 대상으로 통계를 가져옵니다.
 
-모든 UI 문자열은 `i18n/strings.json`에 정의되어 있으며, 기본 언어는 `ko`입니다. 새 언어를 추가하려면 동일한 키 구조로
-언어 코드를 추가하고 `index.html`의 `lang` 속성을 변경하세요. JSON을 불러오지 못하는 경우에는 내장 한국어 문자열로
-폴백합니다.
+```bash
+python scripts/fetch_stats.py --input data/filtered_peers.json
+```
 
-## 자동 통계 및 Pages 배포
+* 결과:
 
-저장소에는 `scripts/fetch_stats.py`를 매일 06:00 (Asia/Seoul) / 21:00 (UTC) 에 실행해 통계를 커밋하고 GitHub Pages에 배포하는
-워크플로 `.github/workflows/update.yml`이 포함되어 있습니다.
+  * `data/stats.ok.json` — ActivityPub 검증 성공 및 정상 통계
+  * `data/stats.bad.json` — 검증 실패, 미응답, 이상치, 비정상 통계 등
+* 인스턴스 1개 처리마다 즉시 저장되므로, 중간에 중단되어도 이미 수집된 데이터는 보존됩니다.
+* `--input`을 사용하면 이미 기록된 호스트는 자동으로 스킵합니다.
+* `requests` 패키지를 설치하면 HTTPS 요청 성능이 향상됩니다.
+* 최초 실행 시 기존 `stats.json`이 존재하면 자동으로 OK/BAD 구조로 마이그레이션됩니다.
 
-- GitHub Actions의 기본 `GITHUB_TOKEN`에 `contents: write`, `pages: write` 권한이 필요합니다.
-- 조직 정책으로 쓰기 권한이 제한된 경우 `repo` 권한이 있는 PAT를 `REPO_TOKEN` 비밀키로 등록하고, 워크플로의 주석 처리된
-  `token` 항목을 활성화하세요.
-- 워크플로를 로컬에서 점검하려면 [`act`](https://github.com/nektos/act)를 설치한 뒤 `act -j update`를 실행하세요.
+---
 
-## 로컬 미리보기
+## 🧩 스크립트 요약
 
-브라우저의 `file://` 경로로 열면 보안 정책 때문에 JSON을 불러오지 못할 수 있습니다. 아래 명령으로 간단한 서버를 실행한 뒤 `http://localhost:8000`을 방문하세요.
+| 스크립트             | 역할                                        |
+| ---------------- | ----------------------------------------- |
+| `fetch_stats.py` | ActivityPub 노드/플랫폼별 API를 통해 통계 수집 및 검증    |
+| `filter_spam.py` | 도메인 이름 기반 스팸·광고·비정상 후보 자동 필터링             |
+| `update.yml`     | (옵션) GitHub Actions를 이용해 자동 갱신 및 Pages 배포 |
+
+---
+
+## 🖥️ 웹 UI 기능
+
+* 검색창(`id="q"`) : 이름·설명을 실시간 부분 검색
+* 플랫폼 필터 : `instances.json` 기준 자동 생성
+* 통계 열 클릭 시 오름/내림차순 정렬
+* 언어 표시는 수동 언어 + 감지 언어 병합
+* 검증 실패 항목에는 “검증 실패” 뱃지가 표시
+* 가입 여부는 NodeInfo 기준으로 “열림 / 닫힘 / 불명” 구분
+
+---
+
+## 🔄 자동 통계 및 Pages 배포
+
+`.github/workflows/update.yml`은 매일 06:00 (Asia/Seoul) / 21:00 (UTC)에
+`fetch_stats.py`를 실행해 `stats.ok.json`과 `stats.bad.json`을 갱신하고
+GitHub Pages로 자동 배포합니다.
+
+* `GITHUB_TOKEN`에 `contents: write`, `pages: write` 권한이 필요합니다.
+* 제한된 조직 계정에서는 `repo` 권한을 가진 PAT을 `REPO_TOKEN`으로 등록하세요.
+* 로컬에서도 [`act`](https://github.com/nektos/act)로 `act -j update` 명령으로 테스트 가능합니다.
+
+---
+
+## 💻 로컬 미리보기
 
 ```bash
 python -m http.server 8000
 ```
 
-## GitHub Pages 배포
+`http://localhost:8000`에서 사이트를 확인합니다.
+브라우저에서 `file://`로 직접 열면 JSON이 불러와지지 않을 수 있습니다.
 
-1. 이 저장소를 GitHub에 푸시합니다.
-2. GitHub에서 저장소의 **Settings → Pages**로 이동합니다.
-3. **Source**를 `Deploy from a branch`, **Branch**를 `main`(또는 원하는 브랜치)과 `/ (root)`로 설정합니다.
-4. 저장하면 몇 분 후 `https://<사용자명>.github.io/<저장소명>/`에서 사이트를 확인할 수 있습니다.
+---
 
-## 라이선스
+## ⚖️ 라이선스
 
 이 프로젝트는 [MIT License](./LICENSE)를 따릅니다.

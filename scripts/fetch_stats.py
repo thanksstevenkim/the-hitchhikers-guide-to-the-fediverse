@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Fetch Fediverse instance statistics into data/stats.json with ActivityPub verification."""
+"""
+Fetch Fediverse instance statistics with ActivityPub verification.
+
+- Incremental save: after EACH instance is processed, results are saved atomically.
+- Split outputs:
+    * data/stats.ok.json  : verified + sane stats
+    * data/stats.bad.json : failed verification, network/parse errors, or anomalous metrics
+"""
 
 from __future__ import annotations
 
@@ -11,13 +18,29 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Set, Tuple
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
+import codecs
 
 TIMEOUT = 5
 USER_AGENT = "fedlist-stats-fetcher/1.0"
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Inputs
 INSTANCES_PATH = BASE_DIR / "data" / "instances.json"
+
+# Outputs (split)
+ALIASES_PATH = BASE_DIR / "data" / "host_aliases.json"
+STATS_OK_PATH  = BASE_DIR / "data" / "stats.ok.json"
+STATS_BAD_PATH = BASE_DIR / "data" / "stats.bad.json"
+
+# (Legacy) Single-file path retained for compatibility in helper logic
 STATS_PATH = BASE_DIR / "data" / "stats.json"
+
+# Network safety limits
+MAX_JSON_BYTES = 2_000_000  # 2MB soft cap for JSON payloads
+MAX_REDIRECTS = 5
+ALLOWED_JSON_CT = ("application/json", "application/ld+json", "application/activity+json")
+BLOCKED_SUFFIXES = (".bin", ".zip", ".tar", ".gz", ".xz", ".bz2", ".7z", ".rar", ".mp4", ".mp3", ".avi")
 
 try:  # Optional dependency, falls back to urllib if unavailable
     import requests  # type: ignore
@@ -37,101 +60,379 @@ class FetchError(RuntimeError):
     """Raised when a remote fetch fails."""
 
 
+def _same_host(url: str, host: str) -> bool:
+    try:
+        h = urlparse(url).hostname
+        return (h or "").lower() == host.lower()
+    except Exception:
+        return False
+
+
+def _looks_like_binary(url: str) -> bool:
+    path = urlparse(url).path.lower()
+    return any(path.endswith(suf) for suf in BLOCKED_SUFFIXES)
+
+
+def _assert_safe_url(url: str, host: str) -> None:
+    # 동일 호스트 아니거나, 의심 확장자면 차단
+    if not _same_host(url, host):
+        raise FetchError(f"redirected to different host: {url}")
+    if _looks_like_binary(url):
+        raise FetchError(f"suspicious path: {url}")
+
+def _is_json_ct(content_type: str) -> bool:
+    if not content_type:
+        return False
+    ct = content_type.split(";")[0].strip().lower()
+    # 표준 JSON 또는 +json 파생 타입 허용
+    return ct == "application/json" or ct.endswith("+json")
+
+def _normalize_host(h: str) -> str:
+    # 포트 제거 (IPv4/도메인에만 적용, IPv6는 대괄호 표기 가정)
+    raw = (h or "").strip()
+    if raw.startswith("["):  # [::1]:8443 형태는 그대로 두되 대괄호 제거만
+        # [::1]:8443 → ::1]:8443 → 간단 처리 어려우면 일단 전체를 IDNA 처리만
+        host = raw
+    else:
+        # 도메인/IPv4: 마지막 콜론 뒤가 숫자면 포트로 보고 제거
+        if ":" in raw:
+            head, tail = raw.rsplit(":", 1)
+            if tail.isdigit():
+                raw = head
+        host = raw
+    try:
+        return host.encode("idna").decode("ascii").lower().rstrip(".")
+    except Exception:
+        return host.lower().rstrip(".")
+
+
+def _same_zone(a: str, b: str) -> bool:
+    """
+    같은 eTLD+1(대략적)인지 판정.
+    - 정확한 PSL 라이브러리 없이, 실무용 휴리스틱:
+      서로 같거나, 한쪽이 다른쪽의 서브도메인인 경우 허용.
+      (예: example.org ↔ mastodon.example.org)
+    """
+    if not a or not b:
+        return False
+    a = _normalize_host(a)
+    b = _normalize_host(b)
+    if a == b:
+        return True
+    return a.endswith("." + b) or b.endswith("." + a)
+
+def _assert_safe_url_relaxed(url: str, expected_host: str) -> None:
+    """
+    '같은 존'까지 허용하는 안전 검사:
+    - 다른 존으로의 리다이렉트/링크는 차단
+    - 의심 확장자 차단은 그대로 유지
+    """
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").strip()
+    if not _same_zone(host, expected_host):
+        raise FetchError(f"redirected to different host: {url}")
+    if _looks_like_binary(url):
+        raise FetchError(f"suspicious path: {url}")
+
+def _sanitize_charset(enc: Optional[str]) -> str:
+    """
+    잘못된 charset 헤더 방어:
+    - None/빈값 → 'utf-8'
+    - 콤마/슬래시/공백 등 섞인 비정상 값 → 'utf-8'
+    - codecs.lookup 실패 → 'utf-8'
+    """
+    if not enc:
+        return "utf-8"
+    s = str(enc).strip().strip('"').lower()
+    # 흔한 쓰레기 패턴 방어: "utf-8, application/json" 等
+    if any(ch in s for ch in (",", "/", " ", "\t", ";")) and s != "utf-8":
+        return "utf-8"
+    try:
+        codecs.lookup(s)
+        return s
+    except LookupError:
+        return "utf-8"
+
 def main() -> None:
     args = parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
-    # --input이 지정된 경우 호스트 문자열 목록을 로드
+    # --input 이 있으면 host 문자열/객체 리스트를, 없으면 instances.json을 사용
     if args.input:
         instances = list(load_host_strings(Path(args.input)))
     else:
         instances = list(load_instances(INSTANCES_PATH))
-    
+
     if not instances:
-        logging.error("No instances to process. Did you populate data/instances.json?")
+        logging.error("No instances to process. Populate data/instances.json or pass --input.")
         return
 
+    # 현재 UTC 타임스탬프 (ISO8601, Z)
     now = (
         datetime.now(timezone.utc)
         .replace(microsecond=0)
         .isoformat()
         .replace("+00:00", "Z")
     )
-    results: List[Dict[str, Any]] = []
+
+    # 기존 ok/bad 파일을 각각 맵으로 적재
+    ok_map, bad_map = load_existing_stats_maps()
+
     discovered_hosts: Set[str] = set()
-    existing_hosts = {instance.host for instance in instances}
+    processed = 0
+    updated_ok = 0
+    updated_bad = 0
 
     for instance in instances:
         record, errors, peers = process_instance(instance, now)
-        results.append(record)
 
-        if record["verified_activitypub"]:
-            logging.info("Fetched stats for %s", instance.host)
+        had_errors = bool(errors)
+        bucket = classify_record(record, had_errors)  # 'good' or 'bad'
+
+        if bucket == "good":
+            prev = ok_map.get(record["host"])
+            ok_map[record["host"]] = record
+            updated_ok += 1 if (prev is None or prev != record) else 0
+            logging.info("OK   %s (%s)", record["host"], record.get("software", {}).get("name") or "-")
         else:
-            reason = "; ".join(errors) if errors else "no successful responses"
-            logging.warning(
-                "Verification failed for %s (%s): %s",
-                instance.host,
-                instance.url,
-                reason,
-            )
+            prev = bad_map.get(record["host"])
+            bad_map[record["host"]] = record
+            updated_bad += 1 if (prev is None or prev != record) else 0
+            reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
+            logging.warning("BAD  %s: %s", record["host"], reason)
+
+        processed += 1
+
+        # 인스턴스 하나 끝날 때마다 두 파일을 원자적으로 즉시 저장
+        save_stats_pair_atomic(ok_map, bad_map)
 
         if args.discover_peers and peers:
             discovered_hosts.update(peers)
 
-    STATS_PATH.write_text(
-        json.dumps(results, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+    logging.info(
+        "Incremental save complete: processed=%d, ok_updates=%d, bad_updates=%d",
+        processed, updated_ok, updated_bad
     )
-    logging.info("Wrote %s", STATS_PATH.relative_to(BASE_DIR))
 
     if args.discover_peers:
-        suggestions = sorted(host for host in discovered_hosts if host not in existing_hosts)
+        # 이미 검사한(OK/BAD 둘 다 포함) 호스트는 제외
+        suggestions = sorted(
+            h for h in discovered_hosts if h not in load_checked_hosts()
+        )
         emit_peer_suggestions(suggestions, args.peer_output)
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Fetch ActivityPub stats for configured instances.")
+    parser = argparse.ArgumentParser(description="Fetch ActivityPub stats (incremental save, split outputs).")
     parser.add_argument(
         "--input",
-        help="Input file with host list (plain strings) to fetch stats for. Outputs to data/stats.json.",
+        help="Input JSON file with host list (plain strings or objects). Results merge into stats.ok/bad.json."
     )
     parser.add_argument(
         "--discover-peers",
         action="store_true",
-        help="Attempt to gather federation peers for later curation.",
+        help="Attempt to gather federation peers for later curation."
     )
     parser.add_argument(
         "--peer-output",
         default=str(BASE_DIR / "data" / "peer_suggestions.json"),
-        help="File path for discovered peers (use '-' for stdout).",
+        help="File path for discovered peers (use '-' for stdout)."
     )
     return parser.parse_args()
 
 
-def emit_peer_suggestions(hosts: Sequence[str], target: str) -> None:
-    if not hosts:
-        logging.info("No federation peers discovered.")
-        return
+# -------------------------------
+# Saving & loading (split files)
+# -------------------------------
 
-    if target == "-":
-        json.dump(hosts, sys.stdout, ensure_ascii=False, indent=2)
-        sys.stdout.write("\n")
-        logging.info("Emitted %d peer suggestions to stdout", len(hosts))
-        return
-
-    path = Path(target)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(hosts, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    logging.info("Wrote %s", format_relative(path))
-
-
-def format_relative(path: Path) -> str:
+def load_aliases() -> Dict[str, str]:
+    """
+    원본호스트 -> 캐노니컬호스트 매핑.
+    예: {"0xcb.dev": "mastodon.0xcb.dev"}
+    """
+    if not ALIASES_PATH.exists():
+        return {}
     try:
-        return str(path.relative_to(BASE_DIR))
-    except ValueError:
-        return str(path)
+        data = json.loads(ALIASES_PATH.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            # 키/값 모두 정규화
+            out: Dict[str, str] = {}
+            for k, v in data.items():
+                nk = _normalize_host(k)
+                nv = _normalize_host(v)
+                if nk and nv:
+                    out[nk] = nv
+            return out
+    except Exception:
+        pass
+    return {}
 
+def save_aliases(aliases: Dict[str, str]) -> None:
+    ALIASES_PATH.parent.mkdir(parents=True, exist_ok=True)
+    # 예쁘게 저장
+    ALIASES_PATH.write_text(
+        json.dumps(aliases, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8"
+    )
+
+def register_alias(original_host: str, canonical_host: str) -> None:
+    """원본 → 캐노니컬 매핑을 추가/갱신."""
+    aliases = load_aliases()
+    o = _normalize_host(original_host)
+    c = _normalize_host(canonical_host)
+    if not o or not c or o == c:
+        return
+    # 서로 같은 존일 때만 기록(보수적으로)
+    if not _same_zone(o, c):
+        return
+    # 이미 같은 값이면 스킵
+    if aliases.get(o) == c:
+        return
+    aliases[o] = c
+    save_aliases(aliases)
+
+def load_existing_stats_maps() -> Tuple[Dict[str, Dict[str, Any]], Dict[str, Dict[str, Any]]]:
+    """
+    Load existing OK/BAD stats from split files into host->record maps.
+    """
+    def _load(path: Path) -> Dict[str, Dict[str, Any]]:
+        m: Dict[str, Dict[str, Any]] = {}
+        if not path.exists():
+            return m
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(data, list):
+                for e in data:
+                    if isinstance(e, dict) and "host" in e:
+                        m[e["host"]] = e
+        except Exception as exc:
+            logging.warning("Could not load %s: %s", path.name, exc)
+        return m
+
+    ok_map  = _load(STATS_OK_PATH)
+    bad_map = _load(STATS_BAD_PATH)
+
+    # (Optional) Legacy single-file import on first run if split files are missing
+    if not ok_map and not bad_map and STATS_PATH.exists():
+        try:
+            data = json.loads(STATS_PATH.read_text(encoding="utf-8"))
+            if isinstance(data, list):
+                for e in data:
+                    if isinstance(e, dict) and "host" in e:
+                        # naive split: verified goes to OK, others to BAD
+                        (ok_map if e.get("verified_activitypub") else bad_map)[e["host"]] = e
+            logging.info("Migrated legacy stats.json into split files (ok/bad).")
+        except Exception as exc:
+            logging.warning("Could not migrate legacy stats.json: %s", exc)
+
+    return ok_map, bad_map
+
+
+def save_stats_pair_atomic(ok_map: Dict[str, Dict[str, Any]],
+                           bad_map: Dict[str, Dict[str, Any]]) -> None:
+    """
+    Write OK/BAD lists atomically to their respective files.
+    """
+    def _write_atomic(path: Path, items: List[Dict[str, Any]]) -> None:
+        tmp = path.with_suffix(path.suffix + ".tmp")
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp.write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        tmp.replace(path)  # atomic on same filesystem
+
+    ok_list  = sorted(ok_map .values(), key=lambda x: x.get("host", ""))
+    bad_list = sorted(bad_map.values(), key=lambda x: x.get("host", ""))
+
+    _write_atomic(STATS_OK_PATH,  ok_list)
+    _write_atomic(STATS_BAD_PATH, bad_list)
+
+
+def load_checked_hosts() -> Set[str]:
+    checked: Set[str] = set()
+
+    def _merge_from(path: Path) -> None:
+        if not path.exists():
+            return
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(data, list):
+                for e in data:
+                    if isinstance(e, dict):
+                        h = e.get("host")
+                        if isinstance(h, str) and h:
+                            checked.add(_normalize_host(h))
+                        rf = e.get("redirected_from")
+                        if isinstance(rf, str) and rf:
+                            checked.add(_normalize_host(rf))
+                        elif isinstance(rf, (list, tuple, set)):
+                            for x in rf:
+                                if isinstance(x, str) and x:
+                                    checked.add(_normalize_host(x))
+        except Exception:
+            pass
+
+    _merge_from(STATS_OK_PATH)
+    _merge_from(STATS_BAD_PATH)
+    _merge_from(STATS_PATH)  # legacy
+
+    # 별칭 파일도 병합 (원본 호스트는 사실상 검사된 것으로 간주)
+    for src, dst in load_aliases().items():
+        checked.add(_normalize_host(src))
+        checked.add(_normalize_host(dst))
+
+    return checked
+
+
+
+# -------------------------------
+# Classification (good vs bad)
+# -------------------------------
+
+def is_anomalous(record: Dict[str, Any]) -> bool:
+    """
+    Simple anomaly rules:
+      - negative counters
+      - absurd statuses per user ratio
+    """
+    u = record.get("users_total")
+    s = record.get("statuses")
+    am = record.get("users_active_month")
+
+    try:
+        if u is not None and u < 0:
+            return True
+        if s is not None and s < 0:
+            return True
+        if am is not None and am < 0:
+            return True
+        if u and s and u > 0 and (s / u) > 50000:
+            return True
+    except Exception:
+        return True
+    return False
+
+
+def classify_record(record: Dict[str, Any], had_errors: bool) -> str:
+    """
+    Return 'good' or 'bad' based on verification, anomalies, and basic metric presence.
+    """
+    if not record.get("verified_activitypub"):
+        return "bad"
+    if had_errors:
+        return "bad"
+    if is_anomalous(record):
+        return "bad"
+
+    # at least one meaningful metric present
+    if any(record.get(k) is not None for k in ("users_total", "users_active_month", "statuses")):
+        return "good"
+
+    # verified but entirely metric-less -> treat as bad to keep OK file clean
+    return "bad"
+
+
+# -------------------------------
+# Loading inputs
+# -------------------------------
 
 def load_instances(path: Path) -> Iterable[Instance]:
     if not path.exists():
@@ -147,6 +448,9 @@ def load_instances(path: Path) -> Iterable[Instance]:
     if not isinstance(data, list):
         logging.error("Expected a list in %s", path)
         return []
+    
+    checked_hosts = load_checked_hosts()
+    aliases = load_aliases()
 
     instances: List[Instance] = []
     for entry in data:
@@ -160,12 +464,17 @@ def load_instances(path: Path) -> Iterable[Instance]:
         if not host:
             logging.warning("Skipping %s: could not determine host", url)
             continue
+
+        mapped = aliases.get(host, host)
+        if mapped in checked_hosts:
+            continue
+
         instances.append(
             Instance(
-                name=str(entry.get("name", "")).strip() or host,
-                host=host,
-                url=normalize_base_url(url, host),
-                platform=str(entry.get("platform", "")).strip().lower(),
+                name=str(entry.get("name", "")).strip() or mapped,
+                host=mapped,
+                url=normalize_base_url(url or f"https://{mapped}", mapped),
+                platform=str(entry.get("platform", "")).strip().lower() or "unknown",
             )
         )
     return instances
@@ -173,8 +482,8 @@ def load_instances(path: Path) -> Iterable[Instance]:
 
 def load_host_strings(path: Path) -> Iterable[Instance]:
     """
-    문자열 배열로 된 호스트 목록을 로드합니다.
-    예: ["mastodon.social", "pixelfed.social", ...]
+    Load a list of hosts given as strings or dict entries.
+    Already-checked hosts (in ok/bad or legacy) are skipped automatically.
     """
     if not path.exists():
         logging.error("Host list file not found: %s", path)
@@ -190,74 +499,59 @@ def load_host_strings(path: Path) -> Iterable[Instance]:
         logging.error("Expected a list in %s", path)
         return []
 
+    checked_hosts = load_checked_hosts()
+    aliases = load_aliases()
+    skipped_count = 0
     instances: List[Instance] = []
+
     for entry in data:
-        # 문자열인 경우
         if isinstance(entry, str):
-            host = entry.strip().lower()
+            host = _normalize_host(entry)
             if not host:
+                continue
+            mapped = aliases.get(host, host)
+            if mapped in checked_hosts:
+                skipped_count += 1
                 continue
             instances.append(
                 Instance(
-                    name=host,
-                    host=host,
-                    url=f"https://{host}",
-                    platform="unknown",  # 플랫폼은 NodeInfo에서 감지될 것
+                    name=entry.strip() or mapped,
+                    host=mapped,
+                    url=f"https://{mapped}",
+                    platform="unknown",
                 )
             )
-        # 딕셔너리인 경우 (호환성)
         elif isinstance(entry, dict):
             url = str(entry.get("url", "")).strip()
-            if not url:
-                host = str(entry.get("host", "")).strip().lower()
-                if host:
-                    url = f"https://{host}"
-                else:
-                    logging.warning("Skipping entry without URL or host: %s", entry)
-                    continue
             host = extract_host(entry)
             if not host:
                 logging.warning("Skipping %s: could not determine host", url)
                 continue
+            host = _normalize_host(host)
+
+            mapped = aliases.get(host, host)
+            if mapped in checked_hosts:
+                skipped_count += 1
+                continue
             instances.append(
                 Instance(
-                    name=str(entry.get("name", "")).strip() or host,
-                    host=host,
-                    url=normalize_base_url(url, host),
+                    name=str(entry.get("name", "")).strip() or mapped,
+                    host=mapped,
+                    url=normalize_base_url(url or f"https://{mapped}", mapped),
                     platform=str(entry.get("platform", "")).strip().lower() or "unknown",
                 )
             )
-    
-    logging.info("Loaded %d hosts from %s", len(instances), format_relative(path))
+
+    logging.info(
+        "Loaded %d new hosts from %s (%d already checked, skipped)",
+        len(instances), format_relative(path), skipped_count
+    )
     return instances
 
 
-def extract_host(entry: Dict[str, Any]) -> str:
-    host = str(entry.get("host", "")).strip().lower()
-    if host:
-        return host
-
-    url = entry.get("url")
-    if isinstance(url, str) and url:
-        parsed = urlparse(url)
-        if parsed.hostname:
-            return parsed.hostname.lower()
-        return url.strip().lower().rstrip("/")
-    return ""
-
-
-def normalize_base_url(url: str, host: str) -> str:
-    if not url:
-        return f"https://{host}"
-    parsed = urlparse(url)
-    scheme = parsed.scheme or "https"
-    netloc = parsed.netloc or host
-    path = parsed.path.rstrip("/")
-    if not path:
-        path = ""
-    rebuilt = f"{scheme}://{netloc}{path}"
-    return rebuilt.rstrip("/")
-
+# -------------------------------
+# Fetching & parsing
+# -------------------------------
 
 def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any], List[str], Set[str]]:
     record: Dict[str, Any] = {
@@ -276,8 +570,9 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
     languages_seen = set()
     peers: Set[str] = set()
 
+    canonical_base: Optional[str] = None
     try:
-        nodeinfo = fetch_nodeinfo(instance.host)
+        nodeinfo, canonical_base = fetch_nodeinfo(instance.host)  # ← 튜플로 받음
     except FetchError as exc:
         errors.append(f"nodeinfo: {exc}")
         nodeinfo = None
@@ -296,8 +591,24 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
         append_languages(languages, languages_seen, usage.get("languages") if isinstance(usage, dict) else None)
         peers.update(extract_peer_hosts_from_nodeinfo(nodeinfo))
 
+    # ── 여기서 base_url을 결정: NodeInfo가 가리킨 캐노니컬 우선 ──
+    base_url = canonical_base or instance.url
+
+    # 캐노니컬 호스트로 레코드 host 업데이트 (같은 존일 때만)
+    try:
+        if canonical_base:
+            canon_host = _normalize_host(urlparse(canonical_base).hostname or "")
+            if canon_host and _same_zone(canon_host, _normalize_host(instance.host)):
+                if canon_host != _normalize_host(instance.host):
+                    record["redirected_from"] = instance.host
+                    register_alias(instance.host, canon_host)
+                record["host"] = canon_host
+    except Exception:
+        pass
+
     platform_data: Optional[Dict[str, Any]] = None
-    # 플랫폼이 unknown이면 소프트웨어 이름으로 추론
+
+    # 플랫폼 자동 추론 (unknown -> software.name)
     platform = instance.platform
     if platform == "unknown" and record.get("software", {}).get("name"):
         detected_name = record["software"]["name"].lower()
@@ -305,17 +616,17 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
             platform = "mastodon"
         elif "misskey" in detected_name or "calckey" in detected_name or "firefish" in detected_name:
             platform = "misskey"
-    
+
     if platform == "mastodon":
         try:
-            platform_data = fetch_mastodon(instance.url)
+            platform_data = fetch_mastodon(base_url)   # ← 캐노니컬 base 사용
         except FetchError as exc:
             errors.append(f"mastodon: {exc}")
         else:
             record["verified_activitypub"] = True
     elif platform == "misskey":
         try:
-            platform_data = fetch_misskey(instance.url)
+            platform_data = fetch_misskey(base_url)    # ← 캐노니컬 base 사용
         except FetchError as exc:
             errors.append(f"misskey: {exc}")
         else:
@@ -335,7 +646,6 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
     record["languages_detected"] = languages
     return record, errors, peers
 
-
 def extract_peer_hosts_from_nodeinfo(document: Any) -> Set[str]:
     hosts: Set[str] = set()
     if not isinstance(document, dict):
@@ -352,13 +662,13 @@ def extract_peer_hosts_from_nodeinfo(document: Any) -> Set[str]:
                 hosts.update(normalize_peer_list(federation.get("domains")))
     return hosts
 
-
-def fetch_nodeinfo(host: str) -> Optional[Dict[str, Any]]:
+def fetch_nodeinfo(host: str) -> Tuple[Dict[str, Any], str]:
+    expected = _normalize_host(host)
     last_error: Optional[FetchError] = None
     for scheme in ("https", "http"):
-        index_url = f"{scheme}://{host}/.well-known/nodeinfo"
+        index_url = f"{scheme}://{expected}/.well-known/nodeinfo"
         try:
-            index_payload = request_json(index_url)
+            index_payload = request_json(index_url, expected_host=expected)
             if not isinstance(index_payload, dict):
                 raise FetchError("unexpected nodeinfo index payload")
             links = index_payload.get("links")
@@ -370,17 +680,26 @@ def fetch_nodeinfo(host: str) -> Optional[Dict[str, Any]]:
             href = best_link.get("href")
             if not isinstance(href, str) or not href:
                 raise FetchError("nodeinfo link missing href")
-            payload = request_json(href)
+
+            # 같은 존 허용 + 의심 경로 차단
+            _assert_safe_url_relaxed(href, expected)
+
+            # 이 href가 가리키는 호스트/스킴을 '캐노니컬'로 사용
+            parsed = urlparse(href)
+            canon_host = _normalize_host(parsed.hostname or expected)
+            canon_scheme = parsed.scheme or "https"
+            canon_base = f"{canon_scheme}://{canon_host}"
+
+            payload = request_json(href, expected_host=expected)
             if not isinstance(payload, dict):
                 raise FetchError("unexpected nodeinfo document")
-            return payload
+            return payload, canon_base
         except FetchError as exc:
             last_error = exc
             continue
     if last_error is not None:
         raise FetchError(str(last_error))
     raise FetchError("nodeinfo endpoint unreachable")
-
 
 def select_latest_nodeinfo_link(links: Sequence[Any]) -> Optional[Dict[str, Any]]:
     def version_key(link: Dict[str, Any]) -> Tuple[int, int]:
@@ -414,7 +733,8 @@ def fetch_mastodon(base_url: str) -> Dict[str, Any]:
     errors: List[str] = []
     for path in ("/api/v2/instance", "/api/v1/instance"):
         try:
-            payload = request_json(f"{base_url}{path}")
+            host = urlparse(base_url).hostname or ""
+            payload = request_json(f"{base_url}{path}", expected_host=host)
         except FetchError as exc:
             errors.append(str(exc))
             continue
@@ -428,7 +748,8 @@ def fetch_mastodon(base_url: str) -> Dict[str, Any]:
 
 def fetch_mastodon_peers(base_url: str) -> Set[str]:
     try:
-        payload = request_json(f"{base_url}/api/v1/instance/peers")
+        host = urlparse(base_url).hostname or ""
+        payload = request_json(f"{base_url}/api/v1/instance/peers", expected_host=host)
     except FetchError:
         return set()
     return normalize_peer_list(payload)
@@ -482,11 +803,8 @@ def parse_mastodon_payload(payload: Dict[str, Any], is_v2: bool) -> Dict[str, An
 
 
 def fetch_misskey(base_url: str) -> Dict[str, Any]:
-    payload = request_json(
-        f"{base_url}/api/meta",
-        method="POST",
-        json_body={"detail": True},
-    )
+    host = urlparse(base_url).hostname or ""
+    payload = request_json(f"{base_url}/api/meta", method="POST", json_body={"detail": True}, expected_host=host)
     if not isinstance(payload, dict):
         raise FetchError("unexpected meta payload")
 
@@ -517,6 +835,71 @@ def fetch_misskey(base_url: str) -> Dict[str, Any]:
     if isinstance(federation, dict):
         result["peers"] = sorted(normalize_peer_list(federation.get("peers")))
     return result
+
+
+# -------------------------------
+# Utilities
+# -------------------------------
+
+def emit_peer_suggestions(hosts: Sequence[str], target: str) -> None:
+    """
+    Save newly discovered peers, excluding ones already checked (ok/bad/legacy).
+    """
+    if not hosts:
+        logging.info("No federation peers discovered.")
+        return
+
+    checked_hosts = load_checked_hosts()
+    new_hosts = [h for h in hosts if h not in checked_hosts]
+
+    if not new_hosts:
+        logging.info("All discovered peers already checked.")
+        return
+
+    if target == "-":
+        json.dump(new_hosts, sys.stdout, ensure_ascii=False, indent=2)
+        sys.stdout.write("\n")
+        logging.info("Emitted %d peers to stdout.", len(new_hosts))
+        return
+
+    path = Path(target)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(new_hosts, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    logging.info("Wrote %s (%d new peers).", format_relative(path), len(new_hosts))
+
+
+def format_relative(path: Path) -> str:
+    try:
+        return str(path.relative_to(BASE_DIR))
+    except ValueError:
+        return str(path)
+
+
+def extract_host(entry: Dict[str, Any]) -> str:
+    host = str(entry.get("host", "")).strip().lower()
+    if host:
+        return _normalize_host(host)
+
+    url = entry.get("url")
+    if isinstance(url, str) and url:
+        parsed = urlparse(url)
+        if parsed.hostname:
+            return _normalize_host(parsed.hostname)
+        return _normalize_host(url.strip().rstrip("/"))
+    return ""
+
+
+def normalize_base_url(url: str, host: str) -> str:
+    if not url:
+        return f"https://{host}"
+    parsed = urlparse(url)
+    scheme = parsed.scheme or "https"
+    netloc = parsed.netloc or host
+    path = parsed.path.rstrip("/")
+    if not path:
+        path = ""
+    rebuilt = f"{scheme}://{netloc}{path}"
+    return rebuilt.rstrip("/")
 
 
 def update_software(record: Dict[str, Any], software: Any) -> None:
@@ -652,46 +1035,164 @@ def request_json(
     url: str,
     method: str = "GET",
     json_body: Optional[Dict[str, Any]] = None,
+    expected_host: Optional[str] = None,
 ) -> Any:
+    """
+    안전한 JSON 페치:
+      - Content-Type 검증 (application/*json)
+      - 최대 바이트 제한 (MAX_JSON_BYTES)
+      - 동일 호스트 리다이렉트만 허용, MAX_REDIRECTS 제한
+      - 바이너리 의심 경로 차단
+      - 4xx/5xx 상태코드는 FetchError로 변환
+    """
     headers = {
-        "Accept": "application/json",
+        "Accept": "application/json, */*+json; q=0.9",
         "User-Agent": USER_AGENT,
     }
 
-    if requests is not None:
-        try:
-            response = requests.request(
-                method,
-                url,
-                json=json_body,
-                timeout=TIMEOUT,
-                headers=headers,
-            )
-            response.raise_for_status()
-            return response.json()
-        except Exception as exc:  # pragma: no cover - network failure
-            raise FetchError(str(exc))
+    if expected_host:
+        _assert_safe_url_relaxed(url, expected_host)
 
+    if requests is not None:
+    # ----- requests 버전 -----
+        import requests as _req
+        session = _req.Session()
+        session.max_redirects = MAX_REDIRECTS
+
+        class _SameHostAdapter(_req.adapters.HTTPAdapter):
+            def build_response(self, req, resp):
+                r = super().build_response(req, resp)
+                if r.is_redirect:
+                    loc = r.headers.get("location")
+                    if loc:
+                        next_url = urljoin(r.url, loc)
+                        if expected_host:
+                            _assert_safe_url_relaxed(next_url, expected_host)
+                return r
+
+        adapter = _SameHostAdapter(max_retries=0)
+        session.mount("http://", adapter)
+        session.mount("https://", adapter)
+
+        def _do(method: str, url: str, data: Optional[Dict[str, Any]]):
+            try:
+                resp = session.request(
+                    method,
+                    url,
+                    json=data,
+                    timeout=TIMEOUT,
+                    headers=headers,
+                    stream=True,        # 스트리밍
+                    allow_redirects=True,
+                )
+            except _req.exceptions.RequestException as e:
+                # ✅ DNS 실패/연결 실패/타임아웃 등 모든 네트워크 예외를 FetchError로 변환
+                raise FetchError(str(e))
+                # 🔐 상태코드 직접 검사 (HTTPError로 터지지 않게)
+            status = getattr(resp, "status_code", None)
+            if status is None or status >= 400:
+                raise FetchError(f"HTTP {status or 'unknown'} from {url}")
+                # Content-Type 확인
+            ct = (resp.headers.get("Content-Type") or "")
+            if not _is_json_ct(ct):
+                raise FetchError(f"unexpected Content-Type: {ct or 'unknown'}")
+
+            # Content-Length 선검사
+            clen = resp.headers.get("Content-Length")
+            if clen is not None:
+                try:
+                    if int(clen) > MAX_JSON_BYTES:
+                        raise FetchError(f"payload too large: {clen} bytes")
+                except ValueError:
+                    pass
+
+                # 본문 제한 읽기
+            buf = bytearray()
+            for chunk in resp.iter_content(chunk_size=65536):
+                if chunk:
+                    buf.extend(chunk)
+                    if len(buf) > MAX_JSON_BYTES:
+                        raise FetchError(f"payload exceeded {MAX_JSON_BYTES} bytes limit")
+            enc = _sanitize_charset(getattr(resp, "encoding", None))
+            text = buf.decode(enc, errors="replace")
+
+            try:
+                return json.loads(text)
+            except json.JSONDecodeError as exc:
+                raise FetchError(f"Invalid JSON response from {url}: {exc}")
+
+        return _do(method, url, json_body)
+
+    # ----- urllib 버전 -----
     import urllib.error
     import urllib.request
 
     data_bytes: Optional[bytes] = None
+    req_headers = headers.copy()
     if json_body is not None:
-        headers["Content-Type"] = "application/json"
+        req_headers["Content-Type"] = "application/json"
         data_bytes = json.dumps(json_body).encode("utf-8")
 
-    request = urllib.request.Request(url, data=data_bytes, headers=headers, method=method)
-    try:
-        with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
-            charset = response.headers.get_content_charset() or "utf-8"
-            text = response.read().decode(charset)
-    except urllib.error.URLError as exc:  # pragma: no cover - network failure
-        raise FetchError(str(exc))
+    # 수동 리다이렉트 처리(동일 호스트만)
+    current_url = url
+    for _ in range(MAX_REDIRECTS + 1):
+        if expected_host:
+            _assert_safe_url_relaxed(current_url, expected_host)
 
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError as exc:  # pragma: no cover - invalid response
-        raise FetchError(f"Invalid JSON response from {url}: {exc}")
+        request = urllib.request.Request(current_url, data=data_bytes, headers=req_headers, method=method)
+        try:
+            with urllib.request.urlopen(request, timeout=TIMEOUT) as resp:
+                # 리다이렉트 처리
+                if 300 <= resp.status < 400:
+                    loc = resp.headers.get("Location")
+                    if not loc:
+                        raise FetchError(f"redirect without location from {current_url}")
+                    next_url = urljoin(current_url, loc)
+                    if expected_host:
+                        _assert_safe_url_relaxed(next_url, expected_host)
+                    current_url = next_url
+                    # 다음 루프로 (리다이렉트 hop)
+                    continue
+
+                # 🔐 상태코드 검사
+                if resp.status >= 400:
+                    raise FetchError(f"HTTP {resp.status} from {current_url}")
+
+                # Content-Type 검사
+                ct = resp.headers.get("Content-Type") or ""
+                if not _is_json_ct(ct):
+                    raise FetchError(f"unexpected Content-Type: {ct or 'unknown'}")
+
+                # Content-Length 선검사
+                clen = resp.headers.get("Content-Length")
+                if clen is not None:
+                    try:
+                        if int(clen) > MAX_JSON_BYTES:
+                            raise FetchError(f"payload too large: {clen} bytes")
+                    except ValueError:
+                        pass
+
+                # 제한 읽기
+                buf = bytearray()
+                while True:
+                    chunk = resp.read(65536)
+                    if not chunk:
+                        break
+                    buf.extend(chunk)
+                    if len(buf) > MAX_JSON_BYTES:
+                        raise FetchError(f"payload exceeded {MAX_JSON_BYTES} bytes limit")
+                enc = _sanitize_charset(resp.headers.get_content_charset())
+                text = buf.decode(enc, errors="replace")
+
+        except urllib.error.URLError as exc:
+            raise FetchError(str(exc))
+
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError as exc:
+            raise FetchError(f"Invalid JSON response from {current_url}: {exc}")
+
+    raise FetchError("too many redirects")
 
 
 if __name__ == "__main__":
