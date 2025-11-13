@@ -46,7 +46,7 @@ main {
   grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
-  max-width: min(100%, 1200px);
+  max-width: 100vw;
   margin: 0;
 }
 
@@ -293,7 +293,8 @@ td {
 }
 
 .cell-name {
-  min-width: 16rem;
+  min-width: 10rem;
+  max-width: 15rem;
 }
 
 .cell-name__title {

@@ -4,22 +4,22 @@
   const numberLocale = locale || "ko-KR";
 
   const KNOWN_SOFTWARE_LABELS = {
-    akkoma: "아콤마",
+    akkoma: "아코마",
     bookwyrm: "BookWyrm",
     calckey: "Calckey",
     firefish: "파이어피쉬",
     friendica: "Friendica",
     funkwhale: "Funkwhale",
-    ghost: "고스트",
-    gotosocial: "고투소셜",
+    ghost: "Ghost",
+    gotosocial: "GoToSocial",
     hubzilla: "Hubzilla",
     kbin: "Kbin",
-    lemmy: "렘미",
+    lemmy: "Lemmy",
     mastodon: "마스토돈",
     misskey: "미스키",
-    peertube: "피어튜브",
-    pixelfed: "픽셀페드",
-    pleroma: "플레로마",
+    peertube: "PeerTube",
+    pixelfed: "PixelFed",
+    pleroma: "Pleroma",
     sharkey: "Sharkey",
     streams: "Streams",
     takahe: "Takahē",
@@ -420,7 +420,7 @@
       }
 
       const languagesCell = document.createElement("td");
-      languagesCell.textContent = formatLanguages(row, strings);
+      languagesCell.textContent = formatLanguages(entry, strings);
 
       const usersTotalCell = document.createElement("td");
       usersTotalCell.textContent = formatNumber(stats?.users_total);
@@ -692,8 +692,21 @@
     if (!Number.isFinite(numberValue)) {
       return strings.no_data;
     }
-    return numberValue.toLocaleString(numberLocale);
+
+    try {
+      // 지정된 로케일로 먼저 시도
+      return numberValue.toLocaleString(numberLocale);
+    } catch (error) {
+      // 로케일이 지원되지 않거나 이상하면 브라우저 기본 로케일로 fallback
+      try {
+        return numberValue.toLocaleString();
+      } catch {
+        // 이것마저도 안 되면 그냥 숫자 그대로
+        return String(numberValue);
+      }
+    }
   }
+
 
   function stringOrNull(value) {
     if (value === null || value === undefined) {
