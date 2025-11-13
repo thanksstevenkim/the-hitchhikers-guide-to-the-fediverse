@@ -4,11 +4,21 @@
     "intro": "한국어로 운영되는 페디버스 인스턴스를 수동으로 정리한 목록입니다.",
     "search_label": "검색어",
     "search_placeholder": "이름 또는 설명 검색",
+    "software_filter_heading": "소프트웨어 분류",
+    "software_all": "전체 소프트웨어",
+    "software_unknown": "기타",
+    "software_label_mastodon": "마스토돈",
+    "software_label_misskey": "미스키",
+    "software_label_pleroma": "플레로마",
+    "software_label_akkoma": "아콤마",
+    "software_label_firefish": "파이어피쉬",
     "platform_filter_label": "플랫폼",
     "platform_all": "전체",
     "platform_mastodon": "Mastodon",
     "platform_misskey": "Misskey",
     "platform_lemmy": "Lemmy",
+    "language_filter_label": "언어",
+    "language_all": "전체 언어",
     "table_heading": "인스턴스 목록",
     "table_caption": "한국어 Fediverse 인스턴스 목록",
     "table_aria": "한국어 Fediverse 인스턴스 목록",
@@ -33,6 +43,6 @@
     "error_fetch": "데이터를 불러오는 중 오류가 발생했습니다. 로컬에서 테스트하는 경우 <code>python -m http.server</code>로 간단한 서버를 실행하세요.",
     "sort_users_total": "총 사용자 수로 정렬",
     "sort_users_active": "월간 활성 사용자 수로 정렬",
-    "footer_note": "데이터는 data/instances.json과 data/stats.json 파일을 수정해 갱신할 수 있습니다."
+    "footer_note": "데이터는 data/instances.json과 data/stats.ok.json 파일을 수정해 갱신할 수 있습니다."
   }
 }

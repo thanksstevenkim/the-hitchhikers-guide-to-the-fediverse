@@ -12,8 +12,14 @@
       <h1 id="page-title"></h1>
       <p id="page-intro"></p>
     </header>
-    <main>
-      <section aria-labelledby="directory-title">
+    <main class="layout">
+      <aside class="sidebar" aria-labelledby="softwareFilterTitle">
+        <h2 id="softwareFilterTitle"></h2>
+        <nav aria-labelledby="softwareFilterTitle">
+          <ul id="softwareFilter" class="sidebar__list"></ul>
+        </nav>
+      </aside>
+      <section aria-labelledby="directory-title" class="directory">
         <h2 id="directory-title" class="sr-only"></h2>
         <form id="filterForm" class="filter-bar" role="search">
           <div class="filter-field">
@@ -21,8 +27,8 @@
             <input type="search" id="q" name="q" autocomplete="off" />
           </div>
           <div class="filter-field filter-field--narrow">
-            <label for="platformFilter" id="platformLabel"></label>
-            <select id="platformFilter" name="platform"></select>
+            <label for="languageFilter" id="languageLabel"></label>
+            <select id="languageFilter" name="language"></select>
           </div>
         </form>
         <div class="table-container">
