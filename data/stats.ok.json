@@ -114814,6 +114814,21 @@
     "nodeinfo_description": "OwO im dead"
   },
   {
+    "host": "fedi.partidopirata.com.ar",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.19.0+git-ab2044e"
+    },
+    "open_registrations": false,
+    "users_total": 5,
+    "users_active_month": null,
+    "statuses": 2571,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "partidopirata.com.ar"
+  },
+  {
     "host": "fedi.pavluk.org",
     "verified_activitypub": true,
     "software": {
@@ -143045,6 +143060,24 @@
     ],
     "fetched_at": "2025-11-19T09:18:08Z",
     "nodeinfo_description": "This GoToSocial user hasn&#39;t written a bio yet!"
+  },
+  {
+    "host": "gts.pavot.ca",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.20.1+git-ee4294a"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 153,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pavot.ca",
+    "nodeinfo_description": "This is a personal instance. You can follow my account here."
   },
   {
     "host": "gts.pentagirls.gay",
@@ -239906,7 +239939,8 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2025-11-22T13:24:34Z",
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pawslut.party",
     "nodeinfo_description": "local furry creates a mitra instance"
   },
   {
@@ -275905,6 +275939,4675 @@
     "nodeinfo_description": "Welcome to Pantheon Pages, your ultimate destination for exploring the fascinating world of mythology! Dive into monthly blogs that unravel myths, legends, and folklore."
   },
   {
+    "host": "pantsfree.cc",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pleroma",
+      "version": "2.9.1"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 462,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "your source for pants removal updates"
+  },
+  {
+    "host": "panyapanya.xsns.jp",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2025.10.2"
+    },
+    "open_registrations": false,
+    "users_total": 6,
+    "users_active_month": null,
+    "statuses": 2075,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "がんばれ！ぱにゃにゃんだー帝国！\n独裁SNSです。\n\nこのサーバーに登録してあるカスタム絵文字は各ライセンスに従ってご使用ください。\nライセンスが書いてないもの、インポート禁止と書いてあるもの、その他に分類されているものは使用しないでください。"
+  },
+  {
+    "host": "pao.moe",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.8"
+    },
+    "open_registrations": true,
+    "users_total": 104,
+    "users_active_month": 7,
+    "statuses": 27557,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "pao.moeインスタンスのテーマは主に <em>cat</em> <em>FOSS</em> <em>*nix</em> です．<del>ゆるく</del>ハードに語り合いましょう．\r\n「エンジニアはコードで殴り合うべきだ」を標語に，長期間に渡り安定稼働するMastodonインスタンスを目指して，2017年4月14日より運用を開始しました．\r\n\r\n上記のメッセージは開設当初から一切変更されていま（´・ω・） ｽn..."
+  },
+  {
+    "host": "paopu.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 4,
+    "statuses": 505,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "The fediverse home of the Kingdom Hearts Database, the ultimate resource for Kingdom Hearts news, information, and media from the Kingdom Hearts series!"
+  },
+  {
+    "host": "paperbay.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.2.21"
+    },
+    "open_registrations": true,
+    "users_total": 7,
+    "users_active_month": 2,
+    "statuses": 2719,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "papercaton.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2025.2.0"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": null,
+    "statuses": 72,
+    "languages_detected": [
+      "ja"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "勉強用に建てた個鯖です"
+  },
+  {
+    "host": "papergamer.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Next generation digital and paper roleplaying games"
+  },
+  {
+    "host": "paperjale.eus",
+    "verified_activitypub": true,
+    "software": {
+      "name": "bookwyrm",
+      "version": "0.7.4"
+    },
+    "open_registrations": true,
+    "users_total": 1463,
+    "users_active_month": 251,
+    "statuses": 12088,
+    "languages_detected": [
+      "eu",
+      "en",
+      "lv",
+      "sl"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Irakurketa eta iritzi soziala"
+  },
+  {
+    "host": "papi.n1l.dev",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2025.2.0-n"
+    },
+    "open_registrations": false,
+    "users_total": 69,
+    "users_active_month": null,
+    "statuses": 341730,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Fediverseに存在するこじんまりとした村"
+  },
+  {
+    "host": "papierlos-lesen.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 766,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Digitales Schmökern mit eBook-Readern, Tablets und Smartphones"
+  },
+  {
+    "host": "papiertaverne.ch",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 22,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Ein Blog über Pen &amp; Paper Rollenspiele"
+  },
+  {
+    "host": "papypolca.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 10,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Écriture, jeux de rôle, lives et podcasts"
+  },
+  {
+    "host": "para1.k.rainbow-lollipop.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "flohmarkt",
+      "version": "0.13.0"
+    },
+    "open_registrations": true,
+    "users_total": 7,
+    "users_active_month": 0,
+    "statuses": 33,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A flohmarkt instance. Sell and buy 2nd hand items from other users."
+  },
+  {
+    "host": "parang.apartments",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2024.11.0-alpha.1"
+    },
+    "open_registrations": false,
+    "users_total": 89,
+    "users_active_month": null,
+    "statuses": 121447,
+    "languages_detected": [
+      "en",
+      "ko"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "파랑 아파트는 개인이 운영하는 서버입니다. <br>\n특별한 사유가 없다면 운영자들의 1차 지인들만 모아둡니다.<br>\n<br>\n피로감 없는 SNS를 지향하고 있습니다. <br>\n다들 편히 지내주세요.<br>\n<br>\n<h5>파랑 아파트는 검색 엔진의 크롤링과 AI학습 봇을 차단하고 있습니다.</h5>"
+  },
+  {
+    "host": "parasocial.network",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.2.12"
+    },
+    "open_registrations": true,
+    "users_total": 5,
+    "users_active_month": 2,
+    "statuses": 118,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "parcel.birdnest.day",
+    "verified_activitypub": true,
+    "software": {
+      "name": "iceshrimp",
+      "version": "2023.12.14"
+    },
+    "open_registrations": false,
+    "users_total": 5,
+    "users_active_month": 2,
+    "statuses": 1737,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "The cozy personal instance, maintained by snowynest."
+  },
+  {
+    "host": "parcero.casa",
+    "verified_activitypub": true,
+    "software": {
+      "name": "akkoma",
+      "version": "3.16.0-0-g6d88834"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 1991,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Parcero: The cooler fediverse server"
+  },
+  {
+    "host": "parens.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.1"
+    },
+    "open_registrations": false,
+    "users_total": 10,
+    "users_active_month": 6,
+    "statuses": 4821,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "parenti.sh",
+    "verified_activitypub": true,
+    "software": {
+      "name": "lemmy",
+      "version": "0.17.4"
+    },
+    "open_registrations": true,
+    "users_total": 24,
+    "users_active_month": 0,
+    "statuses": 12,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "parentingpatch.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": true,
+    "users_total": 7,
+    "users_active_month": 17,
+    "statuses": 1708,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Where Parents Grow"
+  },
+  {
+    "host": "paretocodex.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Subverting zero sum games into rising tides"
+  },
+  {
+    "host": "pari.cafe",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2025.11.0-pari.0"
+    },
+    "open_registrations": true,
+    "users_total": 1168,
+    "users_active_month": 275,
+    "statuses": 295412,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "歡迎蒞臨Pari Cafe. <br />\nWelcome to Pari Cafe. <br />\n<br />\n一個多語言Misskey實例 =)<br />\nA multilingual Misskey instance =)<br />\n<br />\n鏡像站（源）: <a href=\"https://pari.icu\">pari.icu</a><br />\nMirror(Origin): <a href=\"https://pari.icu\">pari.icu</a><br />"
+  },
+  {
+    "host": "parkertried.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.7"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 41,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "parody.town",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 9,
+    "users_active_month": 7,
+    "statuses": 542,
+    "languages_detected": [
+      "en",
+      "es"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A place for parodies."
+  },
+  {
+    "host": "parrocchie.masto.host",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 11,
+    "users_active_month": 10,
+    "statuses": 333,
+    "languages_detected": [
+      "en",
+      "it"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Comunità Digitale. Per info o per chiedere l'invito scrivere a: parrocchie@tutamail.com ."
+  },
+  {
+    "host": "parrygod.club",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 60,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pars.ee",
+    "verified_activitypub": true,
+    "software": {
+      "name": "akkoma",
+      "version": "3.15.2-926-g7f6ebcb1-develop"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 1608,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Akkoma: The cooler fediverse server"
+  },
+  {
+    "host": "parsa.transmom.love",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.10.0 git-89ee9d5"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 678,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "witch of mirrors."
+  },
+  {
+    "host": "parsec.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.9"
+    },
+    "open_registrations": true,
+    "users_total": 5,
+    "users_active_month": 1,
+    "statuses": 2,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Be excellent to each other, sei humanistisch, keine Nazis, keine Hassrede. \r\nSprache ist hier Deutsch, Englisch ist erlaubt. Kostenpflichtig mit Mehrwert (Mail, Cloud, Chat)"
+  },
+  {
+    "host": "parth-shah-writer.ghost.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Actionable SEO insights for solopreneurs and small businesses. No fluff, no clickbait—just real strategies that work."
+  },
+  {
+    "host": "partialthoughts.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Biased and incomplete ideas"
+  },
+  {
+    "host": "partner.oppaiman.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "How to make the most of Oppai Platform"
+  },
+  {
+    "host": "partners.eqtube.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 14,
+    "users_active_month": 5,
+    "statuses": 274,
+    "languages_detected": [
+      "ru"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Платформа для видеоконтента для независимых СМИ и НКО со встроенным механизмом обхода блокировок."
+  },
+  {
+    "host": "partnerships.ghost.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Thoughts, stories, and ideas"
+  },
+  {
+    "host": "partnerskapetloft.se",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 3,
+    "statuses": 78,
+    "languages_detected": [
+      "en",
+      "no"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "ett kommunledningspartnerskap"
+  },
+  {
+    "host": "partonsalaventure.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "fr",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Bienvenue sur notre blog de voyage. Nous sommes un couple d&#x27;aventuriers passionnés, prêts à partager avec vous nos expériences uniques et nos découvertes à travers le monde."
+  },
+  {
+    "host": "partswithpresley.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 53,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Break through procrastination"
+  },
+  {
+    "host": "party.bonkwave.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "owncast",
+      "version": "0.2.3"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 28,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "This is a live bonk wave streaming server powered by Owncast."
+  },
+  {
+    "host": "partyon.xyz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.6"
+    },
+    "open_registrations": true,
+    "users_total": 45,
+    "users_active_month": 2,
+    "statuses": 53800,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PartyOn, is a community for artist, activist, makers and hackers of the decentralized generation!"
+  },
+  {
+    "host": "pasabo.ca",
+    "verified_activitypub": true,
+    "software": {
+      "name": "bookwyrm",
+      "version": "0.8.2"
+    },
+    "open_registrations": false,
+    "users_total": 6,
+    "users_active_month": 1,
+    "statuses": 783,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "reading in small bites"
+  },
+  {
+    "host": "paschelinos-poesie.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 43,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Wörter erschaffen Bilder"
+  },
+  {
+    "host": "paseo.casacamelia.xyz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2025.11.0"
+    },
+    "open_registrations": true,
+    "users_total": 37,
+    "users_active_month": null,
+    "statuses": 24885,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Fediverse各所に遍在する「つばきさん」の個人サーバー。\n特にこれと言って際立った特徴のない、極普通の汎用サーバーです。\n\n話題に特に制約はありませんが、二次元美少女えちかわな話題も多いため、18歳以上推奨。"
+  },
+  {
+    "host": "paskell.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 32,
+    "languages_detected": [
+      "en",
+      "it"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A personal single-user Mastodon instance."
+  },
+  {
+    "host": "pastafaristes.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.4"
+    },
+    "open_registrations": true,
+    "users_total": 5,
+    "users_active_month": 2,
+    "statuses": 3141,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "La petite instance de @sacripanne et @noecendrier"
+  },
+  {
+    "host": "pastafriday.club",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "5.2.1"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 17,
+    "languages_detected": [
+      "en",
+      "cy"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A tiny Pastafarian refuge."
+  },
+  {
+    "host": "pastel-pink.life",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.1+glitch"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 10855,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pastoral-corgi.pikapod.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pastoraltidskrift.se",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "sv",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "SPT är en tidning för alla med intresse för kyrka och kristen tro – lekfolk, präster, diakoner och andra."
+  },
+  {
+    "host": "pastoredarchino.ch",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 457,
+    "languages_detected": [
+      "en",
+      "it"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "la verità vi farà liberi"
+  },
+  {
+    "host": "pastorhogg.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 34357,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Curating a Life in Christ"
+  },
+  {
+    "host": "pastryand.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Thoughts, stories and ideas."
+  },
+  {
+    "host": "pastwind.top",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2025.10.0"
+    },
+    "open_registrations": false,
+    "users_total": 139,
+    "users_active_month": null,
+    "statuses": 49014,
+    "languages_detected": [
+      "ja",
+      "en",
+      "ko"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "本站從即日起進入維護模式，不開放註冊，會持續營運一段時間。建議使用者搬遷到新站台 https://mistyreverie.org 或其他站台。"
+  },
+  {
+    "host": "pasx.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 18,
+    "users_active_month": 17,
+    "statuses": 5035,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "patagon.space",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "es",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Comunidad de Ciberseguridad e Iniciativas Espaciales"
+  },
+  {
+    "host": "patamiel.xyz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pleroma",
+      "version": "2.8.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 50,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Instance personnelle de l'ourson David"
+  },
+  {
+    "host": "patashnik.club",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 7,
+    "users_active_month": 6,
+    "statuses": 12023,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pataterie.ca",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 40,
+    "users_active_month": 13,
+    "statuses": 103257,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Pareil que Twitter mais pas plein de pubs, d'algorithmes cringe, de wakos de droite et j'vend pas vos données au y'abe. Parle au reste du ✨fediverse✨ et hébergé avec amour à Hochelag ❤️"
+  },
+  {
+    "host": "patavium.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.7"
+    },
+    "open_registrations": true,
+    "users_total": 39,
+    "users_active_month": 5,
+    "statuses": 1802,
+    "languages_detected": [
+      "en",
+      "it"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Istanza Mastodon della community padovana"
+  },
+  {
+    "host": "patches.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.2"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 252,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "patchouli.today",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 24567,
+    "languages_detected": [
+      "ja",
+      "zh",
+      "ko"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "本服务器不允许注册。"
+  },
+  {
+    "host": "patchwork.channel.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.0-alpha.2"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "patchwork.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.0-alpha.5"
+    },
+    "open_registrations": true,
+    "users_total": 74,
+    "users_active_month": 76,
+    "statuses": 79,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pate.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "Emissary",
+      "version": "0.9.0"
+    },
+    "open_registrations": false,
+    "users_total": 5,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "patecrouteuk.co.uk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A unique culinary contest for the masters of pâté en croûte, presented by CLASSIC FINE FOODS."
+  },
+  {
+    "host": "patesadon.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.0.2"
+    },
+    "open_registrations": true,
+    "users_total": 81,
+    "users_active_month": 9,
+    "statuses": 104162,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pateti.co",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.1.18"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 44,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pathetic.systems",
+    "verified_activitypub": true,
+    "software": {
+      "name": "Iceshrimp.NET",
+      "version": "2025.1-beta5.patch3.security2+5a8ddfdddb"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 146,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "pathetic.systems"
+  },
+  {
+    "host": "patpatpat.xyz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "snac",
+      "version": "2.79"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "patrick.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.3"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 4,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "patrickflynn.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.1"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "no",
+      "da"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A personal server for myself."
+  },
+  {
+    "host": "patricklear.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 87,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "patrickm.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Hey, I’m Patrick 👋 I share what I learn about software engineering (mostly Python), AI, product development, and life as a dev."
+  },
+  {
+    "host": "patrickritter.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 12,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Klima&amp;Kunst, Diversität, Kulturwissenschaft"
+  },
+  {
+    "host": "patricus.5v.pl",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8.3"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "do it, but do it right"
+  },
+  {
+    "host": "patrons.gregoryashe.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Patronage for author Gregory Ashe"
+  },
+  {
+    "host": "patternclub.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 5,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "patternsandscale.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Thinking through systems — technological, organizational, human"
+  },
+  {
+    "host": "pattic.school",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Thoughts, stories and ideas."
+  },
+  {
+    "host": "patuleia.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 715,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Fuck off!!!"
+  },
+  {
+    "host": "paul-mcmanus.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 5,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Just another WordPress site"
+  },
+  {
+    "host": "paul.kinlan.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "paul.kinlan.me",
+      "version": "0.0.1"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "paul.schnuerle.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.19.2+git-90851fc"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 1,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pauladamdavis.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Recovering front-end developer, now I just write JavaScript"
+  },
+  {
+    "host": "paulatothepeople.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "under construction"
+  },
+  {
+    "host": "paulcaggegi.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": true,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 39,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Sharing my art from website instance"
+  },
+  {
+    "host": "pauline.gateofhope.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Welcome to my blog! I am so glad that you are here to join me as I embark on this journey of sharing my heart, my story, and my passion for supporting refugees in Louisville, Kentucky."
+  },
+  {
+    "host": "pauljacobson.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 4444,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Life and its many opportunities"
+  },
+  {
+    "host": "paulobrien.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Meet Paul O’Brien, a West London resident who’s a passionate reader, crime documentary enthusiast, current affairs buff, and tech aficionado, especially when it comes to Apple"
+  },
+  {
+    "host": "pauls.recipes",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A selection of functional, straightforward, no-nonsense, tasty recipes"
+  },
+  {
+    "host": "paulvanbuuren.nl",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 586,
+    "languages_detected": [
+      "en",
+      "nl"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "glutenvrije websites sinds 1998"
+  },
+  {
+    "host": "pavia.ils.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 20,
+    "languages_detected": [
+      "en",
+      "it"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "ILS Sede Locale di Pavia"
+  },
+  {
+    "host": "paw.photo",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 24,
+    "users_active_month": 5,
+    "statuses": 118,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Paw Photo is an image sharing platform for pets with paws, preferably. But other animals are accepted."
+  },
+  {
+    "host": "pawb.fun",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.0+glitch"
+    },
+    "open_registrations": true,
+    "users_total": 1861,
+    "users_active_month": 245,
+    "statuses": 235784,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "This instance aimed at any and all within the furry fandom, though anyone is welcome! We're friendly towards members of the LGBTQ+ community and aiming to offer a safe space for our users."
+  },
+  {
+    "host": "pawb.ink",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 9,
+    "users_active_month": 9,
+    "statuses": 27,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A Pixelfed (image sharing) instance at any and all within the furry fandom, though anyone is welcome! A part of the Pawb.Social Fediverse network."
+  },
+  {
+    "host": "pawb.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "lemmy",
+      "version": "0.19.11"
+    },
+    "open_registrations": true,
+    "users_total": 2147,
+    "users_active_month": 244,
+    "statuses": 11696,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pawoo.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.1.18"
+    },
+    "open_registrations": true,
+    "users_total": 978191,
+    "users_active_month": 18162,
+    "statuses": 76208266,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T17:25:35Z"
+  },
+  {
+    "host": "paws.press",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.2.17"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 4199,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "paxation.info",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "3.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 65,
+    "users_active_month": 0,
+    "statuses": 1274,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "paxling.se",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "de",
+      "es"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Technoscience Studies"
+  },
+  {
+    "host": "payalsinha.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "All about what I do, what I think... Engineering, Lessons in Corporate world, etc."
+  },
+  {
+    "host": "paydayreport.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Payday Report is a leading independent labor outlet lead by Emmy-nominated reporter Mike Elk"
+  },
+  {
+    "host": "payouts.fun",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "See real gambling wins posted by the community — from huge slot hits to crazy multipliers. Join Payouts.fun and share your payout today!"
+  },
+  {
+    "host": "payravi.xyz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.4"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 2823,
+    "languages_detected": [
+      "en",
+      "sl"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Personal server of Kevin Payravi (kevinpayravi.com)"
+  },
+  {
+    "host": "pb.craignt.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 1208,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "An invite only server for members of the 90s Craig online community."
+  },
+  {
+    "host": "pbs.idv.tw",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2+glitch"
+    },
+    "open_registrations": false,
+    "users_total": 26,
+    "users_active_month": 14,
+    "statuses": 662834,
+    "languages_detected": [
+      "ja",
+      "en",
+      "ko"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "本站是參考 https://unnerv.jp/about/more 所設置，目標是能夠在聯邦宇宙提供與台灣公眾有關的即時資訊。"
+  },
+  {
+    "host": "pc.cafe",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 6,
+    "users_active_month": 5,
+    "statuses": 7353,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Project accounts for Technicat LLC"
+  },
+  {
+    "host": "pcblueprints.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "All the know-how you&#x27;ll ever need to build your next dream PC."
+  },
+  {
+    "host": "pcgamer.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.4"
+    },
+    "open_registrations": true,
+    "users_total": 355,
+    "users_active_month": 16,
+    "statuses": 39943,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "The Mastodon instance of the PC gamer, by the PC gamer, for the PC gamer."
+  },
+  {
+    "host": "pcgiveaway.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Win or Build a PC - Start Your Tech Future"
+  },
+  {
+    "host": "pchelp.cc",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pchxyz.dscloud.mobi",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 40,
+    "languages_detected": [
+      "en",
+      "da"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Let&#039;s federate!"
+  },
+  {
+    "host": "pcmsys.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "pt",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Descubra mais sobre como a PCMsys pode contribuir para o andamento e garantir o sucesso da conclusão do seu empreendimento industrial."
+  },
+  {
+    "host": "pcworms.ir",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.7"
+    },
+    "open_registrations": false,
+    "users_total": 7,
+    "users_active_month": 5,
+    "statuses": 64,
+    "languages_detected": [
+      "fa"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "بهنام و فاروق دو کرمِ کامپیوتر هستن که همراه دوستاشون از تجربیات خودشون در اینجا می‌نویسن 😉"
+  },
+  {
+    "host": "pdbowman.studio",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 147,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pds-sp.whey.party",
+    "verified_activitypub": true,
+    "software": {
+      "name": "activitypods"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": 3,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pdx.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 569,
+    "users_active_month": 167,
+    "statuses": 211512,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Welcome! pdx.social is an online community for people living in the greater Portland, OR region. 🌲 Established April 6th, 2017 🌲"
+  },
+  {
+    "host": "peace.parts",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "peachpie.theatl.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "piefed",
+      "version": "1.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 9,
+    "users_active_month": 4,
+    "statuses": 38,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "theATL.social hosts PeachPie and other Fediverse services. Accounts are available on PeachPie for financial contributors.\r\n\nThis site is only for u…"
+  },
+  {
+    "host": "peak.pub",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A private server to own the means of consumption."
+  },
+  {
+    "host": "peakair.info",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "peakmoti.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "zh",
+      "ja"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "为全球滑雪者提供的滑雪目的地指南，包括不限于滑雪场、住宿、交通、餐饮、天气、安全等信息，以及粉雪爱好者关注的滑雪装备、雪崩安全、野雪路线等专业知识"
+  },
+  {
+    "host": "peaknotes.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "peakx.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 6,
+    "users_active_month": 1,
+    "statuses": 18,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Setup to support a small group of friends and family to keep the conversation alive and healthy."
+  },
+  {
+    "host": "peanutsmp.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "🥜 Welcome to PeanutSMP, a friendly, community-focused survival server where the goal is simple: enjoy Minecraft the way you want to play."
+  },
+  {
+    "host": "pear.cat",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.0"
+    },
+    "open_registrations": false,
+    "users_total": 8,
+    "users_active_month": 7,
+    "statuses": 388,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A fun instance full of fruits and freets (posts)"
+  },
+  {
+    "host": "peasec.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 526,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "peasej.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 5,
+    "users_active_month": 1,
+    "statuses": 68,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "pebkac.crow-media.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Just another dumbass with a homelab."
+  },
+  {
+    "host": "peckacyber.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Practical Cybersecurity from Research to Implementation"
+  },
+  {
+    "host": "peculiar-dog.pikapod.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Thoughts, stories and ideas"
+  },
+  {
+    "host": "peculiar.florist",
+    "verified_activitypub": true,
+    "software": {
+      "name": "iceshrimp",
+      "version": "2023.12.14"
+    },
+    "open_registrations": true,
+    "users_total": 137,
+    "users_active_month": 39,
+    "statuses": 99482,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Serveur Iceshrimp général francophone, hébergé en France métropolitaine, ouvert à tous (pas besoin d’être fleuriste, je vous assure).\nOn a trop d'emoji et la modération est prise à cœur avec un certain soin sur la protection des minorités (queers, racisées, …). \n\n🌳 Bienvenue dans ce charmant petit coin de verdure. Pas besoin d’avoir la main verte. Ici, on cultive notre petit jardin social qui s’épanouit à merveille dans le Fediverse. 🌱\n\nLes serveurs sont situés en France métropolitaine. \n📝 S’il vous plaît, lisez les règles avant de vous inscrire : https://peculiar.florist/@pelegrine/pages/regles\n📶 https://status.peculiar.florist"
+  },
+  {
+    "host": "peekachello.art",
+    "verified_activitypub": true,
+    "software": {
+      "name": "writefreely",
+      "version": "0.16.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 32,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "peekeend.nl",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.0"
+    },
+    "open_registrations": true,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 208,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "This is a single account server"
+  },
+  {
+    "host": "peen.dev",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.2"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 54,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Home of the NiElS"
+  },
+  {
+    "host": "peer.acidfog.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 31,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A Peertube Instance dedicated to the Central Illinois band Acid Fog"
+  },
+  {
+    "host": "peer.adalta.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "5.2.1"
+    },
+    "open_registrations": true,
+    "users_total": 5,
+    "users_active_month": 5,
+    "statuses": 7783,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peer.madiator.cloud",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 16,
+    "users_active_month": 4,
+    "statuses": 402,
+    "languages_detected": [
+      "en",
+      "es"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Madiator2011's Personal Video Space"
+  },
+  {
+    "host": "peer.mrschneeball.xyz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 3,
+    "statuses": 198,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peer.pvddhhnk.nl",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 7,
+    "users_active_month": 0,
+    "statuses": 22,
+    "languages_detected": [
+      "en",
+      "nl"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Dit is de officiële PeerTube instance van Partij voor de Dieren Hollands Noorderkwartier."
+  },
+  {
+    "host": "peer.raise-uav.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.0.1"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 24941,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Original Art, Music and Technology Videos."
+  },
+  {
+    "host": "peer.taibsu.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "taiBsus video broadcasting platform. Welcome!"
+  },
+  {
+    "host": "peer.tube",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 11,
+    "users_active_month": 6,
+    "statuses": 146,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "(WIP) a showcase instance of intersting content in PeerTube"
+  },
+  {
+    "host": "peerate.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.3"
+    },
+    "open_registrations": true,
+    "users_total": 85,
+    "users_active_month": 33,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Peerate.fr, l'instance peertube vous permettant de vous abonner à vos créateur⋅ices préféré⋅e⋅s."
+  },
+  {
+    "host": "peering.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.1"
+    },
+    "open_registrations": false,
+    "users_total": 15,
+    "users_active_month": 7,
+    "statuses": 6367,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "peertube-beeldverhalen-u36587.vm.elestio.app",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "5.2.1"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 2,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube-demo.lern.link",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 8,
+    "users_active_month": 3,
+    "statuses": 26,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube-docker.cpy.re",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 3,
+    "languages_detected": [
+      "en",
+      "nl"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube docker"
+  },
+  {
+    "host": "peertube-us.howlround.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.3"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A PeerTube instance hosted in the US for the HowlRound TV project."
+  },
+  {
+    "host": "peertube.0011.lt",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.30p87.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.aegrel.ee",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "This PeerTube instance is intended to just help out with discovering and hosting good/original technology-related videos on PeerTube"
+  },
+  {
+    "host": "peertube.amicale.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.3.3"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 1231,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.anasodon.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 28,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "あなその個人用PeerTubeサーバーです。よろしくね。"
+  },
+  {
+    "host": "peertube.anduin.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.3"
+    },
+    "open_registrations": true,
+    "users_total": 20,
+    "users_active_month": 2,
+    "statuses": 71,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular.\nRunning on FreeBSD."
+  },
+  {
+    "host": "peertube.anon-kenkai.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 148,
+    "users_active_month": 17,
+    "statuses": 252,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "「アノニマスの見解」と「No One Cares」シリーズのためのインスタンス / An instance for the \"Anonymous no Kenkai\" and \"No One Cares\" series."
+  },
+  {
+    "host": "peertube.anti-logic.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.2.1"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 1314,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.anzui.dev",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 7,
+    "users_active_month": 0,
+    "statuses": 23,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.apcraft.jp",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 20,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTubeは、あなたのウェブブラウザで直接P2Pを使用するActivityPub連盟ビデオストリーミングプラットフォームです。"
+  },
+  {
+    "host": "peertube.apse-asso.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "2.1.1"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": null,
+    "statuses": 42,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "APSE Tube est une instance Peertube dédiée aux vidéos consacrées à l'usage des sciences sociales en entreprise et en particulier la sociologie appliquée en entreprise"
+  },
+  {
+    "host": "peertube.arch-linux.cz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 8,
+    "users_active_month": 1,
+    "statuses": 1408,
+    "languages_detected": [
+      "en",
+      "cs"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube Arch Linux  je váš domov ve světě Fediverse! Sdílejte videa s přáteli a objevujte nové, to vše na platformě vlastněné českou komunitou Arch Linuxu a nadšenci open source."
+  },
+  {
+    "host": "peertube.archive.pocketnet.app",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "4.2.2"
+    },
+    "open_registrations": false,
+    "users_total": 2145,
+    "users_active_month": 166,
+    "statuses": 47549,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Video Node of the decentralised BAstyon Network"
+  },
+  {
+    "host": "peertube.arnhome.ovh",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 3,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Arnhome PeerTube, une plateforme de streaming vidéo ActivityPub fedérée utilisant P2P directement dans votre navigateur web."
+  },
+  {
+    "host": "peertube.art3mis.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 39,
+    "users_active_month": 8,
+    "statuses": 387,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Eine deutschsprachige PeerTube Instanz primär für Bildungs- und Spielevideos. \nA German PeerTube instance primarily for educational and gaming videos.\nPeerTube is an ActivityPub-federated video streaming platform."
+  },
+  {
+    "host": "peertube.artica.center",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "2.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": null,
+    "statuses": 25,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Serveur de vidéos sur les solutions de sécurité ARTICA (Proxy, filtrage DNS, SMTP Gateway, etc...)"
+  },
+  {
+    "host": "peertube.askan.info",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 57,
+    "languages_detected": [
+      "en",
+      "id"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Askan Peertube"
+  },
+  {
+    "host": "peertube.astral0pitek.synology.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 50,
+    "users_active_month": 3,
+    "statuses": 570,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Astral0pitek's own PeerTube instance."
+  },
+  {
+    "host": "peertube.astrolabe.coop",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.3"
+    },
+    "open_registrations": false,
+    "users_total": 11,
+    "users_active_month": 2,
+    "statuses": 22,
+    "languages_detected": [
+      "en",
+      "es"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Peertube de la CAE Astrolabe"
+  },
+  {
+    "host": "peertube.atsuchan.page",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 3476,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube instance hosted by atsuchan\nPeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.aukfood.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 7,
+    "users_active_month": 1,
+    "statuses": 15,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Auktube, la plateforme vidéo d'Aukfood"
+  },
+  {
+    "host": "peertube.beeldengeluid.nl",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 11,
+    "users_active_month": 2,
+    "statuses": 7604,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube Beeld & Geluid is an open media platform that offers online access to audiovisual archive material."
+  },
+  {
+    "host": "peertube.bgeneric.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 1,
+    "statuses": 44,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.bgzashtita.es",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 1344,
+    "users_active_month": 3,
+    "statuses": 1166,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube And Bgzashtita, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.bildung-ekhn.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 1,
+    "statuses": 175,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube Instanz des Fachbereichs Erwachsenenbildung und Familienbildung im Zentrum Bildung der EKHN"
+  },
+  {
+    "host": "peertube.bingo-ev.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 8,
+    "users_active_month": 3,
+    "statuses": 167,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.blablalinux.be",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 362,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Ici, nous parlons de la distribution Debian, Ubuntu et Mint, du navigateur Vivaldi, de la virtualisation et de l'autohébergement avec Proxmox, ainsi que du recyclage d'ordinateurs avec mon collectif Emmabuntus."
+  },
+  {
+    "host": "peertube.boc47.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 47,
+    "users_active_month": 3,
+    "statuses": 73,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Une plateforme de partage de vidéos libre et éthique, hébergée par BOC47, la Boîte à Outils numérique Coopérative du Lot-et-Garonne."
+  },
+  {
+    "host": "peertube.boger.dev",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 8,
+    "users_active_month": 2,
+    "statuses": 214,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Eine freie, unabhängige Videoplattform, inspiriert von Open Source und Teil des dezentralen PeerTube-Netzwerks."
+  },
+  {
+    "host": "peertube.br0.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "peertube.brian70.tw",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.1.1"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.brigadadigital.tec.br",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.1.1"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.bubbletea.dev",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 0,
+    "statuses": 18,
+    "languages_detected": [
+      "en",
+      "da"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "peertube for bubbletea-dev"
+  },
+  {
+    "host": "peertube.c44.com.au",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 6,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Adelaide's community broadcaster showcasing local stories, emerging creators, and diverse voices. From arts and culture to grassroots productions—authentic South Australian content made by and for the community. Watch on C44 & CTV+."
+  },
+  {
+    "host": "peertube.cainet.info",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 6,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "CAINet PeerTube. Mostly music content."
+  },
+  {
+    "host": "peertube.casually.cat",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 9,
+    "users_active_month": 2,
+    "statuses": 840,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Powered by PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.ch",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 3485,
+    "users_active_month": 10,
+    "statuses": 296,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Generic peertube instance, speaking mostly English and French. Hosted by the fairsocialnet.ch association and paid for by its members.  By becoming a member you get 10Gb. \n\n100% Located in Switzerland."
+  },
+  {
+    "host": "peertube.chartilacorp.ru",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.0"
+    },
+    "open_registrations": true,
+    "users_total": 38,
+    "users_active_month": 7,
+    "statuses": 118,
+    "languages_detected": [
+      "en",
+      "bg"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Видео/cтриминговая платформа Chartilacorp - ChartyTube."
+  },
+  {
+    "host": "peertube.chir.rs",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 64,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Peertube instance for @charlotte@akko.chir.rs"
+  },
+  {
+    "host": "peertube.chuggybumba.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.3"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 122,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.cif.su",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 163,
+    "users_active_month": 16,
+    "statuses": 177,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "The Decentralized P2P-VOD Instance of the [ CiF ]"
+  },
+  {
+    "host": "peertube.circlewithadot.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 2,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Videos mostly related to my music (as Incentive) and maybe some various other things."
+  },
+  {
+    "host": "peertube.cirkau.art",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 15,
+    "users_active_month": 4,
+    "statuses": 489,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "TV Clownistan est une instance PeerTube (plateforme de streaming vidéo fédérée par ActivityPub utilisant le P2P), regroupant essentiellement des vidéos de clowns, avec des clowns et celleux qui aiment les clowns. Et pas queux."
+  },
+  {
+    "host": "peertube.cloud.nerdraum.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 83,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "geschlossene Instanz.\nKeine Registrierung möglich."
+  },
+  {
+    "host": "peertube.cluster.wtf",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 114,
+    "languages_detected": [
+      "en",
+      "ru"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Для тех, кто не хочет смотреть на YouTube."
+  },
+  {
+    "host": "peertube.cocamserverguild.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 291,
+    "users_active_month": 12,
+    "statuses": 58,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Cocam'server Video is a platform to upload or stream videos"
+  },
+  {
+    "host": "peertube.codefandango.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 3,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.communecter.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "3.2.1"
+    },
+    "open_registrations": false,
+    "users_total": 46,
+    "users_active_month": 1,
+    "statuses": 200,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.cpy.re",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 13,
+    "users_active_month": 0,
+    "statuses": 15,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Demo server 1 of PeerTube"
+  },
+  {
+    "host": "peertube.craftum.pl",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 6,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.crazy-to-bike.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 25,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, eine ActivityPub-föderierte Videostreaming-Platform, die P2P direkt zu deinem Webbrowser nutzt."
+  },
+  {
+    "host": "peertube.ctseuro.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.0"
+    },
+    "open_registrations": false,
+    "users_total": 8,
+    "users_active_month": 0,
+    "statuses": 27,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser. This is a Instance with limited possibility to register for now, but opening registering to the public is soon."
+  },
+  {
+    "host": "peertube.cuatrolibertades.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.3.3"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 0,
+    "statuses": 31,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.cyber-tribal.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.2"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 10,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "NetRunner, Netizen, Cyborg-Anthropologue, Spécialiste en archéologie, paléographie et épigraphie du logiciel…"
+  },
+  {
+    "host": "peertube.dair-institute.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 6,
+    "users_active_month": 3,
+    "statuses": 101,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.darkness.services",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 4,
+    "users_active_month": 2,
+    "statuses": 144,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.datagueule.tv",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 152,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Plateforme vidéos de Data Gueule"
+  },
+  {
+    "host": "peertube.debian.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.3"
+    },
+    "open_registrations": false,
+    "users_total": 184,
+    "users_active_month": 5,
+    "statuses": 2767,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "peertube.debian.social, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.demo.cloudron.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.demonix.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 74,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Instance peertube de Sys4 contenant des Gameplays, des Tutoriels et du Modding principalement autour de Minetest."
+  },
+  {
+    "host": "peertube.designersethiques.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 6,
+    "users_active_month": 1,
+    "statuses": 224,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Retrouvez toutes les vidéos produites par l'association Designers Éthiques."
+  },
+  {
+    "host": "peertube.desmu.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 218,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Instance privée de @desmu@mastodon.desmu.fr"
+  },
+  {
+    "host": "peertube.dixvaha.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.dk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 40,
+    "users_active_month": 7,
+    "statuses": 34,
+    "languages_detected": [
+      "en",
+      "da"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "En dansk PeerTube server til at dele videoer!"
+  },
+  {
+    "host": "peertube.doesstuff.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.1"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 390,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "The (hopefully) permanent site of Lety's social media videos! Come watch along as I scream into the void~!"
+  },
+  {
+    "host": "peertube.dryusdan.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 16,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.dsdrive.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 6,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Instance qui se cherche...  Culture, Nature, Politique (à gauche), ..."
+  },
+  {
+    "host": "peertube.dsmouse.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 1,
+    "statuses": 1721,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.dtth.ch",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.3"
+    },
+    "open_registrations": false,
+    "users_total": 48,
+    "users_active_month": 2,
+    "statuses": 5,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "A private PeerTube instance for DTTH users."
+  },
+  {
+    "host": "peertube.dubwise.dk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.3.3"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 44,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.dynlinux.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 31229,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.easter.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 1,
+    "statuses": 2505,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.ecologie.bzh",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 0,
+    "statuses": 304,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "La vidéo au service de l'Écologie et du Logiciel Libre en BZH"
+  },
+  {
+    "host": "peertube.ecsodikas.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.0.1"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 72,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Art, Tech, Programming, Math and more nerdy stuff. <3"
+  },
+  {
+    "host": "peertube.elforcer.ru",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 1876,
+    "languages_detected": [
+      "en",
+      "ru"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Частный видеосервер ELForcer без регистрации."
+  },
+  {
+    "host": "peertube.elobot.ch",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 3,
+    "languages_detected": [
+      "en",
+      "es"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "L'instance de elo-bot"
+  },
+  {
+    "host": "peertube.eqver.se",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 11,
+    "users_active_month": 1,
+    "statuses": 59,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.err404.numericore.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.ethibox.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.3.3"
+    },
+    "open_registrations": true,
+    "users_total": 96,
+    "users_active_month": 2,
+    "statuses": 84,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Une instance PeerTube hébergé par Ethibox"
+  },
+  {
+    "host": "peertube.eticadigital.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 4,
+    "users_active_month": 2,
+    "statuses": 12,
+    "languages_detected": [
+      "en",
+      "es"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Ética Digital Chile (www.eticadigital.cl) es una organización sin fines de lucro, que educa y ayuda a la ciudadanía al uso ético, responsable y seguro de tecnologías digitales."
+  },
+  {
+    "host": "peertube.eu.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 25,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Essentiellement destiné aux vidéos de Pierre Beyssac"
+  },
+  {
+    "host": "peertube.european-pirates.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "4.2.2"
+    },
+    "open_registrations": false,
+    "users_total": 14,
+    "users_active_month": 0,
+    "statuses": 376,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "peertube.eus",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.0.1"
+    },
+    "open_registrations": true,
+    "users_total": 472,
+    "users_active_month": 37,
+    "statuses": 3156,
+    "languages_detected": [
+      "en",
+      "pl"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Euskarazko bideoak partekatzeko webgune irekia."
+  },
+  {
+    "host": "peertube.euskarabildua.eus",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.0.0"
+    },
+    "open_registrations": false,
+    "users_total": 7,
+    "users_active_month": 1,
+    "statuses": 3443,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z"
+  },
+  {
+    "host": "peertube.existiert.ch",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 526,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Peertube for existiert.ch, mainly gaming and comedy. Signup possible but no uploads until I unlock them for your account."
+  },
+  {
+    "host": "peertube.f-si.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "1.2.1"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 110,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.familie-berner.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.0.1"
+    },
+    "open_registrations": false,
+    "users_total": 8,
+    "users_active_month": 1,
+    "statuses": 24677,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.familleboisteau.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.3.3"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 3,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.fedi.zutto.fi",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.3"
+    },
+    "open_registrations": true,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 4,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.fedihub.online",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.1"
+    },
+    "open_registrations": true,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 7,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.fediversity.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.2"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 0,
+    "statuses": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.fenarinarsa.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.0"
+    },
+    "open_registrations": false,
+    "users_total": 6,
+    "users_active_month": 3,
+    "statuses": 448,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.festnoz.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 6,
+    "users_active_month": 0,
+    "statuses": 24,
+    "languages_detected": [
+      "en",
+      "no"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Videos for balfolk"
+  },
+  {
+    "host": "peertube.florentcurk.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 7,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Réalisateur indépendant ayant créé son bout d'internet !\nÊtre un créateur fou & le bon vivre sont mes passes temps. 🫶"
+  },
+  {
+    "host": "peertube.fomin.site",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.fototjansterkalmar.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 105,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.foxfam.club",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 136,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.3.2"
+    },
+    "open_registrations": true,
+    "users_total": 1500,
+    "users_active_month": 32,
+    "statuses": 19840,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.freespeech.club",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.funkfeuer.at",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 2,
+    "statuses": 3,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.futo.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.2.1"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 133,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.gaialabs.ch",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "3.4.0"
+    },
+    "open_registrations": false,
+    "users_total": 5,
+    "users_active_month": 1,
+    "statuses": 1376,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.gargantia.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 820,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Instance Peertube du serveur Gargantia"
+  },
+  {
+    "host": "peertube.gegeweb.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 12,
+    "users_active_month": 1,
+    "statuses": 392,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Gegeweb's PeerTube is a pod of the Peertube fediverse.\nPeertube is a free software and a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.get-racing.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 145,
+    "users_active_month": 1,
+    "statuses": 47,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "Videoplattform von GET racing"
+  },
+  {
+    "host": "peertube.ghis94.ovh",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 4,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.gidikroon.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "4.2.2"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 4844,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "This is the personal video server of Gidi Kroon using PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.giftedmc.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 53,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.gravitywell.xyz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 58,
+    "users_active_month": 8,
+    "statuses": 7156,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.gsugambit.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "4.2.2"
+    },
+    "open_registrations": true,
+    "users_total": 79,
+    "users_active_month": 0,
+    "statuses": 120,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "Peertube, federated video instance, managed by GSUGambit. Feel free to join."
+  },
+  {
+    "host": "peertube.guillaumeleguen.xyz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 12,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "Une instance vidéo administré par Guillaume Leguen."
+  },
+  {
+    "host": "peertube.hameln.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 31,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "Diese Seite läuft derzeit im Testbetrieb. Es können keine Accounts angefordert werden."
+  },
+  {
+    "host": "peertube.headcrashing.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 13,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.heise.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 9,
+    "users_active_month": 8,
+    "statuses": 237,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "Willkommen auf der Peertube-Instanz von heise online"
+  },
+  {
+    "host": "peertube.helvetet.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 5,
+    "users_active_month": 1,
+    "statuses": 19,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.heraut.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 153,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "Instance privée.  Les demandes d'ouverture de compte ne sont pas acceptées."
+  },
+  {
+    "host": "peertube.hlpnet.dk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.1"
+    },
+    "open_registrations": true,
+    "users_total": 4,
+    "users_active_month": 1,
+    "statuses": 2559,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.hoerli.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 459,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "Hier findest du alle meine Videos. Folge mir ueber das Fedivers, um nichts mehr zu verpassen!"
+  },
+  {
+    "host": "peertube.home.x0r.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.1"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 9,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.hyperfreedom.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "4.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 1,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.ichigo.everydayimshuflin.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 615,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular."
+  },
+  {
+    "host": "peertube.ignifi.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.2.0"
+    },
+    "open_registrations": true,
+    "users_total": 67,
+    "users_active_month": 0,
+    "statuses": 4749,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.ii.md",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "6.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.imaag.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 31,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, eine von ActivityPub betriebene Videostreaming-Plattform, die P2P direkt in Ihrem Webbrowser nutzt."
+  },
+  {
+    "host": "peertube.in.ua",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 278,
+    "users_active_month": 33,
+    "statuses": 1698,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.inparadise.se",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.1"
+    },
+    "open_registrations": true,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 39,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.interhop.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "5.2.1"
+    },
+    "open_registrations": false,
+    "users_total": 9,
+    "users_active_month": 0,
+    "statuses": 39,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "peertube.intrapology.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.0"
+    },
+    "open_registrations": false,
+    "users_total": 5,
+    "users_active_month": 1,
+    "statuses": 241,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T17:25:35Z",
+    "nodeinfo_description": "Federated video sharing from Intrapology. We make a live interactive show about alien anthropologists, and we make Intrinsink, a web app that allows audiences to decide what performers say and do."
+  },
+  {
     "host": "pub.miscworks.net",
     "verified_activitypub": true,
     "software": {
@@ -276784,6 +281487,73 @@
     "fetched_at": "2025-11-23T07:30:17Z",
     "redirected_from": "paiges.net",
     "nodeinfo_description": "an instance in the fediverse"
+  },
+  {
+    "host": "social.parkour.wien",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.18.1+git-fd670c6"
+    },
+    "open_registrations": false,
+    "users_total": 7,
+    "users_active_month": null,
+    "statuses": 11,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "parkour.wien"
+  },
+  {
+    "host": "social.partiarazem.pl",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.8"
+    },
+    "open_registrations": false,
+    "users_total": 7,
+    "users_active_month": 3,
+    "statuses": 634,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "partiarazem.pl"
+  },
+  {
+    "host": "social.path-of-chaos.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.4+cat.1.0.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 7,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "path-of-chaos.com",
+    "nodeinfo_description": "Eine kleine Catstodon Instanz für mich selbst :3"
+  },
+  {
+    "host": "social.pawsitiv.space",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.1+glitch"
+    },
+    "open_registrations": true,
+    "users_total": 86,
+    "users_active_month": 5,
+    "statuses": 3563,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pawsitiv.space",
+    "nodeinfo_description": "General purpose, English instance founded on principles of respect, inclusion, and positivity. 500 character limit."
   },
   {
     "host": "social.tchncs.de",
@@ -288866,5 +293636,710 @@
     "fetched_at": "2025-11-23T15:51:56Z",
     "redirected_from": "panoraveille.com",
     "nodeinfo_description": "Veille tourisme, tendances, revue de presse tourisme, hôtellerie, restauration, transports, digital"
+  },
+  {
+    "host": "www.paradiso.zone",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paradiso.zone",
+    "nodeinfo_description": "Otherworldly tabletop games, by Quadra 🖤"
+  },
+  {
+    "host": "www.paradoxpairs.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paradoxpairs.com",
+    "nodeinfo_description": "Paradox Pairs are two ideas that first seem to be in opposition. Exploring deeper we find boundaries necessary for creativity, innovation, and appreciation."
+  },
+  {
+    "host": "www.paramasticar.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "es",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paramasticar.com",
+    "nodeinfo_description": "Sabiduría semanal para pausar y volverte a encontrar. Por Rodrigo Ponce de León."
+  },
+  {
+    "host": "www.parametricguitar.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "parametricguitar.com",
+    "nodeinfo_description": "Sharing my journey of designing and building parametric guitars."
+  },
+  {
+    "host": "www.parkinsonalliancen.dk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "da"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "parkinsonalliancen.dk",
+    "nodeinfo_description": "Vi arbejder for bedre forhold for patienter med Parkinsons sygdom ved at tale patienternes sag overfor politiske beslutningstagere."
+  },
+  {
+    "host": "www.parkinsonsdisease.blog",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "parkinsonsdisease.blog"
+  },
+  {
+    "host": "www.parlons.cloud",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "fr",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "parlons.cloud",
+    "nodeinfo_description": "Partages autour d&#x27;AWS et du Cloud en général"
+  },
+  {
+    "host": "www.parrott.ink",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "parrott.ink",
+    "nodeinfo_description": "Reclaiming Scripture for love and liberation. Affirming, Antiracist, Feminist, Universalist."
+  },
+  {
+    "host": "www.parthsawhney.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "af"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "parthsawhney.com",
+    "nodeinfo_description": "Keep Moving Forward"
+  },
+  {
+    "host": "www.pasaribu.co",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pasaribu.co",
+    "nodeinfo_description": "Thoughts and ideas."
+  },
+  {
+    "host": "www.passagesofplay.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "passagesofplay.com",
+    "nodeinfo_description": "A chronicle of tactics and theory."
+  },
+  {
+    "host": "www.passengertokyo.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "passengertokyo.com",
+    "nodeinfo_description": "A record of life and processes in Japan."
+  },
+  {
+    "host": "www.pastazaddy.co",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pastazaddy.co",
+    "nodeinfo_description": "eat as good as you look"
+  },
+  {
+    "host": "www.pastorjoepodcast.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pastorjoepodcast.com",
+    "nodeinfo_description": "&quot;Become All You Have Been Created To Be!&quot;"
+  },
+  {
+    "host": "www.patbrown.lol",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "patbrown.lol",
+    "nodeinfo_description": "Pat Brown&#x27;s personal webpage and weblog."
+  },
+  {
+    "host": "www.patchandtweak.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "patchandtweak.com",
+    "nodeinfo_description": "Explore, Study, and Master Synthesis..."
+  },
+  {
+    "host": "www.patf.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "patf.io",
+    "nodeinfo_description": "A newsletter about games, literature, and media of all sorts by Patrick Fiorilli, PhD."
+  },
+  {
+    "host": "www.pathompat.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "th",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pathompat.me",
+    "nodeinfo_description": "Work, experience and ideas."
+  },
+  {
+    "host": "www.patienow.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "zh",
+      "ja"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "patienow.com",
+    "nodeinfo_description": "寫些廢文、追點流行，還有一堆碎碎念。"
+  },
+  {
+    "host": "www.patkoproperty.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "patkoproperty.com",
+    "nodeinfo_description": "Professional Consultation on Real Estate and Properties Matters in Singapore. Effective &amp; Efficient. Focus on Customer Service and Delivering Value."
+  },
+  {
+    "host": "www.patrolling.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "patrolling.org",
+    "nodeinfo_description": "Discover real anti-poaching reports at Patrol in our multi-media newsletter and find out how rangers fight wildlife crime!"
+  },
+  {
+    "host": "www.paulbakaus.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paulbakaus.com",
+    "nodeinfo_description": "Deep dives into the creator economy, content ecosystems and future tech that powers the internet of tomorrow (AI, VR, AR and more). By Paul Bakaus."
+  },
+  {
+    "host": "www.paulcaputo.wine",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paulcaputo.wine",
+    "nodeinfo_description": "Paul Caputo is an award winning writer covering wine, food, travel and culture"
+  },
+  {
+    "host": "www.paulcvesse.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paulcvesse.com",
+    "nodeinfo_description": "PCV is an independent publication that covers all aspects of sales, from prospecting to closing deals. Stay ahead of the curve with the latest sales strategies, tips, and trends."
+  },
+  {
+    "host": "www.paulfedak.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paulfedak.com",
+    "nodeinfo_description": "Personal homepage"
+  },
+  {
+    "host": "www.paulgunnels.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paulgunnels.com",
+    "nodeinfo_description": "Leaving corporate life for entrepreneurship"
+  },
+  {
+    "host": "www.pauljhenderson.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pauljhenderson.com",
+    "nodeinfo_description": "something worth reading • justice, politics, news, opinion &amp; more"
+  },
+  {
+    "host": "www.paulmduvall.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paulmduvall.com",
+    "nodeinfo_description": "Actionable patterns for spec‑driven development, agentic DevSecOps, and automated compliance—build faster and safer with AI across clouds (mostly AWS)."
+  },
+  {
+    "host": "www.paulofurtado.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paulofurtado.com"
+  },
+  {
+    "host": "www.paulwoodthorpe.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "paulwoodthorpe.com",
+    "nodeinfo_description": "Quirky News Delivered Daily"
+  },
+  {
+    "host": "www.pavle.codes",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pavle.codes",
+    "nodeinfo_description": "A hub for software engineering &amp; .NET"
+  },
+  {
+    "host": "www.pboehler.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pboehler.net",
+    "nodeinfo_description": "Newsletter and resources on new civic media models."
+  },
+  {
+    "host": "www.pbp.ie",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pbp.ie",
+    "nodeinfo_description": "Fighting for Workers and Ecosocialism."
+  },
+  {
+    "host": "www.pbrehony.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pbrehony.com",
+    "nodeinfo_description": "social ecological complexity, conservation, learning, sharing, thriving into the future"
+  },
+  {
+    "host": "www.pccjournal.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pccjournal.com",
+    "nodeinfo_description": "The Park County Community Journal is a community based newspaper serving the people of Park County Montana"
+  },
+  {
+    "host": "www.pd365.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "zh",
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pd365.org",
+    "nodeinfo_description": "每一位孩子，都可以眼里有光心里有爱 ；每一位家长，都可以享受和孩子家人的相处 ；和年妈年爸一起，15年家长学习社区｜家庭教育｜自我观察｜理解人性，正面管教，非暴力沟通，DBT，情绪观察记录，九型人格，性格三中心，自我观察，自我认知学习项目帮你的家庭搭建内在阳光房，家长少生气，孩子快乐成长幸福成功"
+  },
+  {
+    "host": "www.peak-suisse.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "peak-suisse.com",
+    "nodeinfo_description": "Peak Suisse: Elevating Excellence in Financial Services, Energy Trading, Life Sciences, Cryptocurrency, and Technology Transformation."
+  },
+  {
+    "host": "www.pediaguia.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "es"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "pediaguia.com",
+    "nodeinfo_description": "Tu Blog de Consejos para el Cuidado de las Enfermedades Infantiles. Aquí encontrarás tips para el cuidado de las enfermedades de tus hijos."
+  },
+  {
+    "host": "www.peekatale.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T16:00:45Z",
+    "redirected_from": "peekatale.com",
+    "nodeinfo_description": "Tale Linh Do is a feature animation Storyboard Artist at Netflix Animation. Film studies, art books and gesture life drawing. Currently based in Burbank, California."
   }
 ]
