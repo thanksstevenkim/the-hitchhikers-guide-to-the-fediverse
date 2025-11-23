@@ -450036,5 +450036,166 @@
     "statuses": null,
     "languages_detected": [],
     "fetched_at": "2025-11-23T07:30:17Z"
+  },
+  {
+    "host": "panicking.net",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "panjab.wiki",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "panko.itzti.li",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-23T15:51:56Z",
+    "nodeinfo_description": "This domain may be for sale!"
+  },
+  {
+    "host": "pano.community",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "panoptic.onl",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "panopticon.social",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "panoramabox.hostdon.ne.jp",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "pantadoon.m.to",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "pantagruel.dnsup.net",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "pantheonstorm.com",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "panthermodern.net",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "panthermoderns.org",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [
+      "en",
+      "cy"
+    ],
+    "fetched_at": "2025-11-23T15:51:56Z",
+    "nodeinfo_description": "cyberpunks doing cyberthings..."
+  },
+  {
+    "host": "pantherx.social",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
+  },
+  {
+    "host": "pantless.ninja",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-23T15:51:56Z"
   }
 ]

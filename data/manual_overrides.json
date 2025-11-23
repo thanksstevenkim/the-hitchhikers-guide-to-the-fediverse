@@ -169,6 +169,11 @@
       "ja"
     ]
   },
+  "akkoma.t3mp-0x.cc": {
+    "languages_detected": [
+      "ja"
+    ]
+  },
   "akkomane.social": {
     "languages_detected": [
       "en"
@@ -250,9 +255,239 @@
     ],
     "open_registrations": false
   },
+  "anime.midday.top": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "asaba.sakuragawa.moe": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "bitlog.tw": {
+    "languages_detected": [
+      "ja"
+    ]
+  },
+  "blog.double-wise.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "blog.joe-brothers.com": {
+    "languages_detected": [
+      "en"
+    ]
+  },
+  "blog.marpybara.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "blog.tesser.io": {
+    "languages_detected": [
+      "en"
+    ]
+  },
+  "busy-gecko.pikapod.net": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "deptai.work": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "discover.openawaken.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
   "e.fo": {
     "languages_detected": [
       "hr"
+    ]
+  },
+  "fqpedia.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "hcchiang.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "hekukaixin.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "ictnlife.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "inmotiontw.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "jarvislin.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "jpcreditcardguide.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "library.southfox.me": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "lightus.tech": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "lucychiang.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "m.zimiao.moe": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "mashy.jp": {
+    "languages_detected": [
+      "ja"
+    ]
+  },
+  "mastodon.gbanyan.net": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "mastodon.hexsix.me": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "mastodon.xn--t8jzbl7g.jp": {
+    "languages_detected": [
+      "ja"
+    ]
+  },
+  "media.ntumedsa.org": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "mi.t03.io": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "miao-is-curious.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "mingtoming.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "misskey.donokoanoko.jp": {
+    "languages_detected": [
+      "ja"
+    ]
+  },
+  "mitra.rettuce.page": {
+    "languages_detected": [
+      "ja"
+    ]
+  },
+  "mk.chiwa.net": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "mo-na.space": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "moneyhk101.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "mtfos.wtf": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "natsu.page": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "neuritis.org": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "news.daodaodao.top": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "nine.land": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "nya.show": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "ourmemory.sbs": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "pangu.hengsha.host": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "www.maggiephysio.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "www.man-of.com": {
+    "languages_detected": [
+      "en"
+    ]
+  },
+  "www.mathtrallenchen.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "www.not-only-physio.com": {
+    "languages_detected": [
+      "zh"
     ]
   },
   "300bps.kr": {
@@ -872,9 +1107,24 @@
       "ko"
     ]
   },
+  "mastodon.hongkongers.net": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "mastodon.li": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
   "masost.one": {
     "languages_detected": [
       "ko"
+    ]
+  },
+  "misskey.jayhsustudio.com": {
+    "languages_detected": [
+      "zh"
     ]
   }
 }
