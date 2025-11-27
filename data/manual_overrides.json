@@ -498,6 +498,9 @@
   "amormor.art": {
     "open_registrations": false
   },
+  "commucomp.org": {
+    "open_registrations": false
+  },
   "baram.me": {
     "languages_detected": [
       "ko"
@@ -912,6 +915,19 @@
   "bookclub.masto.host": {
     "open_registrations": false
   },
+  "m.skyblond.info": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "piko.day": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "orc.forest.hostdon.ne.jp": {
+    "open_registrations": false
+  },
   "bookstodon.es": {
     "languages_detected": [
       "es"
@@ -1123,6 +1139,26 @@
     ]
   },
   "misskey.jayhsustudio.com": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "pastwind.top": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "patchouli.today": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "pbs.idv.tw": {
+    "languages_detected": [
+      "zh"
+    ]
+  },
+  "pentimento.me": {
     "languages_detected": [
       "zh"
     ]

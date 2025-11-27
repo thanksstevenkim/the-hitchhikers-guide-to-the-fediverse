@@ -81,6 +81,8 @@ LANG_CANON = {
     "dk": "da",
     "spanish": "es",
     "sp": "es",
+    "cs": "cz",
+    "mm": "my",
 }
 
 # Outputs (split)
@@ -269,42 +271,12 @@ def main() -> None:
 
     for instance in instances:
         try:
+            # 1) 인스턴스에서 raw record 뽑기
             record, errors, peers = process_instance(instance, now)
-
-            had_errors = bool(errors)
-            bucket = classify_record(record, had_errors)  # 'good' or 'bad'
-
-            if bucket == "good":
-                prev = ok_map.get(record["host"])
-                ok_map[record["host"]] = record
-                updated_ok += 1 if (prev is None or prev != record) else 0
-                logging.info(
-                    "OK   %s (%s)",
-                    record["host"],
-                    record.get("software", {}).get("name") or "-",
-                )
-            else:
-                prev = bad_map.get(record["host"])
-                bad_map[record["host"]] = record
-                updated_bad += 1 if (prev is None or prev != record) else 0
-                reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
-                logging.warning("BAD  %s: %s", record["host"], reason)
-
-            processed += 1
-
-            # 인스턴스 하나 끝날 때마다 두 파일을 원자적으로 즉시 저장
-            save_stats_pair_atomic(ok_map, bad_map)
-
-            if args.discover_peers and peers:
-                discovered_hosts.update(peers)
-
         except Exception as exc:
-            # 여기까지 왔다는 건 process_instance / classify_record / save_stats_pair_atomic
-            # 어디선가 진짜 예외가 난 것.
-            logging.exception("FATAL while handling %s", instance.host)
-
-            # 최소 BAD 레코드 하나는 남겨두고 다음 인스턴스로 넘어가자
-            minimal = {
+            logging.exception("FATAL while processing %s", instance.host)
+            # 2) 최소 레코드로 대체
+            record = {
                 "host": instance.host,
                 "verified_activitypub": False,
                 "software": {},
@@ -315,15 +287,42 @@ def main() -> None:
                 "languages_detected": [],
                 "fetched_at": now,
             }
-            bad_map[instance.host] = minimal
-            save_stats_pair_atomic(ok_map, bad_map)
-            processed += 1
-            continue
+            errors = [f"fatal: {exc!r}"]
+            peers = set()
 
-    logging.info(
-        "Incremental save complete: processed=%d, ok_updates=%d, bad_updates=%d",
-        processed, updated_ok, updated_bad
-    )
+        # 3) 무조건 여기서 manual_overrides 적용 (정상/예외 둘 다)
+        apply_manual_overrides(record, manual_overrides)
+
+        # 4) 그 결과를 기준으로 분류/저장
+        had_errors = bool(errors)
+        bucket = classify_record(record, had_errors)  # 'good' or 'bad'
+
+        if bucket == "good":
+            prev = ok_map.get(record["host"])
+            ok_map[record["host"]] = record
+            updated_ok += 1 if (prev is None or prev != record) else 0
+            logging.info(
+                "OK   %s (%s)",
+                record["host"],
+                record.get("software", {}).get("name") or "-",
+            )
+        else:
+            prev = bad_map.get(record["host"])
+            bad_map[record["host"]] = record
+            updated_bad += 1 if (prev is None or prev != record) else 0
+            reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
+            logging.warning("BAD  %s: %s", record["host"], reason)
+
+        processed += 1
+        save_stats_pair_atomic(ok_map, bad_map)
+
+        if args.discover_peers and peers:
+            discovered_hosts.update(peers)
+
+        logging.info(
+            "Incremental save complete: processed=%d, ok_updates=%d, bad_updates=%d",
+            processed, updated_ok, updated_bad
+        )
 
     if args.discover_peers:
         # 이미 검사한(OK/BAD 둘 다 포함) 호스트는 제외
