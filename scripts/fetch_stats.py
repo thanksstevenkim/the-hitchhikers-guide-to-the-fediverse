@@ -268,32 +268,57 @@ def main() -> None:
     updated_bad = 0
 
     for instance in instances:
-        record, errors, peers = process_instance(instance, now)
+        try:
+            record, errors, peers = process_instance(instance, now)
 
-        apply_manual_overrides(record, manual_overrides)
+            had_errors = bool(errors)
+            bucket = classify_record(record, had_errors)  # 'good' or 'bad'
 
-        had_errors = bool(errors)
-        bucket = classify_record(record, had_errors)  # 'good' or 'bad'
+            if bucket == "good":
+                prev = ok_map.get(record["host"])
+                ok_map[record["host"]] = record
+                updated_ok += 1 if (prev is None or prev != record) else 0
+                logging.info(
+                    "OK   %s (%s)",
+                    record["host"],
+                    record.get("software", {}).get("name") or "-",
+                )
+            else:
+                prev = bad_map.get(record["host"])
+                bad_map[record["host"]] = record
+                updated_bad += 1 if (prev is None or prev != record) else 0
+                reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
+                logging.warning("BAD  %s: %s", record["host"], reason)
 
-        if bucket == "good":
-            prev = ok_map.get(record["host"])
-            ok_map[record["host"]] = record
-            updated_ok += 1 if (prev is None or prev != record) else 0
-            logging.info("OK   %s (%s)", record["host"], record.get("software", {}).get("name") or "-")
-        else:
-            prev = bad_map.get(record["host"])
-            bad_map[record["host"]] = record
-            updated_bad += 1 if (prev is None or prev != record) else 0
-            reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
-            logging.warning("BAD  %s: %s", record["host"], reason)
+            processed += 1
 
-        processed += 1
+            # 인스턴스 하나 끝날 때마다 두 파일을 원자적으로 즉시 저장
+            save_stats_pair_atomic(ok_map, bad_map)
 
-        # 인스턴스 하나 끝날 때마다 두 파일을 원자적으로 즉시 저장
-        save_stats_pair_atomic(ok_map, bad_map)
+            if args.discover_peers and peers:
+                discovered_hosts.update(peers)
 
-        if args.discover_peers and peers:
-            discovered_hosts.update(peers)
+        except Exception as exc:
+            # 여기까지 왔다는 건 process_instance / classify_record / save_stats_pair_atomic
+            # 어디선가 진짜 예외가 난 것.
+            logging.exception("FATAL while handling %s", instance.host)
+
+            # 최소 BAD 레코드 하나는 남겨두고 다음 인스턴스로 넘어가자
+            minimal = {
+                "host": instance.host,
+                "verified_activitypub": False,
+                "software": {},
+                "open_registrations": None,
+                "users_total": None,
+                "users_active_month": None,
+                "statuses": None,
+                "languages_detected": [],
+                "fetched_at": now,
+            }
+            bad_map[instance.host] = minimal
+            save_stats_pair_atomic(ok_map, bad_map)
+            processed += 1
+            continue
 
     logging.info(
         "Incremental save complete: processed=%d, ok_updates=%d, bad_updates=%d",
@@ -709,6 +734,7 @@ def load_host_strings(path: Path) -> Iterable[Instance]:
 # -------------------------------
 
 def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any], List[str], Set[str]]:
+    logging.info("BEGIN %s", instance.host)
     record: Dict[str, Any] = {
         "host": instance.host,
         "verified_activitypub": False,
@@ -729,6 +755,7 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
     try:
         nodeinfo, canonical_base = fetch_nodeinfo(instance.host)
     except FetchError as exc:
+        logging.warning("nodeinfo error for %s: %s", instance.host, exc)
         errors.append(f"nodeinfo: {exc}")
         nodeinfo = None
 
@@ -811,18 +838,25 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
         if desc:
             record["nodeinfo_description"] = desc
     
-    # ✅ NodeInfo에서 설명을 가져오지 못했을 때 사이트 메타데이터에서 시도
+    # NodeInfo에서 설명을 가져오지 못했을 때 사이트 메타데이터에서 시도
     if not desc:
-        site_details = fetch_instance_details(base_url, record["host"])
+        # NodeInfo에서 Content-Type 관련 에러가 난 경우,
+        # 사이트 자체가 뭔가 이상한 경우일 가능성이 크니까 HTML 메타데이터는 스킵.
+        if any("unexpected Content-Type" in e for e in errors):
+            site_details = None
+        else:
+            site_details = fetch_instance_details(base_url, record["host"])
+
         if site_details and site_details.get("description"):
             desc = site_details["description"]
             record["nodeinfo_description"] = desc
-            
-            # 사이트 메타데이터에서 발견된 언어도 추가
+
             site_langs = site_details.get("languages", [])
             append_languages(languages, languages_seen, site_langs)
+
     
     if desc:
+        logging.info("detecting languages from description for host %s", instance.host)
         # 1) 스크립트(문자 범위) 기반으로 ko/ja/en 강제 포함
         script_langs = list(detect_scripts(desc))
         append_languages(languages, languages_seen, script_langs)
@@ -836,47 +870,49 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
     return record, errors, peers
 
 def extract_metadata_from_html(html: str, host: str) -> Dict[str, Any]:
-    """
-    HTML에서 메타데이터 추출
-    """
-    import re
-    from html.parser import HTMLParser
+    try:
+        import re
+        from html.parser import HTMLParser
     
-    result = {
-        "description": None,
-        "languages": []
-    }
+        result = {
+            "description": None,
+            "languages": []
+        }
     
-    # 간단한 정규식으로 메타 태그 추출 (의존성 없이)
-    description_patterns = [
-        r'<meta\s+name="description"\s+content="([^"]*)"',
-        r'<meta\s+property="og:description"\s+content="([^"]*)"',
-        r'<meta\s+name="twitter:description"\s+content="([^"]*)"',
-        r'<meta\s+property="twitter:description"\s+content="([^"]*)"'
-    ]
+        # 간단한 정규식으로 메타 태그 추출 (의존성 없이)
+        description_patterns = [
+            r'<meta\s+name="description"\s+content="([^"]*)"',
+            r'<meta\s+property="og:description"\s+content="([^"]*)"',
+            r'<meta\s+name="twitter:description"\s+content="([^"]*)"',
+            r'<meta\s+property="twitter:description"\s+content="([^"]*)"'
+        ]
     
-    # 설명 추출
-    for pattern in description_patterns:
-        match = re.search(pattern, html, re.IGNORECASE)
-        if match:
-            description = match.group(1).strip()
-            if description and len(description) > 10:  # 너무 짧은 설명은 무시
-                result["description"] = description
-                break
+        # 설명 추출
+        for pattern in description_patterns:
+            match = re.search(pattern, html, re.IGNORECASE)
+            if match:
+                description = match.group(1).strip()
+                if description and len(description) > 10:  # 너무 짧은 설명은 무시
+                    result["description"] = description
+                    break
     
     # 언어 추출 시도
-    lang_match = re.search(r'<html[^>]*\slang="([^"]*)"', html, re.IGNORECASE)
-    if not lang_match:
-        lang_match = re.search(r'<html[^>]*\sxml:lang="([^"]*)"', html, re.IGNORECASE)
+        lang_match = re.search(r'<html[^>]*\slang="([^"]*)"', html, re.IGNORECASE)
+        if not lang_match:
+            lang_match = re.search(r'<html[^>]*\sxml:lang="([^"]*)"', html, re.IGNORECASE)
     
-    if lang_match:
-        lang_code = lang_match.group(1).strip()
-        if lang_code:
-            normalized = normalize_language_code(lang_code)
-            if normalized:
-                result["languages"].append(normalized)
+        if lang_match:
+            lang_code = lang_match.group(1).strip()
+            if lang_code:
+                normalized = normalize_language_code(lang_code)
+                if normalized:
+                    result["languages"].append(normalized)
     
-    return result
+        return result
+    
+    except Exception as e:
+        logging.warning("failed to parse HTML metadata for %s: %r", host, e)
+        return {"description": None, "languages": []}
 
 def fetch_site_metadata(base_url: str, host: str, include_description: bool = True) -> Optional[Dict[str, Any]]:
     """
@@ -1326,23 +1362,25 @@ def detect_scripts(text: str) -> set[str]:
 def detect_languages_from_text(text: str,
                                max_langs: int = 5,
                                min_prob: float = 0.2) -> List[str]:
-    """
-    서버 설명 같은 짧은 텍스트에서 언어 코드를 추론한다.
-    langdetect 결과에서 확률이 min_prob 이상인 코드만,
-    최대 max_langs개까지 반환.
-    """
     text = (text or "").strip()
     if not text:
         return []
+
+    # 입력이 과도하게 긴 경우 잘라버리기 (예: 1000자)
+    if len(text) > 1000:
+        text = text[:1000]
 
     try:
         candidates = detect_langs(text)
     except LangDetectException:
         return []
+    except Exception as e:
+        # 여기에 로그를 잠깐 넣어두면 어느 서버에서 터지는지 바로 알 수 있음
+        logging.warning("langdetect failed with unexpected error: %r", e)
+        return []
 
     langs: List[str] = []
     for cand in candidates:
-        # cand.lang 은 'ko', 'en', 'pt' 같은 코드
         if cand.prob < min_prob:
             continue
         code = normalize_language_code(cand.lang)

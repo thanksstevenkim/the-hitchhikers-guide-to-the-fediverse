@@ -129,6 +129,7 @@ python scripts/fetch_stats.py --input data/filtered_peers.json
 - 통계 열 정렬
 - 가입 여부 배지 표시
 - 비정상 인스턴스 자동 표시
+- 이상한 메타데이터 및 Nodeinfo를 가진 웹사이트 필터링
 
 ---
 

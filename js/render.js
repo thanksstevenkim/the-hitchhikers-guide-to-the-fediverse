@@ -183,6 +183,7 @@
       "microblogpub",
       "microdotblog",
       "nettepuoti-activitypub-limited-support",
+      "paul-kinlan-me",
       "writefreely",
     ],
     social: [
