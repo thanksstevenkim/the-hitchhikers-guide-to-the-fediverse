@@ -312,6 +312,7 @@
       "piefed",
       "private",
       "pub",
+      "vernissage",
       "squidcity",
       "sutty-distributed-press",
       "tootik",

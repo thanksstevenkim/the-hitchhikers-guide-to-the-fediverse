@@ -464903,5 +464903,472 @@
     "statuses": null,
     "languages_detected": [],
     "fetched_at": "2025-11-27T06:26:23Z"
+  },
+  {
+    "host": "photos.darn.social",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.defulmere.name",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.degruchy.org",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.doe.cool",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.ernestoacosta.org",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.esmailelbob.xyz",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.evansims.com",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.familylison.com",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.frankly.land",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.geekshelter.net",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.geoffreyarduini.com",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.jaryk.xyz",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [
+      "en",
+      "pl"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "photos.jaryk.xyz"
+  },
+  {
+    "host": "photos.jnxj.net",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.joeinn.es",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.karloskar.org",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.kinlproject.rocks",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.kovah.de",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.kurau.tokyo",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.loranger.xyz",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.ma9y.net",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.manganiello.social",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.mattbowen.net",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.missocial.de",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.mnfed.social",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.mws.rocks",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "MetroWind’s Pictures"
+  },
+  {
+    "host": "photos.my-spaces.social",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.nagoyadon.jp",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.owlcloud.synology.me",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.peacememori.es",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.phoenixharbor.net",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.quentel.social",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.ronit.xyz",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.rstokes.uk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.1"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 54630,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.sateh.com",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.serenus.space",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "A minimal, single-page photo gallery for Astro."
+  },
+  {
+    "host": "photos.skrasek.us",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.sysctl.io",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.teahouse.social",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.thefishermenandthepriestess.com",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.thoresson.social",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.thoshis.net",
+    "verified_activitypub": false,
+    "software": {},
+    "open_registrations": null,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
   }
 ]

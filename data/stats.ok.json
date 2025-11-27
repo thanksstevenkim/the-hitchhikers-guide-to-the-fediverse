@@ -286251,6 +286251,412 @@
     "nodeinfo_description": "A family instance of Pixelfed."
   },
   {
+    "host": "photos.cosocial.ca",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 3,
+    "statuses": 78,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "The photo-sharing site for the CoSocial Community Cooperative"
+  },
+  {
+    "host": "photos.deathbycomputers.co.uk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 60,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.elenarossini.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 95,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.faithcollapsing.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 19,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.giesing.space",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 19,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "A personal Pixelfed instance open to friends and community members who want a simple, privacy-friendly place to share photos."
+  },
+  {
+    "host": "photos.grossermensch.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 3,
+    "statuses": 522,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.heath.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 35,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms. This Pixelfed instance is the home of Carl Heath"
+  },
+  {
+    "host": "photos.hemera.systems",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.irregular.space",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.4"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 5311,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.jurv.is",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Photos with just enough story to remember how they were made."
+  },
+  {
+    "host": "photos.jws.app",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 244,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Joe&#039;s Photos"
+  },
+  {
+    "host": "photos.lullis.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 3,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.mroberts.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.3"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 2767,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "This is a self-hosted single user Pixelfed instance for my own use, just my own photos curated by me as replacement for Instagram."
+  },
+  {
+    "host": "photos.neillans.co.uk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.5+glitch.1.10.1"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 100,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.pepicrft.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.5"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 25611,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.pixelpeeper.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 20,
+    "languages_detected": [
+      "en",
+      "ca"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "PixelPeeper&#039;s Pixelfed Instance"
+  },
+  {
+    "host": "photos.poprox.group",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.5"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 11,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.racf.guru",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.5"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.samuellison.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 55,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Personal server for Samuel Lison &amp; The Spore Trail."
+  },
+  {
+    "host": "photos.sethgoldstein.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 4,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "This is a personal PixelFed instance."
+  },
+  {
+    "host": "photos.skumring.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "Vernissage",
+      "version": "1.25.0-d3ea1bc"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 166,
+    "languages_detected": [],
+    "fetched_at": "2025-11-27T06:30:53Z"
+  },
+  {
+    "host": "photos.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 370,
+    "users_active_month": 18,
+    "statuses": 2,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "photos.sprig.gs",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 23,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "Some photos from and by the Spriggs Family"
+  },
+  {
+    "host": "photos.thegayborhood.club",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.4"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-27T06:30:53Z",
+    "nodeinfo_description": "An LGBTQ+ and ally friendly PixelFed instance for me and my friends."
+  },
+  {
     "host": "pub.miscworks.net",
     "verified_activitypub": true,
     "software": {
