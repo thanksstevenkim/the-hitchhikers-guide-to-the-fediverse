@@ -83,6 +83,7 @@ LANG_CANON = {
     "sp": "es",
     "cs": "cz",
     "mm": "my",
+    "rs": "sr",
 }
 
 # Outputs (split)

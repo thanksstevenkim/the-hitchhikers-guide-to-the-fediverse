@@ -1595,12 +1595,13 @@
     },
     "open_registrations": false,
     "users_total": 11,
-    "users_active_month": 0,
+    "users_active_month": 1,
     "statuses": 515,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2025-11-21T05:20:01Z",
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "plz.7td.org",
     "nodeinfo_description": "SeventhDimension Pleroma Instance"
   },
   {
@@ -143243,6 +143244,24 @@
     "fetched_at": "2025-11-19T09:18:08Z"
   },
   {
+    "host": "gts.plexwave.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.20.0-rc1+git-8221628"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 205,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "plexwave.org",
+    "nodeinfo_description": "Parenthetical synthesist.he/him"
+  },
+  {
     "host": "gts.poci.us",
     "verified_activitypub": true,
     "software": {
@@ -156118,6 +156137,24 @@
     ],
     "fetched_at": "2025-11-20T07:58:17Z",
     "nodeinfo_description": "An Iceshrimp.NET instance"
+  },
+  {
+    "host": "ice.polycule.li",
+    "verified_activitypub": true,
+    "software": {
+      "name": "iceshrimp",
+      "version": "2023.12.14"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 2,
+    "statuses": 5261,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "polycule.li",
+    "nodeinfo_description": "Just a small personal-ish server for myself, polycule and very close friends."
   },
   {
     "host": "ice.stellaris.fyi",
@@ -217802,6 +217839,21 @@
     ],
     "fetched_at": "2025-11-22T13:24:34Z",
     "nodeinfo_description": "Just a geek testing out setting up my own Mastodon Server! Here just to have some fun!"
+  },
+  {
+    "host": "mastodon.pointless.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.2.23"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 1,
+    "statuses": 864,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "pointless.net"
   },
   {
     "host": "mastodon.pom.community",
@@ -297839,6 +297891,2524 @@
     "nodeinfo_description": "News and views from around the Plex."
   },
   {
+    "host": "plinubius.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 31,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Kommentar und Diskussion im Fediverse unter dem ActivityPub-Handle: @plinubius@chaos.social"
+  },
+  {
+    "host": "plm.ranranhome.info",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pleroma",
+      "version": "2.4.2"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": null,
+    "statuses": 6,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Pleroma: An efficient and flexible fediverse server"
+  },
+  {
+    "host": "plock.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 11,
+    "users_active_month": 1,
+    "statuses": 416,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "plock.net part deux"
+  },
+  {
+    "host": "ploen.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.5"
+    },
+    "open_registrations": true,
+    "users_total": 25,
+    "users_active_month": 6,
+    "statuses": 5379,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Diese Mastodon Instanz ist für Personen aus dem Kreis Plön und umliegender Umgebung gedacht, jedoch sind alle willkommen."
+  },
+  {
+    "host": "plone.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.2.21"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 3,
+    "statuses": 911,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "plopp.utzer.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 278,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "plord.co.uk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 33,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "plrm.capslock.dev",
+    "verified_activitypub": true,
+    "software": {
+      "name": "akkoma",
+      "version": "3.11.0-294-g889b57df-develop"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 1223,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Akkoma: The cooler fediverse server"
+  },
+  {
+    "host": "plrm.ddns.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pleroma",
+      "version": "2.9.1-294-g7071e65a"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 292,
+    "languages_detected": [
+      "en",
+      "da"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Pleroma: An efficient and flexible fediverse server"
+  },
+  {
+    "host": "plrm.komaniya.work",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pleroma",
+      "version": "2.9.1"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 1601,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Pleroma: An efficient and flexible fediverse server"
+  },
+  {
+    "host": "plsnobully.me",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.2.17"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 1,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "plud.re",
+    "verified_activitypub": true,
+    "software": {
+      "name": "iceshrimp",
+      "version": "2023.12.14"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 2123,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "personal server, registration is closed"
+  },
+  {
+    "host": "plugins.seindal.dk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 5,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "These are plugins I&#8217;ve written primarily for my own use, but many might be of general interest. Some have been submitted to the official plugin registry. Most are made as a result of either a specific need on one of my sites, or as a reaction to more common &#8216;official&#8217; plugins getting overly complicated or [&hellip;]"
+  },
+  {
+    "host": "plume.atsuchan.page",
+    "verified_activitypub": true,
+    "software": {
+      "name": "plume",
+      "version": "0.7.2"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": null,
+    "statuses": 7,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Plume instance hosted by atsuchan"
+  },
+  {
+    "host": "plume.benboeckel.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "plume",
+      "version": "0.7.2"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": null,
+    "statuses": 6,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "plume.collectifdhun.ovh",
+    "verified_activitypub": true,
+    "software": {
+      "name": "plume",
+      "version": "0.7.2"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": null,
+    "statuses": 1,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "plume.deuxfleurs.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "plume",
+      "version": "0.7.3-dev"
+    },
+    "open_registrations": false,
+    "users_total": 21,
+    "users_active_month": null,
+    "statuses": 37,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Deuxfleurs est une association loi 1901 enregistrée en France.\nNos serveurs sont également hébergés sur le territoire français.\nPour en savoir plus, rendez-vous sur notre site web : [deuxfleurs.fr](https://deuxfleurs.fr)."
+  },
+  {
+    "host": "plume.helios42.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "plume",
+      "version": "0.7.3-dev"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 2,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "plume.musain.cafe",
+    "verified_activitypub": true,
+    "software": {
+      "name": "plume",
+      "version": "0.7.3-dev"
+    },
+    "open_registrations": false,
+    "users_total": 8,
+    "users_active_month": null,
+    "statuses": 7,
+    "languages_detected": [
+      "ja",
+      "en",
+      "ko",
+      "zh"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "注册请私信管理员 @cafeowner@musain.cafe"
+  },
+  {
+    "host": "plume.pullopen.xyz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "plume",
+      "version": "0.7.3-dev"
+    },
+    "open_registrations": false,
+    "users_total": 1803,
+    "users_active_month": null,
+    "statuses": 399,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "这里是**蓝盒子**图书馆！欢迎大家前来发布及分享**本人或经授权转载**的**中文**作品！\n\nThis is an instance for articles written in **Chinese**. If you want to publish in other languages, please contact the admin, thank you.\n\n请使用英文用户名注册，否则与其他平台联通会出现问题。可在事后改成中文昵称。\n\n目前发现文章标题中若带有英文“/”、“[]”等符号会出现错误，请尽量避免。\n\n[基本使用方法](https://write.allships.run/~/Test%E5%9B%BE/%E5%8F%91-%E5%9B%BE-q-a-%E7%A9%BA/)\n\n本站支持Markdown写作方式，请参见[Plume中的格式使用：Markdown及HTML](https://plume.pullopen.xyz/~/%E5%9B%BE%E4%B9%A6%E9%A6%86%E7%AE%A1%E7%90%86%E6%97%A5%E5%BF%97/plume-%E4%B8%AD-%E7%9A%84-%E6%A0%BC-%E5%BC%8F-%E4%BD%BF-%E7%94%A8-markdown-%E5%8F%8A-html)\n\n因Plume本身问题，目前无法在用户主页显示所有文章，各位需自行创建目录，并将链接放在**个人资料**中。\n\n本站不保证未来长时间稳定，请保存好存档。**请勿将本站分享至墙内平台！**"
+  },
+  {
+    "host": "plume.wimmer-edv.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "plume",
+      "version": "0.7.3-dev"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": null,
+    "statuses": 33,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Meine kleine eigene Blog-Instanz für privates und archiviertes"
+  },
+  {
+    "host": "plumecorrective.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 310,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Parce qu&#039;on a tous une lecture en cours !"
+  },
+  {
+    "host": "plumedserves.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 91,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "plumes.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.4"
+    },
+    "open_registrations": true,
+    "users_total": 14,
+    "users_active_month": 1,
+    "statuses": 1456,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Plumes.io est une communauté d'auteur•ices, de scénaristes et d'illustrateur•ices avec un intérêt pour le domaine de l'imaginaire: science-fiction, fantasy, fantastique, polar et thriller."
+  },
+  {
+    "host": "plunch.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.6"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 11,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "plural.cafe",
+    "verified_activitypub": true,
+    "software": {
+      "name": "glitchcafe",
+      "version": "4.1.2+cafe.41a1757"
+    },
+    "open_registrations": false,
+    "users_total": 1364,
+    "users_active_month": 49,
+    "statuses": 205593,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "plus.narino.jp",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "熊本・天草へ移住した「農家（元航空）とIT（元行政）」の夫婦が発信。非エンジニア目線のテクノロジー活用法や新しい働き方のヒント、農園から直送する旬の柑橘情報をお届けします。"
+  },
+  {
+    "host": "plus.qlub.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.6"
+    },
+    "open_registrations": false,
+    "users_total": 42,
+    "users_active_month": 14,
+    "statuses": 5145,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Qlub, le réseau social québécois gratuit pour tous. Qlub+ finance Qlub en offrant davantage de fonctionnalités. Avec Qlub+, vous contribuez à notre mission de bâtir un écosystème numérique souverain."
+  },
+  {
+    "host": "plusbrothers.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 9,
+    "users_active_month": 6,
+    "statuses": 663,
+    "languages_detected": [
+      "it",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Mondo Positivo e mondo reale. Storie vere e inventate, contro lo stigma su HIV. - Real world and Poz World. True and fictional stories against HIV stigma."
+  },
+  {
+    "host": "plush.city",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 670,
+    "users_active_month": 181,
+    "statuses": 1401481,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "This is a space for soft friends and friends of soft friends to \r\ngather together to share compassion and care for one another!\r\n\r\nPlease review our Code of Conduct prior to signing up!"
+  },
+  {
+    "host": "plushie.town",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 175,
+    "users_active_month": 60,
+    "statuses": 390319,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "（๑´ﻌ｀๑） :  where toybox friends and those with paws gather to play!"
+  },
+  {
+    "host": "plushies.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 76,
+    "users_active_month": 48,
+    "statuses": 107106,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "plushies.social: A Mastodon instance for plushies"
+  },
+  {
+    "host": "plustodon.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.6.0-alpha.1"
+    },
+    "open_registrations": true,
+    "users_total": 203,
+    "users_active_month": 13,
+    "statuses": 163787,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Google\"Plus to\" Mas\"todon\""
+  },
+  {
+    "host": "plutopia.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 5,
+    "users_active_month": 2,
+    "statuses": 363,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "We talk to interesting people via podcast and weekly livestream."
+  },
+  {
+    "host": "plwrtp.moonquake.name",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 382,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "pm.axbom.se",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "sv",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "anteckningar &amp; utkast"
+  },
+  {
+    "host": "pm.ernix.jp",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.4"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 100,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "pmai.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "pmk.noflm.cc",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2025.10.2"
+    },
+    "open_registrations": false,
+    "users_total": 5,
+    "users_active_month": null,
+    "statuses": 206,
+    "languages_detected": [
+      "ja"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "のふれむの個人用のインスタンスです。\nみこすきー"
+  },
+  {
+    "host": "pmth.us",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2024.5.0"
+    },
+    "open_registrations": true,
+    "users_total": 17,
+    "users_active_month": null,
+    "statuses": 267,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "✨🌎✨ A interplanetary communication platform ✨🚀✨"
+  },
+  {
+    "host": "pmueller.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 140,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Autor und Dozent"
+  },
+  {
+    "host": "pmux.dev",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Future-Proof Your Product &amp; Design Career"
+  },
+  {
+    "host": "pneumastodon.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.2.18"
+    },
+    "open_registrations": true,
+    "users_total": 4,
+    "users_active_month": 1,
+    "statuses": 165,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "pnw-mastodon.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 21,
+    "users_active_month": 0,
+    "statuses": 83,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Focusing on the Pacific Northwest region of the USA"
+  },
+  {
+    "host": "pnw.zone",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 1728,
+    "users_active_month": 178,
+    "statuses": 112023,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Come join the Pacific Northwest (US/Canada) Community! A regional instance for anyone that lives in or enjoys the PNW."
+  },
+  {
+    "host": "po0.online",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "5.2.1"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 1,
+    "statuses": 12927,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "poa.st",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pleroma",
+      "version": "2.9.1-340-g397a6965-feature-chat-delete"
+    },
+    "open_registrations": false,
+    "users_total": 33924,
+    "users_active_month": 1672,
+    "statuses": 9602196,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Featured on The Verge, USA Today and more!"
+  },
+  {
+    "host": "poast.tv",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.2.0"
+    },
+    "open_registrations": true,
+    "users_total": 1696,
+    "users_active_month": 70,
+    "statuses": 8771,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "PoastTV, an ActivityPub-federated video streaming platform built on PeerTube using P2P directly in your web browser. Poast TV is a way to join federated video sharing and escape the Big Tech™ stranglehold on public discourse."
+  },
+  {
+    "host": "pocketpixels.club",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 43,
+    "users_active_month": 6,
+    "statuses": 2844,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "The Pocket Pixels club is a place where everyone shares a love of retro handheld games. GB Devs, Low-res pixel arists, Modders, Collectors, and Players!"
+  },
+  {
+    "host": "pocmo.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 226,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "pocmo's Mastodon instance for pocmo, friends and family."
+  },
+  {
+    "host": "pod.sekor.eu.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.19.1+git-6574dc8"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": null,
+    "statuses": 237,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "This is the personal instance of me, a guy who likes to selfhost stuff and code."
+  },
+  {
+    "host": "pod.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 606,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "pod.truefans.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "truefans",
+      "version": "1.0.0"
+    },
+    "open_registrations": false,
+    "users_total": 2125,
+    "users_active_month": null,
+    "statuses": 10,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "podcast.agence-rosalie.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "fr",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Le média révélateur de liens entre humains"
+  },
+  {
+    "host": "podcast.blackvoid.club",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "podcast.chickenyogi.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": true,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 31,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Podcasting to help you hatch your authentic self"
+  },
+  {
+    "host": "podcast.infosec.exchange",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 2,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "The Fanciest Security Podcast On the Fediverse"
+  },
+  {
+    "host": "podcast.oeglobal.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.7"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 93,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Podcasts from Open Education Global"
+  },
+  {
+    "host": "podcast.onpaper.su",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.1.9"
+    },
+    "open_registrations": false,
+    "users_total": 10,
+    "users_active_month": null,
+    "statuses": 251,
+    "languages_detected": [
+      "ru",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "On Paper - говорим о фотографии. Актуальные подкасты о фотографии и визуальных медиа на русском языке, собранные на одном ресурсе."
+  },
+  {
+    "host": "podcaster.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 8,
+    "users_active_month": 1,
+    "statuses": 9,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "podcasters.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "podcastindex.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 1370,
+    "users_active_month": 139,
+    "statuses": 138448,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Intended for all stake holders of podcasting who are interested in improving the ecosystem"
+  },
+  {
+    "host": "podcastlevelup.es",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "es",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Hablamos de videojuegos. Somos independientes."
+  },
+  {
+    "host": "podcastmastery.coach",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 34,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Podcast Coaching &amp; Consulting For Your Business"
+  },
+  {
+    "host": "podcastperformance.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "podcast-peformance",
+      "version": "1.0.4"
+    },
+    "open_registrations": false,
+    "users_total": 100,
+    "users_active_month": 20,
+    "statuses": 1000,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "podcasts.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 442,
+    "users_active_month": 254,
+    "statuses": 55905,
+    "languages_detected": [
+      "en",
+      "es"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "podcasts.social - Mastodon für Podcasts"
+  },
+  {
+    "host": "poder.dk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 29,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "podhubie.vsieti.sk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pleroma",
+      "version": "2.6.50-872-gcb3e0462.develop+soapbox"
+    },
+    "open_registrations": true,
+    "users_total": 52,
+    "users_active_month": 5,
+    "statuses": 616,
+    "languages_detected": [
+      "en",
+      "sk"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Prepája nás s prírodou aj s našou prirodzenosťou, prepája nás medzi sebou aj naše zoskupenia - HUBy. Umožňuje nám spoluvytvárať nové a podporovať existujúce HUBy, ktoré nám umožnia plnohodnotne a symbioticky žiť svoje životy a zdieľať svoje záľuby. Umožňuje nám bezpečne   zdieľať svoje zručnosti a nadania, čím podporujú život a zdravie nás všetkých. Prepája nás podporujúc a obohacujúc našu odolnosť a rozmanitosť. <A HREF=\"https://planeta.earth\">Symbiotic.planetA.earth</A> <P>♥ Kopírovanie je prejavom lásky a Symbiocénu</P>"
+  },
+  {
+    "host": "podlibre.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "3.2.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 1364,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "podlibre.video",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "3.2.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 0,
+    "statuses": 21,
+    "languages_detected": [
+      "en",
+      "es",
+      "da"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Podlibre.video"
+  },
+  {
+    "host": "podriaser.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 203,
+    "languages_detected": [
+      "en",
+      "es"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Cartas desde la edad mediana"
+  },
+  {
+    "host": "podtalk.show",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 157,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Conversations with podcast creators."
+  },
+  {
+    "host": "podtasia.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Your portal to the world of podcasts. Tutorials, reviews, and interviews to help podcasters up-skill and make better podcasts."
+  },
+  {
+    "host": "podvibes.co",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 403,
+    "users_active_month": 41,
+    "statuses": 33031,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "A corner of the #Fediverse carved out and cared for by audio fiction creators and fans.\r\n\r\nIf you love audio dramas, fiction podcasts, audiobooks, radio plays, and more—welcome!"
+  },
+  {
+    "host": "podworko.5edf.pl",
+    "verified_activitypub": true,
+    "software": {
+      "name": "friendica",
+      "version": "2024.12-1576"
+    },
+    "open_registrations": false,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "poesieundprosa.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 55,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Mikroliteratur im Netz"
+  },
+  {
+    "host": "poetry.garden",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.0"
+    },
+    "open_registrations": false,
+    "users_total": 44,
+    "users_active_month": null,
+    "statuses": 54,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "A free literary space for writers to publish their work."
+  },
+  {
+    "host": "pogs.cafe",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.2.1"
+    },
+    "open_registrations": true,
+    "users_total": 45,
+    "users_active_month": 3,
+    "statuses": 8722,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "pogs.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Discover the posibilities of enabling Player-Owned Game Server on your next game title. Reduce your infrastructure cost and give more power to your community."
+  },
+  {
+    "host": "pohl.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Andy Pohl - Engineer/Scientist"
+  },
+  {
+    "host": "poils.pachyderme.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.0"
+    },
+    "open_registrations": true,
+    "users_total": 30,
+    "users_active_month": 2,
+    "statuses": 1434,
+    "languages_detected": [
+      "en",
+      "so",
+      "tr"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Hi ya, cow girl !"
+  },
+  {
+    "host": "pointc.co",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Gain Clarity. Build Culture. With Courage."
+  },
+  {
+    "host": "pointless.chat",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.1"
+    },
+    "open_registrations": true,
+    "users_total": 990,
+    "users_active_month": 85,
+    "statuses": 253871,
+    "languages_detected": [
+      "ko"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "반가워요! 항상 즐겁고 새로움이 가득한 소셜 네트워크, 포인트리스에 어서오세요!"
+  },
+  {
+    "host": "pointless.video",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 18,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Theme park-centric videos. Mostly pointless"
+  },
+  {
+    "host": "poit.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.5"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 23,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "pokemon.mastportal.info",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 1517,
+    "users_active_month": 227,
+    "statuses": 4030971,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "ポケモン非公認マストドンです。\r\n\r\nゲーム「ポケットモンスター」だけでなく、「ポケモンカードゲーム」や「ポケモンGO」、「ポケットモンスターSPECIAL」などポケモンが大好きな方は是非どうぞ。\r\n\r\nポケモン以外の話題も自由にできます。\r\n\r\nイラストの投稿や好きなポケモンなどを話してみるのも良いかもしれません。"
+  },
+  {
+    "host": "pokemon.men",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.8"
+    },
+    "open_registrations": true,
+    "users_total": 86,
+    "users_active_month": 1,
+    "statuses": 23170,
+    "languages_detected": [
+      "ja",
+      "en",
+      "zh"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "一个自由的中文Mastodon实例。注意: 本站域名在中国大陆地区被dns污染。"
+  },
+  {
+    "host": "pokretac.rs",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "sr",
+      "en",
+      "hr"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "GG Pokretač okuplja ljude u Čačku koji žele da ulažu svoje vreme i trud u artikulisano građansko društveno delovanje."
+  },
+  {
+    "host": "pol.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.8"
+    },
+    "open_registrations": true,
+    "users_total": 8096,
+    "users_active_month": 568,
+    "statuses": 313475,
+    "languages_detected": [
+      "en",
+      "pl"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Serwer dla osób polskojęzycznych, zlokalizowany w Krakowie, szybki, dobrze i przyjaźnie moderowany. Prowadzony przez Fundację Technologie dla Ludzi."
+  },
+  {
+    "host": "polagrade.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "id"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "PolaGrade menghadirkan souvenir kustom dan layanan cetak profesional di Jakarta. Sempurna untuk bisnis, acara, dan hadiah yang meninggalkan kesan mendalam."
+  },
+  {
+    "host": "polaroid.absturztau.be",
+    "verified_activitypub": true,
+    "software": {
+      "name": "pixelfed",
+      "version": "0.12.6"
+    },
+    "open_registrations": false,
+    "users_total": 469,
+    "users_active_month": 6,
+    "statuses": 1554,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms."
+  },
+  {
+    "host": "pole-emdr.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "fr",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Pôle EMDR est un centre de formation spécialisé dans la thérapie EMDR, le traumatisme (PTSD / TSPT) encadré par Nicolas et Marguerite Desbiendras."
+  },
+  {
+    "host": "poleedition.mmsh.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8.3"
+    },
+    "open_registrations": false,
+    "users_total": 11,
+    "users_active_month": 9,
+    "statuses": 69,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "policybriefs.co",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Finance | Politics | Economy"
+  },
+  {
+    "host": "policyflow.nz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Critical and research-informed insights into politics, policy, and legislation in Aotearoa New Zealand, guiding informed discussions for a more engaged society."
+  },
+  {
+    "host": "polifinario.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 123,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "&quot;There's never enough time to do all the nothing you want&quot;"
+  },
+  {
+    "host": "polis.edens-garden.xyz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "akkoma",
+      "version": "3.16.0-60-g6d88834f"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 8,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Akkoma: The cooler fediverse server"
+  },
+  {
+    "host": "politicalwire.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 2,
+    "statuses": 149732,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "All the political news in one place"
+  },
+  {
+    "host": "politicarc.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "PoliticArc provides expert insights and analysis on geopolitics, international relations, Indian democracy, and policy developments shaping the world — decoding politics with facts and perspective."
+  },
+  {
+    "host": "politikvonunten.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 319,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Gegen die Raserei und Gefährdung durch nach Minuten bezahlte Carsharing-PKW - Kritik und Unfälle"
+  },
+  {
+    "host": "politikwelt.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Everything is politics"
+  },
+  {
+    "host": "politische-perspektiven.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 3,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Politik, Gesellschaft und Zeitgeschehen - als Blog und Podcast."
+  },
+  {
+    "host": "polity.pi0.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Thoughts, stories and ideas."
+  },
+  {
+    "host": "poliversity.it",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.1+glitch"
+    },
+    "open_registrations": true,
+    "users_total": 222,
+    "users_active_month": 94,
+    "statuses": 35968,
+    "languages_detected": [
+      "en",
+      "it"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Poliversity è una comunità dedicata alla ricerca scientifica e al giornalismo, all'università e all'istruzione ed è nata per promuovere il diritto alla conoscenza e la corretta informazione"
+  },
+  {
+    "host": "poliverso.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "friendica",
+      "version": "2024.12-1576"
+    },
+    "open_registrations": true,
+    "users_total": 652,
+    "users_active_month": 198,
+    "statuses": 44586,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "polizeros.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 14,
+    "users_active_month": 30,
+    "statuses": 23481,
+    "languages_detected": [
+      "en",
+      "ca"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "&quot;A republic, if you can keep it.&quot; Defeat MAGA."
+  },
+  {
+    "host": "pollyanna.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": 1,
+    "statuses": 14980,
+    "languages_detected": [
+      "en",
+      "it"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Pollyanna's solo-instance"
+  },
+  {
+    "host": "polsci.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": true,
+    "users_total": 32,
+    "users_active_month": 9,
+    "statuses": 1617,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Mit polsci.social reagiert der FID Politikwissenschaft auf das Interesse der politikwissenschaftlich Forschenden, einen offenen Kanal für die Wissenschaftskommunikation bereitzustellen."
+  },
+  {
+    "host": "poltora.dev",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "I write about development, tools, pet projects, and interviews."
+  },
+  {
+    "host": "polyam.space",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.6.0-alpha.1+glitch.polyam"
+    },
+    "open_registrations": false,
+    "users_total": 7,
+    "users_active_month": 5,
+    "statuses": 11752,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "A tiny instance for polyam, queer, neurodivergend and anti-fascist folks."
+  },
+  {
+    "host": "polychrom.ing",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.20.1+git-ee4294a"
+    },
+    "open_registrations": false,
+    "users_total": 6,
+    "users_active_month": null,
+    "statuses": 4527,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "The new social hub for creative think tank, hueristic instruments"
+  },
+  {
+    "host": "polycycle.io",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 8,
+    "languages_detected": [
+      "en",
+      "no"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Private server."
+  },
+  {
+    "host": "polyglot.city",
+    "verified_activitypub": true,
+    "software": {
+      "name": "hometown",
+      "version": "4.2.17+hometown-1.1.2"
+    },
+    "open_registrations": true,
+    "users_total": 226,
+    "users_active_month": 51,
+    "statuses": 60123,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "polyglot.jiwonkwak.co",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "A diary of languages, strength, and vibes"
+  },
+  {
+    "host": "polygon.noblogs.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": true,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Geraffel, Gedanken, Knust und viele Fragen. Wir sind das polygon und schreiben manchmal Dinge."
+  },
+  {
+    "host": "polyinnovator.space",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "There is a world of innovations out there to be found, and it is going to take a Polymath to find them. Subscribe to the PolyInContent Digest!"
+  },
+  {
+    "host": "polylogue.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 253,
+    "languages_detected": [
+      "en",
+      "fr"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Le blog un peu ensommeillé de Nicolas Taffin."
+  },
+  {
+    "host": "polymaths.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.20.2+git-3cf4383"
+    },
+    "open_registrations": true,
+    "users_total": 58,
+    "users_active_month": null,
+    "statuses": 89280,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "At Polymaths.social, we’re working to build a community where people can share their passions, form friendships, and have healthy conversations."
+  },
+  {
+    "host": "polyomino.app",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 133,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "pom-show.mymagic.page",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "nl",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Alexander Klöpping en Ernst-Jan Pfauth maken podcasts en meer over media en technologie."
+  },
+  {
+    "host": "pomdon.work",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 22,
+    "users_active_month": 17,
+    "statuses": 412142,
+    "languages_detected": [
+      "ja"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "ぽむの鯖🌟 19/7/26～"
+  },
+  {
+    "host": "pomesskey.xsns.jp",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2025.11.0"
+    },
+    "open_registrations": false,
+    "users_total": 11,
+    "users_active_month": null,
+    "statuses": 46410,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "✨🌎✨ A interplanetary communication platform ✨🚀✨"
+  },
+  {
+    "host": "pomodoro.noblogs.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": true,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 35,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "pompat.us",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.20.2+git-3cf4383"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": null,
+    "statuses": 362,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Some people call me the space cowboySome call me the gangster of loveSome people call me Maurice&#39;Cause I speak of the pompatus of love(lyrics from &#34;T…"
+  },
+  {
+    "host": "pompatus.af7kq.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "Klaxon",
+      "version": "pre-alpha"
+    },
+    "open_registrations": false,
+    "users_total": null,
+    "users_active_month": null,
+    "statuses": null,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "pon.ee",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.13"
+    },
+    "open_registrations": false,
+    "users_total": 11,
+    "users_active_month": 2,
+    "statuses": 280,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "An instance for chill peeps who find talking horses kinda neat. No language restrictions, but we mostly use 🇬🇧/🇨🇿/🇸🇰. Registrations closed as the admin's been the sole active user for a while."
+  },
+  {
+    "host": "pon.tv",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": false,
+    "users_total": 5,
+    "users_active_month": 1,
+    "statuses": 95,
+    "languages_detected": [
+      "ja",
+      "zh"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "一个视频网站。别问。问就是爱！"
+  },
+  {
+    "host": "ponceeric.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "es",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Cada día conozco a personas increíbles, aprendo de ellas, y quiero compartirlo contigo."
+  },
+  {
+    "host": "ponder.a.reallybigh.at",
+    "verified_activitypub": true,
+    "software": {
+      "name": "akkoma",
+      "version": "3.16.0-60-g6d88834f"
+    },
+    "open_registrations": false,
+    "users_total": 6,
+    "users_active_month": 4,
+    "statuses": 725,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "The place for all the pondering wizzards and or frogs. For admin / mod things please message @Julleee."
+  },
+  {
+    "host": "ponderingpotato.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Thoughts, distilled."
+  },
+  {
+    "host": "pone.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.14"
+    },
+    "open_registrations": true,
+    "users_total": 667,
+    "users_active_month": 157,
+    "statuses": 62252,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Pone.Social is a Mastodon-enabled social network for bronies, pegasisters, and all the rest of you fellow pony degenerates."
+  },
+  {
+    "host": "ponies.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.1.20"
+    },
+    "open_registrations": true,
+    "users_total": 531,
+    "users_active_month": 292,
+    "statuses": 269921,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "ponjour.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.8"
+    },
+    "open_registrations": false,
+    "users_total": 25,
+    "users_active_month": 5,
+    "statuses": 1375,
+    "languages_detected": [
+      "ja",
+      "en",
+      "es"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "一个纯个人的 Mastodon 实例。"
+  },
+  {
+    "host": "ponnuki-paderborn.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 9,
+    "users_active_month": 6,
+    "statuses": 103,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Go spielen in Paderborn"
+  },
+  {
+    "host": "pont-bl.eu.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "akkoma",
+      "version": "3.16.0-0-g6d88834"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 967,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Akkoma: The cooler fediverse server"
+  },
+  {
+    "host": "pontebianco.noblogs.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": true,
+    "users_total": 1,
+    "users_active_month": 2,
+    "statuses": 2845,
+    "languages_detected": [
+      "en",
+      "it"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "&gt; materiali, scritture, ricerca, entropia &gt; a cura di marco giovenale e roberto cavallera"
+  },
+  {
+    "host": "pontevedra.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gancio",
+      "version": "1.27.0"
+    },
+    "open_registrations": true,
+    "users_total": 3,
+    "users_active_month": null,
+    "statuses": 55,
+    "languages_detected": [
+      "en",
+      "pt"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Axenda compartida para coletivos autoorganizados na comarca de Pontevedra"
+  },
+  {
+    "host": "pony.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.6.0-nightly.2025-11-07+glitch"
+    },
+    "open_registrations": true,
+    "users_total": 453,
+    "users_active_month": 73,
+    "statuses": 61466,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Ponies on the Fediverse, Ponies on the Timeline, Ponies Everywhere.\r\n\r\nNo horsing around.\r\n\r\nFor nerds, LGBTQ+ or just people looking for a comfy place to call a home in this wild internet."
+  },
+  {
+    "host": "pony.tube",
+    "verified_activitypub": true,
+    "software": {
+      "name": "peertube",
+      "version": "7.3.0"
+    },
+    "open_registrations": true,
+    "users_total": 5723,
+    "users_active_month": 192,
+    "statuses": 11804,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Pony.Tube is a PeerTube-enabled video streaming platform using P2P (Pony-to-Pony) technology to deliver the latest pony videos directly to you."
+  },
+  {
+    "host": "ponysocial.ru",
+    "verified_activitypub": true,
+    "software": {
+      "name": "sharkey",
+      "version": "2025.4.4"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 18,
+    "languages_detected": [
+      "en",
+      "ru"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Добро пожаловать в FurrySocial — уникальную социальную сеть для фурри-сообщества, построенную на базе Misskey! Здесь вы найдете друзей, творчество, обсуждения и много пушистой магии. Наш инстанс создан фурри для фурри, чтобы каждый мог чувствовать себя свободно и безопасно.\n\nВ отличии от X (Twitter) - вам разрешено публиковать NSFW, при условии, что вы установили тег, что контент не безопасен!\n\n Server status: http://77.239.117.162:3001/status/info"
+  },
+  {
+    "host": "ponz.xsns.jp",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2025.11.0"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": null,
+    "statuses": 10,
+    "languages_detected": [
+      "ja"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "ここはメンタル疾患の男、はんぺんにゃんの個人用おひとりさまサーバーとなります。\n登録は受け付けておりませんのでご理解ください。"
+  },
+  {
+    "host": "pool2.matcha1919.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2024.10.1"
+    },
+    "open_registrations": false,
+    "users_total": 3,
+    "users_active_month": null,
+    "statuses": 21567,
+    "languages_detected": [
+      "ja",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "末茶藻中の個人サーバです（再作成）<br>\n<br>\n土地 — 森(Forest) 島(Island)<br>\n（(Ｔ)：(緑)か(青)を加える。）<br>\n繁殖池が戦場に出るに際し、あなたは２点のライフを支払ってもよい。そうしないなら、これはタップ状態で戦場に出る。"
+  },
+  {
+    "host": "poorlyrendered.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.5.2"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 2,
+    "statuses": 3292,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "My personal Mastodon server. If you would like to sign up on this server, hit me up! Run by scottearle@gmail.com"
+  },
+  {
+    "host": "popbob.wtf",
+    "verified_activitypub": true,
+    "software": {
+      "name": "Iceshrimp.NET",
+      "version": "2025.1-beta5.patch3.security3+bc60eda934"
+    },
+    "open_registrations": false,
+    "users_total": 15,
+    "users_active_month": 10,
+    "statuses": 19174,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "The OLDEST anarchy instance in Fediverse history."
+  },
+  {
+    "host": "popisland.xsns.jp",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2025.11.0"
+    },
+    "open_registrations": false,
+    "users_total": 7,
+    "users_active_month": null,
+    "statuses": 2563,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "CAST IN THE NAME OF GOD, YE NOT GUILTY."
+  },
+  {
+    "host": "popkulturreferenz.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.3.9"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 2285,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "This is my server. There are many like it, but this one is mine."
+  },
+  {
+    "host": "poplockparables.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Street dance, music, history, and the journeys between."
+  },
+  {
+    "host": "popon.pptdn.jp",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.2.0"
+    },
+    "open_registrations": true,
+    "users_total": 15,
+    "users_active_month": 0,
+    "statuses": 102619,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "poppy.dea.bz",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "6.8"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 31,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
+    "host": "popresearchrobot.populartransport.net",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "nodeinfo_description": "Plain language AI generated summaries on the latest research about informal and shared mobility"
+  },
+  {
+    "host": "poptalk.scrubbles.tech",
+    "verified_activitypub": true,
+    "software": {
+      "name": "lemmy",
+      "version": "0.19.11"
+    },
+    "open_registrations": true,
+    "users_total": 44,
+    "users_active_month": 1,
+    "statuses": 713,
+    "languages_detected": [],
+    "fetched_at": "2025-11-28T13:28:26Z"
+  },
+  {
     "host": "pub.miscworks.net",
     "verified_activitypub": true,
     "software": {
@@ -298902,6 +301472,24 @@
     "languages_detected": [],
     "fetched_at": "2025-11-27T10:25:04Z",
     "redirected_from": "pixitha.me"
+  },
+  {
+    "host": "social.plhk.dev",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.16.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 6,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "plhk.dev",
+    "nodeinfo_description": "This GoToSocial user hasn't written a bio yet!"
   },
   {
     "host": "social.tchncs.de",
@@ -313230,5 +315818,405 @@
     "fetched_at": "2025-11-27T10:25:04Z",
     "redirected_from": "pleger.cl",
     "nodeinfo_description": "Ph. D. in Computer Science &amp; Software Engineer"
+  },
+  {
+    "host": "www.ploddingham.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "ploddingham.com",
+    "nodeinfo_description": "A little bit of this, a little bit of that, a little at a time."
+  },
+  {
+    "host": "www.pluckyday.co",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "pluckyday.co",
+    "nodeinfo_description": "A family’s real-time journey through Acute Leukemia in Hong Kong"
+  },
+  {
+    "host": "www.plumia.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "plumia.org",
+    "nodeinfo_description": "A nonprofit think-tank and membership association for global citizens."
+  },
+  {
+    "host": "www.plutuspulse101x.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "plutuspulse101x.org",
+    "nodeinfo_description": "Shaping the future of Private Equity Thought Leadership"
+  },
+  {
+    "host": "www.plymouthplus.co.uk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "plymouthplus.co.uk",
+    "nodeinfo_description": "All the latest Plymouth news, sports, events, and updates 24/7. Breaking stories, live blogs, opinions, photos, and videos. Independently owned and operated."
+  },
+  {
+    "host": "www.pm40plus.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "pm40plus.com",
+    "nodeinfo_description": "Prime Movement 40+. Smart fitness, fascia training &amp; rebounding for 40+. Move better, feel stronger, and stay pain-free with Coach Andy."
+  },
+  {
+    "host": "www.po4or.fr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "fr",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "po4or.fr",
+    "nodeinfo_description": "PO4OR – Portail de l’Orient, média culturel franco-arabe basé à Paris, relie l’Orient et l’Occident à travers le cinéma, les arts et la société"
+  },
+  {
+    "host": "www.pocacito.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "pocacito.org",
+    "nodeinfo_description": "education,  archive, network for regenerative sustainability"
+  },
+  {
+    "host": "www.pocketobservatory.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "pocketobservatory.org",
+    "nodeinfo_description": "An attention reclamation project by Meg Conley"
+  },
+  {
+    "host": "www.podcastdigests.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "podcastdigests.com",
+    "nodeinfo_description": "Podcast Digests turns two-hour podcasts into 5-minute, paywall-free written insights. Discover curated takeaways, timestamps &amp; links every week. Subscribe free"
+  },
+  {
+    "host": "www.podcastvideos.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "podcastvideos.com",
+    "nodeinfo_description": "Scaling storytelling by helping people and businesses frequently publish audio and video podcasts that build valuable virtual relationships with their audiences."
+  },
+  {
+    "host": "www.podendo.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "pt"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "podendo.com",
+    "nodeinfo_description": "O PodEndo. é um podcast que aborda os desafios que as mulheres com endometriose enfrentam e apresenta dicas práticas sobre como viverem felizes apesar desta patologia."
+  },
+  {
+    "host": "www.poetryemotion.co.uk",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "poetryemotion.co.uk",
+    "nodeinfo_description": "Thoughts, stories, adventures and ideas."
+  },
+  {
+    "host": "www.polartides.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "polartides.com",
+    "nodeinfo_description": "Empowering businesses through advanced software, cybersecurity, and digital innovation. PolarTides builds secure systems, smart tools, and seamless technology that drive real progress."
+  },
+  {
+    "host": "www.polemics.md",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "polemics.md",
+    "nodeinfo_description": "i find weird things on the internet and write about them"
+  },
+  {
+    "host": "www.policyisforlovers.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "policyisforlovers.com",
+    "nodeinfo_description": "A friendly playbook for good change"
+  },
+  {
+    "host": "www.policyview.ai",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "policyview.ai",
+    "nodeinfo_description": "Tracking AI policy across all 50 states and the federal government"
+  },
+  {
+    "host": "www.polsknorsk.blog",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "pl",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "polsknorsk.blog",
+    "nodeinfo_description": "Urshula, Polka w Norwegii, o życiu w Norwegii i języku norweskim"
+  },
+  {
+    "host": "www.polycrisispolitics.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "polycrisispolitics.com",
+    "nodeinfo_description": "The climate crisis is here now and it comes with a host of interrelated problems.  Let&#x27;s unravel the threads that have brought us polycrisis."
+  },
+  {
+    "host": "www.polzer.org",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "de",
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "polzer.org",
+    "nodeinfo_description": "Essays in text, audio, photo &amp; film. Thoughts, stories and experiences, mostly in German, by Joachim Polzer."
+  },
+  {
+    "host": "www.pontivox.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "pontivox.com",
+    "nodeinfo_description": "Pontivox is dedicated to amplifying messages of peace, unity, and moral clarity by thoughtfully curating official statements, theological insights, cultural commentary, and reflections from both the Church and the wider faith community."
+  },
+  {
+    "host": "www.poorlydrawnarsenal.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2025-11-28T13:28:26Z",
+    "redirected_from": "poorlydrawnarsenal.com",
+    "nodeinfo_description": "I have questionable artistic skills and a love of Arsenal. Here is where I combine the two."
   }
 ]
