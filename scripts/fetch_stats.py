@@ -61,6 +61,7 @@ LANG_CANON = {
     "zh-tw": "zh",
     "chinese": "zh",
     "中文": "zh",
+    "cn": "zh",
 
     "pt": "pt",
     "pt-br": "pt",
