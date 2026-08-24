@@ -53,6 +53,19 @@ python scripts/validate_data.py
 
 수집기는 `instances.json`의 선별 인스턴스를 이전 통계 존재 여부와 관계없이 매번 다시 처리합니다. 인스턴스별로 `stats.ok.json`과 로컬 진단용 `stats.bad.json`을 원자적으로 갱신합니다. 검증기는 `instances.json`, `stats.ok.json`, `manual_overrides.json`, `host_aliases.json`의 JSON 구조와 필수 필드, 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
 
+### 상태 전환과 일시 장애 처리
+
+`stats.ok.json`과 `stats.bad.json`은 host 및 alias를 canonical host로 해석했을 때 서로 배타적입니다.
+
+- 정상 응답은 해당 인스턴스를 `stats.ok.json`에만 저장하고 기존 BAD 기록을 제거합니다.
+- 이전에 정상 상태였던 인스턴스의 첫 번째와 두 번째 연속 실패는 일시 장애로 간주합니다. 마지막 정상 통계를 OK에 유지하면서 `consecutive_failures`, `last_failure_at`, `last_failure_reason`을 갱신합니다.
+- 기본 임계값 `FAILURE_THRESHOLD = 3`에 도달하면 마지막 정상 통계를 OK에서 제거하고 현재 실패 기록을 BAD로 이동합니다.
+- 이전 정상 기록이 없는 신규 실패 인스턴스는 즉시 BAD에 기록합니다.
+- 이후 정상 응답을 받으면 BAD 기록과 실패 정보를 제거하고 `consecutive_failures`를 `0`으로 초기화해 OK로 복귀합니다.
+- alias 원본과 canonical host의 이전 기록은 한 인스턴스로 합쳐져 양쪽 파일에 중복으로 남지 않습니다.
+
+웹 UI는 `stats.ok.json`만 현재 정상 목록으로 사용합니다. 따라서 지속적으로 실패한 인스턴스는 임계값 도달 후 화면에서 제외되고, 복구되면 자동으로 다시 표시됩니다.
+
 다른 디렉터리에서 안전하게 시험하려면 추적 파일 네 개를 복사한 뒤 `--data-dir`을 사용합니다.
 
 ```bash

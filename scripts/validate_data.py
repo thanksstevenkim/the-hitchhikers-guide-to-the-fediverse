@@ -38,6 +38,12 @@ def load_json(path: Path) -> Any:
         raise ValidationError(f"invalid JSON in {path}: {exc}") from exc
 
 
+def load_optional_json(path: Path, default: Any) -> Any:
+    if not path.exists():
+        return default
+    return load_json(path)
+
+
 def require_nonempty_string(value: Any, label: str) -> str:
     if not isinstance(value, str) or not value.strip():
         raise ValidationError(f"{label} must be a non-empty string")
@@ -65,12 +71,48 @@ def validate_instances(path: Path) -> None:
         seen_urls.add(normalized)
 
 
-def validate_stats(path: Path) -> None:
-    rows = load_json(path)
-    if not isinstance(rows, list) or not rows:
-        raise ValidationError(f"{path} must be a non-empty JSON array")
+def normalize_host(value: str) -> str:
+    host = value.strip().lower().rstrip(".")
+    if "://" in host:
+        host = urlparse(host).hostname or ""
+    elif ":" in host:
+        name, port = host.rsplit(":", 1)
+        if port.isdigit():
+            host = name
+    try:
+        return host.encode("idna").decode("ascii")
+    except UnicodeError:
+        return host
+
+
+def resolve_canonical_host(host: str, aliases: dict[str, str]) -> str:
+    current = normalize_host(host)
+    seen: set[str] = set()
+    while current:
+        if current in seen:
+            return min(seen)
+        seen.add(current)
+        target = normalize_host(aliases.get(current, ""))
+        if not target or target == current:
+            break
+        current = target
+    return current
+
+
+def validate_stats(
+    path: Path,
+    aliases: dict[str, str],
+    *,
+    bucket: str,
+    required: bool,
+) -> set[str]:
+    rows = load_json(path) if required else load_optional_json(path, [])
+    if not isinstance(rows, list) or (required and not rows):
+        requirement = "a non-empty JSON array" if required else "a JSON array"
+        raise ValidationError(f"{path} must be {requirement}")
 
     seen_hosts: set[str] = set()
+    seen_canonical_hosts: set[str] = set()
     for index, row in enumerate(rows):
         label = f"{path}[{index}]"
         if not isinstance(row, dict):
@@ -79,13 +121,22 @@ def validate_stats(path: Path) -> None:
         if missing:
             raise ValidationError(f"{label} is missing fields: {', '.join(sorted(missing))}")
 
-        host = require_nonempty_string(row["host"], f"{label}.host").lower()
+        host = normalize_host(require_nonempty_string(row["host"], f"{label}.host"))
         if host in seen_hosts:
-            raise ValidationError(f"duplicate stats host: {host}")
+            raise ValidationError(f"duplicate {bucket} stats host: {host}")
         seen_hosts.add(host)
+        canonical_host = resolve_canonical_host(host, aliases)
+        if canonical_host in seen_canonical_hosts:
+            raise ValidationError(
+                f"duplicate {bucket} canonical host after aliases: {canonical_host}"
+            )
+        seen_canonical_hosts.add(canonical_host)
 
-        if row["verified_activitypub"] is not True:
+        verified = row["verified_activitypub"]
+        if bucket == "OK" and verified is not True:
             raise ValidationError(f"{label}.verified_activitypub must be true")
+        if bucket == "BAD" and not isinstance(verified, bool):
+            raise ValidationError(f"{label}.verified_activitypub must be boolean")
         if not isinstance(row["software"], dict):
             raise ValidationError(f"{label}.software must be an object")
         if row["open_registrations"] is not None and not isinstance(
@@ -106,9 +157,24 @@ def validate_stats(path: Path) -> None:
         ):
             raise ValidationError(f"{label}.languages_detected must be a string array")
         require_nonempty_string(row["fetched_at"], f"{label}.fetched_at")
+        failures = row.get("consecutive_failures")
+        if failures is not None and (
+            not isinstance(failures, int)
+            or isinstance(failures, bool)
+            or failures < 0
+        ):
+            raise ValidationError(f"{label}.consecutive_failures must be non-negative")
+        if row.get("last_failure_at") is not None:
+            require_nonempty_string(row["last_failure_at"], f"{label}.last_failure_at")
+        if row.get("last_failure_reason") is not None:
+            require_nonempty_string(
+                row["last_failure_reason"], f"{label}.last_failure_reason"
+            )
+
+    return seen_canonical_hosts
 
 
-def validate_mapping(path: Path, value_validator: type) -> None:
+def validate_mapping(path: Path, value_validator: type) -> dict[str, Any]:
     mapping = load_json(path)
     if not isinstance(mapping, dict):
         raise ValidationError(f"{path} must be a JSON object")
@@ -118,6 +184,7 @@ def validate_mapping(path: Path, value_validator: type) -> None:
             raise ValidationError(
                 f"{path}[{key!r}] must be {value_validator.__name__}"
             )
+    return mapping
 
 
 def parse_args() -> argparse.Namespace:
@@ -130,13 +197,32 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def validate_data_dir(data_dir: Path) -> None:
+    validate_instances(data_dir / "instances.json")
+    validate_mapping(data_dir / "manual_overrides.json", dict)
+    raw_aliases = validate_mapping(data_dir / "host_aliases.json", str)
+    aliases = {
+        normalize_host(key): normalize_host(value)
+        for key, value in raw_aliases.items()
+    }
+    ok_hosts = validate_stats(
+        data_dir / "stats.ok.json", aliases, bucket="OK", required=True
+    )
+    bad_hosts = validate_stats(
+        data_dir / "stats.bad.json", aliases, bucket="BAD", required=False
+    )
+    overlap = ok_hosts & bad_hosts
+    if overlap:
+        raise ValidationError(
+            "hosts present in both OK and BAD stats after aliases: "
+            + ", ".join(sorted(overlap))
+        )
+
+
 def main() -> int:
     data_dir = parse_args().data_dir.resolve()
     try:
-        validate_instances(data_dir / "instances.json")
-        validate_stats(data_dir / "stats.ok.json")
-        validate_mapping(data_dir / "manual_overrides.json", dict)
-        validate_mapping(data_dir / "host_aliases.json", str)
+        validate_data_dir(data_dir)
     except ValidationError as exc:
         print(f"data validation failed: {exc}", file=sys.stderr)
         return 1
