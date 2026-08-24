@@ -10,87 +10,71 @@ GitHub Pages로 그대로 호스팅할 수 있으며, 검색·필터·정렬 기
 
 ---
 
-## 📁 데이터 구조
+## 📁 데이터와 Git 추적 정책
 
-| 파일                          | 설명                                                    |
-| ----------------------------- | ------------------------------------------------------- |
-| `data/instances.json`         | 수동으로 등록한 인스턴스 목록                           |
-| `data/stats.ok.json`          | ActivityPub 검증 성공 및 통계 이상치 없는 정상 인스턴스 |
-| `data/stats.bad.json`         | 검증 실패·네트워크 오류·이상치 등 비정상 인스턴스       |
-| `data/peer_suggestions.json`  | 연합 관계를 통해 발견된 새 인스턴스 후보                |
-| `data/filtered_peers.json`    | 스팸/광고 도메인을 걸러낸 최종 후보                     |
-| `data/spam_filtered.log.json` | 스팸 필터에서 제외된 도메인과 이유 로그                 |
+웹 UI가 런타임에 읽는 파일은 정확히 두 개입니다.
+
+| 파일 | Git | Pages | 역할 |
+| --- | --- | --- | --- |
+| `data/instances.json` | 유지 | 포함 | 수동으로 선별한 인스턴스 목록 |
+| `data/stats.ok.json` | 유지 | 포함 | 검증을 통과한 공개 통계. 사이트의 유일한 통계 입력 |
+| `data/manual_overrides.json` | 유지 | 제외 | 특정 호스트의 수집 결과를 보정하는 수동 규칙 |
+| `data/host_aliases.json` | 유지 | 제외 | 원본 호스트와 canonical host의 검증된 매핑 |
+
+다음 파일은 조사·진단 과정의 재생성 가능한 중간 산출물이므로 `.gitignore`에 포함하며 Pages에도 올리지 않습니다.
+
+| 파일 | 생성 시점 |
+| --- | --- |
+| `data/stats.bad.json` | 통계 수집 중 검증 실패·네트워크 오류·이상치 기록 |
+| `data/peer_suggestions.json` | `--discover-peers` 실행 시 발견 후보 기록 |
+| `data/filtered_peers.json` | `filter_spam.py` 실행 시 필터 통과 후보 기록 |
+| `data/spam_filtered.log.json` | `filter_spam.py` 실행 시 제외 사유 기록 |
+
+이 파일들은 로컬 실행 중 필요에 따라 다시 생성됩니다. 과거 파일이 필요하면 Git 이력에서 확인할 수 있습니다.
 
 ---
 
-## ⚙️ 실행 순서 (추천 워크플로)
+## ⚙️ 설치와 수동 갱신
 
-아래 세 단계를 순서대로 실행하면 됩니다.
+Python 3.12 환경에서 의존성을 설치합니다.
 
----
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
 
-### ① 연합 피어 목록 생성
+선별된 `instances.json`의 통계를 갱신하고 결과를 검사합니다.
 
-기존 인스턴스에서 연합된 피어 도메인을 탐색합니다.
+```bash
+python scripts/fetch_stats.py
+python scripts/validate_data.py
+```
+
+수집기는 인스턴스별로 `stats.ok.json`과 로컬 진단용 `stats.bad.json`을 원자적으로 갱신합니다. 검증기는 `instances.json`, `stats.ok.json`, `manual_overrides.json`, `host_aliases.json`의 JSON 구조와 필수 필드, 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
+
+다른 디렉터리에서 안전하게 시험하려면 추적 파일 네 개를 복사한 뒤 `--data-dir`을 사용합니다.
+
+```bash
+python scripts/fetch_stats.py --data-dir /tmp/fediverse-data
+python scripts/validate_data.py --data-dir /tmp/fediverse-data
+```
+
+### 선택 사항: 새 피어 조사
+
+새 후보를 조사하는 과정은 정기 워크플로와 분리되어 있습니다.
 
 ```bash
 python scripts/fetch_stats.py --discover-peers
-```
-
-- NodeInfo 및 소프트웨어별 API의 `peers` 정보를 수집합니다.
-- 결과: `data/peer_suggestions.json`
-- 이미 검사된(host가 `stats.ok.json` 또는 `stats.bad.json`에 존재하는) 도메인은 자동으로 제외됩니다.
-- 표준 출력으로 내보내려면 `--peer-output -`을 사용할 수 있습니다.
-
----
-
-### ② 스팸·비정상 도메인 필터링
-
-`filter_spam.py`로 피어 목록에서 명백히 스팸·광고·비정상 도메인을 제거합니다.
-
-```bash
 python scripts/filter_spam.py
-```
-
-- 입력: `data/peer_suggestions.json`
-- 출력:
-
-  - `data/filtered_peers.json` — 통과된 후보 (다음 단계 입력으로 사용)
-  - `data/spam_filtered.log.json` — 제외된 도메인과 사유 기록
-
-- 필터링 기준:
-
-  - 의심스러운 TLD (`.tk`, `.ml`, `.xyz`, 등)
-  - 스팸/성인/도박/암호화폐 등 키워드
-  - 숫자·반복 패턴 도메인
-  - (존재 시) ActivityPub 검증 실패 또는 비정상 통계
-
-- 옵션:
-
-  - `--blocklist <파일>` : 추가 차단 목록 지정
-  - `--dry-run` : 결과를 파일로 저장하지 않고 콘솔로만 출력
-
-> 💡 이 단계에서 미리 걸러내면, `fetch_stats.py`가 불필요한 네트워크 요청을 하지 않아 훨씬 빠르게 동작합니다.
-
----
-
-### ③ 통계 수집 (정상 도메인만)
-
-스팸 필터를 통과한 인스턴스만 대상으로 통계를 가져옵니다.
-
-```bash
 python scripts/fetch_stats.py --input data/filtered_peers.json
+python scripts/validate_data.py
 ```
 
-- 결과:
-
-  - `data/stats.ok.json` — ActivityPub 검증 성공 및 정상 통계
-  - `data/stats.bad.json` — 검증 실패, 미응답, 이상치, 비정상 통계 등
-
-- 인스턴스 1개 처리마다 즉시 저장되므로, 중간에 중단되어도 이미 수집된 데이터는 보존됩니다.
-- `--input`을 사용하면 이미 기록된 호스트는 자동으로 스킵합니다.
-- `requests` 패키지를 설치하면 HTTPS 요청 성능이 향상됩니다.
-- 최초 실행 시 기존 `stats.json`이 존재하면 자동으로 OK/BAD 구조로 마이그레이션됩니다.
+- `--peer-output -`을 사용하면 후보를 파일 대신 표준 출력으로 보낼 수 있습니다.
+- `filter_spam.py --dry-run`은 필터 결과를 파일에 쓰지 않습니다.
+- `--blocklist <파일>`로 로컬 추가 차단 목록을 지정할 수 있습니다.
+- 새 후보를 `stats.ok.json`에 합치기 전에는 결과와 진단 로그를 사람이 검토해야 합니다.
 
 ---
 
@@ -100,7 +84,8 @@ python scripts/fetch_stats.py --input data/filtered_peers.json
 | ---------------- | ------------------------------------------------------ |
 | `fetch_stats.py` | ActivityPub 노드/플랫폼별 API를 통해 통계 수집 및 검증 |
 | `filter_spam.py` | 도메인 이름 기반 스팸·광고·비정상 후보 자동 필터링     |
-| `update.yml`     | (옵션) GitHub Actions를 이용해 자동 갱신 및 Pages 배포 |
+| `validate_data.py` | 배포 데이터의 JSON 형식과 필수 필드 검증 |
+| `update.yml`     | 격리된 통계 갱신, 검증, 명시적 커밋 및 Pages 배포 |
 
 ---
 
@@ -136,12 +121,18 @@ python scripts/fetch_stats.py --input data/filtered_peers.json
 ## 🔄 자동 통계 및 Pages 배포
 
 `.github/workflows/update.yml`은 매일 06:00 (Asia/Seoul) / 21:00 (UTC)에
-`fetch_stats.py`를 실행해 `stats.ok.json`과 `stats.bad.json`을 갱신하고
-GitHub Pages로 자동 배포합니다.
+다음 순서로 실행됩니다.
 
-- `GITHUB_TOKEN`에 `contents: write`, `pages: write` 권한이 필요합니다.
-- 제한된 조직 계정에서는 `repo` 권한을 가진 PAT을 `REPO_TOKEN`으로 등록하세요.
-- 로컬에서도 [`act`](https://github.com/nektos/act)로 `act -j update` 명령으로 테스트 가능합니다.
+1. Python `3.12.10`과 `requirements.txt`의 고정 의존성을 설치합니다.
+2. 추적 중인 데이터 네 개를 Runner 임시 디렉터리에 복사합니다.
+3. 임시 디렉터리에서 통계를 수집하고 `validate_data.py`로 검사합니다.
+4. 검증에 성공한 `stats.ok.json`과 `host_aliases.json`만 작업 트리에 승격합니다.
+5. 두 파일 중 실제 변경이 있는 경우에만 Actions bot으로 커밋합니다.
+6. 변경 여부와 관계없이 현재의 정상 데이터로 `_site` 아티팩트를 만들고 Pages에 배포합니다.
+
+검증이나 수집이 실패하면 추적 중인 정상 데이터는 덮어쓰지 않으며 Pages 배포 단계도 실행되지 않습니다. Pages 아티팩트에는 `index.html`, `styles.css`, `js/`, `i18n/`, `instances.json`, `stats.ok.json`만 포함됩니다.
+
+워크플로의 `GITHUB_TOKEN`에는 `contents: write`, `pages: write`, `id-token: write` 권한이 필요합니다. 저장소의 **Settings → Pages → Build and deployment → Source**는 **GitHub Actions**여야 합니다. 현재처럼 보호되지 않은 개인 저장소의 `main` 브랜치에서는 기본 `GITHUB_TOKEN`으로 충분하며 별도 PAT을 저장소에 넣지 않습니다. 조직 또는 저장소 정책이 Actions의 쓰기를 제한한다면 해당 정책을 먼저 확인해야 합니다.
 
 ---
 

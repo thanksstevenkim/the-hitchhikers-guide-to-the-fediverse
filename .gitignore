@@ -3,3 +3,12 @@ node_modules/
 *.log
 .venv/
 __pycache__/
+_site/
+
+# Local discovery and diagnostics; none of these files is served by the site.
+data/peer_suggestions.json
+data/filtered_peers.json
+data/spam_filtered.log.json
+data/stats.bad.json
+data/stats.json
+data/*.tmp

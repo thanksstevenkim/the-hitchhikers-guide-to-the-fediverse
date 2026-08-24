@@ -5,9 +5,6 @@ on:
     - cron: "0 21 * * *"
   workflow_dispatch:
 
-# NOTE: Ensure the workflow token has contents: write access. For locked-down setups,
-# configure a PAT with `repo` scope as secrets.REPO_TOKEN and uncomment the checkout token below.
-# Local test: install https://github.com/nektos/act and run `act -j update`.
 permissions:
   contents: write
   pages: write
@@ -26,36 +23,63 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        # token: ${{ secrets.REPO_TOKEN }}
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.12.10"
+          cache: pip
       - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Prepare isolated data staging directory
+        id: staging
+        shell: bash
         run: |
-          python -m pip install --upgrade pip
-          pip install langdetect requests
-      - name: Fetch instance statistics
-        run: python scripts/fetch_stats.py
+          staging_data="${RUNNER_TEMP}/fediverse-data"
+          mkdir -p "$staging_data"
+          cp data/instances.json "$staging_data/instances.json"
+          cp data/stats.ok.json "$staging_data/stats.ok.json"
+          cp data/manual_overrides.json "$staging_data/manual_overrides.json"
+          cp data/host_aliases.json "$staging_data/host_aliases.json"
+          echo "data_dir=$staging_data" >> "$GITHUB_OUTPUT"
+      - name: Fetch instance statistics into staging
+        run: python scripts/fetch_stats.py --data-dir "${{ steps.staging.outputs.data_dir }}"
+      - name: Validate staged site data
+        run: python scripts/validate_data.py --data-dir "${{ steps.staging.outputs.data_dir }}"
+      - name: Promote validated data
+        shell: bash
+        run: |
+          staging_data="${{ steps.staging.outputs.data_dir }}"
+          cp "$staging_data/stats.ok.json" data/stats.ok.json
+          cp "$staging_data/host_aliases.json" data/host_aliases.json
       - name: Commit updated stats
         id: commit
+        shell: bash
         run: |
-          if git diff --quiet -- data/stats.json; then
+          tracked_outputs=(data/stats.ok.json data/host_aliases.json)
+          if git diff --quiet -- "${tracked_outputs[@]}"; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/stats.json
+            git add -- "${tracked_outputs[@]}"
             git commit -m "chore: refresh stats"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+      - name: Build Pages artifact
+        shell: bash
+        run: |
+          mkdir -p _site/data
+          cp index.html styles.css _site/
+          cp -R js i18n _site/
+          cp data/instances.json data/stats.ok.json _site/data/
+          touch _site/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

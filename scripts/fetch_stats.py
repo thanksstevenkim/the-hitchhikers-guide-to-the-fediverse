@@ -27,9 +27,10 @@ from html.parser import HTMLParser
 TIMEOUT = 5
 USER_AGENT = "fedlist-stats-fetcher/1.0"
 BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
 
 # Inputs
-INSTANCES_PATH = BASE_DIR / "data" / "instances.json"
+INSTANCES_PATH = DATA_DIR / "instances.json"
 
 LANG_CANON = {
     # 영어
@@ -88,14 +89,32 @@ LANG_CANON = {
 }
 
 # Outputs (split)
-ALIASES_PATH = BASE_DIR / "data" / "host_aliases.json"
-STATS_OK_PATH  = BASE_DIR / "data" / "stats.ok.json"
-STATS_BAD_PATH = BASE_DIR / "data" / "stats.bad.json"
+ALIASES_PATH = DATA_DIR / "host_aliases.json"
+STATS_OK_PATH  = DATA_DIR / "stats.ok.json"
+STATS_BAD_PATH = DATA_DIR / "stats.bad.json"
 
 # (Legacy) Single-file path retained for compatibility in helper logic
-STATS_PATH = BASE_DIR / "data" / "stats.json"
+STATS_PATH = DATA_DIR / "stats.json"
 
-MANUAL_OVERRIDES_PATH = BASE_DIR / "data" / "manual_overrides.json"
+MANUAL_OVERRIDES_PATH = DATA_DIR / "manual_overrides.json"
+
+
+def configure_data_dir(data_dir: Path) -> None:
+    """Point all data inputs and outputs at one directory.
+
+    GitHub Actions uses this to collect into a staging directory. The tracked
+    site data is only replaced after the staged files pass validation.
+    """
+    global DATA_DIR, INSTANCES_PATH, ALIASES_PATH
+    global STATS_OK_PATH, STATS_BAD_PATH, STATS_PATH, MANUAL_OVERRIDES_PATH
+
+    DATA_DIR = data_dir.resolve()
+    INSTANCES_PATH = DATA_DIR / "instances.json"
+    ALIASES_PATH = DATA_DIR / "host_aliases.json"
+    STATS_OK_PATH = DATA_DIR / "stats.ok.json"
+    STATS_BAD_PATH = DATA_DIR / "stats.bad.json"
+    STATS_PATH = DATA_DIR / "stats.json"
+    MANUAL_OVERRIDES_PATH = DATA_DIR / "manual_overrides.json"
 
 # Network safety limits
 MAX_JSON_BYTES = 2_000_000  # 2MB soft cap for JSON payloads
@@ -242,6 +261,7 @@ def _sanitize_charset(enc: Optional[str]) -> str:
 def main() -> None:
     args = parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+    configure_data_dir(Path(args.data_dir))
 
     # --input 이 있으면 host 문자열/객체 리스트를, 없으면 instances.json을 사용
     if args.input:
@@ -331,11 +351,17 @@ def main() -> None:
         suggestions = sorted(
             h for h in discovered_hosts if h not in load_checked_hosts()
         )
-        emit_peer_suggestions(suggestions, args.peer_output)
+        peer_output = args.peer_output or str(DATA_DIR / "peer_suggestions.json")
+        emit_peer_suggestions(suggestions, peer_output)
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Fetch ActivityPub stats (incremental save, split outputs).")
+    parser.add_argument(
+        "--data-dir",
+        default=str(DATA_DIR),
+        help="Directory containing inputs and receiving outputs (default: data)."
+    )
     parser.add_argument(
         "--input",
         help="Input JSON file with host list (plain strings or objects). Results merge into stats.ok/bad.json."
@@ -347,8 +373,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--peer-output",
-        default=str(BASE_DIR / "data" / "peer_suggestions.json"),
-        help="File path for discovered peers (use '-' for stdout)."
+        default=None,
+        help="File path for discovered peers (default: <data-dir>/peer_suggestions.json; use '-' for stdout)."
     )
     return parser.parse_args()
 
