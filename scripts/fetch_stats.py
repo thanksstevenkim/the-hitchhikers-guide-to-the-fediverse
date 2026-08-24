@@ -2,7 +2,8 @@
 """
 Fetch Fediverse instance statistics with ActivityPub verification.
 
-- Incremental save: after EACH instance is processed, results are saved atomically.
+- Bounded network concurrency with main-thread state transitions.
+- Batched atomic checkpoints, including a final interrupted-run checkpoint.
 - Split outputs:
     * data/stats.ok.json  : verified + sane stats
     * data/stats.bad.json : failed verification, network/parse errors, or anomalous metrics
@@ -11,22 +12,34 @@ Fetch Fediverse instance statistics with ActivityPub verification.
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import FIRST_COMPLETED, Future, ThreadPoolExecutor, wait
 import json
 import logging
 import sys
 import re
-from dataclasses import dataclass
+import threading
+import time
+from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Sequence, Set, Tuple
+from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Set, Tuple
 from urllib.parse import urlparse, urljoin
 import codecs
 from langdetect import detect_langs, LangDetectException
 from html.parser import HTMLParser
 
-TIMEOUT = 5
+REQUEST_CONNECT_TIMEOUT = 3.05
+REQUEST_READ_TIMEOUT = 5.0
+REQUESTS_TIMEOUT = (REQUEST_CONNECT_TIMEOUT, REQUEST_READ_TIMEOUT)
+URLLIB_TIMEOUT = REQUEST_READ_TIMEOUT
 USER_AGENT = "fedlist-stats-fetcher/1.0"
 FAILURE_THRESHOLD = 3
+DEFAULT_WORKERS = 16
+MAX_WORKERS = 32
+DEFAULT_CHECKPOINT_EVERY = 100
+MAX_CHECKPOINT_EVERY = 10_000
+MAX_IN_FLIGHT_MULTIPLIER = 2
+INTERRUPT_DRAIN_SECONDS = 10.0
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
@@ -131,12 +144,48 @@ except Exception:  # pragma: no cover - optional import guard
     requests = None
 
 
+LANGDETECT_LOCK = threading.Lock()
+
+
 @dataclass
 class Instance:
     name: str
     host: str
     url: str
     platform: str
+
+
+@dataclass
+class FetchResult:
+    """One worker observation with no shared state mutations."""
+
+    instance: Instance
+    record: Dict[str, Any]
+    errors: List[str]
+    peers: Set[str]
+
+
+@dataclass
+class CollectionState:
+    """Mutable health state, owned and changed only by the main thread."""
+
+    ok_map: Dict[str, Dict[str, Any]]
+    bad_map: Dict[str, Dict[str, Any]]
+    monitored: Dict[str, Dict[str, Any]]
+    aliases: Dict[str, str]
+    manual_overrides: Dict[str, Dict[str, Any]]
+    candidate_mode: bool
+    discover_peers: bool
+    total: int
+    started_at: float = field(default_factory=time.monotonic)
+    discovered_hosts: Set[str] = field(default_factory=set)
+    processed: int = 0
+    good: int = 0
+    transient: int = 0
+    bad: int = 0
+    last_checkpoint: int = 0
+    registry_dirty: bool = False
+    aliases_dirty: bool = False
 
 
 class FetchError(RuntimeError):
@@ -261,6 +310,283 @@ def _sanitize_charset(enc: Optional[str]) -> str:
     except LookupError:
         return "utf-8"
 
+def failure_result(instance: Instance, timestamp: str, exc: BaseException) -> FetchResult:
+    return FetchResult(
+        instance=instance,
+        record={
+            "host": instance.host,
+            "verified_activitypub": False,
+            "software": {},
+            "open_registrations": None,
+            "users_total": None,
+            "users_active_month": None,
+            "statuses": None,
+            "languages_detected": [],
+            "fetched_at": timestamp,
+        },
+        errors=[f"fatal: {exc!r}"],
+        peers=set(),
+    )
+
+
+def fetch_instance_observation(
+    instance: Instance,
+    timestamp: str,
+    *,
+    discover_peers: bool = False,
+) -> FetchResult:
+    """Run network collection in a worker without mutating shared state."""
+    try:
+        result = process_instance(
+            instance, timestamp, discover_peers=discover_peers
+        )
+        if isinstance(result, FetchResult):
+            return result
+        record, errors, peers = result
+        return FetchResult(instance, record, list(errors), set(peers))
+    except Exception as exc:
+        logging.exception("FATAL while processing %s", instance.host)
+        return failure_result(instance, timestamp, exc)
+
+
+def register_alias_observation(
+    aliases: Dict[str, str], original_host: str, canonical_host: str
+) -> bool:
+    """Apply a verified same-zone alias in memory on the main thread."""
+    original = _normalize_host(original_host)
+    canonical = _normalize_host(canonical_host)
+    if (
+        not original
+        or not canonical
+        or original == canonical
+        or not _same_zone(original, canonical)
+        or aliases.get(original) == canonical
+    ):
+        return False
+    aliases[original] = canonical
+    return True
+
+
+def apply_fetch_result(state: CollectionState, result: FetchResult) -> str:
+    """Apply one completed observation; this function runs on the main thread."""
+    instance = result.instance
+    record = result.record
+    errors = result.errors
+    existing_source = monitored_source_for(
+        state.monitored, instance.host, state.aliases
+    )
+
+    redirected_from = record.get("redirected_from")
+    if isinstance(redirected_from, str):
+        alias_changed = register_alias_observation(
+            state.aliases, redirected_from, str(record.get("host", ""))
+        )
+        state.aliases_dirty |= alias_changed
+        if alias_changed:
+            previous_entry = state.monitored.pop(
+                _normalize_host(redirected_from), None
+            )
+            if previous_entry is not None:
+                state.registry_dirty = True
+
+    apply_manual_overrides(record, state.manual_overrides)
+    bucket = classify_record(record, bool(errors))
+    reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
+    health_state, _, _, failure_count = apply_health_transition(
+        record,
+        bucket,
+        state.ok_map,
+        state.bad_map,
+        state.aliases,
+        failure_reason=reason,
+    )
+
+    # GOOD/BAD changes display state only. Existing monitored hosts are never
+    # removed, while reviewed candidates join only after a GOOD observation.
+    if not state.candidate_mode or health_state == "good":
+        software = record.get("software")
+        platform = (
+            str(software.get("name", "")).strip().lower()
+            if isinstance(software, dict)
+            else ""
+        )
+        state.registry_dirty |= register_monitored_instance(
+            state.monitored,
+            Instance(
+                name=instance.name or str(record["host"]),
+                host=str(record["host"]),
+                url=instance.url,
+                platform=platform or instance.platform,
+            ),
+            source=(
+                "peer"
+                if state.candidate_mode
+                else existing_source
+            ),
+            aliases=state.aliases,
+        )
+
+    if state.discover_peers and result.peers:
+        state.discovered_hosts.update(result.peers)
+
+    state.processed += 1
+    if health_state == "good":
+        state.good += 1
+        logging.debug("OK %s", record["host"])
+    elif health_state == "transient_failure":
+        state.transient += 1
+        logging.warning(
+            "WARN %s: transient failure %d/%d; retaining last known good stats: %s",
+            record["host"],
+            failure_count,
+            FAILURE_THRESHOLD,
+            reason,
+        )
+    else:
+        state.bad += 1
+        logging.warning(
+            "BAD %s (consecutive failures=%d): %s",
+            record["host"],
+            failure_count,
+            reason,
+        )
+    return health_state
+
+
+def format_duration(seconds: float) -> str:
+    total_seconds = max(0, int(seconds))
+    hours, remainder = divmod(total_seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+
+
+def checkpoint_collection(state: CollectionState, *, force: bool = False) -> bool:
+    """Atomically checkpoint completed results in invariant-safe order."""
+    pending_results = state.processed > state.last_checkpoint
+    if not pending_results and not state.registry_dirty and not state.aliases_dirty:
+        return False
+    if not force and not pending_results:
+        return False
+
+    if state.aliases_dirty:
+        save_aliases(state.aliases)
+    # Registry is saved before OK so interruption cannot create an OK record
+    # that is absent from the persistent monitored set.
+    if state.registry_dirty:
+        save_monitored_registry_atomic(state.monitored, state.aliases)
+    if pending_results:
+        save_stats_pair_atomic(state.ok_map, state.bad_map, state.aliases)
+
+    state.aliases_dirty = False
+    state.registry_dirty = False
+    state.last_checkpoint = state.processed
+
+    elapsed = max(time.monotonic() - state.started_at, 0.001)
+    rate = state.processed / elapsed
+    remaining = max(state.total - state.processed, 0)
+    eta = remaining / rate if rate > 0 else 0
+    percentage = (100.0 * state.processed / state.total) if state.total else 100.0
+    logging.info(
+        "Processed %d/%d (%.1f%%) GOOD=%d transient=%d BAD=%d "
+        "elapsed=%s rate=%.2f hosts/s ETA=%s",
+        state.processed,
+        state.total,
+        percentage,
+        state.good,
+        state.transient,
+        state.bad,
+        format_duration(elapsed),
+        rate,
+        format_duration(eta),
+    )
+    return True
+
+
+def run_bounded_fetches(
+    instances: Sequence[Instance],
+    timestamp: str,
+    on_result: Callable[[FetchResult], None],
+    *,
+    workers: int,
+    fetcher: Callable[[Instance, str], FetchResult] = fetch_instance_observation,
+    interrupt_drain_seconds: float = INTERRUPT_DRAIN_SECONDS,
+) -> None:
+    """Fetch with bounded in-flight work and apply results on the caller thread."""
+    executor = ThreadPoolExecutor(max_workers=workers, thread_name_prefix="fedlist")
+    iterator = iter(instances)
+    in_flight: Dict[Future[FetchResult], Instance] = {}
+    seen_hosts: Set[str] = set()
+    input_exhausted = False
+    max_in_flight = max(workers, workers * MAX_IN_FLIGHT_MULTIPLIER)
+
+    def fill_queue() -> None:
+        nonlocal input_exhausted
+        while not input_exhausted and len(in_flight) < max_in_flight:
+            try:
+                instance = next(iterator)
+            except StopIteration:
+                input_exhausted = True
+                break
+            host = _normalize_host(instance.host)
+            if not host or host in seen_hosts:
+                continue
+            seen_hosts.add(host)
+            future = executor.submit(fetcher, instance, timestamp)
+            in_flight[future] = instance
+
+    def consume(done: Iterable[Future[FetchResult]]) -> None:
+        for future in done:
+            instance = in_flight.pop(future, None)
+            if instance is None or future.cancelled():
+                continue
+            try:
+                result = future.result()
+            except Exception as exc:
+                logging.exception("Worker failed for %s", instance.host)
+                result = failure_result(instance, timestamp, exc)
+            on_result(result)
+
+    fill_queue()
+    try:
+        while in_flight:
+            done, _ = wait(tuple(in_flight), return_when=FIRST_COMPLETED)
+            consume(done)
+            fill_queue()
+    except KeyboardInterrupt:
+        logging.warning(
+            "Interrupt received; cancelling queued work and draining completed workers "
+            "for up to %.0f seconds",
+            interrupt_drain_seconds,
+        )
+        for future in in_flight:
+            future.cancel()
+        try:
+            done, _ = wait(tuple(in_flight), timeout=interrupt_drain_seconds)
+            consume(done)
+        except KeyboardInterrupt:
+            logging.warning("Second interrupt received; stopping worker drain")
+        executor.shutdown(wait=False, cancel_futures=True)
+        raise
+    except BaseException:
+        for future in in_flight:
+            future.cancel()
+        executor.shutdown(wait=False, cancel_futures=True)
+        raise
+    else:
+        executor.shutdown(wait=True)
+
+
+def deduplicate_instances(
+    instances: Iterable[Instance], aliases: Dict[str, str]
+) -> List[Instance]:
+    unique: Dict[str, Instance] = {}
+    for instance in instances:
+        canonical = resolve_canonical_host(instance.host, aliases)
+        if canonical and canonical not in unique:
+            unique[canonical] = instance
+    return [unique[host] for host in sorted(unique)]
+
+
 def main() -> None:
     args = parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -269,20 +595,19 @@ def main() -> None:
     aliases = load_aliases()
     seed_instances = list(load_instances(INSTANCES_PATH))
     ok_map, bad_map = load_existing_stats_maps()
+    # One O(n) canonicalization makes every per-host health transition O(1).
+    reconcile_health_maps(ok_map, bad_map, aliases)
     monitored, registry_changed = prepare_monitored_registry(
-        seed_instances,
-        ok_map,
-        aliases,
+        seed_instances, ok_map, aliases
     )
     if registry_changed:
         save_monitored_registry_atomic(monitored, aliases)
 
-    # Candidate inputs are a queue of unseen hosts. The default path is a
-    # refresh of the complete persistent monitoring set, not just the seeds.
     if args.input:
         instances = list(load_host_strings(Path(args.input)))
     else:
         instances = monitored_instances(monitored, aliases)
+    instances = deduplicate_instances(instances, aliases)
 
     if not instances:
         if args.input:
@@ -294,133 +619,94 @@ def main() -> None:
             )
         return
 
-    # 현재 UTC 타임스탬프 (ISO8601, Z)
     now = (
         datetime.now(timezone.utc)
         .replace(microsecond=0)
         .isoformat()
         .replace("+00:00", "Z")
     )
+    state = CollectionState(
+        ok_map=ok_map,
+        bad_map=bad_map,
+        monitored=monitored,
+        aliases=aliases,
+        manual_overrides=load_manual_overrides(),
+        candidate_mode=bool(args.input),
+        discover_peers=args.discover_peers,
+        total=len(instances),
+    )
+    logging.info(
+        "Starting collection: total=%d workers=%d checkpoint_every=%d "
+        "connect_timeout=%.2fs read_timeout=%.2fs",
+        state.total,
+        args.workers,
+        args.checkpoint_every,
+        REQUEST_CONNECT_TIMEOUT,
+        REQUEST_READ_TIMEOUT,
+    )
 
-    manual_overrides = load_manual_overrides()
+    def handle_result(result: FetchResult) -> None:
+        apply_fetch_result(state, result)
+        if state.processed - state.last_checkpoint >= args.checkpoint_every:
+            checkpoint_collection(state)
 
-    discovered_hosts: Set[str] = set()
-    processed = 0
-    updated_ok = 0
-    updated_bad = 0
-
-    for instance in instances:
-        try:
-            # 1) 인스턴스에서 raw record 뽑기
-            record, errors, peers = process_instance(instance, now)
-        except Exception as exc:
-            logging.exception("FATAL while processing %s", instance.host)
-            # 2) 최소 레코드로 대체
-            record = {
-                "host": instance.host,
-                "verified_activitypub": False,
-                "software": {},
-                "open_registrations": None,
-                "users_total": None,
-                "users_active_month": None,
-                "statuses": None,
-                "languages_detected": [],
-                "fetched_at": now,
-            }
-            errors = [f"fatal: {exc!r}"]
-            peers = set()
-
-        # 3) 무조건 여기서 manual_overrides 적용 (정상/예외 둘 다)
-        apply_manual_overrides(record, manual_overrides)
-
-        # 4) 그 결과를 기준으로 분류하고 상호 배타적인 상태로 저장
-        current_aliases = load_aliases()
-        had_errors = bool(errors)
-        bucket = classify_record(record, had_errors)  # 'good' or 'bad'
-        reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
-        state, ok_changed, bad_changed, failure_count = apply_health_transition(
-            record,
-            bucket,
-            ok_map,
-            bad_map,
-            current_aliases,
-            failure_reason=reason,
+    try:
+        run_bounded_fetches(
+            instances,
+            now,
+            handle_result,
+            workers=args.workers,
+            fetcher=lambda instance, timestamp: fetch_instance_observation(
+                instance,
+                timestamp,
+                discover_peers=args.discover_peers,
+            ),
         )
-
-        # Monitoring membership is independent of display health. Existing
-        # monitored instances remain registered on failure; reviewed
-        # candidates join only after a successful collection.
-        if not args.input or state == "good":
-            software = record.get("software")
-            platform = (
-                str(software.get("name", "")).strip().lower()
-                if isinstance(software, dict)
-                else ""
-            )
-            registry_changed = register_monitored_instance(
-                monitored,
-                Instance(
-                    name=instance.name or record["host"],
-                    host=record["host"],
-                    url=instance.url,
-                    platform=platform or instance.platform,
-                ),
-                source="peer" if args.input else monitored_source_for(
-                    monitored, instance.host, current_aliases
-                ),
-                aliases=current_aliases,
-            )
-            if registry_changed:
-                save_monitored_registry_atomic(monitored, current_aliases)
-        updated_ok += int(ok_changed)
-        updated_bad += int(bad_changed)
-
-        if state == "good":
-            logging.info(
-                "OK   %s (%s)",
-                record["host"],
-                record.get("software", {}).get("name") or "-",
-            )
-        elif state == "transient_failure":
-            logging.warning(
-                "WARN %s: transient failure %d/%d; retaining last known good stats: %s",
-                record["host"],
-                failure_count,
-                FAILURE_THRESHOLD,
-                reason,
-            )
-        else:
-            logging.warning(
-                "BAD  %s (consecutive failures=%d): %s",
-                record["host"],
-                failure_count,
-                reason,
-            )
-
-        processed += 1
-        save_stats_pair_atomic(ok_map, bad_map, current_aliases)
-
-        if args.discover_peers and peers:
-            discovered_hosts.update(peers)
-
-        logging.info(
-            "Incremental save complete: processed=%d, ok_updates=%d, bad_updates=%d",
-            processed, updated_ok, updated_bad
+    except KeyboardInterrupt:
+        logging.warning("Saving a final checkpoint before interrupted exit")
+        checkpoint_collection(state, force=True)
+        logging.error(
+            "Collection interrupted after %d/%d hosts; saved completed results",
+            state.processed,
+            state.total,
         )
+        raise SystemExit(130)
+    except BaseException:
+        logging.exception("Collector aborted; saving completed results")
+        checkpoint_collection(state, force=True)
+        raise
+    else:
+        checkpoint_collection(state, force=True)
 
     if args.discover_peers:
-        # Load the known set once; do not repeatedly parse JSON in this loop.
         checked_hosts = load_checked_hosts()
-
-        suggestions = sorted(
-            h for h in discovered_hosts if h not in checked_hosts
-        )
         peer_output = args.peer_output or str(DATA_DIR / "peer_suggestions.json")
-        emit_peer_suggestions(suggestions, peer_output)
+        emit_peer_suggestions(
+            sorted(state.discovered_hosts),
+            peer_output,
+            checked_hosts=checked_hosts,
+        )
+
+
+def bounded_positive_int(label: str, maximum: int) -> Callable[[str], int]:
+    def parse(value: str) -> int:
+        try:
+            number = int(value)
+        except ValueError as exc:
+            raise argparse.ArgumentTypeError(f"{label} must be an integer") from exc
+        if number < 1 or number > maximum:
+            raise argparse.ArgumentTypeError(
+                f"{label} must be between 1 and {maximum}"
+            )
+        return number
+
+    return parse
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Fetch ActivityPub stats (incremental save, split outputs).")
+    parser = argparse.ArgumentParser(
+        description="Fetch ActivityPub stats with bounded concurrency and atomic checkpoints."
+    )
     parser.add_argument(
         "--data-dir",
         default=str(DATA_DIR),
@@ -439,6 +725,21 @@ def parse_args() -> argparse.Namespace:
         "--peer-output",
         default=None,
         help="File path for discovered peers (default: <data-dir>/peer_suggestions.json; use '-' for stdout)."
+    )
+    parser.add_argument(
+        "--workers",
+        type=bounded_positive_int("workers", MAX_WORKERS),
+        default=DEFAULT_WORKERS,
+        help=f"Concurrent network workers (default: {DEFAULT_WORKERS}, max: {MAX_WORKERS}).",
+    )
+    parser.add_argument(
+        "--checkpoint-every",
+        type=bounded_positive_int("checkpoint interval", MAX_CHECKPOINT_EVERY),
+        default=DEFAULT_CHECKPOINT_EVERY,
+        help=(
+            "Atomically save completed results after this many hosts "
+            f"(default: {DEFAULT_CHECKPOINT_EVERY})."
+        ),
     )
     return parser.parse_args()
 
@@ -691,22 +992,22 @@ def _pop_equivalent_records(
     records: Dict[str, Dict[str, Any]],
     canonical_host: str,
     aliases: Dict[str, str],
+    observed_hosts: Sequence[str] = (),
 ) -> List[Tuple[str, Dict[str, Any]]]:
-    """Remove and return every record resolving to one canonical host."""
+    """Remove canonical/observed keys without scanning the complete map.
+
+    ``main()`` canonicalizes loaded maps once before collection. Every later
+    insert also uses canonical keys, so per-result transitions remain O(1).
+    Explicit observed keys preserve compatibility for direct callers and
+    legacy alias records.
+    """
     matches: List[Tuple[str, Dict[str, Any]]] = []
-    for key, value in list(records.items()):
-        record_host = value.get("host") if isinstance(value, dict) else key
-        candidate_hosts = [str(record_host or key)]
-        redirected_from = value.get("redirected_from") if isinstance(value, dict) else None
-        if isinstance(redirected_from, str):
-            candidate_hosts.append(redirected_from)
-        elif isinstance(redirected_from, (list, tuple, set)):
-            candidate_hosts.extend(str(host) for host in redirected_from)
-        if any(
-            resolve_canonical_host(candidate, aliases) == canonical_host
-            for candidate in candidate_hosts
-        ):
-            matches.append((key, records.pop(key)))
+    keys = {canonical_host}
+    keys.update(_normalize_host(host) for host in observed_hosts if host)
+    for key in keys:
+        value = records.pop(key, None)
+        if value is not None:
+            matches.append((key, value))
     return matches
 
 
@@ -761,8 +1062,19 @@ def apply_health_transition(
     if observed_host != canonical_host and not current.get("redirected_from"):
         current["redirected_from"] = observed_host
 
-    previous_ok_records = _pop_equivalent_records(ok_map, canonical_host, aliases)
-    previous_bad_records = _pop_equivalent_records(bad_map, canonical_host, aliases)
+    observed_variants = [observed_host]
+    redirected_from = current.get("redirected_from")
+    if isinstance(redirected_from, str):
+        observed_variants.append(redirected_from)
+    elif isinstance(redirected_from, (list, tuple, set)):
+        observed_variants.extend(str(host) for host in redirected_from)
+
+    previous_ok_records = _pop_equivalent_records(
+        ok_map, canonical_host, aliases, observed_variants
+    )
+    previous_bad_records = _pop_equivalent_records(
+        bad_map, canonical_host, aliases, observed_variants
+    )
     previous_ok = _latest_record(previous_ok_records)
     previous_bad = _latest_record(previous_bad_records)
 
@@ -857,11 +1169,12 @@ def reconcile_health_maps(
 
 def save_aliases(aliases: Dict[str, str]) -> None:
     ALIASES_PATH.parent.mkdir(parents=True, exist_ok=True)
-    # 예쁘게 저장
-    ALIASES_PATH.write_text(
+    temporary = ALIASES_PATH.with_suffix(ALIASES_PATH.suffix + ".tmp")
+    temporary.write_text(
         json.dumps(aliases, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8"
     )
+    temporary.replace(ALIASES_PATH)
 
 def register_alias(original_host: str, canonical_host: str) -> None:
     """원본 → 캐노니컬 매핑을 추가/갱신."""
@@ -1242,8 +1555,13 @@ def load_host_strings(path: Path) -> Iterable[Instance]:
 # Fetching & parsing
 # -------------------------------
 
-def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any], List[str], Set[str]]:
-    logging.info("BEGIN %s", instance.host)
+def process_instance(
+    instance: Instance,
+    timestamp: str,
+    *,
+    discover_peers: bool = False,
+) -> Tuple[Dict[str, Any], List[str], Set[str]]:
+    logging.debug("BEGIN %s", instance.host)
     record: Dict[str, Any] = {
         "host": instance.host,
         "verified_activitypub": False,
@@ -1264,7 +1582,7 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
     try:
         nodeinfo, canonical_base = fetch_nodeinfo(instance.host)
     except FetchError as exc:
-        logging.warning("nodeinfo error for %s: %s", instance.host, exc)
+        logging.debug("nodeinfo error for %s: %s", instance.host, exc)
         errors.append(f"nodeinfo: {exc}")
         nodeinfo = None
 
@@ -1284,7 +1602,8 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
         append_languages(languages, languages_seen, ni_langs)
 
         # peers
-        peers.update(extract_peer_hosts_from_nodeinfo(nodeinfo))
+        if discover_peers:
+            peers.update(extract_peer_hosts_from_nodeinfo(nodeinfo))
     elif nodeinfo:
         errors.append("nodeinfo: invalid format")
 
@@ -1298,7 +1617,6 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
             if canon_host and _same_zone(canon_host, _normalize_host(instance.host)):
                 if canon_host != _normalize_host(instance.host):
                     record["redirected_from"] = instance.host
-                    register_alias(instance.host, canon_host)
                 record["host"] = canon_host
     except Exception:
         pass
@@ -1316,14 +1634,18 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
 
     if platform == "mastodon":
         try:
-            platform_data = fetch_mastodon(base_url)   # ← 캐노니컬 base 사용
+            platform_data = fetch_mastodon(
+                base_url, include_peers=discover_peers
+            )
         except FetchError as exc:
             errors.append(f"mastodon: {exc}")
         else:
             record["verified_activitypub"] = True
     elif platform == "misskey":
         try:
-            platform_data = fetch_misskey(base_url)    # ← 캐노니컬 base 사용
+            platform_data = fetch_misskey(
+                base_url, include_peers=discover_peers
+            )
         except FetchError as exc:
             errors.append(f"misskey: {exc}")
         else:
@@ -1338,7 +1660,8 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
         update_numeric(record, "users_active_month", platform_data.get("users_active_month"))
         update_numeric(record, "statuses", platform_data.get("statuses"))
         append_languages(languages, languages_seen, platform_data.get("languages"))
-        peers.update(normalize_peer_list(platform_data.get("peers")))
+        if discover_peers:
+            peers.update(normalize_peer_list(platform_data.get("peers")))
     
         # --- 설명 텍스트 저장 (언어 감지 없이) ---
     desc = record.get("nodeinfo_description")
@@ -1365,7 +1688,7 @@ def process_instance(instance: Instance, timestamp: str) -> Tuple[Dict[str, Any]
 
     
     if desc:
-        logging.info("detecting languages from description for host %s", instance.host)
+        logging.debug("detecting languages from description for host %s", instance.host)
         # 1) 스크립트(문자 범위) 기반으로 ko/ja/en 강제 포함
         script_langs = list(detect_scripts(desc))
         append_languages(languages, languages_seen, script_langs)
@@ -1443,15 +1766,20 @@ def fetch_site_metadata(base_url: str, host: str, include_description: bool = Tr
         if requests is not None:
             import requests as _req
             try:
-                resp = _req.get(base_url, headers=headers, timeout=TIMEOUT, allow_redirects=True)
-                if resp.status_code != 200:
-                    return None
-                
-                content_type = resp.headers.get('content-type', '')
-                if 'text/html' not in content_type:
-                    return None
-                
-                return extract_metadata_from_html(resp.text, host)
+                with _req.get(
+                    base_url,
+                    headers=headers,
+                    timeout=REQUESTS_TIMEOUT,
+                    allow_redirects=True,
+                ) as resp:
+                    if resp.status_code != 200:
+                        return None
+
+                    content_type = resp.headers.get('content-type', '')
+                    if 'text/html' not in content_type:
+                        return None
+
+                    return extract_metadata_from_html(resp.text, host)
             except _req.exceptions.RequestException:
                 return None
         
@@ -1459,7 +1787,7 @@ def fetch_site_metadata(base_url: str, host: str, include_description: bool = Tr
         else:
             import urllib.request
             request = urllib.request.Request(base_url, headers=headers)
-            with urllib.request.urlopen(request, timeout=TIMEOUT) as resp:
+            with urllib.request.urlopen(request, timeout=URLLIB_TIMEOUT) as resp:
                 if resp.status != 200:
                     return None
                 
@@ -1573,7 +1901,7 @@ def select_latest_nodeinfo_link(links: Sequence[Any]) -> Optional[Dict[str, Any]
     return max(candidates, key=version_key)
 
 
-def fetch_mastodon(base_url: str) -> Dict[str, Any]:
+def fetch_mastodon(base_url: str, *, include_peers: bool = False) -> Dict[str, Any]:
     errors: List[str] = []
     for path in ("/api/v2/instance", "/api/v1/instance"):
         try:
@@ -1585,7 +1913,8 @@ def fetch_mastodon(base_url: str) -> Dict[str, Any]:
         if not isinstance(payload, dict):
             continue
         result = parse_mastodon_payload(payload, path.endswith("v2/instance"))
-        result["peers"] = sorted(fetch_mastodon_peers(base_url))
+        if include_peers:
+            result["peers"] = sorted(fetch_mastodon_peers(base_url))
         return result
     raise FetchError("; ".join(errors) if errors else "instance API unavailable")
 
@@ -1646,7 +1975,7 @@ def parse_mastodon_payload(payload: Dict[str, Any], is_v2: bool) -> Dict[str, An
     return result
 
 
-def fetch_misskey(base_url: str) -> Dict[str, Any]:
+def fetch_misskey(base_url: str, *, include_peers: bool = False) -> Dict[str, Any]:
     host = urlparse(base_url).hostname or ""
     payload = request_json(f"{base_url}/api/meta", method="POST", json_body={"detail": True}, expected_host=host)
     if not isinstance(payload, dict):
@@ -1675,9 +2004,10 @@ def fetch_misskey(base_url: str) -> Dict[str, Any]:
         "languages": [],
     }
 
-    federation = payload.get("federation") if isinstance(payload, dict) else None
-    if isinstance(federation, dict):
-        result["peers"] = sorted(normalize_peer_list(federation.get("peers")))
+    if include_peers:
+        federation = payload.get("federation") if isinstance(payload, dict) else None
+        if isinstance(federation, dict):
+            result["peers"] = sorted(normalize_peer_list(federation.get("peers")))
     return result
 
 
@@ -1685,7 +2015,12 @@ def fetch_misskey(base_url: str) -> Dict[str, Any]:
 # Utilities
 # -------------------------------
 
-def emit_peer_suggestions(hosts: Sequence[str], target: str) -> None:
+def emit_peer_suggestions(
+    hosts: Sequence[str],
+    target: str,
+    *,
+    checked_hosts: Optional[Set[str]] = None,
+) -> None:
     """
     Save newly discovered peers, excluding ones already checked (ok/bad/legacy).
     """
@@ -1693,7 +2028,8 @@ def emit_peer_suggestions(hosts: Sequence[str], target: str) -> None:
         logging.info("No federation peers discovered.")
         return
 
-    checked_hosts = load_checked_hosts()
+    if checked_hosts is None:
+        checked_hosts = load_checked_hosts()
     new_hosts = [h for h in hosts if h not in checked_hosts]
 
     if not new_hosts:
@@ -1880,7 +2216,10 @@ def detect_languages_from_text(text: str,
         text = text[:1000]
 
     try:
-        candidates = detect_langs(text)
+        # langdetect lazily initializes shared profiles; serialize this small
+        # CPU-only section while network collection remains concurrent.
+        with LANGDETECT_LOCK:
+            candidates = detect_langs(text)
     except LangDetectException:
         return []
     except Exception as e:
@@ -2095,7 +2434,7 @@ def request_json(
                     method,
                     url,
                     json=data,
-                    timeout=TIMEOUT,
+                    timeout=REQUESTS_TIMEOUT,
                     headers=headers,
                     stream=True,        # 스트리밍
                     allow_redirects=True,
@@ -2136,7 +2475,10 @@ def request_json(
             except json.JSONDecodeError as exc:
                 raise FetchError(f"Invalid JSON response from {url}: {exc}")
 
-        return _do(method, url, json_body)
+        try:
+            return _do(method, url, json_body)
+        finally:
+            session.close()
 
     # ----- urllib 버전 -----
     import urllib.error
@@ -2156,7 +2498,7 @@ def request_json(
 
         request = urllib.request.Request(current_url, data=data_bytes, headers=req_headers, method=method)
         try:
-            with urllib.request.urlopen(request, timeout=TIMEOUT) as resp:
+            with urllib.request.urlopen(request, timeout=URLLIB_TIMEOUT) as resp:
                 # 리다이렉트 처리
                 if 300 <= resp.status < 400:
                     loc = resp.headers.get("Location")

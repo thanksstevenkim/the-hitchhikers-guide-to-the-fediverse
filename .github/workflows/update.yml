@@ -17,6 +17,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 300
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -43,7 +44,11 @@ jobs:
           cp data/host_aliases.json "$staging_data/host_aliases.json"
           echo "data_dir=$staging_data" >> "$GITHUB_OUTPUT"
       - name: Fetch instance statistics into staging
-        run: python scripts/fetch_stats.py --data-dir "${{ steps.staging.outputs.data_dir }}"
+        run: >-
+          python scripts/fetch_stats.py
+          --data-dir "${{ steps.staging.outputs.data_dir }}"
+          --workers 16
+          --checkpoint-every 100
       - name: Validate staged site data
         run: python scripts/validate_data.py --data-dir "${{ steps.staging.outputs.data_dir }}"
       - name: Promote validated data

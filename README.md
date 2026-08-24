@@ -52,7 +52,24 @@ python scripts/fetch_stats.py
 python scripts/validate_data.py
 ```
 
-수집기는 기본 실행에서 `instances.json`의 seed와 `monitored_instances.json`의 전체 대상을 canonical host 기준으로 합쳐 매번 다시 처리합니다. 인스턴스별로 `stats.ok.json`과 로컬 진단용 `stats.bad.json`을 원자적으로 갱신합니다. 검증기는 registry 구조와 `stats.ok ⊆ monitored` 불변식까지 포함해 필수 필드와 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
+수집기는 기본 실행에서 `instances.json`의 seed와 `monitored_instances.json`의 전체 대상을 canonical host 기준으로 합쳐 매번 다시 처리합니다. 검증기는 registry 구조와 `stats.ok ⊆ monitored` 불변식까지 포함해 필수 필드와 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
+
+### 대규모 수집 성능과 checkpoint
+
+기본 수집은 최대 16개의 network worker만 사용하는 bounded concurrency 방식입니다. worker는 네트워크 observation만 반환하며, GOOD/BAD 전환과 파일·registry 변경은 main thread가 한 번씩 적용합니다. 같은 host는 한 실행에서 중복 제출되지 않습니다.
+
+```bash
+python scripts/fetch_stats.py --workers 16 --checkpoint-every 100
+```
+
+- `--workers` 기본값은 `16`, 허용 범위는 `1~32`입니다. 서버 부하와 Runner 자원을 고려해 상한을 제한합니다.
+- `--checkpoint-every` 기본값은 `100`입니다. 100개 완료마다 alias, monitored registry, OK/BAD 상태를 같은 filesystem의 임시 파일에서 atomic rename으로 저장합니다.
+- 마지막 partial batch도 정상 종료 전에 저장됩니다.
+- `Ctrl+C`가 들어오면 새 작업 제출과 대기 중 작업을 취소하고, 이미 완료된 결과를 최대 10초간 회수한 뒤 final checkpoint를 시도하고 exit code `130`으로 종료합니다.
+- 진행 로그는 checkpoint마다 처리량, GOOD/transient/BAD 수, 경과 시간, 평균 처리율과 대략적인 ETA를 표시합니다.
+- connect timeout은 요청당 `3.05초`, read timeout은 요청당 `5초`입니다. 한 인스턴스가 여러 endpoint를 호출할 수 있으므로 인스턴스 전체 시간은 이보다 길 수 있지만, 제한된 worker 중 하나만 점유하며 전체 수집을 순차적으로 막지는 않습니다.
+
+약 27,000개 registry는 환경과 원격 서버 상태에 따라 여전히 오래 걸릴 수 있습니다. 현재는 매일 full scan을 유지합니다. 향후 실행 시간이 계속 길다면 healthy host는 2~3일 간격, 최근 실패/BAD host는 매일 검사하는 staggered scheduling을 별도 변경으로 검토합니다.
 
 ### 데이터 수명주기
 
@@ -173,12 +190,14 @@ python -m pytest
 
 1. Python `3.12.10`과 `requirements.txt`의 고정 의존성을 설치합니다.
 2. 추적 중인 입력·상태 데이터 다섯 개를 Runner 임시 디렉터리에 복사합니다.
-3. 임시 디렉터리에서 통계를 수집하고 `validate_data.py`로 검사합니다.
+3. 임시 디렉터리에서 16 workers, 100-host checkpoint로 통계를 수집하고 `validate_data.py`로 검사합니다.
 4. 검증에 성공한 `monitored_instances.json`, `stats.ok.json`, `host_aliases.json`만 작업 트리에 승격합니다.
 5. 세 파일 중 실제 변경이 있는 경우에만 Actions bot으로 커밋합니다.
 6. 변경 여부와 관계없이 현재의 정상 데이터로 `_site` 아티팩트를 만들고 Pages에 배포합니다.
 
 검증이나 수집이 실패하면 추적 중인 정상 데이터는 덮어쓰지 않으며 Pages 배포 단계도 실행되지 않습니다. Pages 아티팩트에는 `index.html`, `styles.css`, `js/`, `i18n/`, `instances.json`, `stats.ok.json`만 포함됩니다.
+
+update job에는 `timeout-minutes: 300`을 설정합니다. 강제 timeout은 graceful shutdown 신호를 보장하지 않으므로 최대 손실 범위는 마지막 100개 미만의 미저장 observation이며, 그 이전 checkpoint는 staging 디렉터리에 보존됩니다. Workflow가 실패하면 staging 결과는 repository에 승격되지 않습니다.
 
 워크플로의 `GITHUB_TOKEN`에는 `contents: write`, `pages: write`, `id-token: write` 권한이 필요합니다. 저장소의 **Settings → Pages → Build and deployment → Source**는 **GitHub Actions**여야 합니다. 현재처럼 보호되지 않은 개인 저장소의 `main` 브랜치에서는 기본 `GITHUB_TOKEN`으로 충분하며 별도 PAT을 저장소에 넣지 않습니다. 조직 또는 저장소 정책이 Actions의 쓰기를 제한한다면 해당 정책을 먼저 확인해야 합니다.
 
