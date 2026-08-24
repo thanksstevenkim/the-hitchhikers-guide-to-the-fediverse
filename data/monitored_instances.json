@@ -1770,12 +1770,6 @@
     "platform": "ghost"
   },
   {
-    "host": "aellxx.dev",
-    "url": "https://aellxx.dev",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "aelspire.info",
     "url": "https://aelspire.info",
     "source": "legacy",
@@ -1816,12 +1810,6 @@
     "url": "https://affinityforest.com",
     "source": "legacy",
     "platform": "writefreely"
-  },
-  {
-    "host": "afisch.blog",
-    "url": "https://afisch.blog",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "afn.game-host.mydns.jp",
@@ -3426,6 +3414,13 @@
     "platform": "ghost"
   },
   {
+    "host": "allykotetsu.com",
+    "url": "https://social.allykotetsu.com",
+    "source": "legacy",
+    "name": "social.allykotetsu.com",
+    "platform": "wordpress"
+  },
+  {
     "host": "allysonshaw.ghost.io",
     "url": "https://allysonshaw.ghost.io",
     "source": "legacy",
@@ -3610,12 +3605,6 @@
     "url": "https://altern8.io",
     "source": "legacy",
     "platform": "ghost"
-  },
-  {
-    "host": "alternatives-numeriques.fr",
-    "url": "https://alternatives-numeriques.fr",
-    "source": "legacy",
-    "platform": "wordpress"
   },
   {
     "host": "alternativesedge.com",
@@ -4656,12 +4645,6 @@
     "platform": "mastodon"
   },
   {
-    "host": "anna.kiwi",
-    "url": "https://anna.kiwi",
-    "source": "legacy",
-    "platform": "wordpress"
-  },
-  {
     "host": "annakirche.at",
     "url": "https://annakirche.at",
     "source": "legacy",
@@ -4767,7 +4750,7 @@
     "host": "ansico.dk",
     "url": "https://ansico.dk",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "forgejo"
   },
   {
     "host": "ansole.org",
@@ -4941,7 +4924,7 @@
     "host": "antisocialparadise.net",
     "url": "https://antisocialparadise.net",
     "source": "legacy",
-    "platform": "gotosocial"
+    "platform": "mastodon"
   },
   {
     "host": "anton-tartz.de",
@@ -5151,7 +5134,7 @@
     "host": "ap.petepuzzles.com",
     "url": "https://ap.petepuzzles.com",
     "source": "legacy",
-    "platform": "gotosocial"
+    "platform": "snac"
   },
   {
     "host": "ap.sadboi.xyz",
@@ -5523,7 +5506,7 @@
     "host": "arakoshi.com",
     "url": "https://arakoshi.com",
     "source": "legacy",
-    "platform": "ccworld-ap-bridge"
+    "platform": "concrnt-ap-bridge"
   },
   {
     "host": "arasaka.biz",
@@ -5715,13 +5698,13 @@
     "host": "ariake.concrnt.net",
     "url": "https://ariake.concrnt.net",
     "source": "legacy",
-    "platform": "ccworld-ap-bridge"
+    "platform": "concrnt-ap-bridge"
   },
   {
     "host": "ariamispainted.world",
     "url": "https://ariamispainted.world",
     "source": "legacy",
-    "platform": "akkoma"
+    "platform": "pleroma"
   },
   {
     "host": "aribaud.net",
@@ -6588,12 +6571,6 @@
     "platform": "ghost"
   },
   {
-    "host": "asymmetricedge.io",
-    "url": "https://asymmetricedge.io",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "async.social",
     "url": "https://async.social",
     "source": "legacy",
@@ -6921,7 +6898,7 @@
     "host": "aufentha.lt",
     "url": "https://aufentha.lt",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "mastodon"
   },
   {
     "host": "august98.com",
@@ -7125,7 +7102,7 @@
     "host": "autumnsky.jp",
     "url": "https://autumnsky.jp",
     "source": "legacy",
-    "platform": "akkoma"
+    "platform": "friendica"
   },
   {
     "host": "avalatte.kr",
@@ -8223,7 +8200,7 @@
     "host": "bath.social",
     "url": "https://bath.social",
     "source": "legacy",
-    "platform": "hometown"
+    "platform": "mastodon"
   },
   {
     "host": "bathcampaigns.org.uk",
@@ -9783,7 +9760,7 @@
     "host": "bird.band",
     "url": "https://bird.band",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "bird.gmem.ca",
@@ -10320,12 +10297,6 @@
     "platform": "sharkey"
   },
   {
-    "host": "blissbabble.com",
-    "url": "https://blissbabble.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "blkbx.eu",
     "url": "https://blkbx.eu",
     "source": "legacy",
@@ -10333,8 +10304,9 @@
   },
   {
     "host": "bln41.de",
-    "url": "https://bln41.de",
+    "url": "https://micro.bln41.de",
     "source": "legacy",
+    "name": "micro.bln41.de",
     "platform": "wordpress"
   },
   {
@@ -10956,6 +10928,13 @@
     "platform": "ghost"
   },
   {
+    "host": "blog.anna.kiwi",
+    "url": "https://anna.kiwi",
+    "source": "legacy",
+    "name": "anna.kiwi",
+    "platform": "wordpress"
+  },
+  {
     "host": "blog.annabyang.com",
     "url": "https://blog.annabyang.com",
     "source": "legacy",
@@ -11241,7 +11220,7 @@
     "host": "blog.azkware.net",
     "url": "https://blog.azkware.net",
     "source": "legacy",
-    "platform": "ghost"
+    "platform": "writefreely"
   },
   {
     "host": "blog.ba9chich.com",
@@ -11811,7 +11790,7 @@
     "host": "blog.camilogtr.com",
     "url": "https://blog.camilogtr.com",
     "source": "legacy",
-    "platform": "ghost"
+    "platform": "writefreely"
   },
   {
     "host": "blog.campman.xyz",
@@ -14079,7 +14058,7 @@
     "host": "blog.goodanser.com",
     "url": "https://blog.goodanser.com",
     "source": "legacy",
-    "platform": "writefreely"
+    "platform": "wafrn"
   },
   {
     "host": "blog.goodmetaphysics.com",
@@ -15972,12 +15951,6 @@
     "platform": "ghost"
   },
   {
-    "host": "blog.max-fun.de",
-    "url": "https://blog.max-fun.de",
-    "source": "legacy",
-    "platform": "wordpress"
-  },
-  {
     "host": "blog.may-i.io",
     "url": "https://blog.may-i.io",
     "source": "legacy",
@@ -16922,12 +16895,6 @@
   {
     "host": "blog.opensecret.cloud",
     "url": "https://blog.opensecret.cloud",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
-    "host": "blog.opensight.ch",
-    "url": "https://blog.opensight.ch",
     "source": "legacy",
     "platform": "ghost"
   },
@@ -21159,7 +21126,7 @@
     "host": "blumenwie.se",
     "url": "https://blumenwie.se",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "akkoma"
   },
   {
     "host": "blumgi.games",
@@ -21418,12 +21385,6 @@
     "url": "https://bol.social",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "boldlatina.com",
-    "url": "https://boldlatina.com",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "boles.xyz",
@@ -21717,7 +21678,7 @@
     "host": "bookmarks.box464.com",
     "url": "https://bookmarks.box464.com",
     "source": "legacy",
-    "platform": "postmarks"
+    "platform": "ap-tombstone"
   },
   {
     "host": "bookmarks.kvibber.com",
@@ -22689,7 +22650,7 @@
     "host": "break3.social",
     "url": "https://break3.social",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "sharkey"
   },
   {
     "host": "breakingbank.media",
@@ -24321,7 +24282,7 @@
     "host": "cambrian.social",
     "url": "https://cambrian.social",
     "source": "legacy",
-    "platform": "friendica"
+    "platform": "snac"
   },
   {
     "host": "camdenwebster.blog",
@@ -25173,13 +25134,13 @@
     "host": "cc.luhrck.com",
     "url": "https://cc.luhrck.com",
     "source": "legacy",
-    "platform": "ccworld-ap-bridge"
+    "platform": "concrnt-ap-bridge"
   },
   {
     "host": "cc.ryotn.com",
     "url": "https://cc.ryotn.com",
     "source": "legacy",
-    "platform": "ccworld-ap-bridge"
+    "platform": "concrnt-ap-bridge"
   },
   {
     "host": "cc2.at",
@@ -25864,12 +25825,6 @@
     "url": "https://chenboyo.com",
     "source": "legacy",
     "platform": "wordpress"
-  },
-  {
-    "host": "cheney.net",
-    "url": "https://cheney.net",
-    "source": "legacy",
-    "platform": "pub"
   },
   {
     "host": "chenshuz.blog",
@@ -28209,7 +28164,7 @@
     "host": "con.k4ir0.com",
     "url": "https://con.k4ir0.com",
     "source": "legacy",
-    "platform": "ccworld-ap-bridge"
+    "platform": "concrnt-ap-bridge"
   },
   {
     "host": "conarro.com",
@@ -29847,7 +29802,7 @@
     "host": "cum.salon",
     "url": "https://cum.salon",
     "source": "legacy",
-    "platform": "gharab-tzereq"
+    "platform": "mitra"
   },
   {
     "host": "cunnin.me",
@@ -30550,12 +30505,6 @@
     "url": "https://dair-community.social",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "dalichro.me",
-    "url": "https://dalichro.me",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "dalliance.network",
@@ -31437,7 +31386,7 @@
     "host": "davidbilla.net",
     "url": "https://davidbilla.net",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "ghost"
   },
   {
     "host": "davidbressler.com",
@@ -32307,7 +32256,7 @@
     "host": "denken.concrnt.net",
     "url": "https://denken.concrnt.net",
     "source": "legacy",
-    "platform": "ccworld-ap-bridge"
+    "platform": "concrnt-ap-bridge"
   },
   {
     "host": "denkfabrikblog.de",
@@ -32511,7 +32460,7 @@
     "host": "designbusan.ai.kr",
     "url": "https://designbusan.ai.kr",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "axismundi"
   },
   {
     "host": "designsystems.wtf",
@@ -32932,6 +32881,13 @@
     "url": "https://devnel.blog",
     "source": "legacy",
     "platform": "wordpress"
+  },
+  {
+    "host": "devol.it",
+    "url": "https://newsletter.devol.it",
+    "source": "legacy",
+    "name": "newsletter.devol.it",
+    "platform": "ghost"
   },
   {
     "host": "devops-radar.com",
@@ -33801,7 +33757,7 @@
     "host": "dissociat.ing",
     "url": "https://dissociat.ing",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "sharkey"
   },
   {
     "host": "dissociative.xyz",
@@ -33958,12 +33914,6 @@
     "url": "https://dline.xyz",
     "source": "legacy",
     "platform": "pleroma"
-  },
-  {
-    "host": "dly.se",
-    "url": "https://dly.se",
-    "source": "legacy",
-    "platform": "wordpress"
   },
   {
     "host": "dm824.fedicity.net",
@@ -34647,7 +34597,7 @@
     "host": "doomscroller.social",
     "url": "https://doomscroller.social",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "misskey"
   },
   {
     "host": "dootdoot.comnetcomdotnet.org",
@@ -35529,7 +35479,7 @@
     "host": "dust.allroads.social",
     "url": "https://dust.allroads.social",
     "source": "legacy",
-    "platform": "wellesley"
+    "platform": "welley"
   },
   {
     "host": "dustbuster.club",
@@ -35589,7 +35539,7 @@
     "host": "dvd.chat",
     "url": "https://dvd.chat",
     "source": "legacy",
-    "platform": "firefish"
+    "platform": "sharkey"
   },
   {
     "host": "dvdlite.co",
@@ -35968,12 +35918,6 @@
     "url": "https://ecoevo.social",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "ecofriendlywest.ca",
-    "url": "https://ecofriendlywest.ca",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "ecohosting.ie",
@@ -36621,7 +36565,7 @@
     "host": "electricrequiem.com",
     "url": "https://electricrequiem.com",
     "source": "legacy",
-    "platform": "firefish"
+    "platform": "catodon"
   },
   {
     "host": "electrodaily.com",
@@ -37158,12 +37102,6 @@
     "platform": "ghost"
   },
   {
-    "host": "en.gy",
-    "url": "https://en.gy",
-    "source": "legacy",
-    "platform": "mastodon"
-  },
-  {
     "host": "en.hyungoon.com",
     "url": "https://en.hyungoon.com",
     "source": "legacy",
@@ -37251,7 +37189,7 @@
     "host": "encryptr.net",
     "url": "https://encryptr.net",
     "source": "legacy",
-    "platform": "encryptr-net"
+    "platform": "gotosocial"
   },
   {
     "host": "encyclia.pub",
@@ -37947,7 +37885,7 @@
     "host": "esperanto.social",
     "url": "https://esperanto.social",
     "source": "legacy",
-    "platform": "gotosocial"
+    "platform": "friendica"
   },
   {
     "host": "espiritismoemfoco.com",
@@ -38043,7 +37981,7 @@
     "host": "estrogen.network",
     "url": "https://estrogen.network",
     "source": "legacy",
-    "platform": "iceshrimp"
+    "platform": "iceshrimp.net"
   },
   {
     "host": "estrogen.plus",
@@ -40977,7 +40915,7 @@
     "host": "fedi.ivy.rs",
     "url": "https://fedi.ivy.rs",
     "source": "legacy",
-    "platform": "snac"
+    "platform": "gotosocial"
   },
   {
     "host": "fedi.j1nk4l.com",
@@ -41067,13 +41005,13 @@
     "host": "fedi.kugetsu.blog",
     "url": "https://fedi.kugetsu.blog",
     "source": "legacy",
-    "platform": "iceshrimp"
+    "platform": "iceshrimp.net"
   },
   {
     "host": "fedi.kutno.pl",
     "url": "https://fedi.kutno.pl",
     "source": "legacy",
-    "platform": "$instance$softwarename$"
+    "platform": "pleroma"
   },
   {
     "host": "fedi.lat",
@@ -41613,7 +41551,7 @@
     "host": "fedi.social",
     "url": "https://fedi.social",
     "source": "legacy",
-    "platform": "quollkey"
+    "platform": "sharkey"
   },
   {
     "host": "fedi.solibre.de",
@@ -41757,7 +41695,7 @@
     "host": "fedi.tesaguri.club",
     "url": "https://fedi.tesaguri.club",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "fedi.tfnux.org",
@@ -43383,7 +43321,7 @@
     "host": "firefish.asso-purr.eu.org",
     "url": "https://firefish.asso-purr.eu.org",
     "source": "legacy",
-    "platform": "misskey"
+    "platform": "sharkey"
   },
   {
     "host": "firefish.city",
@@ -43407,7 +43345,7 @@
     "host": "firefish.imirhil.fr",
     "url": "https://firefish.imirhil.fr",
     "source": "legacy",
-    "platform": "misskey"
+    "platform": "sharkey"
   },
   {
     "host": "firefish.lol",
@@ -43497,7 +43435,7 @@
     "host": "fishpost.trade",
     "url": "https://fishpost.trade",
     "source": "legacy",
-    "platform": "iceshrimp"
+    "platform": "iceshrimp.net"
   },
   {
     "host": "fishsci.com",
@@ -46221,7 +46159,7 @@
     "host": "friendship.quest",
     "url": "https://friendship.quest",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "snac"
   },
   {
     "host": "friendsocial.inet.place",
@@ -47901,7 +47839,7 @@
     "host": "geloofsvoer.nl",
     "url": "https://geloofsvoer.nl",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "ghost"
   },
   {
     "host": "gelsenkirchen.correctiv.org",
@@ -50715,7 +50653,7 @@
     "host": "groove.city",
     "url": "https://groove.city",
     "source": "legacy",
-    "platform": "pixelfed"
+    "platform": "mastodon"
   },
   {
     "host": "groovy-coyote.pikapod.net",
@@ -53976,12 +53914,6 @@
     "platform": "ghost"
   },
   {
-    "host": "hellandd.com",
-    "url": "https://hellandd.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "hellaverse.social",
     "url": "https://hellaverse.social",
     "source": "legacy",
@@ -54219,7 +54151,7 @@
     "host": "herkenhoff.com",
     "url": "https://herkenhoff.com",
     "source": "legacy",
-    "platform": "hubzilla"
+    "platform": "wordpress"
   },
   {
     "host": "herm.zip",
@@ -55089,7 +55021,7 @@
     "host": "hollow.raccoon.quest",
     "url": "https://hollow.raccoon.quest",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "misskey"
   },
   {
     "host": "holocene.cafe",
@@ -56625,7 +56557,7 @@
     "host": "ibbtown.com",
     "url": "https://ibbtown.com",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "akkoma"
   },
   {
     "host": "ibbwstream.schule-bw.de",
@@ -59505,7 +59437,7 @@
     "host": "izalgo.us",
     "url": "https://izalgo.us",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "ghost"
   },
   {
     "host": "iztasocial.site",
@@ -59842,12 +59774,6 @@
     "url": "https://janogdon.net",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "janross.org",
-    "url": "https://janross.org",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "jantzen.no",
@@ -60711,7 +60637,7 @@
     "host": "joaoaguiar.blog.br",
     "url": "https://joaoaguiar.blog.br",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "ghost"
   },
   {
     "host": "jobs.posted.careers",
@@ -62340,12 +62266,6 @@
     "platform": "mastodon"
   },
   {
-    "host": "karanmaindan.com",
-    "url": "https://karanmaindan.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "karlender.net",
     "url": "https://karlender.net",
     "source": "legacy",
@@ -63608,12 +63528,6 @@
   {
     "host": "klickhin.de",
     "url": "https://klickhin.de",
-    "source": "legacy",
-    "platform": "wordpress"
-  },
-  {
-    "host": "klimaschutz-von-unten.de",
-    "url": "https://klimaschutz-von-unten.de",
     "source": "legacy",
     "platform": "wordpress"
   },
@@ -65163,7 +65077,7 @@
     "host": "lake.naru.cafe",
     "url": "https://lake.naru.cafe",
     "source": "legacy",
-    "platform": "iceshrimp"
+    "platform": "misskey"
   },
   {
     "host": "laketrail.uk",
@@ -65236,12 +65150,6 @@
     "url": "https://lamprosliontos.com",
     "source": "legacy",
     "platform": "wordpress"
-  },
-  {
-    "host": "lampy.casa",
-    "url": "https://lampy.casa",
-    "source": "legacy",
-    "platform": "microblogpub"
   },
   {
     "host": "lancsaero.deltasrv.uk",
@@ -67998,12 +67906,6 @@
     "platform": "akkoma"
   },
   {
-    "host": "lifeaftermeds.com",
-    "url": "https://lifeaftermeds.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "lifeasrose.ca",
     "url": "https://lifeasrose.ca",
     "source": "legacy",
@@ -69267,7 +69169,7 @@
     "host": "livingevil.de",
     "url": "https://livingevil.de",
     "source": "legacy",
-    "platform": "owncast"
+    "platform": "mastodon"
   },
   {
     "host": "livingthefighlife.com",
@@ -69532,12 +69434,6 @@
     "url": "https://logs.reinhart1010.id",
     "source": "legacy",
     "platform": "pleroma"
-  },
-  {
-    "host": "lohmann.social",
-    "url": "https://lohmann.social",
-    "source": "legacy",
-    "platform": "mastodon"
   },
   {
     "host": "lojepi.com",
@@ -70989,7 +70885,7 @@
     "host": "m.mirv.top",
     "url": "https://m.mirv.top",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "gotosocial"
   },
   {
     "host": "m.moec.top",
@@ -72669,7 +72565,7 @@
     "host": "manganiello.blog",
     "url": "https://manganiello.blog",
     "source": "legacy",
-    "platform": "writefreely"
+    "platform": "madblog"
   },
   {
     "host": "manganiello.eu",
@@ -72699,7 +72595,7 @@
     "host": "mangostar.casa",
     "url": "https://mangostar.casa",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "misskey"
   },
   {
     "host": "maniainc.com",
@@ -74229,7 +74125,7 @@
     "host": "masto.neuille.ovh",
     "url": "https://masto.neuille.ovh",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "akkoma"
   },
   {
     "host": "masto.news",
@@ -74559,7 +74455,7 @@
     "host": "mastodon-relay.moew.science",
     "url": "https://mastodon-relay.moew.science",
     "source": "legacy",
-    "platform": "pub-relay"
+    "platform": "coma"
   },
   {
     "host": "mastodon-relay.thedoodleproject.net",
@@ -78054,6 +77950,13 @@
     "platform": "mastodon"
   },
   {
+    "host": "mastodon.lohmann.social",
+    "url": "https://lohmann.social",
+    "source": "legacy",
+    "name": "lohmann.social",
+    "platform": "mastodon"
+  },
+  {
     "host": "mastodon.london",
     "url": "https://mastodon.london",
     "source": "legacy",
@@ -81093,7 +80996,7 @@
     "host": "mastodon.versme.net",
     "url": "https://mastodon.versme.net",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "akkoma"
   },
   {
     "host": "mastodon.veselovski.co.uk",
@@ -81783,7 +81686,7 @@
     "host": "matrix.rocks",
     "url": "https://matrix.rocks",
     "source": "legacy",
-    "platform": "misskey"
+    "platform": "sharkey"
   },
   {
     "host": "matrixdreams.com",
@@ -82048,6 +81951,13 @@
     "url": "https://mauve-dingo.pikapod.net",
     "source": "legacy",
     "platform": "ghost"
+  },
+  {
+    "host": "max-fun.de",
+    "url": "https://blog.max-fun.de",
+    "source": "legacy",
+    "name": "blog.max-fun.de",
+    "platform": "wordpress"
   },
   {
     "host": "max.zip",
@@ -83241,7 +83151,7 @@
     "host": "mellow.zone",
     "url": "https://mellow.zone",
     "source": "legacy",
-    "platform": "hometown"
+    "platform": "mastodon"
   },
   {
     "host": "melodic-vibes.channel.org",
@@ -83613,7 +83523,7 @@
     "host": "meron.io",
     "url": "https://meron.io",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "gotosocial"
   },
   {
     "host": "merovingian.club",
@@ -83924,12 +83834,6 @@
   {
     "host": "mherbst.de",
     "url": "https://mherbst.de",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
-    "host": "mhm.kr",
-    "url": "https://mhm.kr",
     "source": "legacy",
     "platform": "ghost"
   },
@@ -84315,7 +84219,7 @@
     "host": "mi.okin-jp.net",
     "url": "https://mi.okin-jp.net",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "yojo-art"
   },
   {
     "host": "mi.osamu-storage.info",
@@ -84814,12 +84718,6 @@
     "url": "https://micro.bbalm.me",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "micro.bln41.de",
-    "url": "https://micro.bln41.de",
-    "source": "legacy",
-    "platform": "wordpress"
   },
   {
     "host": "micro.blog",
@@ -86223,7 +86121,7 @@
     "host": "misskey.electronblueberry.xyz",
     "url": "https://misskey.electronblueberry.xyz",
     "source": "legacy",
-    "platform": "misskey"
+    "platform": "sharkey"
   },
   {
     "host": "misskey.ellidaf.ru",
@@ -86415,7 +86313,7 @@
     "host": "misskey.hatachanoima.net",
     "url": "https://misskey.hatachanoima.net",
     "source": "legacy",
-    "platform": "misskey"
+    "platform": "cherrypick"
   },
   {
     "host": "misskey.haun.jp",
@@ -88203,7 +88101,7 @@
     "host": "mkkey.net",
     "url": "https://mkkey.net",
     "source": "legacy",
-    "platform": "firefish"
+    "platform": "cluckey"
   },
   {
     "host": "mkljczk.nl",
@@ -88920,12 +88818,6 @@
     "platform": "ghost"
   },
   {
-    "host": "moneyhk101.com",
-    "url": "https://moneyhk101.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "moneytlks.com",
     "url": "https://moneytlks.com",
     "source": "legacy",
@@ -89217,7 +89109,7 @@
     "host": "moppels.bar",
     "url": "https://moppels.bar",
     "source": "legacy",
-    "platform": "calckey"
+    "platform": "sharkey"
   },
   {
     "host": "morayner.org",
@@ -89362,12 +89254,6 @@
     "url": "https://morris.cymru",
     "source": "legacy",
     "platform": "wordpress"
-  },
-  {
-    "host": "morrow.report",
-    "url": "https://morrow.report",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "morrow.social",
@@ -91770,12 +91656,6 @@
     "platform": "mastodon"
   },
   {
-    "host": "munchkinstein.co.uk",
-    "url": "https://munchkinstein.co.uk",
-    "source": "legacy",
-    "platform": "wordpress"
-  },
-  {
     "host": "munochi.moe",
     "url": "https://munochi.moe",
     "source": "legacy",
@@ -91887,7 +91767,7 @@
     "host": "music-social.com",
     "url": "https://music-social.com",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "musicsocial"
   },
   {
     "host": "music.benzianium.ch",
@@ -92811,17 +92691,11 @@
     "host": "nak.haniwar.com",
     "url": "https://nak.haniwar.com",
     "source": "legacy",
-    "platform": "ccworld-ap-bridge"
+    "platform": "concrnt-ap-bridge"
   },
   {
     "host": "nalth.is",
     "url": "https://nalth.is",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
-    "host": "namastesalesforce.com",
-    "url": "https://namastesalesforce.com",
     "source": "legacy",
     "platform": "ghost"
   },
@@ -93190,6 +93064,13 @@
     "url": "https://neander.social",
     "source": "legacy",
     "platform": "mastodon"
+  },
+  {
+    "host": "nearly.com.au",
+    "url": "https://www.nearly.com.au",
+    "source": "legacy",
+    "name": "www.nearly.com.au",
+    "platform": "ghost"
   },
   {
     "host": "neat.tube",
@@ -93639,7 +93520,7 @@
     "host": "nerv.agency",
     "url": "https://nerv.agency",
     "source": "legacy",
-    "platform": "misskey"
+    "platform": "sharkey"
   },
   {
     "host": "nerv.st",
@@ -94471,8 +94352,9 @@
   },
   {
     "host": "news.tailschannel.com",
-    "url": "https://news.tailschannel.com",
+    "url": "https://tailschannel.com",
     "source": "legacy",
+    "name": "tailschannel.com",
     "platform": "ghost"
   },
   {
@@ -94618,12 +94500,6 @@
     "url": "https://newsletter.danaamundsen.com",
     "source": "legacy",
     "platform": "writefreely"
-  },
-  {
-    "host": "newsletter.devol.it",
-    "url": "https://newsletter.devol.it",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "newsletter.digitalbydefault.jobs",
@@ -96234,12 +96110,6 @@
     "platform": "ghost"
   },
   {
-    "host": "norepl.ai",
-    "url": "https://norepl.ai",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "norfed.info",
     "url": "https://norfed.info",
     "source": "legacy",
@@ -96939,7 +96809,7 @@
     "host": "nuages.cloud",
     "url": "https://nuages.cloud",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "nualmere.nl",
@@ -97516,12 +97386,6 @@
     "url": "https://obscura-px.work",
     "source": "legacy",
     "platform": "pixelfed"
-  },
-  {
-    "host": "obscurae.co.uk",
-    "url": "https://obscurae.co.uk",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "obscure.com",
@@ -98391,7 +98255,7 @@
     "host": "omemoji.net",
     "url": "https://omemoji.net",
     "source": "legacy",
-    "platform": "akkoma"
+    "platform": "pleroma"
   },
   {
     "host": "omen.audio",
@@ -98946,6 +98810,13 @@
     "platform": "wordpress"
   },
   {
+    "host": "opensight.ch",
+    "url": "https://blog.opensight.ch",
+    "source": "legacy",
+    "name": "blog.opensight.ch",
+    "platform": "ghost"
+  },
+  {
     "host": "opensimsocial.com",
     "url": "https://opensimsocial.com",
     "source": "legacy",
@@ -99339,7 +99210,7 @@
     "host": "orwell.fun",
     "url": "https://orwell.fun",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "misskey"
   },
   {
     "host": "orz.uno",
@@ -99686,12 +99557,6 @@
   {
     "host": "ourpublicassembly.com",
     "url": "https://ourpublicassembly.com",
-    "source": "legacy",
-    "platform": "wordpress"
-  },
-  {
-    "host": "ours-inculte.fr",
-    "url": "https://ours-inculte.fr",
     "source": "legacy",
     "platform": "wordpress"
   },
@@ -100114,12 +99979,6 @@
     "url": "https://owncast.zalasur.media",
     "source": "legacy",
     "platform": "owncast"
-  },
-  {
-    "host": "ownlycx.com",
-    "url": "https://ownlycx.com",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "owo.cafe",
@@ -103797,7 +103656,7 @@
     "host": "petroskowo.pl",
     "url": "https://petroskowo.pl",
     "source": "legacy",
-    "platform": "friendica"
+    "platform": "wordpress"
   },
   {
     "host": "petrous.vislae.town",
@@ -107319,7 +107178,7 @@
     "host": "pl.m0e.space",
     "url": "https://pl.m0e.space",
     "source": "legacy",
-    "platform": "akkoma"
+    "platform": "pleroma"
   },
   {
     "host": "pl.nagi.fan",
@@ -107361,7 +107220,7 @@
     "host": "pl.ugh.im",
     "url": "https://pl.ugh.im",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "pl.uwu.is",
@@ -108984,12 +108843,6 @@
     "platform": "wordpress"
   },
   {
-    "host": "polyinnovator.space",
-    "url": "https://polyinnovator.space",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "polylogue.org",
     "url": "https://polylogue.org",
     "source": "legacy",
@@ -109167,7 +109020,7 @@
     "host": "popkulturreferenz.de",
     "url": "https://popkulturreferenz.de",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "gotosocial"
   },
   {
     "host": "poplockparables.com",
@@ -109341,7 +109194,7 @@
     "host": "possum.city",
     "url": "https://possum.city",
     "source": "legacy",
-    "platform": "turtkey"
+    "platform": "sharkey"
   },
   {
     "host": "possums.gay",
@@ -109386,6 +109239,13 @@
     "platform": "mastodon"
   },
   {
+    "host": "post.lampy.casa",
+    "url": "https://lampy.casa",
+    "source": "legacy",
+    "name": "lampy.casa",
+    "platform": "microblogpub"
+  },
+  {
     "host": "post.lurk.org",
     "url": "https://post.lurk.org",
     "source": "legacy",
@@ -109395,7 +109255,7 @@
     "host": "post.naskya.net",
     "url": "https://post.naskya.net",
     "source": "legacy",
-    "platform": "neko"
+    "platform": "mastodon"
   },
   {
     "host": "post.nuro.lol",
@@ -109407,7 +109267,7 @@
     "host": "post.sup39.dev",
     "url": "https://post.sup39.dev",
     "source": "legacy",
-    "platform": "neko"
+    "platform": "sharkey"
   },
   {
     "host": "post.syobon.net",
@@ -110184,12 +110044,6 @@
     "platform": "ghost"
   },
   {
-    "host": "preview.rgmii.org",
-    "url": "https://preview.rgmii.org",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "pri.monster",
     "url": "https://pri.monster",
     "source": "legacy",
@@ -110289,7 +110143,7 @@
     "host": "prismst.one",
     "url": "https://prismst.one",
     "source": "legacy",
-    "platform": "firefish"
+    "platform": "akkoma"
   },
   {
     "host": "prisol.live",
@@ -111819,7 +111673,7 @@
     "host": "pythag.net",
     "url": "https://pythag.net",
     "source": "legacy",
-    "platform": "piefed"
+    "platform": "imp"
   },
   {
     "host": "python.szkola.pl",
@@ -112486,12 +112340,6 @@
     "url": "https://rabbit.x86.town",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "rabbitholerv.com",
-    "url": "https://rabbitholerv.com",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "rabkor.ru",
@@ -114087,7 +113935,7 @@
     "host": "rel.re",
     "url": "https://rel.re",
     "source": "legacy",
-    "platform": "aoderelay"
+    "platform": "relre"
   },
   {
     "host": "relatorios.jurisintel.com.br",
@@ -114459,7 +114307,7 @@
     "host": "rentadrunk.org",
     "url": "https://rentadrunk.org",
     "source": "legacy",
-    "platform": "lemmy"
+    "platform": "piefed"
   },
   {
     "host": "rentrentier.com",
@@ -115050,6 +114898,13 @@
     "platform": "wordpress"
   },
   {
+    "host": "rgmii.org",
+    "url": "https://preview.rgmii.org",
+    "source": "legacy",
+    "name": "preview.rgmii.org",
+    "platform": "ghost"
+  },
+  {
     "host": "rhabarberbarbara.bar",
     "url": "https://rhabarberbarbara.bar",
     "source": "legacy",
@@ -115593,7 +115448,7 @@
     "host": "rmendes.net",
     "url": "https://rmendes.net",
     "source": "legacy",
-    "platform": "ghost"
+    "platform": "indiekit"
   },
   {
     "host": "rmp.xyz",
@@ -117915,7 +117770,7 @@
     "host": "saturation.social",
     "url": "https://saturation.social",
     "source": "legacy",
-    "platform": "hometown"
+    "platform": "mastodon"
   },
   {
     "host": "saturndust.net",
@@ -118066,12 +117921,6 @@
     "url": "https://sayurili.hostdon.ne.jp",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "sayurisaying.com",
-    "url": "https://sayurisaying.com",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "sbblues.com",
@@ -118311,7 +118160,7 @@
     "host": "schmidl.dev",
     "url": "https://schmidl.dev",
     "source": "legacy",
-    "platform": "pelican-activitypub"
+    "platform": "gotosocial"
   },
   {
     "host": "schmonz.com",
@@ -118782,6 +118631,13 @@
     "platform": "mastodon"
   },
   {
+    "host": "scyoni.com",
+    "url": "https://www.scyoni.com",
+    "source": "legacy",
+    "name": "www.scyoni.com",
+    "platform": "wordpress"
+  },
+  {
     "host": "scz.social",
     "url": "https://scz.social",
     "source": "legacy",
@@ -118803,7 +118659,7 @@
     "host": "sdf.land",
     "url": "https://sdf.land",
     "source": "legacy",
-    "platform": "hometown"
+    "platform": "mastodon"
   },
   {
     "host": "se.fedimeteo.com",
@@ -119385,7 +119241,7 @@
     "host": "seoul.earth",
     "url": "https://seoul.earth",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "eunha"
   },
   {
     "host": "seoulstream.kr",
@@ -120981,7 +120837,7 @@
     "host": "signalnine.net",
     "url": "https://signalnine.net",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "gotosocial"
   },
   {
     "host": "signalsandseeds.xyz",
@@ -122391,7 +122247,7 @@
     "host": "snac.box464.social",
     "url": "https://snac.box464.social",
     "source": "legacy",
-    "platform": "snac"
+    "platform": "ap-tombstone"
   },
   {
     "host": "snac.brigadadigital.tec.br",
@@ -123801,7 +123657,7 @@
     "host": "social.agnos.is",
     "url": "https://social.agnos.is",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "catodon"
   },
   {
     "host": "social.agroecologymap.org",
@@ -123896,12 +123752,6 @@
   {
     "host": "social.ally.cat",
     "url": "https://social.ally.cat",
-    "source": "legacy",
-    "platform": "akkoma"
-  },
-  {
-    "host": "social.allykotetsu.com",
-    "url": "https://social.allykotetsu.com",
     "source": "legacy",
     "platform": "akkoma"
   },
@@ -124557,7 +124407,7 @@
     "host": "social.beshir.org",
     "url": "https://social.beshir.org",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "social.bezmuth.uk",
@@ -124947,7 +124797,7 @@
     "host": "social.bybliotheca.net",
     "url": "https://social.bybliotheca.net",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "catodon"
   },
   {
     "host": "social.bytten-studio.com",
@@ -125265,7 +125115,7 @@
     "host": "social.collado.eu",
     "url": "https://social.collado.eu",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "gotosocial"
   },
   {
     "host": "social.collectivemoo.net",
@@ -126324,6 +126174,13 @@
     "platform": "wordpress"
   },
   {
+    "host": "social.en.gy",
+    "url": "https://en.gy",
+    "source": "legacy",
+    "name": "en.gy",
+    "platform": "gotosocial"
+  },
+  {
     "host": "social.energieincomune.com",
     "url": "https://social.energieincomune.com",
     "source": "legacy",
@@ -126369,7 +126226,7 @@
     "host": "social.epic-worlds.com",
     "url": "https://social.epic-worlds.com",
     "source": "legacy",
-    "platform": "gotosocial"
+    "platform": "mastodon"
   },
   {
     "host": "social.eqrion.net",
@@ -126603,7 +126460,7 @@
     "host": "social.fbxl.net",
     "url": "https://social.fbxl.net",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "unfathomably-be"
   },
   {
     "host": "social.fcourtois.net",
@@ -127035,7 +126892,7 @@
     "host": "social.gabekangas.com",
     "url": "https://social.gabekangas.com",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "social.gabisonntag.art",
@@ -128601,7 +128458,7 @@
     "host": "social.klausgesprochen.de",
     "url": "https://social.klausgesprochen.de",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "akkoma"
   },
   {
     "host": "social.klay.moe",
@@ -129699,7 +129556,7 @@
     "host": "social.mechanizedarmadillo.com",
     "url": "https://social.mechanizedarmadillo.com",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "pleroma"
   },
   {
     "host": "social.medienzentrum-hdh.de",
@@ -130119,7 +129976,7 @@
     "host": "social.mrjeda.de",
     "url": "https://social.mrjeda.de",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "social.mrks.network",
@@ -133263,7 +133120,7 @@
     "host": "social.stefanomarinelli.it",
     "url": "https://social.stefanomarinelli.it",
     "source": "legacy",
-    "platform": "akkoma"
+    "platform": "littlefedi"
   },
   {
     "host": "social.stellers.gay",
@@ -133821,7 +133678,7 @@
     "host": "social.thedivingshellyfish.org",
     "url": "https://social.thedivingshellyfish.org",
     "source": "legacy",
-    "platform": "pixelfed"
+    "platform": "friendica"
   },
   {
     "host": "social.theflyingkiwi.de",
@@ -136269,7 +136126,7 @@
     "host": "spacetojump.at",
     "url": "https://spacetojump.at",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "ghost"
   },
   {
     "host": "spacetraveler.work",
@@ -137948,12 +137805,6 @@
   {
     "host": "story.seonggoos.com",
     "url": "https://story.seonggoos.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
-    "host": "storyclub.org",
-    "url": "https://storyclub.org",
     "source": "legacy",
     "platform": "ghost"
   },
@@ -139737,7 +139588,7 @@
     "host": "sy.nthia.dev",
     "url": "https://sy.nthia.dev",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "syasai.club",
@@ -140169,7 +140020,7 @@
     "host": "tadanemuinda.com",
     "url": "https://tadanemuinda.com",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "ghost"
   },
   {
     "host": "tadanemukey.xyz",
@@ -140248,12 +140099,6 @@
     "url": "https://tail-f.journalctl.uk",
     "source": "legacy",
     "platform": "snac"
-  },
-  {
-    "host": "tailschannel.com",
-    "url": "https://tailschannel.com",
-    "source": "legacy",
-    "platform": "wordpress"
   },
   {
     "host": "tailswish.industries",
@@ -140734,12 +140579,6 @@
     "url": "https://taruntarun.net",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "tarynbarnes.com",
-    "url": "https://tarynbarnes.com",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "tastingtraffic.net",
@@ -141225,7 +141064,7 @@
     "host": "techniclip.com",
     "url": "https://techniclip.com",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "misskey"
   },
   {
     "host": "technocat.art",
@@ -141418,6 +141257,13 @@
     "url": "https://teknopata.eus",
     "source": "legacy",
     "platform": "wordpress"
+  },
+  {
+    "host": "teknote.io",
+    "url": "https://www.teknote.io",
+    "source": "legacy",
+    "name": "www.teknote.io",
+    "platform": "writefreely"
   },
   {
     "host": "tekton.network",
@@ -143562,6 +143408,13 @@
     "platform": "ghost"
   },
   {
+    "host": "theyellowlight.org",
+    "url": "https://www.theyellowlight.org",
+    "source": "legacy",
+    "name": "www.theyellowlight.org",
+    "platform": "ghost"
+  },
+  {
     "host": "thezawzaw.pikapod.net",
     "url": "https://thezawzaw.pikapod.net",
     "source": "legacy",
@@ -143679,7 +143532,7 @@
     "host": "this-is-fine.social",
     "url": "https://this-is-fine.social",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "snac"
   },
   {
     "host": "this-village.isbrill.com",
@@ -143754,12 +143607,6 @@
     "platform": "ghost"
   },
   {
-    "host": "thismortalportal.com",
-    "url": "https://thismortalportal.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "thomas-hitz.ch",
     "url": "https://thomas-hitz.ch",
     "source": "legacy",
@@ -143788,12 +143635,6 @@
     "url": "https://thomasjpr.social",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "thomasknoll.info",
-    "url": "https://thomasknoll.info",
-    "source": "legacy",
-    "platform": "wordpress"
   },
   {
     "host": "thomasp.vivaldi.net",
@@ -145797,7 +145638,7 @@
     "host": "toot.pikopublish.ing",
     "url": "https://toot.pikopublish.ing",
     "source": "legacy",
-    "platform": "iceshrimp"
+    "platform": "catodon"
   },
   {
     "host": "toot.plus.yt",
@@ -146295,7 +146136,7 @@
     "host": "toots.matapacos.dog",
     "url": "https://toots.matapacos.dog",
     "source": "legacy",
-    "platform": "hometown"
+    "platform": "mastodon"
   },
   {
     "host": "toots.meetwoof.com",
@@ -146976,12 +146817,6 @@
     "platform": "ghost"
   },
   {
-    "host": "traumaexplained.com",
-    "url": "https://traumaexplained.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "traumatized.umbreon.online",
     "url": "https://traumatized.umbreon.online",
     "source": "legacy",
@@ -147351,7 +147186,7 @@
     "host": "troet.uberblogr.de",
     "url": "https://troet.uberblogr.de",
     "source": "legacy",
-    "platform": "single file activitypub server in php"
+    "platform": "uberblogr-activitypub"
   },
   {
     "host": "troet.wandel.social",
@@ -149292,9 +149127,105 @@
     "platform": "ghost"
   },
   {
+    "host": "www.aellxx.dev",
+    "url": "https://www.aellxx.dev",
+    "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.afisch.blog",
+    "url": "https://www.afisch.blog",
+    "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.alternatives-numeriques.fr",
+    "url": "https://alternatives-numeriques.fr",
+    "source": "legacy",
+    "name": "alternatives-numeriques.fr",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.asymmetricedge.io",
+    "url": "https://asymmetricedge.io",
+    "source": "legacy",
+    "name": "asymmetricedge.io",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.blissbabble.com",
+    "url": "https://blissbabble.com",
+    "source": "legacy",
+    "name": "blissbabble.com",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.boldlatina.com",
+    "url": "https://boldlatina.com",
+    "source": "legacy",
+    "name": "boldlatina.com",
+    "platform": "ghost"
+  },
+  {
     "host": "www.coppershaman.com",
     "url": "https://www.coppershaman.com",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.dalichro.me",
+    "url": "https://dalichro.me",
+    "source": "legacy",
+    "name": "dalichro.me",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.dly.se",
+    "url": "https://dly.se",
+    "source": "legacy",
+    "name": "dly.se",
+    "platform": "wordpress"
+  },
+  {
+    "host": "www.ecofriendlywest.ca",
+    "url": "https://ecofriendlywest.ca",
+    "source": "legacy",
+    "name": "ecofriendlywest.ca",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.hellandd.com",
+    "url": "https://hellandd.com",
+    "source": "legacy",
+    "name": "hellandd.com",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.janross.org",
+    "url": "https://janross.org",
+    "source": "legacy",
+    "name": "janross.org",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.karanmaindan.com",
+    "url": "https://karanmaindan.com",
+    "source": "legacy",
+    "name": "karanmaindan.com",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.klimaschutz-von-unten.de",
+    "url": "https://klimaschutz-von-unten.de",
+    "source": "legacy",
+    "name": "klimaschutz-von-unten.de",
+    "platform": "wordpress"
+  },
+  {
+    "host": "www.lifeaftermeds.com",
+    "url": "https://lifeaftermeds.com",
+    "source": "legacy",
+    "name": "lifeaftermeds.com",
     "platform": "ghost"
   },
   {
@@ -150330,6 +150261,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.mhm.kr",
+    "url": "https://mhm.kr",
+    "source": "legacy",
+    "name": "mhm.kr",
+    "platform": "ghost"
+  },
+  {
     "host": "www.miamihotelguide.com",
     "url": "https://www.miamihotelguide.com",
     "source": "legacy",
@@ -150858,6 +150796,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.moneyhk101.com",
+    "url": "https://moneyhk101.com",
+    "source": "legacy",
+    "name": "moneyhk101.com",
+    "platform": "ghost"
+  },
+  {
     "host": "www.moneymonk.co",
     "url": "https://www.moneymonk.co",
     "source": "legacy",
@@ -150939,6 +150884,13 @@
     "host": "www.morpheus-research.com",
     "url": "https://www.morpheus-research.com",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.morrow.report",
+    "url": "https://morrow.report",
+    "source": "legacy",
+    "name": "morrow.report",
     "platform": "ghost"
   },
   {
@@ -151192,6 +151144,13 @@
     "url": "https://www.multiversialacademy.es",
     "source": "legacy",
     "platform": "ghost"
+  },
+  {
+    "host": "www.munchkinstein.co.uk",
+    "url": "https://munchkinstein.co.uk",
+    "source": "legacy",
+    "name": "munchkinstein.co.uk",
+    "platform": "wordpress"
   },
   {
     "host": "www.mundaneuniverse.com",
@@ -151500,6 +151459,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.namastesalesforce.com",
+    "url": "https://namastesalesforce.com",
+    "source": "legacy",
+    "name": "namastesalesforce.com",
+    "platform": "ghost"
+  },
+  {
     "host": "www.nanoyanzon.com",
     "url": "https://www.nanoyanzon.com",
     "source": "legacy",
@@ -151628,12 +151594,6 @@
   {
     "host": "www.nazukjain.com",
     "url": "https://www.nazukjain.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
-    "host": "www.nearly.com.au",
-    "url": "https://www.nearly.com.au",
     "source": "legacy",
     "platform": "ghost"
   },
@@ -152214,6 +152174,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.norepl.ai",
+    "url": "https://norepl.ai",
+    "source": "legacy",
+    "name": "norepl.ai",
+    "platform": "ghost"
+  },
+  {
     "host": "www.normallydistributed.dev",
     "url": "https://www.normallydistributed.dev",
     "source": "legacy",
@@ -152481,6 +152448,13 @@
     "host": "www.obliqueasia.com",
     "url": "https://www.obliqueasia.com",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.obscurae.co.uk",
+    "url": "https://obscurae.co.uk",
+    "source": "legacy",
+    "name": "obscurae.co.uk",
     "platform": "ghost"
   },
   {
@@ -153054,6 +153028,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.ours-inculte.fr",
+    "url": "https://ours-inculte.fr",
+    "source": "legacy",
+    "name": "ours-inculte.fr",
+    "platform": "ghost"
+  },
+  {
     "host": "www.ourson.blog",
     "url": "https://www.ourson.blog",
     "source": "legacy",
@@ -153117,6 +153098,13 @@
     "host": "www.ovidiuplaton.com",
     "url": "https://www.ovidiuplaton.com",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.ownlycx.com",
+    "url": "https://ownlycx.com",
+    "source": "legacy",
+    "name": "ownlycx.com",
     "platform": "ghost"
   },
   {
@@ -154140,6 +154128,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.polyinnovator.space",
+    "url": "https://polyinnovator.space",
+    "source": "legacy",
+    "name": "polyinnovator.space",
+    "platform": "ghost"
+  },
+  {
     "host": "www.polzer.org",
     "url": "https://www.polzer.org",
     "source": "legacy",
@@ -154815,6 +154810,13 @@
     "host": "www.raajshinde.net",
     "url": "https://www.raajshinde.net",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.rabbitholerv.com",
+    "url": "https://rabbitholerv.com",
+    "source": "legacy",
+    "name": "rabbitholerv.com",
     "platform": "ghost"
   },
   {
@@ -156630,6 +156632,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.sayurisaying.com",
+    "url": "https://sayurisaying.com",
+    "source": "legacy",
+    "name": "sayurisaying.com",
+    "platform": "ghost"
+  },
+  {
     "host": "www.sbctricks.com",
     "url": "https://www.sbctricks.com",
     "source": "legacy",
@@ -156766,12 +156775,6 @@
     "url": "https://www.scurry.space",
     "source": "legacy",
     "platform": "ghost"
-  },
-  {
-    "host": "www.scyoni.com",
-    "url": "https://www.scyoni.com",
-    "source": "legacy",
-    "platform": "wordpress"
   },
   {
     "host": "www.sdnewswatch.org",
@@ -158550,6 +158553,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.storyclub.org",
+    "url": "https://storyclub.org",
+    "source": "legacy",
+    "name": "storyclub.org",
+    "platform": "ghost"
+  },
+  {
     "host": "www.storyforkids.org",
     "url": "https://www.storyforkids.org",
     "source": "legacy",
@@ -159180,6 +159190,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.tarynbarnes.com",
+    "url": "https://tarynbarnes.com",
+    "source": "legacy",
+    "name": "tarynbarnes.com",
+    "platform": "ghost"
+  },
+  {
     "host": "www.taskforcetalent.com",
     "url": "https://www.taskforcetalent.com",
     "source": "legacy",
@@ -159380,12 +159397,6 @@
   {
     "host": "www.tejomayabharat.com",
     "url": "https://www.tejomayabharat.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
-    "host": "www.teknote.io",
-    "url": "https://www.teknote.io",
     "source": "legacy",
     "platform": "ghost"
   },
@@ -160992,12 +161003,6 @@
     "platform": "ghost"
   },
   {
-    "host": "www.theyellowlight.org",
-    "url": "https://www.theyellowlight.org",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "www.thezerolux.com",
     "url": "https://www.thezerolux.com",
     "source": "legacy",
@@ -161124,6 +161129,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.thismortalportal.com",
+    "url": "https://thismortalportal.com",
+    "source": "legacy",
+    "name": "thismortalportal.com",
+    "platform": "ghost"
+  },
+  {
     "host": "www.thisnannuplife.net",
     "url": "https://www.thisnannuplife.net",
     "source": "legacy",
@@ -161151,6 +161163,13 @@
     "host": "www.thomashanning.com",
     "url": "https://www.thomashanning.com",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.thomasknoll.info",
+    "url": "https://thomasknoll.info",
+    "source": "legacy",
+    "name": "thomasknoll.info",
     "platform": "ghost"
   },
   {
@@ -161613,6 +161632,13 @@
     "host": "www.transportmanagement.org",
     "url": "https://www.transportmanagement.org",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.traumaexplained.com",
+    "url": "https://traumaexplained.com",
+    "source": "legacy",
+    "name": "traumaexplained.com",
     "platform": "ghost"
   },
   {
