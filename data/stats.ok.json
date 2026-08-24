@@ -812,6 +812,25 @@
     "nodeinfo_description": "Luca Hammer bloggt über Social Media Analyse, Netzwerkvisualisierung und sonstige Dinge, die ihn beschäftigen."
   },
   {
+    "host": "21-sekunden.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "7.1"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 8,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2026-08-24T11:50:54Z",
+    "nodeinfo_description": "Begriffe einfach in 21 Sekunden erklärt. Hoffentlich.",
+    "consecutive_failures": 0
+  },
+  {
     "host": "21cm.ca",
     "verified_activitypub": true,
     "software": {
@@ -865,6 +884,36 @@
     "nodeinfo_description": "Bienvenue dans notre classe"
   },
   {
+    "host": "248days.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "7.1"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 0,
+    "statuses": 1,
+    "languages_detected": [],
+    "fetched_at": "2026-08-24T11:50:54Z",
+    "consecutive_failures": 0
+  },
+  {
+    "host": "2a3d.y941s.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.6.6"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 0,
+    "languages_detected": [],
+    "fetched_at": "2026-08-24T11:50:54Z",
+    "consecutive_failures": 0
+  },
+  {
     "host": "2done.club",
     "verified_activitypub": true,
     "software": {
@@ -914,6 +963,24 @@
     ],
     "fetched_at": "2025-11-21T05:20:01Z",
     "nodeinfo_description": "Actionable career strategy for software engineers on the path to mastery, with insights from a Principal Engineer"
+  },
+  {
+    "host": "2ndbreakfast.audreywatters.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 64,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2026-08-24T11:50:54Z",
+    "nodeinfo_description": "Ed-Tech Criticism. AI Refusal.",
+    "consecutive_failures": 0
   },
   {
     "host": "2tonwaffle.com",
@@ -13961,14 +14028,15 @@
     "open_registrations": true,
     "users_total": 28,
     "users_active_month": null,
-    "statuses": 6225,
+    "statuses": 6226,
     "languages_detected": [
-      "ja",
+      "ko",
       "en",
-      "ko"
+      "ja"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "청춘(靑春)들이 이끌어가는 자유 주제 페디버스(연합우주) 인스턴스 서버입니다.<br />青春が率いる自由な主題のフェディバース上のサーバーです。<br />\nYour adolescent Fediverse instance for free talking, with a liberty.<br />\n<br />\n[ since 2024/12/25 ]<br />\n<br />\n!! 무단 크롤링을 통한 AI 학습에 사용 금지 !!<br />\n!! AI学習に使用禁止 !!<br />\n!! Not for AI training !!"
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "청춘(靑春)들이 이끌어가는 자유 주제 페디버스(연합우주) 인스턴스 서버입니다.<br />青春が率いる自由な主題のフェディバース上のサーバーです。<br />\nYour adolescent Fediverse instance for free talking, with a liberty.<br />\n<br />\n[ since 2024/12/25 ]<br />\n<br />\n!! 무단 크롤링을 통한 AI 학습에 사용 금지 !!<br />\n!! AI学習に使用禁止 !!<br />\n!! Not for AI training !!",
+    "consecutive_failures": 0
   },
   {
     "host": "aoikaze.social",
@@ -21722,12 +21790,13 @@
     "open_registrations": true,
     "users_total": 139,
     "users_active_month": 18,
-    "statuses": 199036,
+    "statuses": 199037,
     "languages_detected": [
       "ko"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "동네 어디에나 있는 슈퍼마켓 입니다."
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "동네 어디에나 있는 슈퍼마켓 입니다.",
+    "consecutive_failures": 0
   },
   {
     "host": "bala.one",
@@ -93824,7 +93893,10 @@
     "users_active_month": 1,
     "statuses": 6,
     "languages_detected": [],
-    "fetched_at": "2025-11-18T14:43:41Z"
+    "fetched_at": "2025-11-18T14:43:41Z",
+    "consecutive_failures": 1,
+    "last_failure_at": "2026-08-24T11:54:47Z",
+    "last_failure_reason": "nodeinfo: HTTPSConnectionPool(host='discuss.koyu.space', port=443): Max retries exceeded with url: /.well-known/nodeinfo (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1129)')))"
   },
   {
     "host": "discuss.online",
@@ -124033,13 +124105,14 @@
     },
     "open_registrations": false,
     "users_total": 62706,
-    "users_active_month": 7245,
-    "statuses": 4892150,
+    "users_active_month": 7247,
+    "statuses": 4892172,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "Fosstodon is an invite only Mastodon instance that is open to those who are interested in technology; particularly free & open source software.\r\n\r\nIf you wish to join, contact us for an invite."
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "Fosstodon is an invite only Mastodon instance that is open to those who are interested in technology; particularly free & open source software.\r\n\r\nIf you wish to join, contact us for an invite.",
+    "consecutive_failures": 0
   },
   {
     "host": "fosstodon.su",
@@ -184883,7 +184956,8 @@
     "users_active_month": 1870,
     "statuses": 213449,
     "languages_detected": [],
-    "fetched_at": "2026-08-24T11:26:00Z"
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "consecutive_failures": 0
   },
   {
     "host": "lemmy.mods4ever.com",
@@ -218030,13 +218104,14 @@
     },
     "open_registrations": false,
     "users_total": 188331,
-    "users_active_month": 7611,
-    "statuses": 12740682,
+    "users_active_month": 7613,
+    "statuses": 12740739,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "A newer server of Mastodon, operated by Mastodon GmbH for the common good."
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "A newer server of Mastodon, operated by Mastodon GmbH for the common good.",
+    "consecutive_failures": 0
   },
   {
     "host": "mastodon.opencloud.lu",
@@ -220934,14 +221009,15 @@
       "version": "4.7.0"
     },
     "open_registrations": true,
-    "users_total": 3375815,
-    "users_active_month": 272740,
-    "statuses": 185742626,
+    "users_total": 3375847,
+    "users_active_month": 272829,
+    "statuses": 185744915,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "The original server of Mastodon, operated by Mastodon GmbH for the common good."
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "The original server of Mastodon, operated by Mastodon GmbH for the common good.",
+    "consecutive_failures": 0
   },
   {
     "host": "mastodon.social-pod.org",
@@ -230230,12 +230306,13 @@
     "open_registrations": true,
     "users_total": 6133,
     "users_active_month": 743,
-    "statuses": 744033,
+    "statuses": 744041,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "Metalhead.club is a Mastodon instance hosted in Germany and powered by 100% green energy."
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "Metalhead.club is a Mastodon instance hosted in Germany and powered by 100% green energy.",
+    "consecutive_failures": 0
   },
   {
     "host": "metalized.net",
@@ -238065,15 +238142,16 @@
       "version": "2025.4.1-io.12b-fb6fbea074"
     },
     "open_registrations": true,
-    "users_total": 738871,
+    "users_total": 738880,
     "users_active_month": null,
-    "statuses": 174288454,
+    "statuses": 174294817,
     "languages_detected": [
-      "ja",
-      "en"
+      "en",
+      "ja"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "Misskey.io は、株式会社MisskeyHQが運営する地球で生まれた分散マイクロブログSNSです。<br>\nFediverse（様々なSNSで構成される宇宙）の中に存在するため、他のSNSと相互に繋がっています。\n<br>\n暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。<br>\n<br>\n<span style=\"color:#eb6363\">※VPNや捨てメアドを利用しての登録は出来ません</span>"
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "Misskey.io は、株式会社MisskeyHQが運営する地球で生まれた分散マイクロブログSNSです。<br>\nFediverse（様々なSNSで構成される宇宙）の中に存在するため、他のSNSと相互に繋がっています。\n<br>\n暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。<br>\n<br>\n<span style=\"color:#eb6363\">※VPNや捨てメアドを利用しての登録は出来ません</span>",
+    "consecutive_failures": 0
   },
   {
     "host": "misskey.jayhsustudio.com",
@@ -251207,13 +251285,14 @@
     },
     "open_registrations": true,
     "users_total": 276499,
-    "users_active_month": 10602,
-    "statuses": 24007027,
+    "users_active_month": 10619,
+    "statuses": 24007419,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "A general-purpose Mastodon server with a 500 character limit. All languages are welcome."
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "A general-purpose Mastodon server with a 500 character limit. All languages are welcome.",
+    "consecutive_failures": 0
   },
   {
     "host": "mstdn.social.setsuzokustudio.com",
@@ -253713,13 +253792,14 @@
     "open_registrations": true,
     "users_total": 2097,
     "users_active_month": 138,
-    "statuses": 327432,
+    "statuses": 327431,
     "languages_detected": [
-      "en",
-      "ko"
+      "ko",
+      "en"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "머스타드(Mustard)는 여러분의 일상에 톡 쏘는 즐거움을 더하는 연합 뷔페입니다."
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "머스타드(Mustard)는 여러분의 일상에 톡 쏘는 즐거움을 더하는 연합 뷔페입니다.",
+    "consecutive_failures": 0
   },
   {
     "host": "mustardon.tokyo",
@@ -309202,12 +309282,13 @@
     "open_registrations": true,
     "users_total": 3740,
     "users_active_month": 245,
-    "statuses": 959944,
+    "statuses": 959959,
     "languages_detected": [
       "ko"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "2017년부터 마스토돈 개발에 꾸준히 기여하는 원조 장인이 운영하는, 한국어권에서 가장 오래된 마스토돈 서버입니다.\r\n성소수자들이 마음 놓고 이용할 수 있는 공간을 목적으로 개설되었습니다."
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "2017년부터 마스토돈 개발에 꾸준히 기여하는 원조 장인이 운영하는, 한국어권에서 가장 오래된 마스토돈 서버입니다.\r\n성소수자들이 마음 놓고 이용할 수 있는 공간을 목적으로 개설되었습니다.",
+    "consecutive_failures": 0
   },
   {
     "host": "qeepposted.nl",
@@ -368445,12 +368526,13 @@
     "open_registrations": true,
     "users_total": 22444,
     "users_active_month": 3594,
-    "statuses": 4184805,
+    "statuses": 4184847,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-08-24T11:26:00Z",
-    "nodeinfo_description": "A friendly server from Germany – which tends to attract techy people, but welcomes everybody. This is one of the oldest Mastodon instances."
+    "fetched_at": "2026-08-24T11:54:47Z",
+    "nodeinfo_description": "A friendly server from Germany – which tends to attract techy people, but welcomes everybody. This is one of the oldest Mastodon instances.",
+    "consecutive_failures": 0
   },
   {
     "host": "social.tealshark.net",
