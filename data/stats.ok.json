@@ -1,5 +1,23 @@
 [
   {
+    "host": "00wd00.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2026.7.0"
+    },
+    "open_registrations": false,
+    "users_total": 11,
+    "users_active_month": null,
+    "statuses": 28,
+    "languages_detected": [
+      "ja",
+      "zh"
+    ],
+    "fetched_at": "2026-08-24T11:27:46Z",
+    "nodeinfo_description": "一个小型的中文联邦社交站点"
+  },
+  {
     "host": "0a1b.com",
     "verified_activitypub": true,
     "software": {
@@ -32,6 +50,60 @@
     ],
     "fetched_at": "2025-11-21T05:20:01Z",
     "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser."
+  },
+  {
+    "host": "0ct0pu5.social",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.21.2+git-343fed2"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 282,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2026-08-24T11:27:46Z",
+    "nodeinfo_description": "I&#39;m just a guy who chose a really simple life - fan of security ,privacy and minimal design. Web Developer with passion but only as a hobby. My friends know me as shaggy because of my dreadlocks (kudlaty in Polish). I have always associated an octopus with a shaggy person, that&#39;s why 0ct0pu5. That&#39;s all I have to say for now because I believe that more doesn’t always mean better.\n\n🇵🇱 / 🇬🇧\n\npowered by gotosocial"
+  },
+  {
+    "host": "0fff.top",
+    "verified_activitypub": true,
+    "software": {
+      "name": "misskey",
+      "version": "2026.6.0"
+    },
+    "open_registrations": false,
+    "users_total": 12,
+    "users_active_month": null,
+    "statuses": 282,
+    "languages_detected": [
+      "ja",
+      "en",
+      "no"
+    ],
+    "fetched_at": "2026-08-24T11:27:46Z",
+    "nodeinfo_description": "0fff.top 是联邦宇宙实例，基于开源平台 Misskey 运行。"
+  },
+  {
+    "host": "0lb.be",
+    "verified_activitypub": true,
+    "software": {
+      "name": "hometown",
+      "version": "4.5.7+hometown-1.2.0"
+    },
+    "open_registrations": false,
+    "users_total": 9,
+    "users_active_month": 5,
+    "statuses": 1915,
+    "languages_detected": [
+      "en",
+      "nl"
+    ],
+    "fetched_at": "2026-08-24T11:27:46Z",
+    "nodeinfo_description": "Verveelde me, heb  dan maar een Mastodon-instance opgezet. Verwacht dus niets speciaal."
   },
   {
     "host": "0rb.it",
@@ -168,6 +240,34 @@
     "nodeinfo_description": "0x212.com is a general purpose server and accounts are invite only."
   },
   {
+    "host": "0x3c.pl",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.2.9"
+    },
+    "open_registrations": false,
+    "users_total": 94,
+    "users_active_month": 9,
+    "statuses": 3272,
+    "languages_detected": [],
+    "fetched_at": "2026-08-24T11:27:46Z"
+  },
+  {
+    "host": "0x45.eu",
+    "verified_activitypub": true,
+    "software": {
+      "name": "gotosocial",
+      "version": "0.22.1+git-fdff42b"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 19,
+    "languages_detected": [],
+    "fetched_at": "2026-08-24T11:27:46Z"
+  },
+  {
     "host": "0x7c26.org",
     "verified_activitypub": true,
     "software": {
@@ -202,6 +302,23 @@
     "fetched_at": "2025-11-21T05:20:01Z"
   },
   {
+    "host": "0xe10.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "snac",
+      "version": "2.94"
+    },
+    "open_registrations": false,
+    "users_total": 2,
+    "users_active_month": 2,
+    "statuses": 593,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2026-08-24T11:27:46Z",
+    "nodeinfo_description": "Aryabhata is acknowledged as one of the astute astronomers of early India. His school of astronomy is well known and widespread all over India, especially in the South...Of late there is a tendency to spell his name as “Aryabhatta”. While Aryabhata himself mentions Kali 3600 to be the date of his composing the work, some say that Kali 3600 is the date of his birth. A view has been broached that Aryabhata hailed from Kerala. (Indian Journal of History of Science, 20 September 2001)"
+  },
+  {
     "host": "0xh1.com",
     "verified_activitypub": true,
     "software": {
@@ -234,6 +351,23 @@
     ],
     "fetched_at": "2025-11-21T05:20:01Z",
     "nodeinfo_description": "Blockchain Security"
+  },
+  {
+    "host": "1001otheralbums.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "7.1"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 277,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2026-08-24T11:27:46Z",
+    "nodeinfo_description": "Or, The 1001 Albums John Mastodon Says You Must Hear Before You Die (Or Like, Don’t, But Trust Them, The Albums Are All Actually Really Good)"
   },
   {
     "host": "100terres.social",
@@ -509,6 +643,24 @@
     "nodeinfo_description": "Experts in partnerships, community, connection, and communication. Emphasizing humans first."
   },
   {
+    "host": "1a23.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "7.1"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 0,
+    "languages_detected": [
+      "en",
+      "ro"
+    ],
+    "fetched_at": "2026-08-24T11:27:46Z",
+    "nodeinfo_description": "We create."
+  },
+  {
     "host": "1foo.net",
     "verified_activitypub": true,
     "software": {
@@ -521,6 +673,20 @@
     "statuses": 8550,
     "languages_detected": [],
     "fetched_at": "2025-11-21T05:20:01Z"
+  },
+  {
+    "host": "1komma5graz.at",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "7.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 7,
+    "languages_detected": [],
+    "fetched_at": "2026-08-24T11:27:46Z"
   },
   {
     "host": "1m2lab.anvil.top",
@@ -13790,18 +13956,18 @@
     "verified_activitypub": true,
     "software": {
       "name": "misskey",
-      "version": "2025.10.2"
+      "version": "2026.7.0"
     },
     "open_registrations": true,
-    "users_total": 16,
+    "users_total": 28,
     "users_active_month": null,
-    "statuses": 2256,
+    "statuses": 6225,
     "languages_detected": [
       "ja",
-      "ko",
-      "en"
+      "en",
+      "ko"
     ],
-    "fetched_at": "2025-11-21T05:20:01Z",
+    "fetched_at": "2026-08-24T11:26:00Z",
     "nodeinfo_description": "청춘(靑春)들이 이끌어가는 자유 주제 페디버스(연합우주) 인스턴스 서버입니다.<br />青春が率いる自由な主題のフェディバース上のサーバーです。<br />\nYour adolescent Fediverse instance for free talking, with a liberty.<br />\n<br />\n[ since 2024/12/25 ]<br />\n<br />\n!! 무단 크롤링을 통한 AI 학습에 사용 금지 !!<br />\n!! AI学習に使用禁止 !!<br />\n!! Not for AI training !!"
   },
   {
@@ -21551,17 +21717,17 @@
     "verified_activitypub": true,
     "software": {
       "name": "mastodon",
-      "version": "4.6.0-alpha.1+qdon.glitch"
+      "version": "4.7.0-alpha.2+qdon.glitch"
     },
     "open_registrations": true,
-    "users_total": 136,
-    "users_active_month": 28,
-    "statuses": 175904,
+    "users_total": 139,
+    "users_active_month": 18,
+    "statuses": 199036,
     "languages_detected": [
       "ko"
     ],
-    "fetched_at": "2025-11-21T05:20:01Z",
-    "nodeinfo_description": "동네 어디에나 있는 슈퍼마켓 입니다.\r\n개인 서버에서 운영되고 있습니다."
+    "fetched_at": "2026-08-24T11:26:00Z",
+    "nodeinfo_description": "동네 어디에나 있는 슈퍼마켓 입니다."
   },
   {
     "host": "bala.one",
@@ -123863,16 +124029,16 @@
     "verified_activitypub": true,
     "software": {
       "name": "mastodon",
-      "version": "4.5.1"
+      "version": "4.7.0"
     },
     "open_registrations": false,
-    "users_total": 62491,
-    "users_active_month": 8403,
-    "statuses": 4505265,
+    "users_total": 62706,
+    "users_active_month": 7245,
+    "statuses": 4892150,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2025-11-18T11:35:32Z",
+    "fetched_at": "2026-08-24T11:26:00Z",
     "nodeinfo_description": "Fosstodon is an invite only Mastodon instance that is open to those who are interested in technology; particularly free & open source software.\r\n\r\nIf you wish to join, contact us for an invite."
   },
   {
@@ -184710,14 +184876,14 @@
     "verified_activitypub": true,
     "software": {
       "name": "lemmy",
-      "version": "0.19.13"
+      "version": "0.19.20"
     },
     "open_registrations": true,
-    "users_total": 56221,
-    "users_active_month": 2087,
-    "statuses": 183095,
+    "users_total": 58523,
+    "users_active_month": 1870,
+    "statuses": 213449,
     "languages_detected": [],
-    "fetched_at": "2025-11-18T14:43:41Z"
+    "fetched_at": "2026-08-24T11:26:00Z"
   },
   {
     "host": "lemmy.mods4ever.com",
@@ -217860,17 +218026,17 @@
     "verified_activitypub": true,
     "software": {
       "name": "mastodon",
-      "version": "4.6.0-nightly.2025-11-18"
+      "version": "4.8.0-nightly.2026-08-24"
     },
     "open_registrations": false,
-    "users_total": 189104,
-    "users_active_month": 8493,
-    "statuses": 11562353,
+    "users_total": 188331,
+    "users_active_month": 7611,
+    "statuses": 12740682,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2025-11-18T11:35:32Z",
-    "nodeinfo_description": "A newer server operated by the Mastodon gGmbH non-profit"
+    "fetched_at": "2026-08-24T11:26:00Z",
+    "nodeinfo_description": "A newer server of Mastodon, operated by Mastodon GmbH for the common good."
   },
   {
     "host": "mastodon.opencloud.lu",
@@ -220765,17 +220931,17 @@
     "verified_activitypub": true,
     "software": {
       "name": "mastodon",
-      "version": "4.6.0-nightly.2025-11-18"
+      "version": "4.7.0"
     },
     "open_registrations": true,
-    "users_total": 2961793,
-    "users_active_month": 255517,
-    "statuses": 153786400,
+    "users_total": 3375815,
+    "users_active_month": 272740,
+    "statuses": 185742626,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2025-11-18T11:35:32Z",
-    "nodeinfo_description": "The original server operated by the Mastodon gGmbH non-profit"
+    "fetched_at": "2026-08-24T11:26:00Z",
+    "nodeinfo_description": "The original server of Mastodon, operated by Mastodon GmbH for the common good."
   },
   {
     "host": "mastodon.social-pod.org",
@@ -230059,16 +230225,16 @@
     "verified_activitypub": true,
     "software": {
       "name": "mastodon",
-      "version": "4.5.1"
+      "version": "4.7.0"
     },
     "open_registrations": true,
-    "users_total": 5899,
-    "users_active_month": 710,
-    "statuses": 676415,
+    "users_total": 6133,
+    "users_active_month": 743,
+    "statuses": 744033,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2025-11-18T11:35:32Z",
+    "fetched_at": "2026-08-24T11:26:00Z",
     "nodeinfo_description": "Metalhead.club is a Mastodon instance hosted in Germany and powered by 100% green energy."
   },
   {
@@ -237896,18 +238062,18 @@
     "verified_activitypub": true,
     "software": {
       "name": "misskey",
-      "version": "2024.5.0-io.10"
+      "version": "2025.4.1-io.12b-fb6fbea074"
     },
     "open_registrations": true,
-    "users_total": 685104,
+    "users_total": 738871,
     "users_active_month": null,
-    "statuses": 142427109,
+    "statuses": 174288454,
     "languages_detected": [
-      "en",
-      "ja"
+      "ja",
+      "en"
     ],
-    "fetched_at": "2025-11-18T11:35:32Z",
-    "nodeinfo_description": "Misskey.io は、株式会社MisskeyHQが運営する地球で生まれた分散マイクロブログSNSです。 \nFediverse（様々なSNSで構成される宇宙）の中に存在するため、他のSNSと相互に繋がっています。\n \n暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。※VPNや捨てメアドを利用しての登録は出来ません。"
+    "fetched_at": "2026-08-24T11:26:00Z",
+    "nodeinfo_description": "Misskey.io は、株式会社MisskeyHQが運営する地球で生まれた分散マイクロブログSNSです。<br>\nFediverse（様々なSNSで構成される宇宙）の中に存在するため、他のSNSと相互に繋がっています。\n<br>\n暫し都会の喧騒から離れて、新しいインターネットにダイブしてみませんか。<br>\n<br>\n<span style=\"color:#eb6363\">※VPNや捨てメアドを利用しての登録は出来ません</span>"
   },
   {
     "host": "misskey.jayhsustudio.com",
@@ -251037,16 +251203,16 @@
     "verified_activitypub": true,
     "software": {
       "name": "mastodon",
-      "version": "4.5.1"
+      "version": "4.7.0"
     },
     "open_registrations": true,
-    "users_total": 267269,
-    "users_active_month": 11589,
-    "statuses": 21701243,
+    "users_total": 276499,
+    "users_active_month": 10602,
+    "statuses": 24007027,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2025-11-18T11:35:32Z",
+    "fetched_at": "2026-08-24T11:26:00Z",
     "nodeinfo_description": "A general-purpose Mastodon server with a 500 character limit. All languages are welcome."
   },
   {
@@ -253542,17 +253708,17 @@
     "verified_activitypub": true,
     "software": {
       "name": "mastodon",
-      "version": "4.5.1"
+      "version": "4.6.6"
     },
     "open_registrations": true,
-    "users_total": 2048,
-    "users_active_month": 194,
-    "statuses": 282205,
+    "users_total": 2097,
+    "users_active_month": 138,
+    "statuses": 327432,
     "languages_detected": [
       "en",
       "ko"
     ],
-    "fetched_at": "2025-11-18T15:13:58Z",
+    "fetched_at": "2026-08-24T11:26:00Z",
     "nodeinfo_description": "머스타드(Mustard)는 여러분의 일상에 톡 쏘는 즐거움을 더하는 연합 뷔페입니다."
   },
   {
@@ -309031,16 +309197,16 @@
     "verified_activitypub": true,
     "software": {
       "name": "mastodon",
-      "version": "4.6.0-alpha.1+qdon.glitch"
+      "version": "4.7.0-alpha.2+qdon.glitch"
     },
     "open_registrations": true,
-    "users_total": 3709,
-    "users_active_month": 292,
-    "statuses": 828064,
+    "users_total": 3740,
+    "users_active_month": 245,
+    "statuses": 959944,
     "languages_detected": [
       "ko"
     ],
-    "fetched_at": "2025-11-18T11:35:32Z",
+    "fetched_at": "2026-08-24T11:26:00Z",
     "nodeinfo_description": "2017년부터 마스토돈 개발에 꾸준히 기여하는 원조 장인이 운영하는, 한국어권에서 가장 오래된 마스토돈 서버입니다.\r\n성소수자들이 마음 놓고 이용할 수 있는 공간을 목적으로 개설되었습니다."
   },
   {
@@ -368274,16 +368440,16 @@
     "verified_activitypub": true,
     "software": {
       "name": "mastodon",
-      "version": "4.5.1"
+      "version": "4.7.0"
     },
     "open_registrations": true,
-    "users_total": 23135,
-    "users_active_month": 3556,
-    "statuses": 3910415,
+    "users_total": 22444,
+    "users_active_month": 3594,
+    "statuses": 4184805,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2025-11-18T11:35:32Z",
+    "fetched_at": "2026-08-24T11:26:00Z",
     "nodeinfo_description": "A friendly server from Germany – which tends to attract techy people, but welcomes everybody. This is one of the oldest Mastodon instances."
   },
   {
@@ -411637,6 +411803,25 @@
     "fetched_at": "2025-11-22T13:24:34Z",
     "redirected_from": "microblog.wittenbrink.net",
     "nodeinfo_description": "« Mon stile et mon esprit vont vagabondant de mesmes. »"
+  },
+  {
+    "host": "www.12thnews.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 0,
+    "statuses": 8,
+    "languages_detected": [
+      "en",
+      "ca"
+    ],
+    "fetched_at": "2026-08-24T11:27:46Z",
+    "redirected_from": "12thnews.com",
+    "nodeinfo_description": "Stories from Atlanta's Fútbol Culture"
   },
   {
     "host": "www.coppershaman.com",

@@ -348,8 +348,10 @@ def main() -> None:
 
     if args.discover_peers:
         # 이미 검사한(OK/BAD 둘 다 포함) 호스트는 제외
+        checked_hosts = load_checked_hosts()
+
         suggestions = sorted(
-            h for h in discovered_hosts if h not in load_checked_hosts()
+            h for h in discovered_hosts if h not in checked_hosts
         )
         peer_output = args.peer_output or str(DATA_DIR / "peer_suggestions.json")
         emit_peer_suggestions(suggestions, peer_output)
