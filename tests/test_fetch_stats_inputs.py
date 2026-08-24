@@ -116,7 +116,12 @@ def test_discover_peers_processes_an_already_checked_seed(
     )
     processed: list[str] = []
 
-    def fake_process(instance: fetch_stats.Instance, timestamp: str):
+    def fake_process(
+        instance: fetch_stats.Instance,
+        timestamp: str,
+        *,
+        discover_peers: bool = False,
+    ):
         processed.append(instance.host)
         return (
             {

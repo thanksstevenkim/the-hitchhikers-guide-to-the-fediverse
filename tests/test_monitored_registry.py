@@ -52,7 +52,12 @@ def prepare_data(
         write_json(data_dir / "monitored_instances.json", monitored)
 
 
-def good_result(instance: fetch_stats.Instance, timestamp: str):
+def good_result(
+    instance: fetch_stats.Instance,
+    timestamp: str,
+    *,
+    discover_peers: bool = False,
+):
     record = make_record(instance.host, good=True)
     record["fetched_at"] = timestamp
     return record, [], set()
@@ -103,7 +108,12 @@ def test_default_run_checks_discovered_ok_and_deduplicates_seed(
     )
     processed: list[str] = []
 
-    def fake_process(instance: fetch_stats.Instance, timestamp: str):
+    def fake_process(
+        instance: fetch_stats.Instance,
+        timestamp: str,
+        *,
+        discover_peers: bool = False,
+    ):
         processed.append(instance.host)
         return good_result(instance, timestamp)
 
@@ -112,7 +122,8 @@ def test_default_run_checks_discovered_ok_and_deduplicates_seed(
 
     fetch_stats.main()
 
-    assert processed == ["discovered.example", "seed.example"]
+    assert sorted(processed) == ["discovered.example", "seed.example"]
+    assert len(processed) == 2
 
 
 def test_threshold_failure_removes_display_state_but_keeps_monitoring(
@@ -133,7 +144,12 @@ def test_threshold_failure_removes_display_state_but_keeps_monitoring(
         ],
     )
 
-    def fail(instance: fetch_stats.Instance, timestamp: str):
+    def fail(
+        instance: fetch_stats.Instance,
+        timestamp: str,
+        *,
+        discover_peers: bool = False,
+    ):
         record = make_record(instance.host, good=False)
         record["fetched_at"] = timestamp
         return record, ["timeout"], set()
@@ -176,7 +192,12 @@ def test_bad_monitored_host_is_rechecked_and_recovers(
     )
     processed: list[str] = []
 
-    def recover(instance: fetch_stats.Instance, timestamp: str):
+    def recover(
+        instance: fetch_stats.Instance,
+        timestamp: str,
+        *,
+        discover_peers: bool = False,
+    ):
         processed.append(instance.host)
         return good_result(instance, timestamp)
 
