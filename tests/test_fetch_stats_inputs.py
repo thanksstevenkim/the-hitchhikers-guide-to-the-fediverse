@@ -21,6 +21,7 @@ def prepare_data_dir(
     ok: Optional[List[object]] = None,
     bad: Optional[List[object]] = None,
     aliases: Optional[Dict[str, str]] = None,
+    monitored: Optional[List[object]] = None,
 ) -> None:
     data_dir.mkdir()
     write_json(data_dir / "instances.json", instances)
@@ -28,6 +29,8 @@ def prepare_data_dir(
     write_json(data_dir / "stats.bad.json", bad or [])
     write_json(data_dir / "host_aliases.json", aliases or {})
     write_json(data_dir / "manual_overrides.json", {})
+    if monitored is not None:
+        write_json(data_dir / "monitored_instances.json", monitored)
 
 
 @pytest.mark.parametrize("stats_file", ["stats.ok.json", "stats.bad.json"])
@@ -78,6 +81,28 @@ def test_candidate_input_still_skips_already_checked_hosts(tmp_path: Path) -> No
     instances = list(fetch_stats.load_host_strings(candidates))
 
     assert [instance.host for instance in instances] == ["b.example"]
+
+
+def test_candidate_input_skips_monitored_host_without_stats(tmp_path: Path) -> None:
+    data_dir = tmp_path / "data"
+    prepare_data_dir(
+        data_dir,
+        instances=[],
+        monitored=[
+            {
+                "host": "known.example",
+                "url": "https://known.example",
+                "source": "peer",
+            }
+        ],
+    )
+    candidates = data_dir / "peer_suggestions.json"
+    write_json(candidates, ["known.example", "new.example"])
+    fetch_stats.configure_data_dir(data_dir)
+
+    instances = list(fetch_stats.load_host_strings(candidates))
+
+    assert [instance.host for instance in instances] == ["new.example"]
 
 
 def test_discover_peers_processes_an_already_checked_seed(

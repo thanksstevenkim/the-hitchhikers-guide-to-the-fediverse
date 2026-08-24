@@ -174,6 +174,50 @@ def validate_stats(
     return seen_canonical_hosts
 
 
+def validate_monitored_registry(
+    path: Path,
+    aliases: dict[str, str],
+) -> set[str]:
+    rows = load_json(path)
+    if not isinstance(rows, list) or not rows:
+        raise ValidationError(f"{path} must be a non-empty JSON array")
+
+    seen_hosts: set[str] = set()
+    seen_canonical_hosts: set[str] = set()
+    for index, row in enumerate(rows):
+        label = f"{path}[{index}]"
+        if not isinstance(row, dict):
+            raise ValidationError(f"{label} must be an object")
+        host = normalize_host(require_nonempty_string(row.get("host"), f"{label}.host"))
+        if host in seen_hosts:
+            raise ValidationError(f"duplicate monitored host: {host}")
+        seen_hosts.add(host)
+
+        canonical_host = resolve_canonical_host(host, aliases)
+        if canonical_host in seen_canonical_hosts:
+            raise ValidationError(
+                "duplicate monitored canonical host after aliases: "
+                f"{canonical_host}"
+            )
+        seen_canonical_hosts.add(canonical_host)
+
+        url = require_nonempty_string(row.get("url"), f"{label}.url")
+        parsed = urlparse(url)
+        if parsed.scheme not in {"http", "https"} or not parsed.hostname:
+            raise ValidationError(f"{label}.url must be an absolute HTTP(S) URL")
+        url_host = resolve_canonical_host(parsed.hostname, aliases)
+        if url_host != canonical_host:
+            raise ValidationError(f"{label}.url host must match its canonical host")
+
+        source = require_nonempty_string(row.get("source"), f"{label}.source")
+        if source not in {"seed", "peer", "legacy"}:
+            raise ValidationError(
+                f"{label}.source must be one of: seed, peer, legacy"
+            )
+
+    return seen_canonical_hosts
+
+
 def validate_mapping(path: Path, value_validator: type) -> dict[str, Any]:
     mapping = load_json(path)
     if not isinstance(mapping, dict):
@@ -205,6 +249,9 @@ def validate_data_dir(data_dir: Path) -> None:
         normalize_host(key): normalize_host(value)
         for key, value in raw_aliases.items()
     }
+    monitored_hosts = validate_monitored_registry(
+        data_dir / "monitored_instances.json", aliases
+    )
     ok_hosts = validate_stats(
         data_dir / "stats.ok.json", aliases, bucket="OK", required=True
     )
@@ -216,6 +263,12 @@ def validate_data_dir(data_dir: Path) -> None:
         raise ValidationError(
             "hosts present in both OK and BAD stats after aliases: "
             + ", ".join(sorted(overlap))
+        )
+    unmonitored_ok = ok_hosts - monitored_hosts
+    if unmonitored_ok:
+        raise ValidationError(
+            "OK stats hosts missing from monitored registry: "
+            + ", ".join(sorted(unmonitored_ok))
         )
 
 
