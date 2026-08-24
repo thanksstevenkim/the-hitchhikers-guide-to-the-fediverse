@@ -40,6 +40,28 @@ def prepare_data(
     write_json(data_dir / "stats.bad.json", bad)
     write_json(data_dir / "manual_overrides.json", {})
     write_json(data_dir / "host_aliases.json", aliases or {})
+    canonical_hosts = {
+        (aliases or {}).get(record["host"], record["host"])
+        for record in ok
+    }
+    write_json(
+        data_dir / "monitored_instances.json",
+        [
+            {
+                "host": host,
+                "url": f"https://{host}",
+                "source": "legacy",
+            }
+            for host in sorted(canonical_hosts)
+        ]
+        or [
+            {
+                "host": "a.example",
+                "url": "https://a.example",
+                "source": "seed",
+            }
+        ],
+    )
 
 
 @pytest.mark.parametrize("bucket", ["OK", "BAD"])
@@ -78,4 +100,54 @@ def test_alias_equivalent_cross_bucket_host_is_rejected(tmp_path: Path) -> None:
     )
 
     with pytest.raises(validate_data.ValidationError, match="both OK and BAD"):
+        validate_data.validate_data_dir(data_dir)
+
+
+def test_duplicate_monitored_canonical_host_is_rejected(tmp_path: Path) -> None:
+    data_dir = tmp_path / "data"
+    prepare_data(
+        data_dir,
+        ok=[make_record("canonical.example", good=True)],
+        bad=[],
+        aliases={"old.example": "canonical.example"},
+    )
+    write_json(
+        data_dir / "monitored_instances.json",
+        [
+            {
+                "host": "old.example",
+                "url": "https://old.example",
+                "source": "legacy",
+            },
+            {
+                "host": "canonical.example",
+                "url": "https://canonical.example",
+                "source": "peer",
+            },
+        ],
+    )
+
+    with pytest.raises(validate_data.ValidationError, match="canonical host"):
+        validate_data.validate_data_dir(data_dir)
+
+
+def test_ok_host_must_be_present_in_monitored_registry(tmp_path: Path) -> None:
+    data_dir = tmp_path / "data"
+    prepare_data(
+        data_dir,
+        ok=[make_record("displayed.example", good=True)],
+        bad=[],
+    )
+    write_json(
+        data_dir / "monitored_instances.json",
+        [
+            {
+                "host": "other.example",
+                "url": "https://other.example",
+                "source": "seed",
+            }
+        ],
+    )
+
+    with pytest.raises(validate_data.ValidationError, match="missing from monitored"):
         validate_data.validate_data_dir(data_dir)

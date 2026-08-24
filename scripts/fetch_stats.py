@@ -32,6 +32,7 @@ DATA_DIR = BASE_DIR / "data"
 
 # Inputs
 INSTANCES_PATH = DATA_DIR / "instances.json"
+MONITORED_PATH = DATA_DIR / "monitored_instances.json"
 
 LANG_CANON = {
     # 영어
@@ -106,11 +107,12 @@ def configure_data_dir(data_dir: Path) -> None:
     GitHub Actions uses this to collect into a staging directory. The tracked
     site data is only replaced after the staged files pass validation.
     """
-    global DATA_DIR, INSTANCES_PATH, ALIASES_PATH
+    global DATA_DIR, INSTANCES_PATH, MONITORED_PATH, ALIASES_PATH
     global STATS_OK_PATH, STATS_BAD_PATH, STATS_PATH, MANUAL_OVERRIDES_PATH
 
     DATA_DIR = data_dir.resolve()
     INSTANCES_PATH = DATA_DIR / "instances.json"
+    MONITORED_PATH = DATA_DIR / "monitored_instances.json"
     ALIASES_PATH = DATA_DIR / "host_aliases.json"
     STATS_OK_PATH = DATA_DIR / "stats.ok.json"
     STATS_BAD_PATH = DATA_DIR / "stats.bad.json"
@@ -264,14 +266,32 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     configure_data_dir(Path(args.data_dir))
 
-    # --input 이 있으면 host 문자열/객체 리스트를, 없으면 instances.json을 사용
+    aliases = load_aliases()
+    seed_instances = list(load_instances(INSTANCES_PATH))
+    ok_map, bad_map = load_existing_stats_maps()
+    monitored, registry_changed = prepare_monitored_registry(
+        seed_instances,
+        ok_map,
+        aliases,
+    )
+    if registry_changed:
+        save_monitored_registry_atomic(monitored, aliases)
+
+    # Candidate inputs are a queue of unseen hosts. The default path is a
+    # refresh of the complete persistent monitoring set, not just the seeds.
     if args.input:
         instances = list(load_host_strings(Path(args.input)))
     else:
-        instances = list(load_instances(INSTANCES_PATH))
+        instances = monitored_instances(monitored, aliases)
 
     if not instances:
-        logging.error("No instances to process. Populate data/instances.json or pass --input.")
+        if args.input:
+            logging.info("No new candidate instances to process.")
+        else:
+            logging.error(
+                "No instances to process. Populate data/instances.json or "
+                "data/monitored_instances.json."
+            )
         return
 
     # 현재 UTC 타임스탬프 (ISO8601, Z)
@@ -281,9 +301,6 @@ def main() -> None:
         .isoformat()
         .replace("+00:00", "Z")
     )
-
-    # 기존 ok/bad 파일을 각각 맵으로 적재
-    ok_map, bad_map = load_existing_stats_maps()
 
     manual_overrides = load_manual_overrides()
 
@@ -317,6 +334,7 @@ def main() -> None:
         apply_manual_overrides(record, manual_overrides)
 
         # 4) 그 결과를 기준으로 분류하고 상호 배타적인 상태로 저장
+        current_aliases = load_aliases()
         had_errors = bool(errors)
         bucket = classify_record(record, had_errors)  # 'good' or 'bad'
         reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
@@ -325,9 +343,35 @@ def main() -> None:
             bucket,
             ok_map,
             bad_map,
-            load_aliases(),
+            current_aliases,
             failure_reason=reason,
         )
+
+        # Monitoring membership is independent of display health. Existing
+        # monitored instances remain registered on failure; reviewed
+        # candidates join only after a successful collection.
+        if not args.input or state == "good":
+            software = record.get("software")
+            platform = (
+                str(software.get("name", "")).strip().lower()
+                if isinstance(software, dict)
+                else ""
+            )
+            registry_changed = register_monitored_instance(
+                monitored,
+                Instance(
+                    name=instance.name or record["host"],
+                    host=record["host"],
+                    url=instance.url,
+                    platform=platform or instance.platform,
+                ),
+                source="peer" if args.input else monitored_source_for(
+                    monitored, instance.host, current_aliases
+                ),
+                aliases=current_aliases,
+            )
+            if registry_changed:
+                save_monitored_registry_atomic(monitored, current_aliases)
         updated_ok += int(ok_changed)
         updated_bad += int(bad_changed)
 
@@ -354,7 +398,7 @@ def main() -> None:
             )
 
         processed += 1
-        save_stats_pair_atomic(ok_map, bad_map)
+        save_stats_pair_atomic(ok_map, bad_map, current_aliases)
 
         if args.discover_peers and peers:
             discovered_hosts.update(peers)
@@ -365,7 +409,7 @@ def main() -> None:
         )
 
     if args.discover_peers:
-        # 이미 검사한(OK/BAD 둘 다 포함) 호스트는 제외
+        # Load the known set once; do not repeatedly parse JSON in this loop.
         checked_hosts = load_checked_hosts()
 
         suggestions = sorted(
@@ -439,6 +483,208 @@ def resolve_canonical_host(host: str, aliases: Dict[str, str]) -> str:
             break
         current = target
     return current
+
+
+MONITORED_SOURCE_PRIORITY = {"legacy": 0, "peer": 1, "seed": 2}
+
+
+def _monitored_entry_as_instance(entry: Dict[str, Any]) -> Instance:
+    host = _normalize_host(str(entry.get("host", "")))
+    return Instance(
+        name=str(entry.get("name", "")).strip() or host,
+        host=host,
+        url=str(entry.get("url", "")).strip() or f"https://{host}",
+        platform=str(entry.get("platform", "")).strip().lower() or "unknown",
+    )
+
+
+def monitored_source_for(
+    registry: Dict[str, Dict[str, Any]],
+    host: str,
+    aliases: Dict[str, str],
+) -> str:
+    """Return the preserved provenance for one canonical monitored host."""
+    canonical_host = resolve_canonical_host(host, aliases)
+    entry = registry.get(canonical_host)
+    if entry is not None:
+        source = str(entry.get("source", "legacy"))
+        return source if source in MONITORED_SOURCE_PRIORITY else "legacy"
+    return "legacy"
+
+
+def register_monitored_instance(
+    registry: Dict[str, Dict[str, Any]],
+    instance: Instance,
+    *,
+    source: str,
+    aliases: Dict[str, str],
+) -> bool:
+    """Insert or canonicalize an instance without ever dropping membership."""
+    canonical_host = resolve_canonical_host(instance.host, aliases)
+    if not canonical_host:
+        return False
+    source = source if source in MONITORED_SOURCE_PRIORITY else "legacy"
+
+    # Registry keys are canonicalized on load and save, so insertion and
+    # alias collapse stay O(1) even for tens of thousands of monitored hosts.
+    existing = registry.pop(canonical_host, {})
+    existing_source = str(existing.get("source", "legacy"))
+    if MONITORED_SOURCE_PRIORITY.get(existing_source, 0) > MONITORED_SOURCE_PRIORITY[source]:
+        source = existing_source
+
+    parsed_url_host = _normalize_host(urlparse(instance.url).hostname or "")
+    url = (
+        normalize_base_url(instance.url, canonical_host)
+        if resolve_canonical_host(parsed_url_host, aliases) == canonical_host
+        else f"https://{canonical_host}"
+    )
+    name = instance.name.strip() or str(existing.get("name", "")).strip() or canonical_host
+    platform = instance.platform.strip().lower()
+    if not platform or platform == "unknown":
+        platform = str(existing.get("platform", "")).strip().lower() or "unknown"
+
+    updated: Dict[str, Any] = {
+        "host": canonical_host,
+        "url": url,
+        "source": source,
+    }
+    if name != canonical_host:
+        updated["name"] = name
+    if platform != "unknown":
+        updated["platform"] = platform
+
+    changed = existing != updated
+    registry[canonical_host] = updated
+    return changed
+
+
+def load_monitored_registry(
+    aliases: Optional[Dict[str, str]] = None,
+) -> Dict[str, Dict[str, Any]]:
+    """Load the persistent health-check set, accepting legacy string rows."""
+    aliases = aliases if aliases is not None else load_aliases()
+    if not MONITORED_PATH.exists():
+        return {}
+    try:
+        rows = json.loads(MONITORED_PATH.read_text(encoding="utf-8"))
+    except Exception as exc:
+        logging.warning("Could not load %s: %s", MONITORED_PATH.name, exc)
+        return {}
+    if not isinstance(rows, list):
+        logging.warning("%s must be a JSON array", MONITORED_PATH.name)
+        return {}
+
+    registry: Dict[str, Dict[str, Any]] = {}
+    for row in rows:
+        if isinstance(row, str):
+            host = _normalize_host(row)
+            entry: Dict[str, Any] = {"host": host, "source": "legacy"}
+        elif isinstance(row, dict):
+            entry = row
+            host = _normalize_host(str(row.get("host", "")))
+        else:
+            continue
+        if not host:
+            continue
+        register_monitored_instance(
+            registry,
+            Instance(
+                name=str(entry.get("name", "")).strip() or host,
+                host=host,
+                url=str(entry.get("url", "")).strip() or f"https://{host}",
+                platform=str(entry.get("platform", "")).strip().lower() or "unknown",
+            ),
+            source=str(entry.get("source", "legacy")),
+            aliases=aliases,
+        )
+    return registry
+
+
+def prepare_monitored_registry(
+    seed_instances: Sequence[Instance],
+    ok_map: Dict[str, Dict[str, Any]],
+    aliases: Dict[str, str],
+) -> Tuple[Dict[str, Dict[str, Any]], bool]:
+    """Load/migrate registry and enforce seeds + current OK as members."""
+    registry = load_monitored_registry(aliases)
+    started_empty = not registry
+    changed = False
+
+    for instance in seed_instances:
+        changed |= register_monitored_instance(
+            registry, instance, source="seed", aliases=aliases
+        )
+
+    for record in ok_map.values():
+        host = _normalize_host(str(record.get("host", "")))
+        if not host:
+            continue
+        software = record.get("software")
+        platform = (
+            str(software.get("name", "")).strip().lower()
+            if isinstance(software, dict)
+            else "unknown"
+        )
+        changed |= register_monitored_instance(
+            registry,
+            Instance(host, host, f"https://{host}", platform or "unknown"),
+            source="legacy",
+            aliases=aliases,
+        )
+
+    if started_empty and registry:
+        logging.info(
+            "Bootstrapped %s from instances.json and stats.ok.json",
+            MONITORED_PATH.name,
+        )
+    return registry, changed
+
+
+def monitored_instances(
+    registry: Dict[str, Dict[str, Any]],
+    aliases: Dict[str, str],
+) -> List[Instance]:
+    """Return one canonical health-check target for every registry member."""
+    canonical: Dict[str, Dict[str, Any]] = {}
+    for entry in registry.values():
+        instance = _monitored_entry_as_instance(entry)
+        register_monitored_instance(
+            canonical,
+            instance,
+            source=str(entry.get("source", "legacy")),
+            aliases=aliases,
+        )
+    return [_monitored_entry_as_instance(canonical[host]) for host in sorted(canonical)]
+
+
+def save_monitored_registry_atomic(
+    registry: Dict[str, Dict[str, Any]],
+    aliases: Optional[Dict[str, str]] = None,
+) -> None:
+    """Canonicalize and atomically persist the long-lived monitoring set."""
+    aliases = aliases if aliases is not None else load_aliases()
+    canonical: Dict[str, Dict[str, Any]] = {}
+    for entry in registry.values():
+        register_monitored_instance(
+            canonical,
+            _monitored_entry_as_instance(entry),
+            source=str(entry.get("source", "legacy")),
+            aliases=aliases,
+        )
+    registry.clear()
+    registry.update(canonical)
+    MONITORED_PATH.parent.mkdir(parents=True, exist_ok=True)
+    temporary = MONITORED_PATH.with_suffix(MONITORED_PATH.suffix + ".tmp")
+    temporary.write_text(
+        json.dumps(
+            [registry[host] for host in sorted(registry)],
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    temporary.replace(MONITORED_PATH)
 
 
 def _pop_equivalent_records(
@@ -670,8 +916,11 @@ def load_existing_stats_maps() -> Tuple[Dict[str, Dict[str, Any]], Dict[str, Dic
     return ok_map, bad_map
 
 
-def save_stats_pair_atomic(ok_map: Dict[str, Dict[str, Any]],
-                           bad_map: Dict[str, Dict[str, Any]]) -> None:
+def save_stats_pair_atomic(
+    ok_map: Dict[str, Dict[str, Any]],
+    bad_map: Dict[str, Dict[str, Any]],
+    aliases: Optional[Dict[str, str]] = None,
+) -> None:
     """
     Write OK/BAD lists atomically to their respective files.
     """
@@ -681,7 +930,7 @@ def save_stats_pair_atomic(ok_map: Dict[str, Dict[str, Any]],
         tmp.write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         tmp.replace(path)  # atomic on same filesystem
 
-    reconcile_health_maps(ok_map, bad_map, load_aliases())
+    reconcile_health_maps(ok_map, bad_map, aliases if aliases is not None else load_aliases())
 
     ok_list  = sorted(ok_map .values(), key=lambda x: x.get("host", ""))
     bad_list = sorted(bad_map.values(), key=lambda x: x.get("host", ""))
@@ -717,13 +966,15 @@ def load_checked_hosts() -> Set[str]:
     _merge_from(STATS_OK_PATH)
     _merge_from(STATS_BAD_PATH)
     _merge_from(STATS_PATH)  # legacy
+    _merge_from(MONITORED_PATH)
 
     # 별칭 파일도 병합 (원본 호스트는 사실상 검사된 것으로 간주)
-    for src, dst in load_aliases().items():
+    aliases = load_aliases()
+    for src, dst in aliases.items():
         checked.add(_normalize_host(src))
         checked.add(_normalize_host(dst))
 
-    return checked
+    return checked | {resolve_canonical_host(host, aliases) for host in checked}
 
 def load_manual_overrides() -> Dict[str, Dict[str, Any]]:
     """
@@ -872,6 +1123,7 @@ def load_instances(path: Path) -> Iterable[Instance]:
     aliases = load_aliases()
 
     instances: List[Instance] = []
+    seen: Set[str] = set()
     for entry in data:
         if not isinstance(entry, dict):
             continue
@@ -884,12 +1136,21 @@ def load_instances(path: Path) -> Iterable[Instance]:
             logging.warning("Skipping %s: could not determine host", url)
             continue
 
-        mapped = aliases.get(host, host)
+        mapped = resolve_canonical_host(host, aliases)
+        if mapped in seen:
+            continue
+        seen.add(mapped)
         instances.append(
             Instance(
                 name=str(entry.get("name", "")).strip() or mapped,
                 host=mapped,
-                url=normalize_base_url(url or f"https://{mapped}", mapped),
+                url=(
+                    normalize_base_url(url, mapped)
+                    if resolve_canonical_host(
+                        _normalize_host(urlparse(url).hostname or ""), aliases
+                    ) == mapped
+                    else f"https://{mapped}"
+                ),
                 platform=str(entry.get("platform", "")).strip().lower() or "unknown",
             )
         )
@@ -922,16 +1183,18 @@ def load_host_strings(path: Path) -> Iterable[Instance]:
     aliases = load_aliases()
     skipped_count = 0
     instances: List[Instance] = []
+    queued_hosts: Set[str] = set()
 
     for entry in data:
         if isinstance(entry, str):
             host = _normalize_host(entry)
             if not host:
                 continue
-            mapped = aliases.get(host, host)
-            if mapped in checked_hosts:
+            mapped = resolve_canonical_host(host, aliases)
+            if mapped in checked_hosts or mapped in queued_hosts:
                 skipped_count += 1
                 continue
+            queued_hosts.add(mapped)
             instances.append(
                 Instance(
                     name=entry.strip() or mapped,
@@ -948,15 +1211,22 @@ def load_host_strings(path: Path) -> Iterable[Instance]:
                 continue
             host = _normalize_host(host)
 
-            mapped = aliases.get(host, host)
-            if mapped in checked_hosts:
+            mapped = resolve_canonical_host(host, aliases)
+            if mapped in checked_hosts or mapped in queued_hosts:
                 skipped_count += 1
                 continue
+            queued_hosts.add(mapped)
             instances.append(
                 Instance(
                     name=str(entry.get("name", "")).strip() or mapped,
                     host=mapped,
-                    url=normalize_base_url(url or f"https://{mapped}", mapped),
+                    url=(
+                        normalize_base_url(url or f"https://{mapped}", mapped)
+                        if resolve_canonical_host(
+                            _normalize_host(urlparse(url).hostname or mapped), aliases
+                        ) == mapped
+                        else f"https://{mapped}"
+                    ),
                     platform=str(entry.get("platform", "")).strip().lower() or "unknown",
                 )
             )

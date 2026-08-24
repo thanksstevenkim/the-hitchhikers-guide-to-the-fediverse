@@ -16,7 +16,8 @@ GitHub Pages로 그대로 호스팅할 수 있으며, 검색·필터·정렬 기
 
 | 파일 | Git | Pages | 역할 |
 | --- | --- | --- | --- |
-| `data/instances.json` | 유지 | 포함 | 수동으로 선별한 인스턴스 목록 |
+| `data/instances.json` | 유지 | 포함 | 피어 탐색을 시작하는 수동 seed 목록. 전체 운영 목록이 아님 |
+| `data/monitored_instances.json` | 유지 | 제외 | 상태와 무관하게 계속 health check할 전체 canonical host registry |
 | `data/stats.ok.json` | 유지 | 포함 | 검증을 통과한 공개 통계. 사이트의 유일한 통계 입력 |
 | `data/manual_overrides.json` | 유지 | 제외 | 특정 호스트의 수집 결과를 보정하는 수동 규칙 |
 | `data/host_aliases.json` | 유지 | 제외 | 원본 호스트와 canonical host의 검증된 매핑 |
@@ -44,14 +45,39 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-선별된 `instances.json`의 통계를 갱신하고 결과를 검사합니다.
+seed와 monitored registry 전체의 통계를 갱신하고 결과를 검사합니다.
 
 ```bash
 python scripts/fetch_stats.py
 python scripts/validate_data.py
 ```
 
-수집기는 `instances.json`의 선별 인스턴스를 이전 통계 존재 여부와 관계없이 매번 다시 처리합니다. 인스턴스별로 `stats.ok.json`과 로컬 진단용 `stats.bad.json`을 원자적으로 갱신합니다. 검증기는 `instances.json`, `stats.ok.json`, `manual_overrides.json`, `host_aliases.json`의 JSON 구조와 필수 필드, 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
+수집기는 기본 실행에서 `instances.json`의 seed와 `monitored_instances.json`의 전체 대상을 canonical host 기준으로 합쳐 매번 다시 처리합니다. 인스턴스별로 `stats.ok.json`과 로컬 진단용 `stats.bad.json`을 원자적으로 갱신합니다. 검증기는 registry 구조와 `stats.ok ⊆ monitored` 불변식까지 포함해 필수 필드와 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
+
+### 데이터 수명주기
+
+각 파일의 책임은 분리되어 있습니다.
+
+```text
+instances.json             = discovery를 시작하는 수동 seed
+monitored_instances.json   = 계속 health check할 전체 인스턴스
+stats.ok.json              = 현재 사이트에 표시할 healthy 인스턴스
+stats.bad.json             = 현재 실패 상태와 진단 기록
+```
+
+운영 흐름은 다음과 같습니다.
+
+```text
+seed → discovery → candidate review → monitored → health check → OK/BAD
+                                                    ↑              |
+                                                    └── recovery ──┘
+```
+
+- seed는 자동으로 monitored registry에 포함됩니다.
+- peer suggestion은 검토만으로 registry에 들어가지 않습니다. `--input`으로 처리해 정상 수집에 성공한 후보만 `source: "peer"`로 편입됩니다.
+- GOOD/BAD 전환은 표시 상태만 바꾸며 monitored membership은 삭제하지 않습니다.
+- registry가 없거나 비어 있는 기존 checkout은 첫 수집 때 `instances.json ∪ stats.ok.json`으로 비파괴 bootstrap됩니다.
+- alias는 저장 전에 canonical host로 정규화되므로 같은 인스턴스가 registry에 중복되지 않습니다.
 
 ### 상태 전환과 일시 장애 처리
 
@@ -64,9 +90,9 @@ python scripts/validate_data.py
 - 이후 정상 응답을 받으면 BAD 기록과 실패 정보를 제거하고 `consecutive_failures`를 `0`으로 초기화해 OK로 복귀합니다.
 - alias 원본과 canonical host의 이전 기록은 한 인스턴스로 합쳐져 양쪽 파일에 중복으로 남지 않습니다.
 
-웹 UI는 `stats.ok.json`만 현재 정상 목록으로 사용합니다. 따라서 지속적으로 실패한 인스턴스는 임계값 도달 후 화면에서 제외되고, 복구되면 자동으로 다시 표시됩니다.
+웹 UI는 `stats.ok.json`만 현재 정상 목록으로 사용합니다. 지속적으로 실패한 인스턴스는 임계값 도달 후 화면에서 제외되지만 monitored registry에는 남아 다음 실행에서도 검사되며, 복구되면 자동으로 다시 표시됩니다.
 
-다른 디렉터리에서 안전하게 시험하려면 추적 파일 네 개를 복사한 뒤 `--data-dir`을 사용합니다.
+다른 디렉터리에서 안전하게 시험하려면 추적 데이터 다섯 개를 복사한 뒤 `--data-dir`을 사용합니다.
 
 ```bash
 python scripts/fetch_stats.py --data-dir /tmp/fediverse-data
@@ -89,7 +115,7 @@ python scripts/validate_data.py
 - `--blocklist <파일>`로 로컬 추가 차단 목록을 지정할 수 있습니다.
 - 새 후보를 `stats.ok.json`에 합치기 전에는 결과와 진단 로그를 사람이 검토해야 합니다.
 
-`--input`으로 전달하는 피어 후보 목록에서는 `stats.ok.json`, `stats.bad.json`, legacy `stats.json`, aliases를 기준으로 이미 확인한 호스트를 제외합니다. 이 중복 제거는 선별 seed를 갱신하는 기본 실행과 `--discover-peers`의 seed 처리에는 적용되지 않습니다.
+`--input`으로 전달하는 피어 후보 목록에서는 monitored registry, `stats.ok.json`, `stats.bad.json`, legacy `stats.json`, aliases를 기준으로 이미 알려진 호스트를 제외합니다. 이 중복 제거는 seed/monitored health refresh에는 적용되지 않습니다. `--discover-peers`는 전체 monitored 대상을 검사하면서 peers를 모으되, 이미 알려진 호스트를 한 번 계산해 suggestion에서 제외합니다.
 
 ### 테스트
 
@@ -146,10 +172,10 @@ python -m pytest
 다음 순서로 실행됩니다.
 
 1. Python `3.12.10`과 `requirements.txt`의 고정 의존성을 설치합니다.
-2. 추적 중인 데이터 네 개를 Runner 임시 디렉터리에 복사합니다.
+2. 추적 중인 입력·상태 데이터 다섯 개를 Runner 임시 디렉터리에 복사합니다.
 3. 임시 디렉터리에서 통계를 수집하고 `validate_data.py`로 검사합니다.
-4. 검증에 성공한 `stats.ok.json`과 `host_aliases.json`만 작업 트리에 승격합니다.
-5. 두 파일 중 실제 변경이 있는 경우에만 Actions bot으로 커밋합니다.
+4. 검증에 성공한 `monitored_instances.json`, `stats.ok.json`, `host_aliases.json`만 작업 트리에 승격합니다.
+5. 세 파일 중 실제 변경이 있는 경우에만 Actions bot으로 커밋합니다.
 6. 변경 여부와 관계없이 현재의 정상 데이터로 `_site` 아티팩트를 만들고 Pages에 배포합니다.
 
 검증이나 수집이 실패하면 추적 중인 정상 데이터는 덮어쓰지 않으며 Pages 배포 단계도 실행되지 않습니다. Pages 아티팩트에는 `index.html`, `styles.css`, `js/`, `i18n/`, `instances.json`, `stats.ok.json`만 포함됩니다.

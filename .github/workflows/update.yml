@@ -37,6 +37,7 @@ jobs:
           staging_data="${RUNNER_TEMP}/fediverse-data"
           mkdir -p "$staging_data"
           cp data/instances.json "$staging_data/instances.json"
+          cp data/monitored_instances.json "$staging_data/monitored_instances.json"
           cp data/stats.ok.json "$staging_data/stats.ok.json"
           cp data/manual_overrides.json "$staging_data/manual_overrides.json"
           cp data/host_aliases.json "$staging_data/host_aliases.json"
@@ -49,13 +50,14 @@ jobs:
         shell: bash
         run: |
           staging_data="${{ steps.staging.outputs.data_dir }}"
+          cp "$staging_data/monitored_instances.json" data/monitored_instances.json
           cp "$staging_data/stats.ok.json" data/stats.ok.json
           cp "$staging_data/host_aliases.json" data/host_aliases.json
       - name: Commit updated stats
         id: commit
         shell: bash
         run: |
-          tracked_outputs=(data/stats.ok.json data/host_aliases.json)
+          tracked_outputs=(data/monitored_instances.json data/stats.ok.json data/host_aliases.json)
           if git diff --quiet -- "${tracked_outputs[@]}"; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
