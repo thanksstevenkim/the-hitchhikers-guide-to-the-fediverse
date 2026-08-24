@@ -51,7 +51,7 @@ python scripts/fetch_stats.py
 python scripts/validate_data.py
 ```
 
-수집기는 인스턴스별로 `stats.ok.json`과 로컬 진단용 `stats.bad.json`을 원자적으로 갱신합니다. 검증기는 `instances.json`, `stats.ok.json`, `manual_overrides.json`, `host_aliases.json`의 JSON 구조와 필수 필드, 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
+수집기는 `instances.json`의 선별 인스턴스를 이전 통계 존재 여부와 관계없이 매번 다시 처리합니다. 인스턴스별로 `stats.ok.json`과 로컬 진단용 `stats.bad.json`을 원자적으로 갱신합니다. 검증기는 `instances.json`, `stats.ok.json`, `manual_overrides.json`, `host_aliases.json`의 JSON 구조와 필수 필드, 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
 
 다른 디렉터리에서 안전하게 시험하려면 추적 파일 네 개를 복사한 뒤 `--data-dir`을 사용합니다.
 
@@ -75,6 +75,15 @@ python scripts/validate_data.py
 - `filter_spam.py --dry-run`은 필터 결과를 파일에 쓰지 않습니다.
 - `--blocklist <파일>`로 로컬 추가 차단 목록을 지정할 수 있습니다.
 - 새 후보를 `stats.ok.json`에 합치기 전에는 결과와 진단 로그를 사람이 검토해야 합니다.
+
+`--input`으로 전달하는 피어 후보 목록에서는 `stats.ok.json`, `stats.bad.json`, legacy `stats.json`, aliases를 기준으로 이미 확인한 호스트를 제외합니다. 이 중복 제거는 선별 seed를 갱신하는 기본 실행과 `--discover-peers`의 seed 처리에는 적용되지 않습니다.
+
+### 테스트
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest
+```
 
 ---
 

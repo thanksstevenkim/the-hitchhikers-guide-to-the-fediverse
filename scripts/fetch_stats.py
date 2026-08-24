@@ -642,6 +642,13 @@ def classify_record(record: Dict[str, Any], had_errors: bool) -> str:
 # -------------------------------
 
 def load_instances(path: Path) -> Iterable[Instance]:
+    """Load the curated seed instances that must be refreshed every run.
+
+    Unlike ``load_host_strings()``, this loader intentionally does not filter
+    hosts already present in the OK/BAD statistics. ``instances.json`` is the
+    operator-maintained refresh set, not a queue of previously unseen hosts.
+    Host aliases are still applied so collection uses the canonical endpoint.
+    """
     if not path.exists():
         logging.error("Instances file not found: %s", path)
         return []
@@ -656,7 +663,6 @@ def load_instances(path: Path) -> Iterable[Instance]:
         logging.error("Expected a list in %s", path)
         return []
     
-    checked_hosts = load_checked_hosts()
     aliases = load_aliases()
 
     instances: List[Instance] = []
@@ -673,9 +679,6 @@ def load_instances(path: Path) -> Iterable[Instance]:
             continue
 
         mapped = aliases.get(host, host)
-        if mapped in checked_hosts:
-            continue
-
         instances.append(
             Instance(
                 name=str(entry.get("name", "")).strip() or mapped,
@@ -684,13 +687,16 @@ def load_instances(path: Path) -> Iterable[Instance]:
                 platform=str(entry.get("platform", "")).strip().lower() or "unknown",
             )
         )
+    logging.info("Loaded %d curated instances from %s", len(instances), format_relative(path))
     return instances
 
 
 def load_host_strings(path: Path) -> Iterable[Instance]:
     """
-    Load a list of hosts given as strings or dict entries.
-    Already-checked hosts (in ok/bad or legacy) are skipped automatically.
+    Load a candidate list of hosts given as strings or dict entries.
+
+    This path is used for peer discovery follow-up and intentionally excludes
+    hosts already checked in OK/BAD/legacy stats or represented by aliases.
     """
     if not path.exists():
         logging.error("Host list file not found: %s", path)
