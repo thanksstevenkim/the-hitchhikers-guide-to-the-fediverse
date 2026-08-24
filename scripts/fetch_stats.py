@@ -26,6 +26,7 @@ from html.parser import HTMLParser
 
 TIMEOUT = 5
 USER_AGENT = "fedlist-stats-fetcher/1.0"
+FAILURE_THRESHOLD = 3
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
@@ -315,25 +316,42 @@ def main() -> None:
         # 3) 무조건 여기서 manual_overrides 적용 (정상/예외 둘 다)
         apply_manual_overrides(record, manual_overrides)
 
-        # 4) 그 결과를 기준으로 분류/저장
+        # 4) 그 결과를 기준으로 분류하고 상호 배타적인 상태로 저장
         had_errors = bool(errors)
         bucket = classify_record(record, had_errors)  # 'good' or 'bad'
+        reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
+        state, ok_changed, bad_changed, failure_count = apply_health_transition(
+            record,
+            bucket,
+            ok_map,
+            bad_map,
+            load_aliases(),
+            failure_reason=reason,
+        )
+        updated_ok += int(ok_changed)
+        updated_bad += int(bad_changed)
 
-        if bucket == "good":
-            prev = ok_map.get(record["host"])
-            ok_map[record["host"]] = record
-            updated_ok += 1 if (prev is None or prev != record) else 0
+        if state == "good":
             logging.info(
                 "OK   %s (%s)",
                 record["host"],
                 record.get("software", {}).get("name") or "-",
             )
+        elif state == "transient_failure":
+            logging.warning(
+                "WARN %s: transient failure %d/%d; retaining last known good stats: %s",
+                record["host"],
+                failure_count,
+                FAILURE_THRESHOLD,
+                reason,
+            )
         else:
-            prev = bad_map.get(record["host"])
-            bad_map[record["host"]] = record
-            updated_bad += 1 if (prev is None or prev != record) else 0
-            reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
-            logging.warning("BAD  %s: %s", record["host"], reason)
+            logging.warning(
+                "BAD  %s (consecutive failures=%d): %s",
+                record["host"],
+                failure_count,
+                reason,
+            )
 
         processed += 1
         save_stats_pair_atomic(ok_map, bad_map)
@@ -407,6 +425,190 @@ def load_aliases() -> Dict[str, str]:
         pass
     return {}
 
+
+def resolve_canonical_host(host: str, aliases: Dict[str, str]) -> str:
+    """Resolve a normalized host through alias chains without looping."""
+    current = _normalize_host(host)
+    seen: Set[str] = set()
+    while current:
+        if current in seen:
+            return min(seen)
+        seen.add(current)
+        target = _normalize_host(aliases.get(current, ""))
+        if not target or target == current:
+            break
+        current = target
+    return current
+
+
+def _pop_equivalent_records(
+    records: Dict[str, Dict[str, Any]],
+    canonical_host: str,
+    aliases: Dict[str, str],
+) -> List[Tuple[str, Dict[str, Any]]]:
+    """Remove and return every record resolving to one canonical host."""
+    matches: List[Tuple[str, Dict[str, Any]]] = []
+    for key, value in list(records.items()):
+        record_host = value.get("host") if isinstance(value, dict) else key
+        candidate_hosts = [str(record_host or key)]
+        redirected_from = value.get("redirected_from") if isinstance(value, dict) else None
+        if isinstance(redirected_from, str):
+            candidate_hosts.append(redirected_from)
+        elif isinstance(redirected_from, (list, tuple, set)):
+            candidate_hosts.extend(str(host) for host in redirected_from)
+        if any(
+            resolve_canonical_host(candidate, aliases) == canonical_host
+            for candidate in candidate_hosts
+        ):
+            matches.append((key, records.pop(key)))
+    return matches
+
+
+def _latest_record(
+    records: Sequence[Tuple[str, Dict[str, Any]]],
+) -> Optional[Dict[str, Any]]:
+    if not records:
+        return None
+    return max(
+        (record for _, record in records),
+        key=lambda record: str(
+            record.get("last_failure_at") or record.get("fetched_at") or ""
+        ),
+    )
+
+
+def _failure_count(record: Optional[Dict[str, Any]]) -> int:
+    if not record:
+        return 0
+    value = record.get("consecutive_failures", 0)
+    return value if isinstance(value, int) and not isinstance(value, bool) and value >= 0 else 0
+
+
+def apply_health_transition(
+    record: Dict[str, Any],
+    bucket: str,
+    ok_map: Dict[str, Dict[str, Any]],
+    bad_map: Dict[str, Dict[str, Any]],
+    aliases: Dict[str, str],
+    *,
+    failure_reason: str = "classified as anomalous/invalid",
+    failure_threshold: int = FAILURE_THRESHOLD,
+) -> Tuple[str, bool, bool, int]:
+    """Apply one GOOD/BAD observation to mutually exclusive health maps.
+
+    A previously healthy instance gets a grace period for transient failures.
+    Hosts without a last-known-good record remain BAD immediately. All alias
+    variants are removed before the canonical record is inserted.
+    """
+    if bucket not in {"good", "bad"}:
+        raise ValueError(f"unsupported health bucket: {bucket}")
+    if failure_threshold < 1:
+        raise ValueError("failure_threshold must be at least 1")
+
+    observed_host = _normalize_host(str(record.get("host", "")))
+    canonical_host = resolve_canonical_host(observed_host, aliases)
+    if not canonical_host:
+        raise ValueError("health record requires a non-empty host")
+
+    record["host"] = canonical_host
+    current = dict(record)
+    if observed_host != canonical_host and not current.get("redirected_from"):
+        current["redirected_from"] = observed_host
+
+    previous_ok_records = _pop_equivalent_records(ok_map, canonical_host, aliases)
+    previous_bad_records = _pop_equivalent_records(bad_map, canonical_host, aliases)
+    previous_ok = _latest_record(previous_ok_records)
+    previous_bad = _latest_record(previous_bad_records)
+
+    if bucket == "good":
+        current["consecutive_failures"] = 0
+        current.pop("last_failure_at", None)
+        current.pop("last_failure_reason", None)
+        ok_map[canonical_host] = current
+        ok_changed = (
+            previous_ok != current
+            or len(previous_ok_records) != 1
+            or previous_ok_records[0][0] != canonical_host
+        )
+        return "good", ok_changed, bool(previous_bad_records), 0
+
+    prior_failure_count = _failure_count(previous_ok or previous_bad)
+    failure_count = prior_failure_count + 1
+    failure_at = str(current.get("fetched_at") or "")
+
+    if previous_ok is not None and failure_count < failure_threshold:
+        retained = dict(previous_ok)
+        retained["host"] = canonical_host
+        retained["consecutive_failures"] = failure_count
+        retained["last_failure_at"] = failure_at
+        retained["last_failure_reason"] = failure_reason
+        ok_map[canonical_host] = retained
+        ok_changed = (
+            previous_ok != retained
+            or len(previous_ok_records) != 1
+            or previous_ok_records[0][0] != canonical_host
+        )
+        return "transient_failure", ok_changed, bool(previous_bad_records), failure_count
+
+    current["consecutive_failures"] = failure_count
+    current["last_failure_at"] = failure_at
+    current["last_failure_reason"] = failure_reason
+    bad_map[canonical_host] = current
+    bad_changed = (
+        previous_bad != current
+        or len(previous_bad_records) != 1
+        or previous_bad_records[0][0] != canonical_host
+    )
+    return "bad", bool(previous_ok_records), bad_changed, failure_count
+
+
+def reconcile_health_maps(
+    ok_map: Dict[str, Dict[str, Any]],
+    bad_map: Dict[str, Dict[str, Any]],
+    aliases: Dict[str, str],
+) -> None:
+    """Canonicalize both maps and repair legacy overlaps before every save.
+
+    A persisted BAD record with enough consecutive failures wins an existing
+    conflict. Otherwise the last-known-good record wins conservatively.
+    """
+    def _canonicalize(
+        source: Dict[str, Dict[str, Any]],
+    ) -> Dict[str, Dict[str, Any]]:
+        grouped: Dict[str, List[Tuple[str, Dict[str, Any]]]] = {}
+        for key, value in source.items():
+            if not isinstance(value, dict):
+                continue
+            observed_host = _normalize_host(str(value.get("host") or key))
+            canonical_host = resolve_canonical_host(observed_host, aliases)
+            if not canonical_host:
+                continue
+            normalized = dict(value)
+            normalized["host"] = canonical_host
+            if observed_host != canonical_host and not normalized.get("redirected_from"):
+                normalized["redirected_from"] = observed_host
+            grouped.setdefault(canonical_host, []).append((key, normalized))
+
+        result: Dict[str, Dict[str, Any]] = {}
+        for canonical_host, candidates in grouped.items():
+            selected = _latest_record(candidates)
+            if selected is not None:
+                result[canonical_host] = selected
+        return result
+
+    canonical_ok = _canonicalize(ok_map)
+    canonical_bad = _canonicalize(bad_map)
+    for host in canonical_ok.keys() & canonical_bad.keys():
+        if _failure_count(canonical_bad[host]) >= FAILURE_THRESHOLD:
+            canonical_ok.pop(host, None)
+        else:
+            canonical_bad.pop(host, None)
+
+    ok_map.clear()
+    ok_map.update(canonical_ok)
+    bad_map.clear()
+    bad_map.update(canonical_bad)
+
 def save_aliases(aliases: Dict[str, str]) -> None:
     ALIASES_PATH.parent.mkdir(parents=True, exist_ok=True)
     # 예쁘게 저장
@@ -478,6 +680,8 @@ def save_stats_pair_atomic(ok_map: Dict[str, Dict[str, Any]],
         path.parent.mkdir(parents=True, exist_ok=True)
         tmp.write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         tmp.replace(path)  # atomic on same filesystem
+
+    reconcile_health_maps(ok_map, bad_map, load_aliases())
 
     ok_list  = sorted(ok_map .values(), key=lambda x: x.get("host", ""))
     bad_list = sorted(bad_map.values(), key=lambda x: x.get("host", ""))
