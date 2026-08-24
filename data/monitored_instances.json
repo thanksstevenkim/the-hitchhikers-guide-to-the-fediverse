@@ -3415,9 +3415,8 @@
   },
   {
     "host": "allykotetsu.com",
-    "url": "https://social.allykotetsu.com",
+    "url": "https://allykotetsu.com",
     "source": "legacy",
-    "name": "social.allykotetsu.com",
     "platform": "wordpress"
   },
   {
@@ -10304,9 +10303,8 @@
   },
   {
     "host": "bln41.de",
-    "url": "https://micro.bln41.de",
+    "url": "https://bln41.de",
     "source": "legacy",
-    "name": "micro.bln41.de",
     "platform": "wordpress"
   },
   {
@@ -10929,9 +10927,8 @@
   },
   {
     "host": "blog.anna.kiwi",
-    "url": "https://anna.kiwi",
+    "url": "https://blog.anna.kiwi",
     "source": "legacy",
-    "name": "anna.kiwi",
     "platform": "wordpress"
   },
   {
@@ -32884,9 +32881,8 @@
   },
   {
     "host": "devol.it",
-    "url": "https://newsletter.devol.it",
+    "url": "https://devol.it",
     "source": "legacy",
-    "name": "newsletter.devol.it",
     "platform": "ghost"
   },
   {
@@ -77939,9 +77935,8 @@
   },
   {
     "host": "mastodon.lohmann.social",
-    "url": "https://lohmann.social",
+    "url": "https://mastodon.lohmann.social",
     "source": "legacy",
-    "name": "lohmann.social",
     "platform": "mastodon"
   },
   {
@@ -81942,9 +81937,8 @@
   },
   {
     "host": "max-fun.de",
-    "url": "https://blog.max-fun.de",
+    "url": "https://max-fun.de",
     "source": "legacy",
-    "name": "blog.max-fun.de",
     "platform": "wordpress"
   },
   {
@@ -93055,9 +93049,8 @@
   },
   {
     "host": "nearly.com.au",
-    "url": "https://www.nearly.com.au",
+    "url": "https://nearly.com.au",
     "source": "legacy",
-    "name": "www.nearly.com.au",
     "platform": "ghost"
   },
   {
@@ -94340,9 +94333,8 @@
   },
   {
     "host": "news.tailschannel.com",
-    "url": "https://tailschannel.com",
+    "url": "https://news.tailschannel.com",
     "source": "legacy",
-    "name": "tailschannel.com",
     "platform": "ghost"
   },
   {
@@ -98799,9 +98791,8 @@
   },
   {
     "host": "opensight.ch",
-    "url": "https://blog.opensight.ch",
+    "url": "https://opensight.ch",
     "source": "legacy",
-    "name": "blog.opensight.ch",
     "platform": "ghost"
   },
   {
@@ -109228,9 +109219,8 @@
   },
   {
     "host": "post.lampy.casa",
-    "url": "https://lampy.casa",
+    "url": "https://post.lampy.casa",
     "source": "legacy",
-    "name": "lampy.casa",
     "platform": "microblogpub"
   },
   {
@@ -114887,9 +114877,8 @@
   },
   {
     "host": "rgmii.org",
-    "url": "https://preview.rgmii.org",
+    "url": "https://rgmii.org",
     "source": "legacy",
-    "name": "preview.rgmii.org",
     "platform": "ghost"
   },
   {
@@ -118620,9 +118609,8 @@
   },
   {
     "host": "scyoni.com",
-    "url": "https://www.scyoni.com",
+    "url": "https://scyoni.com",
     "source": "legacy",
-    "name": "www.scyoni.com",
     "platform": "wordpress"
   },
   {
@@ -126163,9 +126151,8 @@
   },
   {
     "host": "social.en.gy",
-    "url": "https://en.gy",
+    "url": "https://social.en.gy",
     "source": "legacy",
-    "name": "en.gy",
     "platform": "gotosocial"
   },
   {
@@ -141242,9 +141229,8 @@
   },
   {
     "host": "teknote.io",
-    "url": "https://www.teknote.io",
+    "url": "https://teknote.io",
     "source": "legacy",
-    "name": "www.teknote.io",
     "platform": "writefreely"
   },
   {
@@ -143391,9 +143377,8 @@
   },
   {
     "host": "theyellowlight.org",
-    "url": "https://www.theyellowlight.org",
+    "url": "https://theyellowlight.org",
     "source": "legacy",
-    "name": "www.theyellowlight.org",
     "platform": "ghost"
   },
   {
@@ -149110,44 +149095,38 @@
   },
   {
     "host": "www.aellxx.dev",
-    "url": "https://aellxx.dev",
+    "url": "https://www.aellxx.dev",
     "source": "legacy",
-    "name": "aellxx.dev",
     "platform": "ghost"
   },
   {
     "host": "www.afisch.blog",
-    "url": "https://afisch.blog",
+    "url": "https://www.afisch.blog",
     "source": "legacy",
-    "name": "afisch.blog",
     "platform": "ghost"
   },
   {
     "host": "www.alternatives-numeriques.fr",
-    "url": "https://alternatives-numeriques.fr",
+    "url": "https://www.alternatives-numeriques.fr",
     "source": "legacy",
-    "name": "alternatives-numeriques.fr",
     "platform": "ghost"
   },
   {
     "host": "www.asymmetricedge.io",
-    "url": "https://asymmetricedge.io",
+    "url": "https://www.asymmetricedge.io",
     "source": "legacy",
-    "name": "asymmetricedge.io",
     "platform": "ghost"
   },
   {
     "host": "www.blissbabble.com",
-    "url": "https://blissbabble.com",
+    "url": "https://www.blissbabble.com",
     "source": "legacy",
-    "name": "blissbabble.com",
     "platform": "ghost"
   },
   {
     "host": "www.boldlatina.com",
-    "url": "https://boldlatina.com",
+    "url": "https://www.boldlatina.com",
     "source": "legacy",
-    "name": "boldlatina.com",
     "platform": "ghost"
   },
   {
@@ -149158,72 +149137,62 @@
   },
   {
     "host": "www.dalichro.me",
-    "url": "https://dalichro.me",
+    "url": "https://www.dalichro.me",
     "source": "legacy",
-    "name": "dalichro.me",
     "platform": "ghost"
   },
   {
     "host": "www.dly.se",
-    "url": "https://dly.se",
+    "url": "https://www.dly.se",
     "source": "legacy",
-    "name": "dly.se",
     "platform": "wordpress"
   },
   {
     "host": "www.ecofriendlywest.ca",
-    "url": "https://ecofriendlywest.ca",
+    "url": "https://www.ecofriendlywest.ca",
     "source": "legacy",
-    "name": "ecofriendlywest.ca",
     "platform": "ghost"
   },
   {
     "host": "www.fistfuloffodder.com",
-    "url": "https://fistfuloffodder.com",
+    "url": "https://www.fistfuloffodder.com",
     "source": "legacy",
-    "name": "fistfuloffodder.com",
     "platform": "ghost"
   },
   {
     "host": "www.giftme.love",
-    "url": "https://giftme.love",
+    "url": "https://www.giftme.love",
     "source": "legacy",
-    "name": "giftme.love",
     "platform": "pixelfed"
   },
   {
     "host": "www.hellandd.com",
-    "url": "https://hellandd.com",
+    "url": "https://www.hellandd.com",
     "source": "legacy",
-    "name": "hellandd.com",
     "platform": "ghost"
   },
   {
     "host": "www.janross.org",
-    "url": "https://janross.org",
+    "url": "https://www.janross.org",
     "source": "legacy",
-    "name": "janross.org",
     "platform": "ghost"
   },
   {
     "host": "www.karanmaindan.com",
-    "url": "https://karanmaindan.com",
+    "url": "https://www.karanmaindan.com",
     "source": "legacy",
-    "name": "karanmaindan.com",
     "platform": "ghost"
   },
   {
     "host": "www.klimaschutz-von-unten.de",
-    "url": "https://klimaschutz-von-unten.de",
+    "url": "https://www.klimaschutz-von-unten.de",
     "source": "legacy",
-    "name": "klimaschutz-von-unten.de",
     "platform": "wordpress"
   },
   {
     "host": "www.lifeaftermeds.com",
-    "url": "https://lifeaftermeds.com",
+    "url": "https://www.lifeaftermeds.com",
     "source": "legacy",
-    "name": "lifeaftermeds.com",
     "platform": "ghost"
   },
   {
@@ -150260,9 +150229,8 @@
   },
   {
     "host": "www.mhm.kr",
-    "url": "https://mhm.kr",
+    "url": "https://www.mhm.kr",
     "source": "legacy",
-    "name": "mhm.kr",
     "platform": "ghost"
   },
   {
@@ -150795,9 +150763,8 @@
   },
   {
     "host": "www.moneyhk101.com",
-    "url": "https://moneyhk101.com",
+    "url": "https://www.moneyhk101.com",
     "source": "legacy",
-    "name": "moneyhk101.com",
     "platform": "ghost"
   },
   {
@@ -150886,9 +150853,8 @@
   },
   {
     "host": "www.morrow.report",
-    "url": "https://morrow.report",
+    "url": "https://www.morrow.report",
     "source": "legacy",
-    "name": "morrow.report",
     "platform": "ghost"
   },
   {
@@ -151145,9 +151111,8 @@
   },
   {
     "host": "www.munchkinstein.co.uk",
-    "url": "https://munchkinstein.co.uk",
+    "url": "https://www.munchkinstein.co.uk",
     "source": "legacy",
-    "name": "munchkinstein.co.uk",
     "platform": "wordpress"
   },
   {
@@ -151458,9 +151423,8 @@
   },
   {
     "host": "www.namastesalesforce.com",
-    "url": "https://namastesalesforce.com",
+    "url": "https://www.namastesalesforce.com",
     "source": "legacy",
-    "name": "namastesalesforce.com",
     "platform": "ghost"
   },
   {
@@ -152173,9 +152137,8 @@
   },
   {
     "host": "www.norepl.ai",
-    "url": "https://norepl.ai",
+    "url": "https://www.norepl.ai",
     "source": "legacy",
-    "name": "norepl.ai",
     "platform": "ghost"
   },
   {
@@ -152450,9 +152413,8 @@
   },
   {
     "host": "www.obscurae.co.uk",
-    "url": "https://obscurae.co.uk",
+    "url": "https://www.obscurae.co.uk",
     "source": "legacy",
-    "name": "obscurae.co.uk",
     "platform": "ghost"
   },
   {
@@ -153027,9 +152989,8 @@
   },
   {
     "host": "www.ours-inculte.fr",
-    "url": "https://ours-inculte.fr",
+    "url": "https://www.ours-inculte.fr",
     "source": "legacy",
-    "name": "ours-inculte.fr",
     "platform": "ghost"
   },
   {
@@ -153100,9 +153061,8 @@
   },
   {
     "host": "www.ownlycx.com",
-    "url": "https://ownlycx.com",
+    "url": "https://www.ownlycx.com",
     "source": "legacy",
-    "name": "ownlycx.com",
     "platform": "ghost"
   },
   {
@@ -154127,9 +154087,8 @@
   },
   {
     "host": "www.polyinnovator.space",
-    "url": "https://polyinnovator.space",
+    "url": "https://www.polyinnovator.space",
     "source": "legacy",
-    "name": "polyinnovator.space",
     "platform": "ghost"
   },
   {
@@ -154812,9 +154771,8 @@
   },
   {
     "host": "www.rabbitholerv.com",
-    "url": "https://rabbitholerv.com",
+    "url": "https://www.rabbitholerv.com",
     "source": "legacy",
-    "name": "rabbitholerv.com",
     "platform": "ghost"
   },
   {
@@ -156631,9 +156589,8 @@
   },
   {
     "host": "www.sayurisaying.com",
-    "url": "https://sayurisaying.com",
+    "url": "https://www.sayurisaying.com",
     "source": "legacy",
-    "name": "sayurisaying.com",
     "platform": "ghost"
   },
   {
@@ -158552,9 +158509,8 @@
   },
   {
     "host": "www.storyclub.org",
-    "url": "https://storyclub.org",
+    "url": "https://www.storyclub.org",
     "source": "legacy",
-    "name": "storyclub.org",
     "platform": "ghost"
   },
   {
@@ -158685,9 +158641,8 @@
   },
   {
     "host": "www.subaud.io",
-    "url": "https://subaud.io",
+    "url": "https://www.subaud.io",
     "source": "legacy",
-    "name": "subaud.io",
     "platform": "ghost"
   },
   {
@@ -159196,9 +159151,8 @@
   },
   {
     "host": "www.tarynbarnes.com",
-    "url": "https://tarynbarnes.com",
+    "url": "https://www.tarynbarnes.com",
     "source": "legacy",
-    "name": "tarynbarnes.com",
     "platform": "ghost"
   },
   {
@@ -161135,9 +161089,8 @@
   },
   {
     "host": "www.thismortalportal.com",
-    "url": "https://thismortalportal.com",
+    "url": "https://www.thismortalportal.com",
     "source": "legacy",
-    "name": "thismortalportal.com",
     "platform": "ghost"
   },
   {
@@ -161172,9 +161125,8 @@
   },
   {
     "host": "www.thomasknoll.info",
-    "url": "https://thomasknoll.info",
+    "url": "https://www.thomasknoll.info",
     "source": "legacy",
-    "name": "thomasknoll.info",
     "platform": "ghost"
   },
   {
@@ -161641,9 +161593,8 @@
   },
   {
     "host": "www.traumaexplained.com",
-    "url": "https://traumaexplained.com",
+    "url": "https://www.traumaexplained.com",
     "source": "legacy",
-    "name": "traumaexplained.com",
     "platform": "ghost"
   },
   {
