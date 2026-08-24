@@ -5042,7 +5042,7 @@
   {
     "host": "aoharu.place",
     "url": "https://aoharu.place",
-    "source": "legacy",
+    "source": "seed",
     "platform": "misskey"
   },
   {
@@ -7868,7 +7868,7 @@
   {
     "host": "bakedbean.xyz",
     "url": "https://bakedbean.xyz",
-    "source": "legacy",
+    "source": "seed",
     "platform": "mastodon"
   },
   {
@@ -44642,7 +44642,7 @@
   {
     "host": "fosstodon.org",
     "url": "https://fosstodon.org",
-    "source": "legacy",
+    "source": "seed",
     "platform": "mastodon"
   },
   {
@@ -66854,7 +66854,7 @@
   {
     "host": "lemmy.ml",
     "url": "https://lemmy.ml",
-    "source": "legacy",
+    "source": "seed",
     "platform": "lemmy"
   },
   {
@@ -79178,7 +79178,7 @@
   {
     "host": "mastodon.online",
     "url": "https://mastodon.online",
-    "source": "legacy",
+    "source": "seed",
     "platform": "mastodon"
   },
   {
@@ -80288,7 +80288,7 @@
   {
     "host": "mastodon.social",
     "url": "https://mastodon.social",
-    "source": "legacy",
+    "source": "seed",
     "platform": "mastodon"
   },
   {
@@ -83714,7 +83714,7 @@
   {
     "host": "metalhead.club",
     "url": "https://metalhead.club",
-    "source": "legacy",
+    "source": "seed",
     "platform": "mastodon"
   },
   {
@@ -86462,7 +86462,7 @@
   {
     "host": "misskey.io",
     "url": "https://misskey.io",
-    "source": "legacy",
+    "source": "seed",
     "platform": "misskey"
   },
   {
@@ -91160,7 +91160,7 @@
   {
     "host": "mstdn.social",
     "url": "https://mstdn.social",
-    "source": "legacy",
+    "source": "seed",
     "platform": "mastodon"
   },
   {
@@ -92084,7 +92084,7 @@
   {
     "host": "mustard.blog",
     "url": "https://mustard.blog",
-    "source": "legacy",
+    "source": "seed",
     "platform": "mastodon"
   },
   {
@@ -111878,7 +111878,7 @@
   {
     "host": "qdon.space",
     "url": "https://qdon.space",
-    "source": "legacy",
+    "source": "seed",
     "platform": "mastodon"
   },
   {
@@ -133616,7 +133616,7 @@
   {
     "host": "social.tchncs.de",
     "url": "https://social.tchncs.de",
-    "source": "legacy",
+    "source": "seed",
     "platform": "mastodon"
   },
   {
