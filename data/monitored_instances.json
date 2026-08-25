@@ -181,9 +181,8 @@
   },
   {
     "host": "123nz.nl",
-    "url": "https://www.123nz.nl",
+    "url": "https://123nz.nl",
     "source": "peer",
-    "name": "www.123nz.nl",
     "platform": "wordpress"
   },
   {
@@ -458,9 +457,8 @@
   },
   {
     "host": "3dcandy.live",
-    "url": "https://www.3dcandy.live",
+    "url": "https://3dcandy.live",
     "source": "peer",
-    "name": "www.3dcandy.live",
     "platform": "wordpress"
   },
   {
@@ -1167,9 +1165,8 @@
   },
   {
     "host": "abendschein.ch",
-    "url": "https://www.abendschein.ch",
+    "url": "https://abendschein.ch",
     "source": "peer",
-    "name": "www.abendschein.ch",
     "platform": "wordpress"
   },
   {
@@ -1360,9 +1357,8 @@
   },
   {
     "host": "abuggedlife.com",
-    "url": "https://www.abuggedlife.com",
+    "url": "https://abuggedlife.com",
     "source": "peer",
-    "name": "www.abuggedlife.com",
     "platform": "wordpress"
   },
   {
@@ -2513,9 +2509,8 @@
   },
   {
     "host": "aggloculture.net",
-    "url": "https://www.aggloculture.net",
+    "url": "https://aggloculture.net",
     "source": "peer",
-    "name": "www.aggloculture.net",
     "platform": "wordpress"
   },
   {
@@ -6380,9 +6375,8 @@
   },
   {
     "host": "antranigv.am",
-    "url": "https://weblog.antranigv.am",
+    "url": "https://antranigv.am",
     "source": "peer",
-    "name": "weblog.antranigv.am",
     "platform": "wordpress"
   },
   {
@@ -10160,9 +10154,8 @@
   },
   {
     "host": "balotta.org",
-    "url": "https://www.balotta.org",
+    "url": "https://balotta.org",
     "source": "peer",
-    "name": "www.balotta.org",
     "platform": "gancio"
   },
   {
@@ -11787,9 +11780,8 @@
   },
   {
     "host": "betteroffed.com",
-    "url": "https://www.betteroffed.com",
+    "url": "https://betteroffed.com",
     "source": "peer",
-    "name": "www.betteroffed.com",
     "platform": "wordpress"
   },
   {
@@ -25619,9 +25611,8 @@
   },
   {
     "host": "bobdraws.com",
-    "url": "https://www.bobdraws.com",
+    "url": "https://bobdraws.com",
     "source": "peer",
-    "name": "www.bobdraws.com",
     "platform": "wordpress"
   },
   {
@@ -27828,9 +27819,8 @@
   },
   {
     "host": "brighteon.social",
-    "url": "https://www.brighteon.social",
+    "url": "https://brighteon.social",
     "source": "peer",
-    "name": "www.brighteon.social",
     "platform": "brighteon"
   },
   {
@@ -30895,9 +30885,8 @@
   },
   {
     "host": "ceramicadelpez.edu.uy",
-    "url": "https://www.ceramicadelpez.edu.uy",
+    "url": "https://ceramicadelpez.edu.uy",
     "source": "peer",
-    "name": "www.ceramicadelpez.edu.uy",
     "platform": "wordpress"
   },
   {
@@ -33808,9 +33797,8 @@
   },
   {
     "host": "cold-albion.net",
-    "url": "https://www.cold-albion.net",
+    "url": "https://cold-albion.net",
     "source": "peer",
-    "name": "www.cold-albion.net",
     "platform": "wordpress"
   },
   {
@@ -37656,9 +37644,8 @@
   },
   {
     "host": "danielkherndon.com",
-    "url": "https://www.danielkherndon.com",
+    "url": "https://danielkherndon.com",
     "source": "peer",
-    "name": "www.danielkherndon.com",
     "platform": "ghost"
   },
   {
@@ -38371,9 +38358,8 @@
   },
   {
     "host": "datri.uy",
-    "url": "https://www.datri.uy",
+    "url": "https://datri.uy",
     "source": "peer",
-    "name": "www.datri.uy",
     "platform": "wordpress"
   },
   {
@@ -42652,9 +42638,8 @@
   },
   {
     "host": "down-ballot.info",
-    "url": "https://www.down-ballot.info",
+    "url": "https://down-ballot.info",
     "source": "peer",
-    "name": "www.down-ballot.info",
     "platform": "ghost"
   },
   {
@@ -45222,9 +45207,8 @@
   },
   {
     "host": "eltoroweakly.com",
-    "url": "https://www.eltoroweakly.com",
+    "url": "https://eltoroweakly.com",
     "source": "peer",
-    "name": "www.eltoroweakly.com",
     "platform": "wordpress"
   },
   {
@@ -45265,9 +45249,8 @@
   },
   {
     "host": "emancipation.fr",
-    "url": "https://www.emancipation.fr",
+    "url": "https://emancipation.fr",
     "source": "peer",
-    "name": "www.emancipation.fr",
     "platform": "wordpress"
   },
   {
@@ -52132,9 +52115,8 @@
   },
   {
     "host": "fedi.xirion.net",
-    "url": "https://xirion.net",
+    "url": "https://fedi.xirion.net",
     "source": "peer",
-    "name": "xirion.net",
     "platform": "mastodon"
   },
   {
@@ -53692,9 +53674,8 @@
   },
   {
     "host": "fiets.uk",
-    "url": "https://www.fiets.uk",
+    "url": "https://fiets.uk",
     "source": "peer",
-    "name": "www.fiets.uk",
     "platform": "wordpress"
   },
   {
@@ -56785,9 +56766,8 @@
   },
   {
     "host": "friendica-deutschland.de",
-    "url": "https://www.friendica-deutschland.de",
+    "url": "https://friendica-deutschland.de",
     "source": "peer",
-    "name": "www.friendica-deutschland.de",
     "platform": "friendica"
   },
   {
@@ -57986,9 +57966,8 @@
   },
   {
     "host": "fsolt.es",
-    "url": "https://www.fsolt.es",
+    "url": "https://fsolt.es",
     "source": "peer",
-    "name": "www.fsolt.es",
     "platform": "wordpress"
   },
   {
@@ -59736,9 +59715,8 @@
   },
   {
     "host": "geekroom.tech",
-    "url": "https://www.geekroom.tech",
+    "url": "https://geekroom.tech",
     "source": "peer",
-    "name": "www.geekroom.tech",
     "platform": "lemmy"
   },
   {
@@ -68025,9 +68003,8 @@
   },
   {
     "host": "hell.twtr.plus",
-    "url": "https://twtr.plus",
+    "url": "https://hell.twtr.plus",
     "source": "peer",
-    "name": "twtr.plus",
     "platform": "pleroma"
   },
   {
@@ -68962,9 +68939,8 @@
   },
   {
     "host": "historywalksvenice.com",
-    "url": "https://www.historywalksvenice.com",
+    "url": "https://historywalksvenice.com",
     "source": "peer",
-    "name": "www.historywalksvenice.com",
     "platform": "wordpress"
   },
   {
@@ -71317,9 +71293,8 @@
   },
   {
     "host": "ibb.town",
-    "url": "https://www.ibb.town",
+    "url": "https://ibb.town",
     "source": "peer",
-    "name": "www.ibb.town",
     "platform": "wordpress"
   },
   {
@@ -74463,9 +74438,8 @@
   },
   {
     "host": "it-blogger.dk",
-    "url": "https://www.it-blogger.dk",
+    "url": "https://it-blogger.dk",
     "source": "peer",
-    "name": "www.it-blogger.dk",
     "platform": "wordpress"
   },
   {
@@ -74662,9 +74636,8 @@
   },
   {
     "host": "itsjustdj.com",
-    "url": "https://www.itsjustdj.com",
+    "url": "https://itsjustdj.com",
     "source": "peer",
-    "name": "www.itsjustdj.com",
     "platform": "wordpress"
   },
   {
@@ -74969,9 +74942,8 @@
   },
   {
     "host": "jakubkorab.net",
-    "url": "https://www.jakubkorab.net",
+    "url": "https://jakubkorab.net",
     "source": "peer",
-    "name": "www.jakubkorab.net",
     "platform": "wordpress"
   },
   {
@@ -75036,9 +75008,8 @@
   },
   {
     "host": "jamez.it",
-    "url": "https://www.jamez.it",
+    "url": "https://jamez.it",
     "source": "peer",
-    "name": "www.jamez.it",
     "platform": "wordpress"
   },
   {
@@ -77829,9 +77800,8 @@
   },
   {
     "host": "kagura.ch",
-    "url": "https://www.kagura.ch",
+    "url": "https://kagura.ch",
     "source": "peer",
-    "name": "www.kagura.ch",
     "platform": "misskey"
   },
   {
@@ -78763,9 +78733,8 @@
   },
   {
     "host": "keskonfai.fr",
-    "url": "https://www.keskonfai.fr",
+    "url": "https://keskonfai.fr",
     "source": "peer",
-    "name": "www.keskonfai.fr",
     "platform": "mobilizon"
   },
   {
@@ -82809,9 +82778,8 @@
   },
   {
     "host": "lehman-family.com",
-    "url": "https://www.lehman-family.com",
+    "url": "https://lehman-family.com",
     "source": "peer",
-    "name": "www.lehman-family.com",
     "platform": "wordpress"
   },
   {
@@ -85480,9 +85448,8 @@
   },
   {
     "host": "liminalweb.site",
-    "url": "https://www.liminalweb.site",
+    "url": "https://liminalweb.site",
     "source": "peer",
-    "name": "www.liminalweb.site",
     "platform": "wordpress"
   },
   {
@@ -90883,9 +90850,8 @@
   },
   {
     "host": "makertube.net",
-    "url": "https://www.makertube.net",
+    "url": "https://makertube.net",
     "source": "peer",
-    "name": "www.makertube.net",
     "platform": "peertube"
   },
   {
@@ -91232,16 +91198,14 @@
   },
   {
     "host": "mancave.de",
-    "url": "https://www.mancave.de",
+    "url": "https://mancave.de",
     "source": "peer",
-    "name": "www.mancave.de",
     "platform": "wordpress"
   },
   {
     "host": "mancavgeek.co.uk",
-    "url": "https://www.mancavgeek.co.uk",
+    "url": "https://mancavgeek.co.uk",
     "source": "peer",
-    "name": "www.mancavgeek.co.uk",
     "platform": "wordpress"
   },
   {
@@ -91450,9 +91414,8 @@
   },
   {
     "host": "maosaterra.com",
-    "url": "https://www.maosaterra.com",
+    "url": "https://maosaterra.com",
     "source": "peer",
-    "name": "www.maosaterra.com",
     "platform": "wordpress"
   },
   {
@@ -102445,9 +102408,8 @@
   },
   {
     "host": "mastodon.voege.net",
-    "url": "https://voege.net",
+    "url": "https://mastodon.voege.net",
     "source": "peer",
-    "name": "voege.net",
     "platform": "mastodon"
   },
   {
@@ -105422,7 +105384,7 @@
     "host": "meron.io",
     "url": "https://meron.io",
     "source": "legacy",
-    "platform": "gotosocial"
+    "platform": "mastodon"
   },
   {
     "host": "merovingian.club",
@@ -106770,9 +106732,8 @@
   },
   {
     "host": "michaelcmcgreevy.com",
-    "url": "https://www.michaelcmcgreevy.com",
+    "url": "https://michaelcmcgreevy.com",
     "source": "peer",
-    "name": "www.michaelcmcgreevy.com",
     "platform": "wordpress"
   },
   {
@@ -108652,7 +108613,7 @@
     "host": "misskey.electronblueberry.xyz",
     "url": "https://misskey.electronblueberry.xyz",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "misskey"
   },
   {
     "host": "misskey.ellidaf.ru",
@@ -117563,9 +117524,8 @@
   },
   {
     "host": "neilturner.me.uk",
-    "url": "https://www.neilturner.me.uk",
+    "url": "https://neilturner.me.uk",
     "source": "peer",
-    "name": "www.neilturner.me.uk",
     "platform": "wordpress"
   },
   {
@@ -121632,9 +121592,8 @@
   },
   {
     "host": "novakeith.net",
-    "url": "https://www.novakeith.net",
+    "url": "https://novakeith.net",
     "source": "peer",
-    "name": "www.novakeith.net",
     "platform": "wordpress"
   },
   {
@@ -124874,9 +124833,8 @@
   },
   {
     "host": "oswald-prucker.de",
-    "url": "https://www.oswald-prucker.de",
+    "url": "https://oswald-prucker.de",
     "source": "peer",
-    "name": "www.oswald-prucker.de",
     "platform": "wordpress"
   },
   {
@@ -142308,9 +142266,8 @@
   },
   {
     "host": "ramenramenramen.net",
-    "url": "https://www.ramenramenramen.net",
+    "url": "https://ramenramenramen.net",
     "source": "peer",
-    "name": "www.ramenramenramen.net",
     "platform": "wordpress"
   },
   {
@@ -151652,9 +151609,8 @@
   },
   {
     "host": "shawnhooper.ca",
-    "url": "https://www.shawnhooper.ca",
+    "url": "https://shawnhooper.ca",
     "source": "peer",
-    "name": "www.shawnhooper.ca",
     "platform": "wordpress"
   },
   {
@@ -152763,9 +152719,8 @@
   },
   {
     "host": "silberkind.de",
-    "url": "https://www.silberkind.de",
+    "url": "https://silberkind.de",
     "source": "peer",
-    "name": "www.silberkind.de",
     "platform": "wordpress"
   },
   {
@@ -172466,9 +172421,8 @@
   },
   {
     "host": "social.vengeful.eu",
-    "url": "https://vengeful.eu",
+    "url": "https://social.vengeful.eu",
     "source": "peer",
-    "name": "vengeful.eu",
     "platform": "pleroma"
   },
   {
@@ -172485,9 +172439,8 @@
   },
   {
     "host": "social.vernunftzentrum.de",
-    "url": "https://vernunftzentrum.de",
+    "url": "https://social.vernunftzentrum.de",
     "source": "peer",
-    "name": "vernunftzentrum.de",
     "platform": "gotosocial"
   },
   {
@@ -173016,9 +172969,8 @@
   },
   {
     "host": "social.wizard.gay",
-    "url": "https://wizard.gay",
+    "url": "https://social.wizard.gay",
     "source": "peer",
-    "name": "wizard.gay",
     "platform": "mastodon"
   },
   {
@@ -175053,9 +175005,8 @@
   },
   {
     "host": "spectrecollie.com",
-    "url": "https://www.spectrecollie.com",
+    "url": "https://spectrecollie.com",
     "source": "peer",
-    "name": "www.spectrecollie.com",
     "platform": "wordpress"
   },
   {
@@ -178086,9 +178037,8 @@
   },
   {
     "host": "stuxie.dev",
-    "url": "https://www.stuxie.dev",
+    "url": "https://stuxie.dev",
     "source": "peer",
-    "name": "www.stuxie.dev",
     "platform": "wordpress"
   },
   {
@@ -179709,7 +179659,7 @@
     "host": "tadanemuinda.com",
     "url": "https://tadanemuinda.com",
     "source": "legacy",
-    "platform": "ghost"
+    "platform": "wordpress"
   },
   {
     "host": "tadanemukey.xyz",
@@ -180349,9 +180299,8 @@
   },
   {
     "host": "tarmotanilsoo.com",
-    "url": "https://www.tarmotanilsoo.com",
+    "url": "https://tarmotanilsoo.com",
     "source": "peer",
-    "name": "www.tarmotanilsoo.com",
     "platform": "wordpress"
   },
   {
@@ -181173,9 +181122,8 @@
   },
   {
     "host": "teknopata.eus",
-    "url": "https://www.teknopata.eus",
+    "url": "https://teknopata.eus",
     "source": "peer",
-    "name": "www.teknopata.eus",
     "platform": "wordpress"
   },
   {
@@ -184492,9 +184440,8 @@
   },
   {
     "host": "tielsetc.nl",
-    "url": "https://wp.tielsetc.nl",
+    "url": "https://tielsetc.nl",
     "source": "peer",
-    "name": "wp.tielsetc.nl",
     "platform": "wordpress"
   },
   {
@@ -185615,9 +185562,8 @@
   },
   {
     "host": "too-much.info",
-    "url": "https://www.too-much.info",
+    "url": "https://too-much.info",
     "source": "peer",
-    "name": "www.too-much.info",
     "platform": "wordpress"
   },
   {
@@ -186192,9 +186138,8 @@
   },
   {
     "host": "toot.io",
-    "url": "https://v.toot.io",
+    "url": "https://toot.io",
     "source": "peer",
-    "name": "v.toot.io",
     "platform": "mastodon"
   },
   {
@@ -187915,9 +187860,8 @@
   },
   {
     "host": "transmothra.com",
-    "url": "https://www.transmothra.com",
+    "url": "https://transmothra.com",
     "source": "peer",
-    "name": "www.transmothra.com",
     "platform": "wordpress"
   },
   {
