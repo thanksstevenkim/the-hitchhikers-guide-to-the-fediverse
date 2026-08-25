@@ -3433,9 +3433,8 @@
   },
   {
     "host": "akko.woof.monster",
-    "url": "https://woof.monster",
+    "url": "https://akko.woof.monster",
     "source": "peer",
-    "name": "woof.monster",
     "platform": "akkoma"
   },
   {
@@ -4124,9 +4123,8 @@
   },
   {
     "host": "alfonsojon.com",
-    "url": "https://www.alfonsojon.com",
+    "url": "https://alfonsojon.com",
     "source": "peer",
-    "name": "www.alfonsojon.com",
     "platform": "wordpress"
   },
   {
@@ -6753,16 +6751,14 @@
   },
   {
     "host": "ap.uzzalhossain.com",
-    "url": "https://uzzalhossain.com",
+    "url": "https://ap.uzzalhossain.com",
     "source": "peer",
-    "name": "uzzalhossain.com",
     "platform": "hollo"
   },
   {
     "host": "ap.vert.evv.me",
-    "url": "https://vert.evv.me",
+    "url": "https://ap.vert.evv.me",
     "source": "peer",
-    "name": "vert.evv.me",
     "platform": "gotosocial"
   },
   {
@@ -6971,9 +6967,8 @@
   },
   {
     "host": "app.test.cleversets.com",
-    "url": "https://test.cleversets.com",
+    "url": "https://app.test.cleversets.com",
     "source": "peer",
-    "name": "test.cleversets.com",
     "platform": "cleversets"
   },
   {
@@ -7488,9 +7483,8 @@
   },
   {
     "host": "arjenwiersma.nl",
-    "url": "https://www.arjenwiersma.nl",
+    "url": "https://arjenwiersma.nl",
     "source": "peer",
-    "name": "www.arjenwiersma.nl",
     "platform": "writefreely"
   },
   {
@@ -9271,9 +9265,8 @@
   },
   {
     "host": "awadwatt.com",
-    "url": "https://www.awadwatt.com",
+    "url": "https://awadwatt.com",
     "source": "peer",
-    "name": "www.awadwatt.com",
     "platform": "writefreely"
   },
   {
@@ -12710,9 +12703,8 @@
   },
   {
     "host": "bizzfed.de",
-    "url": "https://www.bizzfed.de",
+    "url": "https://bizzfed.de",
     "source": "peer",
-    "name": "www.bizzfed.de",
     "platform": "bizzfed"
   },
   {
@@ -30909,9 +30901,8 @@
   },
   {
     "host": "ceriselle.org",
-    "url": "https://www.ceriselle.org",
+    "url": "https://ceriselle.org",
     "source": "peer",
-    "name": "www.ceriselle.org",
     "platform": "wordpress"
   },
   {
@@ -31840,9 +31831,8 @@
   },
   {
     "host": "chirp.zadzmo.org",
-    "url": "https://zadzmo.org",
+    "url": "https://chirp.zadzmo.org",
     "source": "peer",
-    "name": "zadzmo.org",
     "platform": "gotosocial"
   },
   {
@@ -35165,9 +35155,8 @@
   },
   {
     "host": "corinnabalkow.de",
-    "url": "https://www.corinnabalkow.de",
+    "url": "https://corinnabalkow.de",
     "source": "peer",
-    "name": "www.corinnabalkow.de",
     "platform": "wordpress"
   },
   {
@@ -41346,9 +41335,8 @@
   },
   {
     "host": "disegnintasca.it",
-    "url": "https://www.disegnintasca.it",
+    "url": "https://disegnintasca.it",
     "source": "peer",
-    "name": "www.disegnintasca.it",
     "platform": "wordpress"
   },
   {
@@ -41563,9 +41551,8 @@
   },
   {
     "host": "djbrevet.dk",
-    "url": "https://www.djbrevet.dk",
+    "url": "https://djbrevet.dk",
     "source": "peer",
-    "name": "www.djbrevet.dk",
     "platform": "wordpress"
   },
   {
@@ -44918,9 +44905,8 @@
   },
   {
     "host": "elephants.witscord.net",
-    "url": "https://witscord.net",
+    "url": "https://elephants.witscord.net",
     "source": "peer",
-    "name": "witscord.net",
     "platform": "gotosocial"
   },
   {
@@ -51663,9 +51649,8 @@
   },
   {
     "host": "fedi.starsandspira.ls",
-    "url": "https://starsandspira.ls",
+    "url": "https://fedi.starsandspira.ls",
     "source": "peer",
-    "name": "starsandspira.ls",
     "platform": "mastodon"
   },
   {
@@ -51904,9 +51889,8 @@
   },
   {
     "host": "fedi.tycho.space",
-    "url": "https://tycho.space",
+    "url": "https://fedi.tycho.space",
     "source": "peer",
-    "name": "tycho.space",
     "platform": "gotosocial"
   },
   {
@@ -51923,9 +51907,8 @@
   },
   {
     "host": "fedi.unchat.cat",
-    "url": "https://unchat.cat",
+    "url": "https://fedi.unchat.cat",
     "source": "peer",
-    "name": "unchat.cat",
     "platform": "gotosocial"
   },
   {
@@ -52014,9 +51997,8 @@
   },
   {
     "host": "fedi.webworxshop.com",
-    "url": "https://webworxshop.com",
+    "url": "https://fedi.webworxshop.com",
     "source": "peer",
-    "name": "webworxshop.com",
     "platform": "mastodon"
   },
   {
@@ -52027,23 +52009,20 @@
   },
   {
     "host": "fedi.welten-wanderin.de",
-    "url": "https://welten-wanderin.de",
+    "url": "https://fedi.welten-wanderin.de",
     "source": "peer",
-    "name": "welten-wanderin.de",
     "platform": "mastodon"
   },
   {
     "host": "fedi.welterde.de",
-    "url": "https://welterde.de",
+    "url": "https://fedi.welterde.de",
     "source": "peer",
-    "name": "welterde.de",
     "platform": "akkoma"
   },
   {
     "host": "fedi.wersdoerfer.de",
-    "url": "https://wersdoerfer.de",
+    "url": "https://fedi.wersdoerfer.de",
     "source": "peer",
-    "name": "wersdoerfer.de",
     "platform": "mastodon"
   },
   {
@@ -52078,9 +52057,8 @@
   },
   {
     "host": "fedi.woke.city",
-    "url": "https://woke.city",
+    "url": "https://fedi.woke.city",
     "source": "peer",
-    "name": "woke.city",
     "platform": "gotosocial"
   },
   {
@@ -52157,9 +52135,8 @@
   },
   {
     "host": "fedi.yukari.in",
-    "url": "https://yukari.in",
+    "url": "https://fedi.yukari.in",
     "source": "peer",
-    "name": "yukari.in",
     "platform": "akkoma"
   },
   {
@@ -52182,9 +52159,8 @@
   },
   {
     "host": "fedi.zerv.al",
-    "url": "https://zerv.al",
+    "url": "https://fedi.zerv.al",
     "source": "peer",
-    "name": "zerv.al",
     "platform": "gotosocial"
   },
   {
@@ -52285,9 +52261,8 @@
   },
   {
     "host": "fedica.de",
-    "url": "https://www.fedica.de",
+    "url": "https://fedica.de",
     "source": "peer",
-    "name": "www.fedica.de",
     "platform": "friendica"
   },
   {
@@ -52886,9 +52861,8 @@
   },
   {
     "host": "fediverse.zachleat.com",
-    "url": "https://zachleat.com",
+    "url": "https://fediverse.zachleat.com",
     "source": "peer",
-    "name": "zachleat.com",
     "platform": "mastodon"
   },
   {
@@ -53109,9 +53083,8 @@
   },
   {
     "host": "feed.yopp.me",
-    "url": "https://yopp.me",
+    "url": "https://feed.yopp.me",
     "source": "peer",
-    "name": "yopp.me",
     "platform": "mastodon"
   },
   {
@@ -56188,9 +56161,8 @@
   },
   {
     "host": "fraterbrian.xyz",
-    "url": "https://www.fraterbrian.xyz",
+    "url": "https://fraterbrian.xyz",
     "source": "peer",
-    "name": "www.fraterbrian.xyz",
     "platform": "wordpress"
   },
   {
@@ -56483,9 +56455,8 @@
   },
   {
     "host": "freifunk-rheinland.net",
-    "url": "https://www.freifunk-rheinland.net",
+    "url": "https://freifunk-rheinland.net",
     "source": "peer",
-    "name": "www.freifunk-rheinland.net",
     "platform": "wordpress"
   },
   {
@@ -58578,9 +58549,8 @@
   },
   {
     "host": "fv.zovtware.com",
-    "url": "https://zovtware.com",
+    "url": "https://fv.zovtware.com",
     "source": "peer",
-    "name": "zovtware.com",
     "platform": "gotosocial"
   },
   {
@@ -58843,9 +58813,8 @@
   },
   {
     "host": "gallery.welshpixie.art",
-    "url": "https://welshpixie.art",
+    "url": "https://gallery.welshpixie.art",
     "source": "peer",
-    "name": "welshpixie.art",
     "platform": "gotosocial"
   },
   {
@@ -59360,9 +59329,8 @@
   },
   {
     "host": "gavinkarlmeier.de",
-    "url": "https://www.gavinkarlmeier.de",
+    "url": "https://gavinkarlmeier.de",
     "source": "peer",
-    "name": "www.gavinkarlmeier.de",
     "platform": "wordpress"
   },
   {
@@ -62589,9 +62557,8 @@
   },
   {
     "host": "goto.thonk.space",
-    "url": "https://thonk.space",
+    "url": "https://goto.thonk.space",
     "source": "peer",
-    "name": "thonk.space",
     "platform": "gotosocial"
   },
   {
@@ -62608,9 +62575,8 @@
   },
   {
     "host": "goto.tonybark.com",
-    "url": "https://tonybark.com",
+    "url": "https://goto.tonybark.com",
     "source": "peer",
-    "name": "tonybark.com",
     "platform": "gotosocial"
   },
   {
@@ -62909,9 +62875,8 @@
   },
   {
     "host": "gotosocial.thewired.im",
-    "url": "https://thewired.im",
+    "url": "https://gotosocial.thewired.im",
     "source": "peer",
-    "name": "thewired.im",
     "platform": "gotosocial"
   },
   {
@@ -65796,9 +65761,8 @@
   },
   {
     "host": "gts.stbn.xyz",
-    "url": "https://stbn.xyz",
+    "url": "https://gts.stbn.xyz",
     "source": "peer",
-    "name": "stbn.xyz",
     "platform": "gotosocial"
   },
   {
@@ -65821,23 +65785,20 @@
   },
   {
     "host": "gts.sykorax.eu",
-    "url": "https://sykorax.eu",
+    "url": "https://gts.sykorax.eu",
     "source": "peer",
-    "name": "sykorax.eu",
     "platform": "gotosocial"
   },
   {
     "host": "gts.sylim.de",
-    "url": "https://sylim.de",
+    "url": "https://gts.sylim.de",
     "source": "peer",
-    "name": "sylim.de",
     "platform": "gotosocial"
   },
   {
     "host": "gts.tabby.rocks",
-    "url": "https://tabby.rocks",
+    "url": "https://gts.tabby.rocks",
     "source": "peer",
-    "name": "tabby.rocks",
     "platform": "gotosocial"
   },
   {
@@ -65884,9 +65845,8 @@
   },
   {
     "host": "gts.tetov.se",
-    "url": "https://tetov.se",
+    "url": "https://gts.tetov.se",
     "source": "peer",
-    "name": "tetov.se",
     "platform": "gotosocial"
   },
   {
@@ -65981,9 +65941,8 @@
   },
   {
     "host": "gts.u8.is",
-    "url": "https://u8.is",
+    "url": "https://gts.u8.is",
     "source": "peer",
-    "name": "u8.is",
     "platform": "gotosocial"
   },
   {
@@ -66012,9 +65971,8 @@
   },
   {
     "host": "gts.urgle.com",
-    "url": "https://urgle.com",
+    "url": "https://gts.urgle.com",
     "source": "peer",
-    "name": "urgle.com",
     "platform": "gotosocial"
   },
   {
@@ -66043,9 +66001,8 @@
   },
   {
     "host": "gts.vkane.cz",
-    "url": "https://vkane.cz",
+    "url": "https://gts.vkane.cz",
     "source": "peer",
-    "name": "vkane.cz",
     "platform": "gotosocial"
   },
   {
@@ -66062,9 +66019,8 @@
   },
   {
     "host": "gts.vzkn.eu",
-    "url": "https://vzkn.eu",
+    "url": "https://gts.vzkn.eu",
     "source": "peer",
-    "name": "vzkn.eu",
     "platform": "gotosocial"
   },
   {
@@ -66087,9 +66043,8 @@
   },
   {
     "host": "gts.winston.sh",
-    "url": "https://winston.sh",
+    "url": "https://gts.winston.sh",
     "source": "peer",
-    "name": "winston.sh",
     "platform": "gotosocial"
   },
   {
@@ -66118,9 +66073,8 @@
   },
   {
     "host": "gts.xiny.li",
-    "url": "https://xiny.li",
+    "url": "https://gts.xiny.li",
     "source": "peer",
-    "name": "xiny.li",
     "platform": "gotosocial"
   },
   {
@@ -66131,9 +66085,8 @@
   },
   {
     "host": "gts.xn--setau-lqa6r.be",
-    "url": "https://xn--setau-lqa6r.be",
+    "url": "https://gts.xn--setau-lqa6r.be",
     "source": "peer",
-    "name": "xn--setau-lqa6r.be",
     "platform": "gotosocial"
   },
   {
@@ -66186,16 +66139,14 @@
   },
   {
     "host": "gts.zaphyra.eu",
-    "url": "https://zaphyra.eu",
+    "url": "https://gts.zaphyra.eu",
     "source": "peer",
-    "name": "zaphyra.eu",
     "platform": "gotosocial"
   },
   {
     "host": "gts.zebras.social",
-    "url": "https://zebras.social",
+    "url": "https://gts.zebras.social",
     "source": "peer",
-    "name": "zebras.social",
     "platform": "gotosocial"
   },
   {
@@ -66206,23 +66157,20 @@
   },
   {
     "host": "gts.zknt.org",
-    "url": "https://zknt.org",
+    "url": "https://gts.zknt.org",
     "source": "peer",
-    "name": "zknt.org",
     "platform": "gotosocial"
   },
   {
     "host": "gts.zl4bv.com",
-    "url": "https://zl4bv.com",
+    "url": "https://gts.zl4bv.com",
     "source": "peer",
-    "name": "zl4bv.com",
     "platform": "gotosocial"
   },
   {
     "host": "gts.zzncx.top",
-    "url": "https://zzncx.top",
+    "url": "https://gts.zzncx.top",
     "source": "peer",
-    "name": "zzncx.top",
     "platform": "gotosocial"
   },
   {
@@ -69197,9 +69145,8 @@
   },
   {
     "host": "hof-emsauen.de",
-    "url": "https://www.hof-emsauen.de",
+    "url": "https://hof-emsauen.de",
     "source": "peer",
-    "name": "www.hof-emsauen.de",
     "platform": "wordpress"
   },
   {
@@ -70506,9 +70453,8 @@
   },
   {
     "host": "hub.wanaka.social",
-    "url": "https://wanaka.social",
+    "url": "https://hub.wanaka.social",
     "source": "peer",
-    "name": "wanaka.social",
     "platform": "gotosocial"
   },
   {
@@ -71917,9 +71863,8 @@
   },
   {
     "host": "ifthenel.se",
-    "url": "https://www.ifthenel.se",
+    "url": "https://ifthenel.se",
     "source": "peer",
-    "name": "www.ifthenel.se",
     "platform": "wordpress"
   },
   {
@@ -76076,9 +76021,8 @@
   },
   {
     "host": "jlcosta.pro.br",
-    "url": "https://www.jlcosta.pro.br",
+    "url": "https://jlcosta.pro.br",
     "source": "peer",
-    "name": "www.jlcosta.pro.br",
     "platform": "wordpress"
   },
   {
@@ -76773,9 +76717,8 @@
   },
   {
     "host": "joshmcneill.com",
-    "url": "https://www.joshmcneill.com",
+    "url": "https://joshmcneill.com",
     "source": "peer",
-    "name": "www.joshmcneill.com",
     "platform": "wordpress"
   },
   {
@@ -77812,9 +77755,8 @@
   },
   {
     "host": "kaijuville.com",
-    "url": "https://www.kaijuville.com",
+    "url": "https://kaijuville.com",
     "source": "peer",
-    "name": "www.kaijuville.com",
     "platform": "wordpress"
   },
   {
@@ -78239,9 +78181,8 @@
   },
   {
     "host": "kate.wtf",
-    "url": "https://xn--oxa.kate.wtf",
+    "url": "https://kate.wtf",
     "source": "peer",
-    "name": "xn--oxa.kate.wtf",
     "platform": "kate.wtf & 11ty"
   },
   {
@@ -78282,9 +78223,8 @@
   },
   {
     "host": "katjaevertz.de",
-    "url": "https://www.katjaevertz.de",
+    "url": "https://katjaevertz.de",
     "source": "peer",
-    "name": "www.katjaevertz.de",
     "platform": "wordpress"
   },
   {
@@ -78934,12 +78874,6 @@
     "url": "https://kg-thum.de",
     "source": "legacy",
     "platform": "wordpress"
-  },
-  {
-    "host": "kghorvath.com",
-    "url": "https://kghorvath.com",
-    "source": "legacy",
-    "platform": "writefreely"
   },
   {
     "host": "kgoesvroom.net",
@@ -81889,9 +81823,8 @@
   },
   {
     "host": "laosun.de",
-    "url": "https://www.laosun.de",
+    "url": "https://laosun.de",
     "source": "peer",
-    "name": "www.laosun.de",
     "platform": "typecho"
   },
   {
@@ -89720,9 +89653,8 @@
   },
   {
     "host": "m.webtoo.ls",
-    "url": "https://webtoo.ls",
+    "url": "https://m.webtoo.ls",
     "source": "peer",
-    "name": "webtoo.ls",
     "platform": "mastodon"
   },
   {
@@ -89751,9 +89683,8 @@
   },
   {
     "host": "m.y1s1.org",
-    "url": "https://y1s1.org",
+    "url": "https://m.y1s1.org",
     "source": "peer",
-    "name": "y1s1.org",
     "platform": "mastodon"
   },
   {
@@ -92428,9 +92359,8 @@
   },
   {
     "host": "mast.stopsky.net",
-    "url": "https://stopsky.net",
+    "url": "https://mast.stopsky.net",
     "source": "peer",
-    "name": "stopsky.net",
     "platform": "mastodon"
   },
   {
@@ -92477,9 +92407,8 @@
   },
   {
     "host": "mast.uxp.de",
-    "url": "https://uxp.de",
+    "url": "https://mast.uxp.de",
     "source": "peer",
-    "name": "uxp.de",
     "platform": "mastodon"
   },
   {
@@ -101268,9 +101197,8 @@
   },
   {
     "host": "mastodon.socializer.cc",
-    "url": "https://socializer.cc",
+    "url": "https://mastodon.socializer.cc",
     "source": "peer",
-    "name": "socializer.cc",
     "platform": "mastodon"
   },
   {
@@ -101689,9 +101617,8 @@
   },
   {
     "host": "mastodon.taverne.social",
-    "url": "https://taverne.social",
+    "url": "https://mastodon.taverne.social",
     "source": "peer",
-    "name": "taverne.social",
     "platform": "mastodon"
   },
   {
@@ -101786,9 +101713,8 @@
   },
   {
     "host": "mastodon.thecrimsontint.com",
-    "url": "https://thecrimsontint.com",
+    "url": "https://mastodon.thecrimsontint.com",
     "source": "peer",
-    "name": "thecrimsontint.com",
     "platform": "mastodon"
   },
   {
@@ -102159,9 +102085,8 @@
   },
   {
     "host": "mastodon.twoslashes.com",
-    "url": "https://twoslashes.com",
+    "url": "https://mastodon.twoslashes.com",
     "source": "peer",
-    "name": "twoslashes.com",
     "platform": "mastodon"
   },
   {
@@ -102220,9 +102145,8 @@
   },
   {
     "host": "mastodon.unsuspicious.website",
-    "url": "https://unsuspicious.website",
+    "url": "https://mastodon.unsuspicious.website",
     "source": "peer",
-    "name": "unsuspicious.website",
     "platform": "mastodon"
   },
   {
@@ -102305,9 +102229,8 @@
   },
   {
     "host": "mastodon.vegh.social",
-    "url": "https://vegh.social",
+    "url": "https://mastodon.vegh.social",
     "source": "peer",
-    "name": "vegh.social",
     "platform": "mastodon"
   },
   {
@@ -102510,9 +102433,8 @@
   },
   {
     "host": "mastodon.wetgrape.su",
-    "url": "https://wetgrape.su",
+    "url": "https://mastodon.wetgrape.su",
     "source": "peer",
-    "name": "wetgrape.su",
     "platform": "mastodon"
   },
   {
@@ -102571,9 +102493,8 @@
   },
   {
     "host": "mastodon.wolfpaw.kr",
-    "url": "https://wolfpaw.kr",
+    "url": "https://mastodon.wolfpaw.kr",
     "source": "peer",
-    "name": "wolfpaw.kr",
     "platform": "mastodon"
   },
   {
@@ -102710,9 +102631,8 @@
   },
   {
     "host": "mastodon.xrh0905.top",
-    "url": "https://xrh0905.top",
+    "url": "https://mastodon.xrh0905.top",
     "source": "peer",
-    "name": "xrh0905.top",
     "platform": "mastodon"
   },
   {
@@ -103557,9 +103477,8 @@
   },
   {
     "host": "maxdonati.com",
-    "url": "https://www.maxdonati.com",
+    "url": "https://maxdonati.com",
     "source": "peer",
-    "name": "www.maxdonati.com",
     "platform": "wordpress"
   },
   {
@@ -107284,9 +107203,8 @@
   },
   {
     "host": "mikapi.de",
-    "url": "https://www.mikapi.de",
+    "url": "https://mikapi.de",
     "source": "peer",
-    "name": "www.mikapi.de",
     "platform": "wordpress"
   },
   {
@@ -115025,9 +114943,8 @@
   },
   {
     "host": "mstdn.wirres.net",
-    "url": "https://wirres.net",
+    "url": "https://mstdn.wirres.net",
     "source": "peer",
-    "name": "wirres.net",
     "platform": "gotosocial"
   },
   {
@@ -115128,9 +115045,8 @@
   },
   {
     "host": "mstdn.zakqari.com",
-    "url": "https://zakqari.com",
+    "url": "https://mstdn.zakqari.com",
     "source": "peer",
-    "name": "zakqari.com",
     "platform": "mastodon"
   },
   {
@@ -123830,9 +123746,8 @@
   },
   {
     "host": "onnojam.es",
-    "url": "https://www.onnojam.es",
+    "url": "https://onnojam.es",
     "source": "peer",
-    "name": "www.onnojam.es",
     "platform": "wordpress"
   },
   {
@@ -125043,9 +124958,8 @@
   },
   {
     "host": "our.sunstation.space",
-    "url": "https://sunstation.space",
+    "url": "https://our.sunstation.space",
     "source": "peer",
-    "name": "sunstation.space",
     "platform": "misskey"
   },
   {
@@ -125362,9 +125276,8 @@
   },
   {
     "host": "owenkelly.net",
-    "url": "https://www.owenkelly.net",
+    "url": "https://owenkelly.net",
     "source": "peer",
-    "name": "www.owenkelly.net",
     "platform": "wordpress"
   },
   {
@@ -149898,9 +149811,8 @@
   },
   {
     "host": "sea.wavelight.ws",
-    "url": "https://wavelight.ws",
+    "url": "https://sea.wavelight.ws",
     "source": "peer",
-    "name": "wavelight.ws",
     "platform": "mastodon"
   },
   {
@@ -155227,9 +155139,8 @@
   },
   {
     "host": "snart.com",
-    "url": "https://www.snart.com",
+    "url": "https://snart.com",
     "source": "peer",
-    "name": "www.snart.com",
     "platform": "wordpress"
   },
   {
@@ -170054,9 +169965,8 @@
   },
   {
     "host": "social.solawi-vierlande.de",
-    "url": "https://solawi-vierlande.de",
+    "url": "https://social.solawi-vierlande.de",
     "source": "peer",
-    "name": "solawi-vierlande.de",
     "platform": "gotosocial"
   },
   {
@@ -170115,9 +170025,8 @@
   },
   {
     "host": "social.sorokin.music",
-    "url": "https://sorokin.music",
+    "url": "https://social.sorokin.music",
     "source": "peer",
-    "name": "sorokin.music",
     "platform": "mastodon"
   },
   {
@@ -170248,9 +170157,8 @@
   },
   {
     "host": "social.spxr.de",
-    "url": "https://spxr.de",
+    "url": "https://social.spxr.de",
     "source": "peer",
-    "name": "spxr.de",
     "platform": "gotosocial"
   },
   {
@@ -170351,9 +170259,8 @@
   },
   {
     "host": "social.starcities.space",
-    "url": "https://starcities.space",
+    "url": "https://social.starcities.space",
     "source": "peer",
-    "name": "starcities.space",
     "platform": "gotosocial"
   },
   {
@@ -170496,9 +170403,8 @@
   },
   {
     "host": "social.stouts.online",
-    "url": "https://stouts.online",
+    "url": "https://social.stouts.online",
     "source": "peer",
-    "name": "stouts.online",
     "platform": "gotosocial"
   },
   {
@@ -170581,9 +170487,8 @@
   },
   {
     "host": "social.stws.co.uk",
-    "url": "https://stws.co.uk",
+    "url": "https://social.stws.co.uk",
     "source": "peer",
-    "name": "stws.co.uk",
     "platform": "gotosocial"
   },
   {
@@ -170702,9 +170607,8 @@
   },
   {
     "host": "social.swehack.se",
-    "url": "https://swehack.se",
+    "url": "https://social.swehack.se",
     "source": "peer",
-    "name": "swehack.se",
     "platform": "gotosocial"
   },
   {
@@ -170757,9 +170661,8 @@
   },
   {
     "host": "social.systemist.net",
-    "url": "https://systemist.net",
+    "url": "https://social.systemist.net",
     "source": "peer",
-    "name": "systemist.net",
     "platform": "gotosocial"
   },
   {
@@ -170776,9 +170679,8 @@
   },
   {
     "host": "social.sziyan.me",
-    "url": "https://sziyan.me",
+    "url": "https://social.sziyan.me",
     "source": "peer",
-    "name": "sziyan.me",
     "platform": "gotosocial"
   },
   {
@@ -170867,9 +170769,8 @@
   },
   {
     "host": "social.tankie.club",
-    "url": "https://tankie.club",
+    "url": "https://social.tankie.club",
     "source": "peer",
-    "name": "tankie.club",
     "platform": "mastodon"
   },
   {
@@ -171126,16 +171027,14 @@
   },
   {
     "host": "social.testze.beer",
-    "url": "https://testze.beer",
+    "url": "https://social.testze.beer",
     "source": "peer",
-    "name": "testze.beer",
     "platform": "gotosocial"
   },
   {
     "host": "social.tetragir.com",
-    "url": "https://tetragir.com",
+    "url": "https://social.tetragir.com",
     "source": "peer",
-    "name": "tetragir.com",
     "platform": "gotosocial"
   },
   {
@@ -171182,9 +171081,8 @@
   },
   {
     "host": "social.the-gdn.net",
-    "url": "https://the-gdn.net",
+    "url": "https://social.the-gdn.net",
     "source": "peer",
-    "name": "the-gdn.net",
     "platform": "mastodon"
   },
   {
@@ -171609,16 +171507,14 @@
   },
   {
     "host": "social.toepfermaerkte.at",
-    "url": "https://toepfermaerkte.at",
+    "url": "https://social.toepfermaerkte.at",
     "source": "peer",
-    "name": "toepfermaerkte.at",
     "platform": "mastodon"
   },
   {
     "host": "social.tomaka.dev",
-    "url": "https://tomaka.dev",
+    "url": "https://social.tomaka.dev",
     "source": "peer",
-    "name": "tomaka.dev",
     "platform": "gotosocial"
   },
   {
@@ -171767,9 +171663,8 @@
   },
   {
     "host": "social.transparent.ruhr",
-    "url": "https://transparent.ruhr",
+    "url": "https://social.transparent.ruhr",
     "source": "peer",
-    "name": "transparent.ruhr",
     "platform": "gotosocial"
   },
   {
@@ -171930,9 +171825,8 @@
   },
   {
     "host": "social.turva.dev",
-    "url": "https://turva.dev",
+    "url": "https://social.turva.dev",
     "source": "peer",
-    "name": "turva.dev",
     "platform": "mastodon"
   },
   {
@@ -171949,9 +171843,8 @@
   },
   {
     "host": "social.tweag.io",
-    "url": "https://tweag.io",
+    "url": "https://social.tweag.io",
     "source": "peer",
-    "name": "tweag.io",
     "platform": "mastodon"
   },
   {
@@ -172010,9 +171903,8 @@
   },
   {
     "host": "social.uberkitten.com",
-    "url": "https://uberkitten.com",
+    "url": "https://social.uberkitten.com",
     "source": "peer",
-    "name": "uberkitten.com",
     "platform": "iceshrimp.net"
   },
   {
@@ -172053,9 +171945,8 @@
   },
   {
     "host": "social.ujeenator.net",
-    "url": "https://ujeenator.net",
+    "url": "https://social.ujeenator.net",
     "source": "peer",
-    "name": "ujeenator.net",
     "platform": "gotosocial"
   },
   {
@@ -172144,9 +172035,8 @@
   },
   {
     "host": "social.unextro.net",
-    "url": "https://unextro.net",
+    "url": "https://social.unextro.net",
     "source": "peer",
-    "name": "unextro.net",
     "platform": "mastodon"
   },
   {
@@ -172157,9 +172047,8 @@
   },
   {
     "host": "social.uninformation.net",
-    "url": "https://uninformation.net",
+    "url": "https://social.uninformation.net",
     "source": "peer",
-    "name": "uninformation.net",
     "platform": "gotosocial"
   },
   {
@@ -172177,16 +172066,14 @@
   },
   {
     "host": "social.unorder.xyz",
-    "url": "https://unorder.xyz",
+    "url": "https://social.unorder.xyz",
     "source": "peer",
-    "name": "unorder.xyz",
     "platform": "gotosocial"
   },
   {
     "host": "social.unorderedcollection.xyz",
-    "url": "https://unorderedcollection.xyz",
+    "url": "https://social.unorderedcollection.xyz",
     "source": "peer",
-    "name": "unorderedcollection.xyz",
     "platform": "gotosocial"
   },
   {
@@ -172299,9 +172186,8 @@
   },
   {
     "host": "social.valquev.fr",
-    "url": "https://valquev.fr",
+    "url": "https://social.valquev.fr",
     "source": "peer",
-    "name": "valquev.fr",
     "platform": "gotosocial"
   },
   {
@@ -172451,9 +172337,8 @@
   },
   {
     "host": "social.vhenry.fr",
-    "url": "https://vhenry.fr",
+    "url": "https://social.vhenry.fr",
     "source": "peer",
-    "name": "vhenry.fr",
     "platform": "gotosocial"
   },
   {
@@ -172518,9 +172403,8 @@
   },
   {
     "host": "social.vivaldi.net",
-    "url": "https://vivaldi.net",
+    "url": "https://social.vivaldi.net",
     "source": "peer",
-    "name": "vivaldi.net",
     "platform": "mastodon"
   },
   {
@@ -172549,9 +172433,8 @@
   },
   {
     "host": "social.vmann.net",
-    "url": "https://vmann.net",
+    "url": "https://social.vmann.net",
     "source": "peer",
-    "name": "vmann.net",
     "platform": "gotosocial"
   },
   {
@@ -172574,9 +172457,8 @@
   },
   {
     "host": "social.voidkvlt.eu",
-    "url": "https://voidkvlt.eu",
+    "url": "https://social.voidkvlt.eu",
     "source": "peer",
-    "name": "voidkvlt.eu",
     "platform": "gotosocial"
   },
   {
@@ -172629,9 +172511,8 @@
   },
   {
     "host": "social.vsc.im",
-    "url": "https://vsc.im",
+    "url": "https://social.vsc.im",
     "source": "peer",
-    "name": "vsc.im",
     "platform": "gotosocial"
   },
   {
@@ -172702,9 +172583,8 @@
   },
   {
     "host": "social.walljm.com",
-    "url": "https://walljm.com",
+    "url": "https://social.walljm.com",
     "source": "peer",
-    "name": "walljm.com",
     "platform": "gotosocial"
   },
   {
@@ -172751,9 +172631,8 @@
   },
   {
     "host": "social.web.colinmills.net",
-    "url": "https://web.colinmills.net",
+    "url": "https://social.web.colinmills.net",
     "source": "peer",
-    "name": "web.colinmills.net",
     "platform": "gotosocial"
   },
   {
@@ -172932,9 +172811,8 @@
   },
   {
     "host": "social.winkekatze24.de",
-    "url": "https://winkekatze24.de",
+    "url": "https://social.winkekatze24.de",
     "source": "peer",
-    "name": "winkekatze24.de",
     "platform": "gotosocial"
   },
   {
@@ -172975,9 +172853,8 @@
   },
   {
     "host": "social.wizardco.re",
-    "url": "https://wizardco.re",
+    "url": "https://social.wizardco.re",
     "source": "peer",
-    "name": "wizardco.re",
     "platform": "gotosocial"
   },
   {
@@ -173036,9 +172913,8 @@
   },
   {
     "host": "social.woon.my",
-    "url": "https://woon.my",
+    "url": "https://social.woon.my",
     "source": "peer",
-    "name": "woon.my",
     "platform": "gotosocial"
   },
   {
@@ -173073,9 +172949,8 @@
   },
   {
     "host": "social.wrenix.eu",
-    "url": "https://wrenix.eu",
+    "url": "https://social.wrenix.eu",
     "source": "peer",
-    "name": "wrenix.eu",
     "platform": "gotosocial"
   },
   {
@@ -173134,9 +173009,8 @@
   },
   {
     "host": "social.xaq.cz",
-    "url": "https://xaq.cz",
+    "url": "https://social.xaq.cz",
     "source": "peer",
-    "name": "xaq.cz",
     "platform": "gotosocial"
   },
   {
@@ -173153,16 +173027,14 @@
   },
   {
     "host": "social.xenrox.net",
-    "url": "https://xenrox.net",
+    "url": "https://social.xenrox.net",
     "source": "peer",
-    "name": "xenrox.net",
     "platform": "gotosocial"
   },
   {
     "host": "social.xerusion.me",
-    "url": "https://xerusion.me",
+    "url": "https://social.xerusion.me",
     "source": "peer",
-    "name": "xerusion.me",
     "platform": "gotosocial"
   },
   {
@@ -173173,9 +173045,8 @@
   },
   {
     "host": "social.xin.cat",
-    "url": "https://xin.cat",
+    "url": "https://social.xin.cat",
     "source": "peer",
-    "name": "xin.cat",
     "platform": "mastodon"
   },
   {
@@ -173216,9 +173087,8 @@
   },
   {
     "host": "social.xndr.name",
-    "url": "https://xndr.name",
+    "url": "https://social.xndr.name",
     "source": "peer",
-    "name": "xndr.name",
     "platform": "gotosocial"
   },
   {
@@ -173259,9 +173129,8 @@
   },
   {
     "host": "social.xythian.com",
-    "url": "https://xythian.com",
+    "url": "https://social.xythian.com",
     "source": "peer",
-    "name": "xythian.com",
     "platform": "gotosocial"
   },
   {
@@ -173296,9 +173165,8 @@
   },
   {
     "host": "social.yaniak.eu",
-    "url": "https://yaniak.eu",
+    "url": "https://social.yaniak.eu",
     "source": "peer",
-    "name": "yaniak.eu",
     "platform": "gotosocial"
   },
   {
@@ -173309,9 +173177,8 @@
   },
   {
     "host": "social.yearg.in",
-    "url": "https://yearg.in",
+    "url": "https://social.yearg.in",
     "source": "peer",
-    "name": "yearg.in",
     "platform": "mastodon"
   },
   {
@@ -173340,9 +173207,8 @@
   },
   {
     "host": "social.yetzt.me",
-    "url": "https://yetzt.me",
+    "url": "https://social.yetzt.me",
     "source": "peer",
-    "name": "yetzt.me",
     "platform": "gotosocial"
   },
   {
@@ -173467,9 +173333,8 @@
   },
   {
     "host": "social.zarrouk.eu",
-    "url": "https://zarrouk.eu",
+    "url": "https://social.zarrouk.eu",
     "source": "peer",
-    "name": "zarrouk.eu",
     "platform": "gotosocial"
   },
   {
@@ -173522,9 +173387,8 @@
   },
   {
     "host": "social.ziqfm.com",
-    "url": "https://ziqfm.com",
+    "url": "https://social.ziqfm.com",
     "source": "peer",
-    "name": "ziqfm.com",
     "platform": "gotosocial"
   },
   {
@@ -176469,9 +176333,8 @@
   },
   {
     "host": "stephaniecainonline.com",
-    "url": "https://www.stephaniecainonline.com",
+    "url": "https://stephaniecainonline.com",
     "source": "peer",
-    "name": "www.stephaniecainonline.com",
     "platform": "wordpress"
   },
   {
@@ -180365,9 +180228,8 @@
   },
   {
     "host": "tatiweb.org",
-    "url": "https://www.tatiweb.org",
+    "url": "https://tatiweb.org",
     "source": "peer",
-    "name": "www.tatiweb.org",
     "platform": "wordpress"
   },
   {
@@ -193200,9 +193062,8 @@
   },
   {
     "host": "verif.quebec",
-    "url": "https://www.verif.quebec",
+    "url": "https://verif.quebec",
     "source": "peer",
-    "name": "www.verif.quebec",
     "platform": "wordpress"
   },
   {
@@ -195475,9 +195336,8 @@
   },
   {
     "host": "videos-libr.es",
-    "url": "https://www.videos-libr.es",
+    "url": "https://videos-libr.es",
     "source": "peer",
-    "name": "www.videos-libr.es",
     "platform": "peertube"
   },
   {
@@ -196220,9 +196080,8 @@
   },
   {
     "host": "videospielgeschichten.de",
-    "url": "https://www.videospielgeschichten.de",
+    "url": "https://videospielgeschichten.de",
     "source": "peer",
-    "name": "www.videospielgeschichten.de",
     "platform": "wordpress"
   },
   {
@@ -203497,6 +203356,13 @@
     "url": "https://www.kers.se",
     "source": "peer",
     "platform": "wordpress"
+  },
+  {
+    "host": "www.kghorvath.com",
+    "url": "https://kghorvath.com",
+    "source": "legacy",
+    "name": "kghorvath.com",
+    "platform": "writefreely"
   },
   {
     "host": "www.kgv-schweizerhoehe.de",
@@ -214786,16 +214652,14 @@
   },
   {
     "host": "www.solotraveler.org",
-    "url": "https://solotraveler.org",
+    "url": "https://www.solotraveler.org",
     "source": "peer",
-    "name": "solotraveler.org",
     "platform": "ghost"
   },
   {
     "host": "www.somatikink.co.uk",
-    "url": "https://somatikink.co.uk",
+    "url": "https://www.somatikink.co.uk",
     "source": "peer",
-    "name": "somatikink.co.uk",
     "platform": "ghost"
   },
   {
@@ -214854,9 +214718,8 @@
   },
   {
     "host": "www.soul-prompt.com",
-    "url": "https://soul-prompt.com",
+    "url": "https://www.soul-prompt.com",
     "source": "peer",
-    "name": "soul-prompt.com",
     "platform": "ghost"
   },
   {
@@ -214975,9 +214838,8 @@
   },
   {
     "host": "www.sparkofsicily.com",
-    "url": "https://sparkofsicily.com",
+    "url": "https://www.sparkofsicily.com",
     "source": "peer",
-    "name": "sparkofsicily.com",
     "platform": "ghost"
   },
   {
@@ -215157,9 +215019,8 @@
   },
   {
     "host": "www.spuren.cc",
-    "url": "https://spuren.cc",
+    "url": "https://www.spuren.cc",
     "source": "peer",
-    "name": "spuren.cc",
     "platform": "ghost"
   },
   {
@@ -215188,9 +215049,8 @@
   },
   {
     "host": "www.sredevops.org",
-    "url": "https://sredevops.org",
+    "url": "https://www.sredevops.org",
     "source": "peer",
-    "name": "sredevops.org",
     "platform": "ghost"
   },
   {
@@ -215519,9 +215379,8 @@
   },
   {
     "host": "www.storiesbydj.com",
-    "url": "https://storiesbydj.com",
+    "url": "https://www.storiesbydj.com",
     "source": "peer",
-    "name": "storiesbydj.com",
     "platform": "ghost"
   },
   {
@@ -215664,9 +215523,8 @@
   },
   {
     "host": "www.stuartpigott.com",
-    "url": "https://stuartpigott.com",
+    "url": "https://www.stuartpigott.com",
     "source": "peer",
-    "name": "stuartpigott.com",
     "platform": "ghost"
   },
   {
@@ -215683,9 +215541,8 @@
   },
   {
     "host": "www.studiogrubbel.com",
-    "url": "https://studiogrubbel.com",
+    "url": "https://www.studiogrubbel.com",
     "source": "peer",
-    "name": "studiogrubbel.com",
     "platform": "ghost"
   },
   {
@@ -215726,9 +215583,8 @@
   },
   {
     "host": "www.sulafound.com",
-    "url": "https://sulafound.com",
+    "url": "https://www.sulafound.com",
     "source": "peer",
-    "name": "sulafound.com",
     "platform": "ghost"
   },
   {
@@ -215757,9 +215613,8 @@
   },
   {
     "host": "www.sundaysoundtracks.com",
-    "url": "https://sundaysoundtracks.com",
+    "url": "https://www.sundaysoundtracks.com",
     "source": "peer",
-    "name": "sundaysoundtracks.com",
     "platform": "ghost"
   },
   {
@@ -215770,9 +215625,8 @@
   },
   {
     "host": "www.suninterrupted.com",
-    "url": "https://suninterrupted.com",
+    "url": "https://www.suninterrupted.com",
     "source": "peer",
-    "name": "suninterrupted.com",
     "platform": "ghost"
   },
   {
@@ -215813,9 +215667,8 @@
   },
   {
     "host": "www.superjumpmagazine.com",
-    "url": "https://superjumpmagazine.com",
+    "url": "https://www.superjumpmagazine.com",
     "source": "peer",
-    "name": "superjumpmagazine.com",
     "platform": "ghost"
   },
   {
@@ -215964,9 +215817,8 @@
   },
   {
     "host": "www.sweatyspice.com",
-    "url": "https://sweatyspice.com",
+    "url": "https://www.sweatyspice.com",
     "source": "peer",
-    "name": "sweatyspice.com",
     "platform": "ghost"
   },
   {
@@ -216127,9 +215979,8 @@
   },
   {
     "host": "www.szorty.space",
-    "url": "https://szorty.space",
+    "url": "https://www.szorty.space",
     "source": "peer",
-    "name": "szorty.space",
     "platform": "ghost"
   },
   {
@@ -216248,9 +216099,8 @@
   },
   {
     "host": "www.talhatabak.com",
-    "url": "https://talhatabak.com",
+    "url": "https://www.talhatabak.com",
     "source": "peer",
-    "name": "talhatabak.com",
     "platform": "ghost"
   },
   {
@@ -216675,9 +216525,8 @@
   },
   {
     "host": "www.texascapitalreport.com",
-    "url": "https://texascapitalreport.com",
+    "url": "https://www.texascapitalreport.com",
     "source": "peer",
-    "name": "texascapitalreport.com",
     "platform": "ghost"
   },
   {
@@ -216814,9 +216663,8 @@
   },
   {
     "host": "www.the-scientists-notebook.com",
-    "url": "https://the-scientists-notebook.com",
+    "url": "https://www.the-scientists-notebook.com",
     "source": "peer",
-    "name": "the-scientists-notebook.com",
     "platform": "ghost"
   },
   {
@@ -216851,9 +216699,8 @@
   },
   {
     "host": "www.theadhdcorner.com",
-    "url": "https://theadhdcorner.com",
+    "url": "https://www.theadhdcorner.com",
     "source": "peer",
-    "name": "theadhdcorner.com",
     "platform": "ghost"
   },
   {
@@ -216882,16 +216729,14 @@
   },
   {
     "host": "www.thealkaloid.com",
-    "url": "https://thealkaloid.com",
+    "url": "https://www.thealkaloid.com",
     "source": "peer",
-    "name": "thealkaloid.com",
     "platform": "ghost"
   },
   {
     "host": "www.thealphadesk.org",
-    "url": "https://thealphadesk.org",
+    "url": "https://www.thealphadesk.org",
     "source": "peer",
-    "name": "thealphadesk.org",
     "platform": "ghost"
   },
   {
@@ -216998,9 +216843,8 @@
   },
   {
     "host": "www.theborg.social",
-    "url": "https://theborg.social",
+    "url": "https://www.theborg.social",
     "source": "peer",
-    "name": "theborg.social",
     "platform": "mastodon"
   },
   {
@@ -217305,23 +217149,20 @@
   },
   {
     "host": "www.thefarce.org",
-    "url": "https://thefarce.org",
+    "url": "https://www.thefarce.org",
     "source": "peer",
-    "name": "thefarce.org",
     "platform": "ghost"
   },
   {
     "host": "www.theferret.scot",
-    "url": "https://theferret.scot",
+    "url": "https://www.theferret.scot",
     "source": "peer",
-    "name": "theferret.scot",
     "platform": "ghost"
   },
   {
     "host": "www.thefierywell.com",
-    "url": "https://thefierywell.com",
+    "url": "https://www.thefierywell.com",
     "source": "peer",
-    "name": "thefierywell.com",
     "platform": "ghost"
   },
   {
@@ -217344,9 +217185,8 @@
   },
   {
     "host": "www.theflytrapmedia.com",
-    "url": "https://theflytrapmedia.com",
+    "url": "https://www.theflytrapmedia.com",
     "source": "peer",
-    "name": "theflytrapmedia.com",
     "platform": "ghost"
   },
   {
@@ -217375,9 +217215,8 @@
   },
   {
     "host": "www.thefringetheory.com",
-    "url": "https://thefringetheory.com",
+    "url": "https://www.thefringetheory.com",
     "source": "peer",
-    "name": "thefringetheory.com",
     "platform": "ghost"
   },
   {
@@ -217394,9 +217233,8 @@
   },
   {
     "host": "www.thegalacticmind.com",
-    "url": "https://thegalacticmind.com",
+    "url": "https://www.thegalacticmind.com",
     "source": "peer",
-    "name": "thegalacticmind.com",
     "platform": "ghost"
   },
   {
@@ -217587,9 +217425,8 @@
   },
   {
     "host": "www.theinternetplaybook.com",
-    "url": "https://theinternetplaybook.com",
+    "url": "https://www.theinternetplaybook.com",
     "source": "peer",
-    "name": "theinternetplaybook.com",
     "platform": "ghost"
   },
   {
@@ -217834,9 +217671,8 @@
   },
   {
     "host": "www.thenullidentity.com",
-    "url": "https://thenullidentity.com",
+    "url": "https://www.thenullidentity.com",
     "source": "peer",
-    "name": "thenullidentity.com",
     "platform": "ghost"
   },
   {
@@ -217925,9 +217761,8 @@
   },
   {
     "host": "www.thephysiohub.uk",
-    "url": "https://thephysiohub.uk",
+    "url": "https://www.thephysiohub.uk",
     "source": "peer",
-    "name": "thephysiohub.uk",
     "platform": "ghost"
   },
   {
@@ -218016,9 +217851,8 @@
   },
   {
     "host": "www.therage.co",
-    "url": "https://therage.co",
+    "url": "https://www.therage.co",
     "source": "peer",
-    "name": "therage.co",
     "platform": "ghost"
   },
   {
@@ -218029,9 +217863,8 @@
   },
   {
     "host": "www.thereaderpress.co.uk",
-    "url": "https://thereaderpress.co.uk",
+    "url": "https://www.thereaderpress.co.uk",
     "source": "peer",
-    "name": "thereaderpress.co.uk",
     "platform": "ghost"
   },
   {
@@ -218048,16 +217881,14 @@
   },
   {
     "host": "www.therednation.org",
-    "url": "https://therednation.org",
+    "url": "https://www.therednation.org",
     "source": "peer",
-    "name": "therednation.org",
     "platform": "ghost"
   },
   {
     "host": "www.theredoubt.net",
-    "url": "https://theredoubt.net",
+    "url": "https://www.theredoubt.net",
     "source": "peer",
-    "name": "theredoubt.net",
     "platform": "ghost"
   },
   {
@@ -218332,9 +218163,8 @@
   },
   {
     "host": "www.thetrendietribune.com",
-    "url": "https://thetrendietribune.com",
+    "url": "https://www.thetrendietribune.com",
     "source": "peer",
-    "name": "thetrendietribune.com",
     "platform": "ghost"
   },
   {
@@ -218381,9 +218211,8 @@
   },
   {
     "host": "www.theurbanist.org",
-    "url": "https://theurbanist.org",
+    "url": "https://www.theurbanist.org",
     "source": "peer",
-    "name": "theurbanist.org",
     "platform": "ghost"
   },
   {
@@ -218448,9 +218277,8 @@
   },
   {
     "host": "www.theweave.art",
-    "url": "https://theweave.art",
+    "url": "https://www.theweave.art",
     "source": "peer",
-    "name": "theweave.art",
     "platform": "ghost"
   },
   {
@@ -218461,9 +218289,8 @@
   },
   {
     "host": "www.theweeklysource.com.au",
-    "url": "https://theweeklysource.com.au",
+    "url": "https://www.theweeklysource.com.au",
     "source": "peer",
-    "name": "theweeklysource.com.au",
     "platform": "ghost"
   },
   {
@@ -218678,16 +218505,14 @@
   },
   {
     "host": "www.thomasott.io",
-    "url": "https://thomasott.io",
+    "url": "https://www.thomasott.io",
     "source": "peer",
-    "name": "thomasott.io",
     "platform": "ghost"
   },
   {
     "host": "www.thomastheproductguy.net",
-    "url": "https://thomastheproductguy.net",
+    "url": "https://www.thomastheproductguy.net",
     "source": "peer",
-    "name": "thomastheproductguy.net",
     "platform": "ghost"
   },
   {
@@ -218698,9 +218523,8 @@
   },
   {
     "host": "www.thoughtsofnever.net",
-    "url": "https://thoughtsofnever.net",
+    "url": "https://www.thoughtsofnever.net",
     "source": "peer",
-    "name": "thoughtsofnever.net",
     "platform": "ghost"
   },
   {
@@ -219149,9 +218973,8 @@
   },
   {
     "host": "www.toratalbion.org.uk",
-    "url": "https://toratalbion.org.uk",
+    "url": "https://www.toratalbion.org.uk",
     "source": "peer",
-    "name": "toratalbion.org.uk",
     "platform": "ghost"
   },
   {
@@ -219246,16 +219069,14 @@
   },
   {
     "host": "www.transjournalists.org",
-    "url": "https://transjournalists.org",
+    "url": "https://www.transjournalists.org",
     "source": "peer",
-    "name": "transjournalists.org",
     "platform": "ghost"
   },
   {
     "host": "www.transpirateradio.com",
-    "url": "https://transpirateradio.com",
+    "url": "https://www.transpirateradio.com",
     "source": "peer",
-    "name": "transpirateradio.com",
     "platform": "ghost"
   },
   {
@@ -219332,9 +219153,8 @@
   },
   {
     "host": "www.trektowin.com",
-    "url": "https://trektowin.com",
+    "url": "https://www.trektowin.com",
     "source": "peer",
-    "name": "trektowin.com",
     "platform": "ghost"
   },
   {
@@ -219453,9 +219273,8 @@
   },
   {
     "host": "www.tropetheory.com",
-    "url": "https://tropetheory.com",
+    "url": "https://www.tropetheory.com",
     "source": "peer",
-    "name": "tropetheory.com",
     "platform": "ghost"
   },
   {
@@ -219466,9 +219285,8 @@
   },
   {
     "host": "www.troyhunt.com",
-    "url": "https://troyhunt.com",
+    "url": "https://www.troyhunt.com",
     "source": "peer",
-    "name": "troyhunt.com",
     "platform": "ghost"
   },
   {
@@ -219599,9 +219417,8 @@
   },
   {
     "host": "www.tyburrswatchlist.com",
-    "url": "https://tyburrswatchlist.com",
+    "url": "https://www.tyburrswatchlist.com",
     "source": "peer",
-    "name": "tyburrswatchlist.com",
     "platform": "ghost"
   },
   {
@@ -219624,23 +219441,20 @@
   },
   {
     "host": "www.uebergabe.de",
-    "url": "https://uebergabe.de",
+    "url": "https://www.uebergabe.de",
     "source": "peer",
-    "name": "uebergabe.de",
     "platform": "ghost"
   },
   {
     "host": "www.ufouapwtf.com",
-    "url": "https://ufouapwtf.com",
+    "url": "https://www.ufouapwtf.com",
     "source": "peer",
-    "name": "ufouapwtf.com",
     "platform": "ghost"
   },
   {
     "host": "www.uhnplus.com",
-    "url": "https://uhnplus.com",
+    "url": "https://www.uhnplus.com",
     "source": "peer",
-    "name": "uhnplus.com",
     "platform": "ghost"
   },
   {
@@ -219675,9 +219489,8 @@
   },
   {
     "host": "www.unanchored.life",
-    "url": "https://unanchored.life",
+    "url": "https://www.unanchored.life",
     "source": "peer",
-    "name": "unanchored.life",
     "platform": "ghost"
   },
   {
@@ -219718,9 +219531,8 @@
   },
   {
     "host": "www.unseenhistories.com",
-    "url": "https://unseenhistories.com",
+    "url": "https://www.unseenhistories.com",
     "source": "peer",
-    "name": "unseenhistories.com",
     "platform": "ghost"
   },
   {
@@ -219731,9 +219543,8 @@
   },
   {
     "host": "www.uofwinds.com",
-    "url": "https://uofwinds.com",
+    "url": "https://www.uofwinds.com",
     "source": "peer",
-    "name": "uofwinds.com",
     "platform": "ghost"
   },
   {
@@ -219750,9 +219561,8 @@
   },
   {
     "host": "www.urbanandyou.com",
-    "url": "https://urbanandyou.com",
+    "url": "https://www.urbanandyou.com",
     "source": "peer",
-    "name": "urbanandyou.com",
     "platform": "ghost"
   },
   {
@@ -219763,9 +219573,8 @@
   },
   {
     "host": "www.urbantroutrecords.com",
-    "url": "https://urbantroutrecords.com",
+    "url": "https://www.urbantroutrecords.com",
     "source": "peer",
-    "name": "urbantroutrecords.com",
     "platform": "ghost"
   },
   {
@@ -219776,9 +219585,8 @@
   },
   {
     "host": "www.urverbunden.com",
-    "url": "https://urverbunden.com",
+    "url": "https://www.urverbunden.com",
     "source": "peer",
-    "name": "urverbunden.com",
     "platform": "ghost"
   },
   {
@@ -219819,9 +219627,8 @@
   },
   {
     "host": "www.valuesandventures.de",
-    "url": "https://valuesandventures.de",
+    "url": "https://www.valuesandventures.de",
     "source": "peer",
-    "name": "valuesandventures.de",
     "platform": "ghost"
   },
   {
@@ -219874,16 +219681,14 @@
   },
   {
     "host": "www.veritastabletop.com",
-    "url": "https://veritastabletop.com",
+    "url": "https://www.veritastabletop.com",
     "source": "peer",
-    "name": "veritastabletop.com",
     "platform": "ghost"
   },
   {
     "host": "www.verliebt-in-tschechien.de",
-    "url": "https://verliebt-in-tschechien.de",
+    "url": "https://www.verliebt-in-tschechien.de",
     "source": "peer",
-    "name": "verliebt-in-tschechien.de",
     "platform": "ghost"
   },
   {
@@ -219900,9 +219705,8 @@
   },
   {
     "host": "www.viastr.com",
-    "url": "https://viastr.com",
+    "url": "https://www.viastr.com",
     "source": "peer",
-    "name": "viastr.com",
     "platform": "ghost"
   },
   {
@@ -219919,9 +219723,8 @@
   },
   {
     "host": "www.victoria-raikel.com",
-    "url": "https://victoria-raikel.com",
+    "url": "https://www.victoria-raikel.com",
     "source": "peer",
-    "name": "victoria-raikel.com",
     "platform": "ghost"
   },
   {
@@ -219980,30 +219783,26 @@
   },
   {
     "host": "www.visits.london",
-    "url": "https://visits.london",
+    "url": "https://www.visits.london",
     "source": "peer",
-    "name": "visits.london",
     "platform": "ghost"
   },
   {
     "host": "www.vitalcitynyc.org",
-    "url": "https://vitalcitynyc.org",
+    "url": "https://www.vitalcitynyc.org",
     "source": "peer",
-    "name": "vitalcitynyc.org",
     "platform": "ghost"
   },
   {
     "host": "www.vitaldissent.email",
-    "url": "https://vitaldissent.email",
+    "url": "https://www.vitaldissent.email",
     "source": "peer",
-    "name": "vitaldissent.email",
     "platform": "ghost"
   },
   {
     "host": "www.vitalungo.com",
-    "url": "https://vitalungo.com",
+    "url": "https://www.vitalungo.com",
     "source": "peer",
-    "name": "vitalungo.com",
     "platform": "ghost"
   },
   {
@@ -220020,9 +219819,8 @@
   },
   {
     "host": "www.vjarmy.com",
-    "url": "https://vjarmy.com",
+    "url": "https://www.vjarmy.com",
     "source": "peer",
-    "name": "vjarmy.com",
     "platform": "ghost"
   },
   {
@@ -220057,9 +219855,8 @@
   },
   {
     "host": "www.vulta.blog",
-    "url": "https://vulta.blog",
+    "url": "https://www.vulta.blog",
     "source": "peer",
-    "name": "vulta.blog",
     "platform": "ghost"
   },
   {
@@ -220076,9 +219873,8 @@
   },
   {
     "host": "www.wandermax.de",
-    "url": "https://wandermax.de",
+    "url": "https://www.wandermax.de",
     "source": "peer",
-    "name": "wandermax.de",
     "platform": "ghost"
   },
   {
@@ -220089,9 +219885,8 @@
   },
   {
     "host": "www.warpnews.org",
-    "url": "https://warpnews.org",
+    "url": "https://www.warpnews.org",
     "source": "peer",
-    "name": "warpnews.org",
     "platform": "ghost"
   },
   {
@@ -220102,9 +219897,8 @@
   },
   {
     "host": "www.waseefakhtar.com",
-    "url": "https://waseefakhtar.com",
+    "url": "https://www.waseefakhtar.com",
     "source": "peer",
-    "name": "waseefakhtar.com",
     "platform": "ghost"
   },
   {
@@ -220115,9 +219909,8 @@
   },
   {
     "host": "www.watchersonthecouch.com",
-    "url": "https://watchersonthecouch.com",
+    "url": "https://www.watchersonthecouch.com",
     "source": "peer",
-    "name": "watchersonthecouch.com",
     "platform": "ghost"
   },
   {
@@ -220134,9 +219927,8 @@
   },
   {
     "host": "www.wealthyparrot.com",
-    "url": "https://wealthyparrot.com",
+    "url": "https://www.wealthyparrot.com",
     "source": "peer",
-    "name": "wealthyparrot.com",
     "platform": "ghost"
   },
   {
@@ -220165,16 +219957,14 @@
   },
   {
     "host": "www.webworm.co",
-    "url": "https://webworm.co",
+    "url": "https://www.webworm.co",
     "source": "peer",
-    "name": "webworm.co",
     "platform": "ghost"
   },
   {
     "host": "www.weedsandpotential.com",
-    "url": "https://weedsandpotential.com",
+    "url": "https://www.weedsandpotential.com",
     "source": "peer",
-    "name": "weedsandpotential.com",
     "platform": "ghost"
   },
   {
@@ -220203,9 +219993,8 @@
   },
   {
     "host": "www.wethecitizens.net",
-    "url": "https://wethecitizens.net",
+    "url": "https://www.wethecitizens.net",
     "source": "peer",
-    "name": "wethecitizens.net",
     "platform": "ghost"
   },
   {
@@ -220216,16 +220005,14 @@
   },
   {
     "host": "www.wewillfreeus.org",
-    "url": "https://wewillfreeus.org",
+    "url": "https://www.wewillfreeus.org",
     "source": "peer",
-    "name": "wewillfreeus.org",
     "platform": "ghost"
   },
   {
     "host": "www.whatsalanwatching.com",
-    "url": "https://whatsalanwatching.com",
+    "url": "https://www.whatsalanwatching.com",
     "source": "peer",
-    "name": "whatsalanwatching.com",
     "platform": "ghost"
   },
   {
@@ -220236,16 +220023,14 @@
   },
   {
     "host": "www.wheredidmarygo.com",
-    "url": "https://wheredidmarygo.com",
+    "url": "https://www.wheredidmarygo.com",
     "source": "peer",
-    "name": "wheredidmarygo.com",
     "platform": "ghost"
   },
   {
     "host": "www.wheresyoured.at",
-    "url": "https://wheresyoured.at",
+    "url": "https://www.wheresyoured.at",
     "source": "peer",
-    "name": "wheresyoured.at",
     "platform": "ghost"
   },
   {
@@ -220256,9 +220041,8 @@
   },
   {
     "host": "www.whiskey7backroads.com",
-    "url": "https://whiskey7backroads.com",
+    "url": "https://www.whiskey7backroads.com",
     "source": "peer",
-    "name": "whiskey7backroads.com",
     "platform": "ghost"
   },
   {
@@ -220269,9 +220053,8 @@
   },
   {
     "host": "www.willstrustsestates.info",
-    "url": "https://willstrustsestates.info",
+    "url": "https://www.willstrustsestates.info",
     "source": "peer",
-    "name": "willstrustsestates.info",
     "platform": "ghost"
   },
   {
@@ -220282,9 +220065,8 @@
   },
   {
     "host": "www.winklercycling.com",
-    "url": "https://winklercycling.com",
+    "url": "https://www.winklercycling.com",
     "source": "peer",
-    "name": "winklercycling.com",
     "platform": "ghost"
   },
   {
@@ -220295,9 +220077,8 @@
   },
   {
     "host": "www.wiwafrog.online",
-    "url": "https://wiwafrog.online",
+    "url": "https://www.wiwafrog.online",
     "source": "peer",
-    "name": "wiwafrog.online",
     "platform": "ghost"
   },
   {
@@ -220308,37 +220089,32 @@
   },
   {
     "host": "www.wnews.org.au",
-    "url": "https://wnews.org.au",
+    "url": "https://www.wnews.org.au",
     "source": "peer",
-    "name": "wnews.org.au",
     "platform": "ghost"
   },
   {
     "host": "www.wobbliecat.link",
-    "url": "https://wobbliecat.link",
+    "url": "https://www.wobbliecat.link",
     "source": "peer",
-    "name": "wobbliecat.link",
     "platform": "ghost"
   },
   {
     "host": "www.wonderfell.org",
-    "url": "https://wonderfell.org",
+    "url": "https://www.wonderfell.org",
     "source": "peer",
-    "name": "wonderfell.org",
     "platform": "ghost"
   },
   {
     "host": "www.workroom-productions.com",
-    "url": "https://workroom-productions.com",
+    "url": "https://www.workroom-productions.com",
     "source": "peer",
-    "name": "workroom-productions.com",
     "platform": "ghost"
   },
   {
     "host": "www.worldbuilding.agency",
-    "url": "https://worldbuilding.agency",
+    "url": "https://www.worldbuilding.agency",
     "source": "peer",
-    "name": "worldbuilding.agency",
     "platform": "ghost"
   },
   {
@@ -220379,9 +220155,8 @@
   },
   {
     "host": "www.wtsda-region1.org",
-    "url": "https://wtsda-region1.org",
+    "url": "https://www.wtsda-region1.org",
     "source": "peer",
-    "name": "wtsda-region1.org",
     "platform": "ghost"
   },
   {
@@ -220422,16 +220197,14 @@
   },
   {
     "host": "www.yalcinarsan.com",
-    "url": "https://yalcinarsan.com",
+    "url": "https://www.yalcinarsan.com",
     "source": "peer",
-    "name": "yalcinarsan.com",
     "platform": "ghost"
   },
   {
     "host": "www.yogamitmelanie.de",
-    "url": "https://yogamitmelanie.de",
+    "url": "https://www.yogamitmelanie.de",
     "source": "peer",
-    "name": "yogamitmelanie.de",
     "platform": "ghost"
   },
   {
@@ -220454,51 +220227,44 @@
   },
   {
     "host": "www.yoyodyne-it.eu",
-    "url": "https://yoyodyne-it.eu",
+    "url": "https://www.yoyodyne-it.eu",
     "source": "peer",
-    "name": "yoyodyne-it.eu",
     "platform": "ghost"
   },
   {
     "host": "www.ypct.com.au",
-    "url": "https://ypct.com.au",
+    "url": "https://www.ypct.com.au",
     "source": "peer",
-    "name": "ypct.com.au",
     "platform": "ghost"
   },
   {
     "host": "www.ystrickler.com",
-    "url": "https://ystrickler.com",
+    "url": "https://www.ystrickler.com",
     "source": "peer",
-    "name": "ystrickler.com",
     "platform": "ghost"
   },
   {
     "host": "www.yuanxitseng.com",
-    "url": "https://yuanxitseng.com",
+    "url": "https://www.yuanxitseng.com",
     "source": "peer",
-    "name": "yuanxitseng.com",
     "platform": "ghost"
   },
   {
     "host": "www.zanety.net",
-    "url": "https://zanety.net",
+    "url": "https://www.zanety.net",
     "source": "peer",
-    "name": "zanety.net",
     "platform": "ghost"
   },
   {
     "host": "www.zerohero.net",
-    "url": "https://zerohero.net",
+    "url": "https://www.zerohero.net",
     "source": "peer",
-    "name": "zerohero.net",
     "platform": "ghost"
   },
   {
     "host": "www.zeroretries.radio",
-    "url": "https://zeroretries.radio",
+    "url": "https://www.zeroretries.radio",
     "source": "peer",
-    "name": "zeroretries.radio",
     "platform": "ghost"
   },
   {
@@ -220509,9 +220275,8 @@
   },
   {
     "host": "www.zitamar.com",
-    "url": "https://zitamar.com",
+    "url": "https://www.zitamar.com",
     "source": "peer",
-    "name": "zitamar.com",
     "platform": "ghost"
   },
   {
@@ -220540,9 +220305,8 @@
   },
   {
     "host": "www.zuppadiparticelle.it",
-    "url": "https://zuppadiparticelle.it",
+    "url": "https://www.zuppadiparticelle.it",
     "source": "peer",
-    "name": "zuppadiparticelle.it",
     "platform": "ghost"
   },
   {
