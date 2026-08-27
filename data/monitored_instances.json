@@ -4539,7 +4539,7 @@
     "host": "alperen.social",
     "url": "https://alperen.social",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "pixelfed"
   },
   {
     "host": "alpha.argyle.social",
@@ -199815,7 +199815,7 @@
     "host": "wrzky.com",
     "url": "https://wrzky.com",
     "source": "peer",
-    "platform": "wordpress"
+    "platform": "mastodon"
   },
   {
     "host": "wsmdh.de",
@@ -203359,9 +203359,8 @@
   },
   {
     "host": "www.kghorvath.com",
-    "url": "https://kghorvath.com",
+    "url": "https://www.kghorvath.com",
     "source": "legacy",
-    "name": "kghorvath.com",
     "platform": "writefreely"
   },
   {
