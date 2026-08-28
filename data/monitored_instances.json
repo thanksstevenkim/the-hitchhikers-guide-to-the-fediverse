@@ -122620,7 +122620,7 @@
     "host": "octans.app",
     "url": "https://octans.app",
     "source": "legacy",
-    "platform": "firefish"
+    "platform": "misskey"
   },
   {
     "host": "octarine.io",
@@ -182246,7 +182246,7 @@
     "host": "thebluehydrangea.org",
     "url": "https://thebluehydrangea.org",
     "source": "peer",
-    "platform": "misskey"
+    "platform": "mastodon"
   },
   {
     "host": "thebluehydrangea.sytes.net",
