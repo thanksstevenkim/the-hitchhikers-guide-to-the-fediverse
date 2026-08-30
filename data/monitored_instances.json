@@ -103212,6 +103212,13 @@
     "platform": "wordpress"
   },
   {
+    "host": "mattdobbins.com",
+    "url": "https://social.mattdobbins.com",
+    "source": "peer",
+    "name": "social.mattdobbins.com",
+    "platform": "wordpress"
+  },
+  {
     "host": "mattebox.social",
     "url": "https://mattebox.social",
     "source": "legacy",
@@ -165234,12 +165241,6 @@
     "url": "https://social.mattburkedev.com",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "social.mattdobbins.com",
-    "url": "https://social.mattdobbins.com",
-    "source": "peer",
-    "platform": "wordpress"
   },
   {
     "host": "social.matteojoliveau.com",
