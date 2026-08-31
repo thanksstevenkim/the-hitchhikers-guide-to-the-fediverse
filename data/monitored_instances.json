@@ -59163,7 +59163,7 @@
     "host": "gardenstate.club",
     "url": "https://gardenstate.club",
     "source": "peer",
-    "platform": "hometown"
+    "platform": "mastodon"
   },
   {
     "host": "gardenstate.social",
@@ -103213,9 +103213,8 @@
   },
   {
     "host": "mattdobbins.com",
-    "url": "https://social.mattdobbins.com",
+    "url": "https://mattdobbins.com",
     "source": "peer",
-    "name": "social.mattdobbins.com",
     "platform": "wordpress"
   },
   {
@@ -147276,7 +147275,7 @@
     "host": "ryona.agency",
     "url": "https://ryona.agency",
     "source": "legacy",
-    "platform": "gharab-tzereq"
+    "platform": "pleroma"
   },
   {
     "host": "ryona.quasivoid.net",
