@@ -30786,12 +30786,6 @@
     "platform": "wordpress"
   },
   {
-    "host": "cedric.fm",
-    "url": "https://cedric.fm",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "cedwardsmedia.social",
     "url": "https://cedwardsmedia.social",
     "source": "legacy",
@@ -201033,6 +201027,13 @@
     "host": "www.ceciliaweckstrom.com",
     "url": "https://www.ceciliaweckstrom.com",
     "source": "peer",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.cedric.fm",
+    "url": "https://cedric.fm",
+    "source": "legacy",
+    "name": "cedric.fm",
     "platform": "ghost"
   },
   {
