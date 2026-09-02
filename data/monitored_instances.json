@@ -20955,7 +20955,7 @@
     "host": "blog.phenjara.de",
     "url": "https://blog.phenjara.de",
     "source": "peer",
-    "platform": "wordpress"
+    "platform": "writefreely"
   },
   {
     "host": "blog.philipphoefer.de",
@@ -181223,6 +181223,13 @@
     "platform": "mobilizon"
   },
   {
+    "host": "termisk.dk",
+    "url": "https://www.termisk.dk",
+    "source": "legacy",
+    "name": "www.termisk.dk",
+    "platform": "ghost"
+  },
+  {
     "host": "terokankaanpera.fi",
     "url": "https://terokankaanpera.fi",
     "source": "legacy",
@@ -201031,9 +201038,8 @@
   },
   {
     "host": "www.cedric.fm",
-    "url": "https://cedric.fm",
+    "url": "https://www.cedric.fm",
     "source": "legacy",
-    "name": "cedric.fm",
     "platform": "ghost"
   },
   {
@@ -216484,12 +216490,6 @@
   {
     "host": "www.terawatttimes.org",
     "url": "https://www.terawatttimes.org",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
-    "host": "www.termisk.dk",
-    "url": "https://www.termisk.dk",
     "source": "legacy",
     "platform": "ghost"
   },
