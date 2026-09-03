@@ -28383,7 +28383,7 @@
     "host": "bulles.enmarge.art",
     "url": "https://bulles.enmarge.art",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "catodon"
   },
   {
     "host": "bulles.miaouwouafmiaou.be",
@@ -72442,12 +72442,6 @@
     "url": "https://impromptu.games",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "improvesomething.today",
-    "url": "https://improvesomething.today",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "improvizon.fr",
@@ -175936,6 +175930,13 @@
     "platform": "wordpress"
   },
   {
+    "host": "starrside.com",
+    "url": "https://www.starrside.com",
+    "source": "legacy",
+    "name": "www.starrside.com",
+    "platform": "ghost"
+  },
+  {
     "host": "starry.cafe",
     "url": "https://starry.cafe",
     "source": "legacy",
@@ -181224,9 +181225,8 @@
   },
   {
     "host": "termisk.dk",
-    "url": "https://www.termisk.dk",
+    "url": "https://termisk.dk",
     "source": "legacy",
-    "name": "www.termisk.dk",
     "platform": "ghost"
   },
   {
@@ -202849,6 +202849,13 @@
     "platform": "wordpress"
   },
   {
+    "host": "www.improvesomething.today",
+    "url": "https://improvesomething.today",
+    "source": "legacy",
+    "name": "improvesomething.today",
+    "platform": "ghost"
+  },
+  {
     "host": "www.impulsait.com",
     "url": "https://www.impulsait.com",
     "source": "peer",
@@ -215128,12 +215135,6 @@
   {
     "host": "www.starkravingdadblog.com",
     "url": "https://www.starkravingdadblog.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
-    "host": "www.starrside.com",
-    "url": "https://www.starrside.com",
     "source": "legacy",
     "platform": "ghost"
   },
