@@ -113781,7 +113781,7 @@
     "host": "mstdn.cyou",
     "url": "https://mstdn.cyou",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "mstdn.degu.cl",
@@ -197286,9 +197286,8 @@
   },
   {
     "host": "warpstonepile.com",
-    "url": "https://www.warpstonepile.com",
+    "url": "https://warpstonepile.com",
     "source": "peer",
-    "name": "www.warpstonepile.com",
     "platform": "wordpress"
   },
   {
@@ -201410,9 +201409,8 @@
   },
   {
     "host": "www.danadaisi.com",
-    "url": "https://danadaisi.com",
+    "url": "https://www.danadaisi.com",
     "source": "legacy",
-    "name": "danadaisi.com",
     "platform": "ghost"
   },
   {
