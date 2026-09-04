@@ -37488,12 +37488,6 @@
     "platform": "ghost"
   },
   {
-    "host": "danadaisi.com",
-    "url": "https://danadaisi.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "danalcantara.com",
     "url": "https://danalcantara.com",
     "source": "peer",
@@ -141371,7 +141365,7 @@
     "host": "quigs.blog",
     "url": "https://quigs.blog",
     "source": "peer",
-    "platform": "ghost"
+    "platform": "writefreely"
   },
   {
     "host": "quinngil.com",
@@ -175931,9 +175925,8 @@
   },
   {
     "host": "starrside.com",
-    "url": "https://www.starrside.com",
+    "url": "https://starrside.com",
     "source": "legacy",
-    "name": "www.starrside.com",
     "platform": "ghost"
   },
   {
@@ -197292,6 +197285,13 @@
     "platform": "warpnet-fediverse-gateway"
   },
   {
+    "host": "warpstonepile.com",
+    "url": "https://www.warpstonepile.com",
+    "source": "peer",
+    "name": "www.warpstonepile.com",
+    "platform": "wordpress"
+  },
+  {
     "host": "warszawa.askapunk.net",
     "url": "https://warszawa.askapunk.net",
     "source": "peer",
@@ -201409,6 +201409,13 @@
     "platform": "ghost"
   },
   {
+    "host": "www.danadaisi.com",
+    "url": "https://danadaisi.com",
+    "source": "legacy",
+    "name": "danadaisi.com",
+    "platform": "ghost"
+  },
+  {
     "host": "www.danielmcglynn.com",
     "url": "https://www.danielmcglynn.com",
     "source": "peer",
@@ -202850,9 +202857,8 @@
   },
   {
     "host": "www.improvesomething.today",
-    "url": "https://improvesomething.today",
+    "url": "https://www.improvesomething.today",
     "source": "legacy",
-    "name": "improvesomething.today",
     "platform": "ghost"
   },
   {
@@ -219889,12 +219895,6 @@
     "url": "https://www.warpnews.org",
     "source": "peer",
     "platform": "ghost"
-  },
-  {
-    "host": "www.warpstonepile.com",
-    "url": "https://www.warpstonepile.com",
-    "source": "peer",
-    "platform": "wordpress"
   },
   {
     "host": "www.waseefakhtar.com",
