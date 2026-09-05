@@ -51501,7 +51501,7 @@
     "host": "fedi.sillybiz.xyz",
     "url": "https://fedi.sillybiz.xyz",
     "source": "legacy",
-    "platform": "akkoma"
+    "platform": "gotosocial"
   },
   {
     "host": "fedi.sillyjune.xyz",
@@ -91710,12 +91710,6 @@
     "platform": "wordpress"
   },
   {
-    "host": "markmyview.com",
-    "url": "https://markmyview.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "markphilpot.com",
     "url": "https://markphilpot.com",
     "source": "peer",
@@ -118018,7 +118012,7 @@
     "host": "netko.kr",
     "url": "https://netko.kr",
     "source": "legacy",
-    "platform": "misskey"
+    "platform": "darak"
   },
   {
     "host": "netlabel.org",
@@ -204435,6 +204429,13 @@
     "host": "www.markiscap.com",
     "url": "https://www.markiscap.com",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.markmyview.com",
+    "url": "https://markmyview.com",
+    "source": "legacy",
+    "name": "markmyview.com",
     "platform": "ghost"
   },
   {
