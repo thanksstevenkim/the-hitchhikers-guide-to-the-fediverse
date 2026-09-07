@@ -80973,7 +80973,7 @@
     "host": "kwak.cab",
     "url": "https://kwak.cab",
     "source": "legacy",
-    "platform": "iceshrimp"
+    "platform": "catodon"
   },
   {
     "host": "kwdsysop.vivaldi.net",
@@ -85059,7 +85059,7 @@
     "host": "lichfieldlive.co.uk",
     "url": "https://lichfieldlive.co.uk",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "ghost"
   },
   {
     "host": "lichtzeit.wengweng.de",
@@ -112834,6 +112834,13 @@
     "url": "https://movsw.0x0.st",
     "source": "legacy",
     "platform": "iceshrimp"
+  },
+  {
+    "host": "moxnet.eu",
+    "url": "https://write.moxnet.eu",
+    "source": "peer",
+    "name": "write.moxnet.eu",
+    "platform": "writefreely"
   },
   {
     "host": "moyer.social",
@@ -147251,7 +147258,7 @@
     "host": "ryona.agency",
     "url": "https://ryona.agency",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "gharab-tzereq"
   },
   {
     "host": "ryona.quasivoid.net",
@@ -199500,12 +199507,6 @@
     "platform": "writefreely"
   },
   {
-    "host": "write.moxnet.eu",
-    "url": "https://write.moxnet.eu",
-    "source": "peer",
-    "platform": "writefreely"
-  },
-  {
     "host": "write.naln1.ca",
     "url": "https://write.naln1.ca",
     "source": "peer",
@@ -204433,9 +204434,8 @@
   },
   {
     "host": "www.markmyview.com",
-    "url": "https://markmyview.com",
+    "url": "https://www.markmyview.com",
     "source": "legacy",
-    "name": "markmyview.com",
     "platform": "ghost"
   },
   {
