@@ -112837,9 +112837,8 @@
   },
   {
     "host": "moxnet.eu",
-    "url": "https://write.moxnet.eu",
+    "url": "https://moxnet.eu",
     "source": "peer",
-    "name": "write.moxnet.eu",
     "platform": "writefreely"
   },
   {
@@ -169860,7 +169859,7 @@
     "host": "social.smplfi.com",
     "url": "https://social.smplfi.com",
     "source": "peer",
-    "platform": "mastodon"
+    "platform": "gotosocial"
   },
   {
     "host": "social.snamellit.com",
