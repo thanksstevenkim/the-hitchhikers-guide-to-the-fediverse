@@ -4539,7 +4539,7 @@
     "host": "alperen.social",
     "url": "https://alperen.social",
     "source": "legacy",
-    "platform": "pixelfed"
+    "platform": "mastodon"
   },
   {
     "host": "alpha.argyle.social",
@@ -144275,7 +144275,7 @@
     "host": "relay.uggs.io",
     "url": "https://relay.uggs.io",
     "source": "peer",
-    "platform": "activityrelay"
+    "platform": "uggsrelay"
   },
   {
     "host": "relay.universeodon.com",
