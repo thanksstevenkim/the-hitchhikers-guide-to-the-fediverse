@@ -127198,7 +127198,7 @@
     "host": "peculiar.florist",
     "url": "https://peculiar.florist",
     "source": "legacy",
-    "platform": "iceshrimp"
+    "platform": "iceshrimp.net"
   },
   {
     "host": "pedi-artists.club",
@@ -154853,7 +154853,7 @@
     "host": "snac.sns.gdn",
     "url": "https://snac.sns.gdn",
     "source": "peer",
-    "platform": "snac"
+    "platform": "snacforge"
   },
   {
     "host": "snac.solobsd.org",
