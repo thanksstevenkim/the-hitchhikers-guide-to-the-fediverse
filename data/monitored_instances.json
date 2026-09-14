@@ -33045,7 +33045,7 @@
     "host": "cloud.xn--schchner-2za.de",
     "url": "https://cloud.xn--schchner-2za.de",
     "source": "peer",
-    "platform": "schächnercloud"
+    "platform": "nextcloud-social"
   },
   {
     "host": "cloudaiapp.dev",
@@ -38889,7 +38889,7 @@
     "host": "deckard.pub",
     "url": "https://deckard.pub",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "solopub"
   },
   {
     "host": "declin.eu",
@@ -71704,12 +71704,6 @@
     "url": "https://ideas.piqolokids.com",
     "source": "legacy",
     "platform": "ghost"
-  },
-  {
-    "host": "ideatrash.net",
-    "url": "https://ideatrash.net",
-    "source": "peer",
-    "platform": "wordpress"
   },
   {
     "host": "identitycyber.com",
@@ -202804,6 +202798,13 @@
     "url": "https://www.ideasurg.pub",
     "source": "peer",
     "platform": "ghost"
+  },
+  {
+    "host": "www.ideatrash.net",
+    "url": "https://ideatrash.net",
+    "source": "peer",
+    "name": "ideatrash.net",
+    "platform": "wordpress"
   },
   {
     "host": "www.ideepix.nl",
