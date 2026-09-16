@@ -120949,12 +120949,6 @@
     "platform": "ghost"
   },
   {
-    "host": "northernwords.com",
-    "url": "https://northernwords.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "northtube.ca",
     "url": "https://northtube.ca",
     "source": "legacy",
@@ -207454,6 +207448,13 @@
     "url": "https://www.northcapemusic.co.uk",
     "source": "peer",
     "platform": "wordpress"
+  },
+  {
+    "host": "www.northernwords.com",
+    "url": "https://northernwords.com",
+    "source": "legacy",
+    "name": "northernwords.com",
+    "platform": "ghost"
   },
   {
     "host": "www.northstack.is",
