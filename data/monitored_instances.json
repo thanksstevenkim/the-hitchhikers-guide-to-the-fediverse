@@ -9129,7 +9129,7 @@
     "host": "autumnsky.jp",
     "url": "https://autumnsky.jp",
     "source": "legacy",
-    "platform": "friendica"
+    "platform": "pleroma"
   },
   {
     "host": "aux.eco",
@@ -207451,9 +207451,8 @@
   },
   {
     "host": "www.northernwords.com",
-    "url": "https://northernwords.com",
+    "url": "https://www.northernwords.com",
     "source": "legacy",
-    "name": "northernwords.com",
     "platform": "ghost"
   },
   {
