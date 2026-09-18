@@ -58,6 +58,17 @@ def test_tracked_software_taxonomy_is_valid() -> None:
     validate_data.validate_software_taxonomy(TAXONOMY_PATH)
 
 
+def test_reviewed_software_has_expected_groups() -> None:
+    taxonomy = json.loads(TAXONOMY_PATH.read_text(encoding="utf-8"))
+    classification = build_software_review_queue.build_classification_map(taxonomy)
+
+    assert classification["starling"] == "social"
+    assert classification["welley"] == "social"
+    assert classification["klonkt"] == "blog"
+    assert classification["concrnt-ap-bridge"] == "bridge"
+    assert "ap-tombstone" not in classification
+
+
 def test_duplicate_software_membership_is_rejected(tmp_path: Path) -> None:
     taxonomy = make_taxonomy()
     taxonomy["groups"]["social"]["members"].append("hometown")  # type: ignore[index]

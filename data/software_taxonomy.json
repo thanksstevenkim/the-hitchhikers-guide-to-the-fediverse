@@ -116,9 +116,11 @@
         "snac",
         "soapbox",
         "socialhome",
+        "starling",
         "takahe",
         "wafrn",
-        "wellesley"
+        "wellesley",
+        "welley"
       ]
     },
     "blog": {
@@ -132,6 +134,7 @@
         "goblog",
         "hatsu",
         "hubzilla",
+        "klonkt",
         "ma-at",
         "microblogpub",
         "microdotblog",
@@ -170,6 +173,7 @@
         "birdsitelive",
         "bridgy-fed",
         "ccworld-ap-bridge",
+        "concrnt-ap-bridge",
         "encyclia",
         "momostr",
         "notestock"
