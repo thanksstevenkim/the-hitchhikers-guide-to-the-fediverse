@@ -34,7 +34,14 @@
     ko: {
       title: "연합우주를 여행하는 히치하이커를 위한 안내서",
       intro:
-        "한국어로 운영되는 페디버스 인스턴스를 수동으로 정리한 목록입니다.",
+        "공개 API와 NodeInfo로 정상 응답을 검증한 ActivityPub 호스트 표본입니다.",
+      summary_heading: "데이터셋 범위 요약",
+      summary_verified_hosts: "검증된 ActivityPub 호스트",
+      summary_activitypub_enabled_sites: "ActivityPub 사용 퍼블리싱 사이트",
+      summary_one_user_hosts: "사용자 1명을 보고한 호스트",
+      summary_reporting_user_totals: "총 사용자 수를 보고한 호스트",
+      summary_note:
+        "이 수치는 현재 표본의 자기 보고 관측값이며, Fediverse 전체 규모나 개인 서버 비율의 추정치가 아닙니다.",
       search_label: "검색어",
       search_placeholder: "이름 또는 설명 검색",
       software_filter_heading: "소프트웨어 분류",
@@ -102,6 +109,20 @@
     localeLinks: Array.from(
       document.querySelectorAll("#localeSwitcher [data-locale]")
     ),
+    datasetSummaryHeading: document.getElementById("dataset-summary-title"),
+    summaryVerifiedLabel: document.getElementById("summary-verified-label"),
+    summaryVerifiedValue: document.getElementById("summary-verified-value"),
+    summaryPublishingLabel: document.getElementById("summary-publishing-label"),
+    summaryPublishingValue: document.getElementById("summary-publishing-value"),
+    summaryOneUserLabel: document.getElementById("summary-one-user-label"),
+    summaryOneUserValue: document.getElementById("summary-one-user-value"),
+    summaryReportingUsersLabel: document.getElementById(
+      "summary-reporting-users-label"
+    ),
+    summaryReportingUsersValue: document.getElementById(
+      "summary-reporting-users-value"
+    ),
+    datasetSummaryNote: document.getElementById("dataset-summary-note"),
     sortableHeaders: Array.from(document.querySelectorAll("th[data-sort-key]")),
   };
 
@@ -220,6 +241,7 @@
       return acc;
     }, []);
 
+    updateDatasetSummary(baseRows);
     updateSoftwareSidebar(baseRows, strings);
     updateLanguageOptions(baseRows, strings);
 
@@ -653,6 +675,8 @@
         : [];
       groups[groupId] = {
         type: stringOrNull(rawGroup.type) ?? "category",
+        deployment_kind:
+          stringOrNull(rawGroup.deployment_kind) ?? "unknown",
         members: Array.from(new Set(members)),
       };
     });
@@ -676,6 +700,44 @@
       members.forEach((member) => parents.set(member, groupId));
     });
     return parents;
+  }
+
+  function deploymentKindForSoftware(softwareKey) {
+    const groupId = findParentSoftware(softwareKey) || softwareKey;
+    return softwareGroups[groupId]?.deployment_kind ?? "unknown";
+  }
+
+  function updateDatasetSummary(rows) {
+    const reportingUserTotals = rows.filter(
+      (row) => getNumericValue(row.stats?.users_total) !== null
+    );
+    const publishingSites = rows.filter(
+      (row) =>
+        deploymentKindForSoftware(row.softwareKey) ===
+        "activitypub_enabled_site"
+    );
+    const oneUserHosts = reportingUserTotals.filter(
+      (row) => getNumericValue(row.stats?.users_total) === 1
+    );
+
+    if (elements.summaryVerifiedValue) {
+      elements.summaryVerifiedValue.textContent = formatNumber(rows.length);
+    }
+    if (elements.summaryPublishingValue) {
+      elements.summaryPublishingValue.textContent = formatNumber(
+        publishingSites.length
+      );
+    }
+    if (elements.summaryOneUserValue) {
+      elements.summaryOneUserValue.textContent = formatNumber(
+        oneUserHosts.length
+      );
+    }
+    if (elements.summaryReportingUsersValue) {
+      elements.summaryReportingUsersValue.textContent = formatNumber(
+        reportingUserTotals.length
+      );
+    }
   }
 
   function createStatsMap(stats) {
@@ -1008,6 +1070,26 @@
     }
     if (elements.pageIntro) {
       elements.pageIntro.textContent = dict.intro;
+    }
+    if (elements.datasetSummaryHeading) {
+      elements.datasetSummaryHeading.textContent = dict.summary_heading;
+    }
+    if (elements.summaryVerifiedLabel) {
+      elements.summaryVerifiedLabel.textContent = dict.summary_verified_hosts;
+    }
+    if (elements.summaryPublishingLabel) {
+      elements.summaryPublishingLabel.textContent =
+        dict.summary_activitypub_enabled_sites;
+    }
+    if (elements.summaryOneUserLabel) {
+      elements.summaryOneUserLabel.textContent = dict.summary_one_user_hosts;
+    }
+    if (elements.summaryReportingUsersLabel) {
+      elements.summaryReportingUsersLabel.textContent =
+        dict.summary_reporting_user_totals;
+    }
+    if (elements.datasetSummaryNote) {
+      elements.datasetSummaryNote.textContent = dict.summary_note;
     }
     if (elements.localeSwitcher) {
       elements.localeSwitcher.setAttribute(
