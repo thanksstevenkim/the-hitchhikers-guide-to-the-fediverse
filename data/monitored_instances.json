@@ -7807,9 +7807,8 @@
   },
   {
     "host": "around.com",
-    "url": "https://www.around.com",
+    "url": "https://around.com",
     "source": "peer",
-    "name": "www.around.com",
     "platform": "wordpress"
   },
   {
@@ -7940,9 +7939,8 @@
   },
   {
     "host": "arteteco.com",
-    "url": "https://www.arteteco.com",
+    "url": "https://arteteco.com",
     "source": "peer",
-    "name": "www.arteteco.com",
     "platform": "wordpress"
   },
   {
@@ -80163,9 +80161,8 @@
   },
   {
     "host": "kate.wtf",
-    "url": "https://xn--liq.kate.wtf",
+    "url": "https://kate.wtf",
     "source": "peer",
-    "name": "xn--liq.kate.wtf",
     "platform": "kate.wtf & 11ty"
   },
   {
@@ -105184,9 +105181,8 @@
   },
   {
     "host": "mastodon.windoos.click",
-    "url": "https://windoos.click",
+    "url": "https://mastodon.windoos.click",
     "source": "peer",
-    "name": "windoos.click",
     "platform": "mastodon"
   },
   {
@@ -176105,9 +176101,8 @@
   },
   {
     "host": "social.thom-aster.com",
-    "url": "https://thom-aster.com",
+    "url": "https://social.thom-aster.com",
     "source": "peer",
-    "name": "thom-aster.com",
     "platform": "gotosocial"
   },
   {
@@ -176442,9 +176437,8 @@
   },
   {
     "host": "social.tqwewe.com",
-    "url": "https://tqwewe.com",
+    "url": "https://social.tqwewe.com",
     "source": "peer",
-    "name": "tqwewe.com",
     "platform": "gotosocial"
   },
   {
@@ -176875,9 +176869,8 @@
   },
   {
     "host": "social.unicornlines.de",
-    "url": "https://unicornlines.de",
+    "url": "https://social.unicornlines.de",
     "source": "peer",
-    "name": "unicornlines.de",
     "platform": "gotosocial"
   },
   {
@@ -177002,9 +176995,8 @@
   },
   {
     "host": "social.vadimpetrov.com",
-    "url": "https://vadimpetrov.com",
+    "url": "https://social.vadimpetrov.com",
     "source": "peer",
-    "name": "vadimpetrov.com",
     "platform": "gotosocial"
   },
   {
@@ -177345,9 +177337,8 @@
   },
   {
     "host": "social.votemap.eu",
-    "url": "https://votemap.eu",
+    "url": "https://social.votemap.eu",
     "source": "peer",
-    "name": "votemap.eu",
     "platform": "mastodon"
   },
   {
@@ -192005,9 +191996,8 @@
   },
   {
     "host": "toot.wowemulation.dev",
-    "url": "https://wowemulation.dev",
+    "url": "https://toot.wowemulation.dev",
     "source": "peer",
-    "name": "wowemulation.dev",
     "platform": "mastodon"
   },
   {
@@ -222738,9 +222728,8 @@
   },
   {
     "host": "www.the-space-between-blog.com",
-    "url": "https://the-space-between-blog.com",
+    "url": "https://www.the-space-between-blog.com",
     "source": "peer",
-    "name": "the-space-between-blog.com",
     "platform": "ghost"
   },
   {
@@ -223585,9 +223574,8 @@
   },
   {
     "host": "www.thelongknuckle.com",
-    "url": "https://thelongknuckle.com",
+    "url": "https://www.thelongknuckle.com",
     "source": "peer",
-    "name": "thelongknuckle.com",
     "platform": "ghost"
   },
   {
@@ -224042,9 +224030,8 @@
   },
   {
     "host": "www.thesankofaquestion.com",
-    "url": "https://thesankofaquestion.com",
+    "url": "https://www.thesankofaquestion.com",
     "source": "peer",
-    "name": "thesankofaquestion.com",
     "platform": "ghost"
   },
   {
@@ -224085,9 +224072,8 @@
   },
   {
     "host": "www.theshaggyreport.com",
-    "url": "https://theshaggyreport.com",
+    "url": "https://www.theshaggyreport.com",
     "source": "peer",
-    "name": "theshaggyreport.com",
     "platform": "ghost"
   },
   {
@@ -224428,9 +224414,8 @@
   },
   {
     "host": "www.thickandthorough.com",
-    "url": "https://thickandthorough.com",
+    "url": "https://www.thickandthorough.com",
     "source": "peer",
-    "name": "thickandthorough.com",
     "platform": "ghost"
   },
   {
@@ -226307,9 +226292,8 @@
   },
   {
     "host": "www.yourautisticlife.com",
-    "url": "https://yourautisticlife.com",
+    "url": "https://www.yourautisticlife.com",
     "source": "peer",
-    "name": "yourautisticlife.com",
     "platform": "wordpress"
   },
   {
@@ -226344,9 +226328,8 @@
   },
   {
     "host": "www.zarwealth.tech",
-    "url": "https://zarwealth.tech",
+    "url": "https://www.zarwealth.tech",
     "source": "peer",
-    "name": "zarwealth.tech",
     "platform": "ghost"
   },
   {

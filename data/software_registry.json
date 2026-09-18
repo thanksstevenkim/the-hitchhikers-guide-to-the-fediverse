@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "taxonomy_schema_version": 1,
-  "dataset_fetched_at": "2026-09-18T21:52:06Z",
+  "dataset_fetched_at": "2026-09-18T22:44:47Z",
   "software_count": 512,
   "software": [
     {
@@ -14,7 +14,7 @@
       "observed_names": [
         "ecko"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedibird",
@@ -26,7 +26,7 @@
       "observed_names": [
         "fedibird"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "hometown",
@@ -38,7 +38,7 @@
       "observed_names": [
         "hometown"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "kmyblue",
@@ -50,7 +50,7 @@
       "observed_names": [
         "kmyblue"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mastodon",
@@ -58,11 +58,11 @@
       "group_type": "family",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 8335,
+      "healthy_instance_count": 8330,
       "observed_names": [
         "mastodon"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "paon",
@@ -74,7 +74,7 @@
       "observed_names": [
         "paon"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "wildebeest",
@@ -86,7 +86,7 @@
       "observed_names": [
         "wildebeest"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "areionskey",
@@ -98,7 +98,7 @@
       "observed_names": [
         "areionskey"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "calckey",
@@ -110,7 +110,7 @@
       "observed_names": [
         "calckey"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "catodon",
@@ -122,7 +122,7 @@
       "observed_names": [
         "catodon"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cherrypick",
@@ -134,7 +134,7 @@
       "observed_names": [
         "cherrypick"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cluckey",
@@ -146,7 +146,7 @@
       "observed_names": [
         "cluckey"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "corpsekey",
@@ -158,7 +158,7 @@
       "observed_names": [
         "corpsekey"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dolphin",
@@ -170,7 +170,7 @@
       "observed_names": [
         "dolphin"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "firefish",
@@ -182,7 +182,7 @@
       "observed_names": [
         "firefish"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "foundkey",
@@ -194,7 +194,7 @@
       "observed_names": [
         "foundkey"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "goblin",
@@ -206,7 +206,7 @@
       "observed_names": [
         "goblin"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "groundpolis-milkey",
@@ -218,7 +218,7 @@
       "observed_names": [
         "groundpolis-milkey"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "hickey",
@@ -230,7 +230,7 @@
       "observed_names": [
         "hickey"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "iceshrimp",
@@ -242,7 +242,7 @@
       "observed_names": [
         "iceshrimp"
       ],
-      "last_observed_at": "2026-09-18T21:04:50Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "magnetar",
@@ -254,7 +254,7 @@
       "observed_names": [
         "magnetar"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "meisskey",
@@ -266,7 +266,7 @@
       "observed_names": [
         "meisskey"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "misskey",
@@ -274,11 +274,11 @@
       "group_type": "family",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 1192,
+      "healthy_instance_count": 1191,
       "observed_names": [
         "misskey"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mk-go",
@@ -290,7 +290,7 @@
       "observed_names": [
         "mk-go"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "nexkey",
@@ -314,7 +314,7 @@
       "observed_names": [
         "pawkey"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pulsar",
@@ -326,7 +326,7 @@
       "observed_names": [
         "pulsar"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "quollkey",
@@ -344,11 +344,11 @@
       "group_type": "family",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 538,
+      "healthy_instance_count": 537,
       "observed_names": [
         "sharkey"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "shorkey",
@@ -360,7 +360,7 @@
       "observed_names": [
         "shorkey"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tanukey",
@@ -382,7 +382,7 @@
       "observed_names": [
         "turtkey"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "yoiyami",
@@ -394,7 +394,7 @@
       "observed_names": [
         "yoiyami"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "yojo-art",
@@ -406,7 +406,7 @@
       "observed_names": [
         "yojo-art"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "akkoma",
@@ -418,7 +418,7 @@
       "observed_names": [
         "akkoma"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cagando",
@@ -430,7 +430,7 @@
       "observed_names": [
         "Cagando"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "gharab-tzereq",
@@ -442,7 +442,7 @@
       "observed_names": [
         "gharab-tzereq"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "incestoma",
@@ -454,7 +454,7 @@
       "observed_names": [
         "incestoma"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "instance-softwarename",
@@ -476,7 +476,7 @@
       "observed_names": [
         "pleroma"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "gotosocial",
@@ -484,11 +484,11 @@
       "group_type": "software",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 1933,
+      "healthy_instance_count": 1934,
       "observed_names": [
         "gotosocial"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ghost",
@@ -500,7 +500,7 @@
       "observed_names": [
         "ghost"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "wordpress",
@@ -512,7 +512,7 @@
       "observed_names": [
         "wordpress"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "98gravity-electro",
@@ -534,7 +534,7 @@
       "observed_names": [
         "activipypub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "activities-next",
@@ -546,7 +546,7 @@
       "observed_names": [
         "activities-next"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ahodon",
@@ -558,7 +558,7 @@
       "observed_names": [
         "ahodon"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "alvanista",
@@ -570,7 +570,7 @@
       "observed_names": [
         "alvanista"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "amiverse",
@@ -592,7 +592,7 @@
       "observed_names": [
         "aniverse"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "appy",
@@ -604,7 +604,7 @@
       "observed_names": [
         "appy"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "aurboda",
@@ -616,7 +616,7 @@
       "observed_names": [
         "aurboda"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "axismundi",
@@ -628,7 +628,7 @@
       "observed_names": [
         "axismundi"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "babil",
@@ -640,7 +640,7 @@
       "observed_names": [
         "babil"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "baudrate",
@@ -652,7 +652,7 @@
       "observed_names": [
         "baudrate"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bizzfed",
@@ -664,7 +664,7 @@
       "observed_names": [
         "bizzfed"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bonfire",
@@ -676,7 +676,7 @@
       "observed_names": [
         "bonfire"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bonfou",
@@ -698,7 +698,7 @@
       "observed_names": [
         "bookwyrm"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bovine",
@@ -710,7 +710,7 @@
       "observed_names": [
         "bovine"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "brighteon",
@@ -722,7 +722,7 @@
       "observed_names": [
         "brighteon"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "broca",
@@ -734,7 +734,7 @@
       "observed_names": [
         "broca"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bugle",
@@ -746,7 +746,7 @@
       "observed_names": [
         "Bugle"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bulle",
@@ -758,7 +758,7 @@
       "observed_names": [
         "bulle"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "calamus",
@@ -770,7 +770,7 @@
       "observed_names": [
         "calamus"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "careercupid",
@@ -782,7 +782,7 @@
       "observed_names": [
         "careercupid"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "catalyst",
@@ -794,7 +794,7 @@
       "observed_names": [
         "catalyst"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cattle-grid",
@@ -816,7 +816,7 @@
       "observed_names": [
         "cf-activitypub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "chara-social",
@@ -828,7 +828,7 @@
       "observed_names": [
         "chara-social"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "charlamos",
@@ -840,7 +840,7 @@
       "observed_names": [
         "charlamos"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "chat",
@@ -852,7 +852,7 @@
       "observed_names": [
         "CHAT"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "checkin",
@@ -864,7 +864,7 @@
       "observed_names": [
         "checkin"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ciu",
@@ -877,7 +877,7 @@
         "Ciu",
         "ciu"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cocoartz",
@@ -889,7 +889,7 @@
       "observed_names": [
         "cocoartz"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "codename-merp",
@@ -901,7 +901,7 @@
       "observed_names": [
         "Codename Merp"
       ],
-      "last_observed_at": "2026-09-18T17:01:28Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "comal",
@@ -913,7 +913,7 @@
       "observed_names": [
         "Comal"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "commonpub",
@@ -925,7 +925,7 @@
       "observed_names": [
         "commonpub"
       ],
-      "last_observed_at": "2026-09-18T17:01:28Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cookifed",
@@ -937,7 +937,7 @@
       "observed_names": [
         "cookifed"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cooltopia",
@@ -949,7 +949,7 @@
       "observed_names": [
         "cooltopia"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "coresignal",
@@ -961,7 +961,7 @@
       "observed_names": [
         "coresignal"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cosmoslide",
@@ -995,7 +995,7 @@
       "observed_names": [
         "d250g2"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dais",
@@ -1007,7 +1007,7 @@
       "observed_names": [
         "dais"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "daism",
@@ -1019,7 +1019,7 @@
       "observed_names": [
         "daism"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "darak",
@@ -1031,7 +1031,7 @@
       "observed_names": [
         "darak"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "demokratie-plattform",
@@ -1043,7 +1043,7 @@
       "observed_names": [
         "demokratie-plattform"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "diskrot",
@@ -1055,7 +1055,7 @@
       "observed_names": [
         "diskrot"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ditto",
@@ -1067,7 +1067,7 @@
       "observed_names": [
         "ditto"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dope-network",
@@ -1079,7 +1079,7 @@
       "observed_names": [
         "dope-network"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dumpster-federation",
@@ -1091,7 +1091,7 @@
       "observed_names": [
         "dumpster-federation"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "echo",
@@ -1103,7 +1103,7 @@
       "observed_names": [
         "Echo"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "egokey",
@@ -1115,7 +1115,7 @@
       "observed_names": [
         "egokey"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "egregoros",
@@ -1127,7 +1127,7 @@
       "observed_names": [
         "egregoros"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ehlabs",
@@ -1139,7 +1139,7 @@
       "observed_names": [
         "ehlabs"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "elektrine",
@@ -1151,7 +1151,7 @@
       "observed_names": [
         "elektrine"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "elgg",
@@ -1163,7 +1163,7 @@
       "observed_names": [
         "elgg"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "emissary",
@@ -1175,7 +1175,7 @@
       "observed_names": [
         "emissary"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "encryptr-net",
@@ -1197,7 +1197,7 @@
       "observed_names": [
         "enigmatick"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "eunha",
@@ -1209,7 +1209,7 @@
       "observed_names": [
         "eunha"
       ],
-      "last_observed_at": "2026-09-18T21:04:50Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "famweb",
@@ -1221,7 +1221,7 @@
       "observed_names": [
         "famweb"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "federated",
@@ -1233,7 +1233,7 @@
       "observed_names": [
         "federated"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedibook",
@@ -1245,7 +1245,7 @@
       "observed_names": [
         "fedibook"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedihood",
@@ -1257,7 +1257,7 @@
       "observed_names": [
         "fedihood"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fediloc",
@@ -1269,7 +1269,7 @@
       "observed_names": [
         "fediloc"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fediman",
@@ -1281,7 +1281,7 @@
       "observed_names": [
         "Fediman"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "foxhole",
@@ -1293,7 +1293,7 @@
       "observed_names": [
         "foxhole"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "frequency",
@@ -1305,7 +1305,7 @@
       "observed_names": [
         "frequency"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "friendica",
@@ -1313,11 +1313,11 @@
       "group_type": "category",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 344,
+      "healthy_instance_count": 343,
       "observed_names": [
         "friendica"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "gibrr",
@@ -1329,7 +1329,7 @@
       "observed_names": [
         "gibrr"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "glenmore",
@@ -1341,7 +1341,7 @@
       "observed_names": [
         "glenmore"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "glitchcafe",
@@ -1353,7 +1353,7 @@
       "observed_names": [
         "glitchcafe"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "gnusocial",
@@ -1365,7 +1365,7 @@
       "observed_names": [
         "gnusocial"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "gothread",
@@ -1377,7 +1377,7 @@
       "observed_names": [
         "gothread"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "grilledcheese",
@@ -1389,7 +1389,7 @@
       "observed_names": [
         "grilledcheese"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "gush",
@@ -1413,7 +1413,7 @@
       "observed_names": [
         "hackerspub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "hanbitfediverse",
@@ -1425,7 +1425,7 @@
       "observed_names": [
         "hanbitfediverse"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "handle",
@@ -1437,7 +1437,7 @@
       "observed_names": [
         "handle"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "harmony",
@@ -1449,7 +1449,7 @@
       "observed_names": [
         "harmony"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "hollo",
@@ -1461,7 +1461,7 @@
       "observed_names": [
         "hollo"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "holos",
@@ -1473,7 +1473,7 @@
       "observed_names": [
         "holos"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "honk",
@@ -1485,7 +1485,7 @@
       "observed_names": [
         "honk"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "hourlyphoto",
@@ -1497,7 +1497,7 @@
       "observed_names": [
         "HourlyPhoto"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "humhub-fediverse",
@@ -1509,7 +1509,7 @@
       "observed_names": [
         "humhub-fediverse"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "hybridsocial",
@@ -1521,7 +1521,7 @@
       "observed_names": [
         "hybridsocial"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "iceshrimp-net",
@@ -1533,7 +1533,7 @@
       "observed_names": [
         "Iceshrimp.NET"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "imp",
@@ -1545,7 +1545,7 @@
       "observed_names": [
         "imp"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "incise",
@@ -1569,7 +1569,7 @@
       "observed_names": [
         "infotograf"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "inkwell",
@@ -1581,7 +1581,7 @@
       "observed_names": [
         "inkwell"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "instapub",
@@ -1593,7 +1593,7 @@
       "observed_names": [
         "instapub"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "intermix",
@@ -1605,7 +1605,7 @@
       "observed_names": [
         "intermix"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "iris",
@@ -1617,7 +1617,7 @@
       "observed_names": [
         "iris"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "irwin",
@@ -1629,7 +1629,7 @@
       "observed_names": [
         "irwin"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "kiiteitte",
@@ -1641,7 +1641,7 @@
       "observed_names": [
         "Kiiteitte"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "known",
@@ -1653,7 +1653,7 @@
       "observed_names": [
         "known"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "kotori",
@@ -1665,7 +1665,7 @@
       "observed_names": [
         "kotori"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "kroeg",
@@ -1677,7 +1677,7 @@
       "observed_names": [
         "kroeg"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ktistec",
@@ -1689,7 +1689,7 @@
       "observed_names": [
         "ktistec"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "letter",
@@ -1701,7 +1701,7 @@
       "observed_names": [
         "letter"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "lightap",
@@ -1713,7 +1713,7 @@
       "observed_names": [
         "lightap"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "littlefedi",
@@ -1725,7 +1725,7 @@
       "observed_names": [
         "littlefedi"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mammuthus",
@@ -1737,7 +1737,7 @@
       "observed_names": [
         "mammuthus"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "microblog",
@@ -1749,7 +1749,7 @@
       "observed_names": [
         "microblog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "millbody",
@@ -1761,7 +1761,7 @@
       "observed_names": [
         "millbody"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mischief",
@@ -1773,7 +1773,7 @@
       "observed_names": [
         "mischief"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "missive",
@@ -1785,7 +1785,7 @@
       "observed_names": [
         "missive"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mitra",
@@ -1797,7 +1797,7 @@
       "observed_names": [
         "mitra"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "moimcookr",
@@ -1809,7 +1809,7 @@
       "observed_names": [
         "MoimCookr"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "monodon",
@@ -1821,7 +1821,7 @@
       "observed_names": [
         "monodon"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "murlog",
@@ -1833,7 +1833,7 @@
       "observed_names": [
         "murlog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "na-real",
@@ -1845,7 +1845,7 @@
       "observed_names": [
         "na-real"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "nekonoverse",
@@ -1853,11 +1853,11 @@
       "group_type": "category",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 2,
+      "healthy_instance_count": 1,
       "observed_names": [
         "nekonoverse"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "openbook",
@@ -1869,7 +1869,7 @@
       "observed_names": [
         "openbook"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "openspace",
@@ -1881,7 +1881,7 @@
       "observed_names": [
         "openspace"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "orizuru",
@@ -1893,7 +1893,7 @@
       "observed_names": [
         "orizuru"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pawfed",
@@ -1905,7 +1905,7 @@
       "observed_names": [
         "pawfed"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "peermesh-pm-module-social",
@@ -1917,7 +1917,7 @@
       "observed_names": [
         "peermesh-pm-module-social"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pelago",
@@ -1929,7 +1929,7 @@
       "observed_names": [
         "pelago"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "perch",
@@ -1941,7 +1941,7 @@
       "observed_names": [
         "perch"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "perohub",
@@ -1953,7 +1953,7 @@
       "observed_names": [
         "perohub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pinka",
@@ -1965,7 +1965,7 @@
       "observed_names": [
         "pinka"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pixelfed",
@@ -1973,11 +1973,11 @@
       "group_type": "category",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 660,
+      "healthy_instance_count": 661,
       "observed_names": [
         "pixelfed"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "plume",
@@ -1989,7 +1989,7 @@
       "observed_names": [
         "plume"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pods-social",
@@ -2001,7 +2001,7 @@
       "observed_names": [
         "pods-social"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ponos",
@@ -2013,7 +2013,7 @@
       "observed_names": [
         "ponos"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "psh",
@@ -2025,7 +2025,7 @@
       "observed_names": [
         "psh"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pub",
@@ -2037,7 +2037,7 @@
       "observed_names": [
         "μpub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pubby",
@@ -2049,7 +2049,7 @@
       "observed_names": [
         "pubby"
       ],
-      "last_observed_at": "2026-09-18T17:01:28Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "quolibet",
@@ -2061,7 +2061,7 @@
       "observed_names": [
         "quolibet"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "roosty",
@@ -2073,7 +2073,7 @@
       "observed_names": [
         "roosty"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "rosmarinus",
@@ -2085,7 +2085,7 @@
       "observed_names": [
         "rosmarinus"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "rox",
@@ -2097,7 +2097,7 @@
       "observed_names": [
         "rox"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "rullen",
@@ -2109,7 +2109,7 @@
       "observed_names": [
         "rullen"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "s-nna774-net",
@@ -2121,7 +2121,7 @@
       "observed_names": [
         "s.nna774.net"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "sakurasato",
@@ -2133,7 +2133,7 @@
       "observed_names": [
         "sakurasato"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "samklang",
@@ -2145,7 +2145,7 @@
       "observed_names": [
         "samklang"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "seiran",
@@ -2157,7 +2157,7 @@
       "observed_names": [
         "seiran"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "sequel",
@@ -2169,7 +2169,7 @@
       "observed_names": [
         "sequel"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "shoot",
@@ -2181,7 +2181,7 @@
       "observed_names": [
         "shoot"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "sigilverse",
@@ -2193,7 +2193,7 @@
       "observed_names": [
         "sigilverse"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "siliconbeest",
@@ -2205,7 +2205,7 @@
       "observed_names": [
         "siliconbeest"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "smallhold",
@@ -2217,7 +2217,7 @@
       "observed_names": [
         "smallhold"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "smithereen",
@@ -2229,7 +2229,7 @@
       "observed_names": [
         "smithereen"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "snac",
@@ -2237,11 +2237,11 @@
       "group_type": "category",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 384,
+      "healthy_instance_count": 385,
       "observed_names": [
         "snac"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "snacforge",
@@ -2253,7 +2253,7 @@
       "observed_names": [
         "snacforge"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "soapbox",
@@ -2275,7 +2275,7 @@
       "observed_names": [
         "social-wud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "socialhome",
@@ -2287,7 +2287,7 @@
       "observed_names": [
         "socialhome"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "soda",
@@ -2299,7 +2299,7 @@
       "observed_names": [
         "soda"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "solo-masto",
@@ -2311,7 +2311,7 @@
       "observed_names": [
         "solo-masto"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "spica",
@@ -2323,7 +2323,7 @@
       "observed_names": [
         "Spica"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "starling",
@@ -2335,7 +2335,7 @@
       "observed_names": [
         "starling"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "stegodon",
@@ -2347,7 +2347,7 @@
       "observed_names": [
         "stegodon"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "sukhi-fedi",
@@ -2359,7 +2359,7 @@
       "observed_names": [
         "sukhi-fedi"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tafarn",
@@ -2383,7 +2383,7 @@
       "observed_names": [
         "takahe"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "thoughts",
@@ -2395,7 +2395,7 @@
       "observed_names": [
         "thoughts"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tinyap",
@@ -2407,7 +2407,7 @@
       "observed_names": [
         "tinyap"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tokoroten",
@@ -2419,7 +2419,7 @@
       "observed_names": [
         "tokoroten"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tootik",
@@ -2431,7 +2431,7 @@
       "observed_names": [
         "tootik"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "touchgrass",
@@ -2443,7 +2443,7 @@
       "observed_names": [
         "touchgrass"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "typent",
@@ -2455,7 +2455,7 @@
       "observed_names": [
         "typent"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "uanna",
@@ -2467,7 +2467,7 @@
       "observed_names": [
         "uanna"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "unet",
@@ -2479,7 +2479,7 @@
       "observed_names": [
         "unet"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "unfathomably-be",
@@ -2491,7 +2491,7 @@
       "observed_names": [
         "unfathomably-be"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "unspoken",
@@ -2503,7 +2503,7 @@
       "observed_names": [
         "unspoken"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "uwuzu",
@@ -2527,7 +2527,7 @@
       "observed_names": [
         "Vernissage"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "vutuv",
@@ -2539,7 +2539,7 @@
       "observed_names": [
         "vutuv"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "wafrn",
@@ -2551,7 +2551,7 @@
       "observed_names": [
         "wafrn"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "waq",
@@ -2563,7 +2563,7 @@
       "observed_names": [
         "waq"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "wegif",
@@ -2575,7 +2575,7 @@
       "observed_names": [
         "wegif"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "wellesley",
@@ -2597,7 +2597,7 @@
       "observed_names": [
         "welley"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "wxwclub",
@@ -2609,7 +2609,7 @@
       "observed_names": [
         "wxwClub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "x-log",
@@ -2631,7 +2631,7 @@
       "observed_names": [
         "xBuddy"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "xenomorph",
@@ -2643,7 +2643,7 @@
       "observed_names": [
         "xenomorph"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "youthopia",
@@ -2655,7 +2655,7 @@
       "observed_names": [
         "youthopia"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "yplev",
@@ -2667,7 +2667,7 @@
       "observed_names": [
         "yplev"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "zap",
@@ -2679,7 +2679,7 @@
       "observed_names": [
         "zap"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "activitypub",
@@ -2691,7 +2691,7 @@
       "observed_names": [
         "ぷよ橋ActivityPub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "backdrop",
@@ -2703,7 +2703,7 @@
       "observed_names": [
         "backdrop"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bloedsuikerbaas-activitypub",
@@ -2715,7 +2715,7 @@
       "observed_names": [
         "bloedsuikerbaas-activitypub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "blog-server",
@@ -2737,7 +2737,7 @@
       "observed_names": [
         "capubara"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "changkyun-kim",
@@ -2761,7 +2761,7 @@
       "observed_names": [
         "ClansPub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "clipsymphony-activitypub-service",
@@ -2773,7 +2773,7 @@
       "observed_names": [
         "Clipsymphony ActivityPub service"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "contentnation",
@@ -2785,7 +2785,7 @@
       "observed_names": [
         "ContentNation"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "coryd-dev",
@@ -2797,7 +2797,7 @@
       "observed_names": [
         "coryd.dev"
       ],
-      "last_observed_at": "2026-09-18T17:01:28Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dailyrucks",
@@ -2809,7 +2809,7 @@
       "observed_names": [
         "dailyrucks"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dch-blog",
@@ -2831,7 +2831,7 @@
       "observed_names": [
         "drupal"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "eindex-blog",
@@ -2843,7 +2843,7 @@
       "observed_names": [
         "eindex-blog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedipage",
@@ -2855,7 +2855,7 @@
       "observed_names": [
         "Fedipage"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "finalboss",
@@ -2867,7 +2867,7 @@
       "observed_names": [
         "finalboss"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "forte",
@@ -2879,7 +2879,7 @@
       "observed_names": [
         "forte"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "glommer",
@@ -2891,7 +2891,7 @@
       "observed_names": [
         "glommer"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "goblog",
@@ -2903,7 +2903,7 @@
       "observed_names": [
         "goblog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "grav-fediverse-publisher",
@@ -2915,7 +2915,7 @@
       "observed_names": [
         "grav-fediverse-publisher"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "grouse",
@@ -2927,7 +2927,7 @@
       "observed_names": [
         "grouse"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "hatsu",
@@ -2939,7 +2939,7 @@
       "observed_names": [
         "hatsu"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "hubzilla",
@@ -2951,7 +2951,7 @@
       "observed_names": [
         "hubzilla"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "indiekit",
@@ -2963,7 +2963,7 @@
       "observed_names": [
         "indiekit"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "indiekit-cms",
@@ -2975,7 +2975,7 @@
       "observed_names": [
         "indiekit-cms"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "jgs-me",
@@ -2987,7 +2987,7 @@
       "observed_names": [
         "jgs-me"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "johnson-fyi-blog",
@@ -2999,7 +2999,7 @@
       "observed_names": [
         "johnson-fyi-blog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "kaleido",
@@ -3011,7 +3011,7 @@
       "observed_names": [
         "kaleido"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "kate-wtf-11ty",
@@ -3023,7 +3023,7 @@
       "observed_names": [
         "Kate.wtf & 11ty"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "klaxon",
@@ -3035,7 +3035,7 @@
       "observed_names": [
         "Klaxon"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "klonkt",
@@ -3047,7 +3047,7 @@
       "observed_names": [
         "klonkt"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "labas",
@@ -3059,7 +3059,7 @@
       "observed_names": [
         "labas"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "lazcorpsite",
@@ -3071,7 +3071,7 @@
       "observed_names": [
         "lazcorpsite"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "lifepress",
@@ -3083,7 +3083,7 @@
       "observed_names": [
         "lifepress"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "logink",
@@ -3095,7 +3095,7 @@
       "observed_names": [
         "logink"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ma-at",
@@ -3117,7 +3117,7 @@
       "observed_names": [
         "macroblog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "madblog",
@@ -3129,7 +3129,7 @@
       "observed_names": [
         "madblog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "marge",
@@ -3141,7 +3141,7 @@
       "observed_names": [
         "marge"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "matters-gateway-core",
@@ -3153,7 +3153,7 @@
       "observed_names": [
         "matters-gateway-core"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mdverse",
@@ -3165,7 +3165,7 @@
       "observed_names": [
         "mdverse"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "microblogpub",
@@ -3177,7 +3177,7 @@
       "observed_names": [
         "microblogpub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "microdotblog",
@@ -3189,7 +3189,7 @@
       "observed_names": [
         "microdotblog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "micronote-pub",
@@ -3201,7 +3201,7 @@
       "observed_names": [
         "micronote.pub"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "moments",
@@ -3213,7 +3213,7 @@
       "observed_names": [
         "moments"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "monoplace-ca",
@@ -3225,7 +3225,7 @@
       "observed_names": [
         "monoplace.ca"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "nettepuoti-activitypub-limited-support",
@@ -3237,7 +3237,7 @@
       "observed_names": [
         "nettepuoti ActivityPub limited support"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "newtqnia",
@@ -3249,7 +3249,7 @@
       "observed_names": [
         "newtqnia"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "notes",
@@ -3261,7 +3261,7 @@
       "observed_names": [
         "notes"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "omicron",
@@ -3273,7 +3273,7 @@
       "observed_names": [
         "omicron"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "oolong",
@@ -3285,7 +3285,7 @@
       "observed_names": [
         "oolong"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "outpost",
@@ -3297,7 +3297,7 @@
       "observed_names": [
         "outpost"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "owl-blogs",
@@ -3309,7 +3309,7 @@
       "observed_names": [
         "owl-blogs"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pandacap",
@@ -3321,7 +3321,7 @@
       "observed_names": [
         "Pandacap"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "paul-kinlan-me",
@@ -3333,7 +3333,7 @@
       "observed_names": [
         "paul.kinlan.me"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pelican-activitypub",
@@ -3345,7 +3345,7 @@
       "observed_names": [
         "pelican-activitypub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pgm",
@@ -3357,7 +3357,7 @@
       "observed_names": [
         "pgm"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "qaperture",
@@ -3369,7 +3369,7 @@
       "observed_names": [
         "qaperture"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "reisetagebuch",
@@ -3381,7 +3381,7 @@
       "observed_names": [
         "reisetagebuch"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "robida",
@@ -3393,7 +3393,7 @@
       "observed_names": [
         "robida"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ruby-news-dev",
@@ -3417,7 +3417,7 @@
       "observed_names": [
         "ryanw.eu"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "scrapblog",
@@ -3429,7 +3429,7 @@
       "observed_names": [
         "Scrapblog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "seos",
@@ -3441,7 +3441,7 @@
       "observed_names": [
         "seos"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "single-file-activitypub-server-in-php",
@@ -3453,7 +3453,7 @@
       "observed_names": [
         "Single File ActivityPub Server in PHP"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "snapsmack",
@@ -3465,7 +3465,7 @@
       "observed_names": [
         "snapsmack"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "sneaas",
@@ -3477,7 +3477,7 @@
       "observed_names": [
         "sneaas"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "social-blog",
@@ -3489,7 +3489,7 @@
       "observed_names": [
         "social-blog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "solopub",
@@ -3501,7 +3501,7 @@
       "observed_names": [
         "solopub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "sutty-distributed-press",
@@ -3513,7 +3513,7 @@
       "observed_names": [
         "sutty-distributed-press"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "sveltekit-blog",
@@ -3525,7 +3525,7 @@
       "observed_names": [
         "sveltekit-blog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "takesama",
@@ -3537,7 +3537,7 @@
       "observed_names": [
         "takesama"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "telepico",
@@ -3561,7 +3561,7 @@
       "observed_names": [
         "tens-city"
       ],
-      "last_observed_at": "2026-09-18T17:01:28Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "thiswasnews",
@@ -3573,7 +3573,7 @@
       "observed_names": [
         "thiswasnews"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tinypub",
@@ -3585,7 +3585,7 @@
       "observed_names": [
         "tinypub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tomh-nl",
@@ -3597,7 +3597,7 @@
       "observed_names": [
         "tomh.nl"
       ],
-      "last_observed_at": "2026-09-18T17:01:28Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "trails-cool",
@@ -3609,7 +3609,7 @@
       "observed_names": [
         "trails-cool"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "typecho",
@@ -3621,7 +3621,7 @@
       "observed_names": [
         "typecho"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "wallog",
@@ -3633,7 +3633,7 @@
       "observed_names": [
         "wallog"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "webfan",
@@ -3646,7 +3646,7 @@
         "Webfan",
         "webfan"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "writ",
@@ -3658,7 +3658,7 @@
       "observed_names": [
         "writ"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "writefreely",
@@ -3670,7 +3670,7 @@
       "observed_names": [
         "writefreely"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "apboard",
@@ -3682,7 +3682,7 @@
       "observed_names": [
         "apboard"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "enigma-bbs",
@@ -3694,7 +3694,7 @@
       "observed_names": [
         "enigma-bbs"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fediforum",
@@ -3706,7 +3706,7 @@
       "observed_names": [
         "fediforum"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "kbin",
@@ -3728,7 +3728,7 @@
       "observed_names": [
         "lemmy"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "lotide",
@@ -3740,7 +3740,7 @@
       "observed_names": [
         "lotide"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mbin",
@@ -3752,7 +3752,7 @@
       "observed_names": [
         "mbin"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "musorbox",
@@ -3764,7 +3764,7 @@
       "observed_names": [
         "musorbox"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "neogroup",
@@ -3776,7 +3776,7 @@
       "observed_names": [
         "neogroup"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "nodebb",
@@ -3788,7 +3788,7 @@
       "observed_names": [
         "NodeBB"
       ],
-      "last_observed_at": "2026-09-18T21:04:50Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "piefed",
@@ -3800,7 +3800,7 @@
       "observed_names": [
         "piefed"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "planet-buzz",
@@ -3812,7 +3812,7 @@
       "observed_names": [
         "planet-buzz"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "prismo",
@@ -3836,7 +3836,7 @@
       "observed_names": [
         "loops"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "meshtube",
@@ -3848,7 +3848,7 @@
       "observed_names": [
         "meshtube"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "open-streaming-platform",
@@ -3860,7 +3860,7 @@
       "observed_names": [
         "Open Streaming Platform"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "owncast",
@@ -3873,7 +3873,7 @@
         "owncast",
         "Owncast"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "peertube",
@@ -3881,11 +3881,11 @@
       "group_type": "category",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 1639,
+      "healthy_instance_count": 1637,
       "observed_names": [
         "peertube"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "scenes-cloud",
@@ -3897,7 +3897,7 @@
       "observed_names": [
         "scenes-cloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "yt-on-fedi",
@@ -3909,7 +3909,7 @@
       "observed_names": [
         "yt-on-fedi"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "funkwhale",
@@ -3917,11 +3917,11 @@
       "group_type": "category",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 74,
+      "healthy_instance_count": 75,
       "observed_names": [
         "funkwhale"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "klonkt-hub",
@@ -3933,7 +3933,7 @@
       "observed_names": [
         "klonkt-hub"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "kromosynth",
@@ -3945,7 +3945,7 @@
       "observed_names": [
         "kromosynth"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mixpal",
@@ -3957,7 +3957,7 @@
       "observed_names": [
         "mixpal"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "musicsocial",
@@ -3969,7 +3969,7 @@
       "observed_names": [
         "musicsocial"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "podcast-peformance",
@@ -3981,7 +3981,7 @@
       "observed_names": [
         "podcast-peformance"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "podfriend",
@@ -3993,7 +3993,7 @@
       "observed_names": [
         "podfriend"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "songhive",
@@ -4005,7 +4005,7 @@
       "observed_names": [
         "Songhive"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "soundverse",
@@ -4017,7 +4017,7 @@
       "observed_names": [
         "soundverse"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "the-crucible",
@@ -4029,7 +4029,7 @@
       "observed_names": [
         "The Crucible"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "truefans",
@@ -4041,7 +4041,7 @@
       "observed_names": [
         "truefans"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tunecamp",
@@ -4053,7 +4053,7 @@
       "observed_names": [
         "tunecamp"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dansal",
@@ -4065,7 +4065,7 @@
       "observed_names": [
         "dansal"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "everycal",
@@ -4077,7 +4077,7 @@
       "observed_names": [
         "everycal"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fancio",
@@ -4089,7 +4089,7 @@
       "observed_names": [
         "Fancio"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "gancio",
@@ -4101,7 +4101,7 @@
       "observed_names": [
         "gancio"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "gathio",
@@ -4113,7 +4113,7 @@
       "observed_names": [
         "Gathio"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mobilizon",
@@ -4126,7 +4126,7 @@
         "Mobilizon",
         "mobilizon"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tumeeto",
@@ -4138,7 +4138,7 @@
       "observed_names": [
         "tumeeto"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cf-git",
@@ -4150,7 +4150,7 @@
       "observed_names": [
         "cf-git"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "forgeflux",
@@ -4162,7 +4162,7 @@
       "observed_names": [
         "forgeflux"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "forgejo",
@@ -4174,7 +4174,7 @@
       "observed_names": [
         "forgejo"
       ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "forkmesh",
@@ -4186,7 +4186,7 @@
       "observed_names": [
         "forkmesh"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "gitea",
@@ -4208,7 +4208,7 @@
       "observed_names": [
         "zerocat"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedsy",
@@ -4230,7 +4230,7 @@
       "observed_names": [
         "flohmarkt"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "betula",
@@ -4242,7 +4242,7 @@
       "observed_names": [
         "betula"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bowrd",
@@ -4254,7 +4254,7 @@
       "observed_names": [
         "bowrd"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "commonplace",
@@ -4266,7 +4266,7 @@
       "observed_names": [
         "commonplace"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "postmarks",
@@ -4278,7 +4278,7 @@
       "observed_names": [
         "postmarks"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "rssfriends",
@@ -4290,7 +4290,7 @@
       "observed_names": [
         "rssfriends"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "annexwyrm",
@@ -4302,7 +4302,7 @@
       "observed_names": [
         "annexwyrm"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bookshelf",
@@ -4314,7 +4314,7 @@
       "observed_names": [
         "bookshelf"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "divedb",
@@ -4326,7 +4326,7 @@
       "observed_names": [
         "divedb"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dstore",
@@ -4338,7 +4338,7 @@
       "observed_names": [
         "dstore"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ducktrip",
@@ -4350,7 +4350,7 @@
       "observed_names": [
         "ducktrip"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dutch-beer-collective",
@@ -4362,7 +4362,7 @@
       "observed_names": [
         "Dutch Beer Collective"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "lipupini",
@@ -4384,7 +4384,7 @@
       "observed_names": [
         "mangrove-fediverse"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "manyfold",
@@ -4396,7 +4396,7 @@
       "observed_names": [
         "manyfold"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "moviebuff",
@@ -4408,7 +4408,7 @@
       "observed_names": [
         "moviebuff"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "movies-diary",
@@ -4420,7 +4420,7 @@
       "observed_names": [
         "movies-diary"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "myriad",
@@ -4432,7 +4432,7 @@
       "observed_names": [
         "myriad"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "neodb",
@@ -4444,7 +4444,7 @@
       "observed_names": [
         "neodb"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "plamenu",
@@ -4456,7 +4456,7 @@
       "observed_names": [
         "plamenu"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tvmarks",
@@ -4468,7 +4468,7 @@
       "observed_names": [
         "tvmarks"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "agora-of-flancia",
@@ -4480,7 +4480,7 @@
       "observed_names": [
         "Agora of Flancia"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cleversets",
@@ -4492,7 +4492,7 @@
       "observed_names": [
         "cleversets"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "development-agora-of-flancia",
@@ -4504,7 +4504,7 @@
       "observed_names": [
         "Development Agora of Flancia"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ibis",
@@ -4516,7 +4516,7 @@
       "observed_names": [
         "ibis"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "the-foundation",
@@ -4528,7 +4528,7 @@
       "observed_names": [
         "the-foundation"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "activitypods",
@@ -4540,7 +4540,7 @@
       "observed_names": [
         "activitypods"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "anoxinon-e-v-cloud",
@@ -4552,7 +4552,7 @@
       "observed_names": [
         "Anoxinon e.V. Cloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "clifton-cloud-storage",
@@ -4564,7 +4564,7 @@
       "observed_names": [
         "Clifton Cloud Storage"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cloud-automat-direct",
@@ -4586,7 +4586,7 @@
       "observed_names": [
         "DJ Cloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "e-phones-nz-cloud",
@@ -4598,7 +4598,7 @@
       "observed_names": [
         "E-Phones NZ Cloud"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "felix-nextcloud",
@@ -4610,7 +4610,7 @@
       "observed_names": [
         "Felix Nextcloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "henze-online",
@@ -4622,7 +4622,7 @@
       "observed_names": [
         "Henze-Online"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "kolosowscy-cloud",
@@ -4634,7 +4634,7 @@
       "observed_names": [
         "kolosowscy.cloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "la-tani-re-cloud",
@@ -4646,7 +4646,7 @@
       "observed_names": [
         "La Tanière Cloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "luca-comazzetto-lab",
@@ -4658,7 +4658,7 @@
       "observed_names": [
         "Luca Comazzetto | Lab"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "luon-cloud",
@@ -4670,7 +4670,7 @@
       "observed_names": [
         "Luon Cloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "nathacloud",
@@ -4682,7 +4682,7 @@
       "observed_names": [
         "NathaCloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "nextcloud",
@@ -4694,7 +4694,7 @@
       "observed_names": [
         "Nextcloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "nextcloud-social",
@@ -4702,12 +4702,12 @@
       "group_type": "category",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 20,
+      "healthy_instance_count": 19,
       "observed_names": [
         "Nextcloud Social",
         "nextcloud-social"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "private-cloud",
@@ -4719,7 +4719,7 @@
       "observed_names": [
         "Private Cloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "profed",
@@ -4731,7 +4731,7 @@
       "observed_names": [
         "profed"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "simcloud",
@@ -4739,11 +4739,9 @@
       "group_type": "category",
       "deployment_kind": "federated_service",
       "classification_status": "classified",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "Simcloud"
-      ],
-      "last_observed_at": "2026-09-18T12:53:11Z"
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
     },
     {
       "software_id": "solid-activitypub",
@@ -4755,7 +4753,7 @@
       "observed_names": [
         "solid-activitypub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "sonney-nextcloud",
@@ -4767,7 +4765,7 @@
       "observed_names": [
         "Sonney Nextcloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "spicy-shoggoth-nextcloud",
@@ -4779,7 +4777,7 @@
       "observed_names": [
         "Spicy Shoggoth Nextcloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "stefans-cloud",
@@ -4791,7 +4789,7 @@
       "observed_names": [
         "Stefans Cloud"
       ],
-      "last_observed_at": "2026-09-18T17:01:28Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "storage-share",
@@ -4803,7 +4801,7 @@
       "observed_names": [
         "Storage Share"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "teledyn-nc",
@@ -4815,7 +4813,7 @@
       "observed_names": [
         "Teledyn NC"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "walzercloud",
@@ -4827,7 +4825,7 @@
       "observed_names": [
         "Walzercloud"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "badgefed",
@@ -4839,7 +4837,7 @@
       "observed_names": [
         "badgefed"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "castling-club",
@@ -4851,7 +4849,7 @@
       "observed_names": [
         "castling.club"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "chess-game-infinito-nexus",
@@ -4863,7 +4861,7 @@
       "observed_names": [
         "chess.game.infinito.nexus"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "cruciverb",
@@ -4875,7 +4873,7 @@
       "observed_names": [
         "cruciverb"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dicecho",
@@ -4887,7 +4885,7 @@
       "observed_names": [
         "dicecho"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "haruspex",
@@ -4899,7 +4897,7 @@
       "observed_names": [
         "haruspex"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tribal-services",
@@ -4911,7 +4909,7 @@
       "observed_names": [
         "Tribal Services"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "untitled-activitypub-software",
@@ -4923,7 +4921,7 @@
       "observed_names": [
         "untitled activitypub software"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bird-meetup",
@@ -4935,7 +4933,7 @@
       "observed_names": [
         "bird.meetup"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "birdsitelive",
@@ -4947,7 +4945,7 @@
       "observed_names": [
         "birdsitelive"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "bridgy-fed",
@@ -4959,7 +4957,7 @@
       "observed_names": [
         "bridgy-fed"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ccworld-ap-bridge",
@@ -4971,7 +4969,7 @@
       "observed_names": [
         "ccworld-ap-bridge"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "concrnt-ap-bridge",
@@ -4983,7 +4981,7 @@
       "observed_names": [
         "concrnt-ap-bridge"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "deltachat-bouncer",
@@ -4995,7 +4993,7 @@
       "observed_names": [
         "deltachat-bouncer"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "encyclia",
@@ -5007,7 +5005,7 @@
       "observed_names": [
         "encyclia"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "feeder",
@@ -5019,7 +5017,7 @@
       "observed_names": [
         "feeder"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "feediverse",
@@ -5031,7 +5029,7 @@
       "observed_names": [
         "feediverse"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mastodon-rss",
@@ -5043,7 +5041,7 @@
       "observed_names": [
         "mastodon-rss"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mastopocket",
@@ -5055,7 +5053,7 @@
       "observed_names": [
         "mastopocket"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "momostr",
@@ -5067,7 +5065,7 @@
       "observed_names": [
         "momostr"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mostr",
@@ -5079,7 +5077,7 @@
       "observed_names": [
         "mostr"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "neodb-skybridge",
@@ -5091,7 +5089,7 @@
       "observed_names": [
         "neodb-skybridge"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "notestock",
@@ -5103,7 +5101,7 @@
       "observed_names": [
         "notestock"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "rss2pub",
@@ -5115,7 +5113,7 @@
       "observed_names": [
         "rss2pub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tidepool",
@@ -5127,7 +5125,7 @@
       "observed_names": [
         "tidepool"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "usk",
@@ -5139,7 +5137,7 @@
       "observed_names": [
         "usk"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "warpnet-fediverse-gateway",
@@ -5151,7 +5149,7 @@
       "observed_names": [
         "warpnet-fediverse-gateway"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "yuris-fedify",
@@ -5175,7 +5173,7 @@
       "observed_names": [
         "activity-pub-relay"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "activity-relay",
@@ -5187,7 +5185,7 @@
       "observed_names": [
         "activity-relay"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "activityrelay",
@@ -5199,7 +5197,7 @@
       "observed_names": [
         "activityrelay"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "aoderelay",
@@ -5211,7 +5209,7 @@
       "observed_names": [
         "aoderelay"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "ap-relay",
@@ -5223,7 +5221,7 @@
       "observed_names": [
         "ap-relay"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "awakari",
@@ -5245,7 +5243,7 @@
       "observed_names": [
         "buzzrelay"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "coma",
@@ -5257,7 +5255,7 @@
       "observed_names": [
         "Coma"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "loops-relay",
@@ -5269,7 +5267,7 @@
       "observed_names": [
         "loops-relay"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "merprelay",
@@ -5281,7 +5279,7 @@
       "observed_names": [
         "merprelay"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "nanasi-apps-xyz-relay-service",
@@ -5293,7 +5291,7 @@
       "observed_names": [
         "nanasi-apps.xyz Relay Service"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "netsune-ap-relay",
@@ -5305,7 +5303,7 @@
       "observed_names": [
         "netsune-ap-relay"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "pub-relay",
@@ -5317,7 +5315,7 @@
       "observed_names": [
         "pub-relay"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "relre",
@@ -5329,7 +5327,7 @@
       "observed_names": [
         "relre"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "selective-relay",
@@ -5341,7 +5339,7 @@
       "observed_names": [
         "selective-relay"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tech-port-relay-service",
@@ -5365,7 +5363,7 @@
       "observed_names": [
         "uggsrelay"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "activitypub-bot",
@@ -5377,7 +5375,7 @@
       "observed_names": [
         "activitypub-bot"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "activitypub-dot-bot",
@@ -5389,7 +5387,7 @@
       "observed_names": [
         "activitypub-dot-bot"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "activitypub-mcp",
@@ -5401,7 +5399,7 @@
       "observed_names": [
         "activitypub-mcp"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "claremontwx",
@@ -5413,7 +5411,7 @@
       "observed_names": [
         "claremontwx"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "drhu-activitypub-worker",
@@ -5425,7 +5423,7 @@
       "observed_names": [
         "drhu-activitypub-worker"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "emoji-ranking-v2-activitypub",
@@ -5437,7 +5435,7 @@
       "observed_names": [
         "Emoji Ranking V2 ActivityPub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedibot",
@@ -5449,7 +5447,7 @@
       "observed_names": [
         "fedibot"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedichatbot",
@@ -5471,7 +5469,7 @@
       "observed_names": [
         "HiddenPhox"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "menuverse-shopmenu",
@@ -5483,7 +5481,7 @@
       "observed_names": [
         "menuverse-shopmenu"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "movietitler",
@@ -5495,7 +5493,7 @@
       "observed_names": [
         "movietitler"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "newsdiff",
@@ -5507,7 +5505,7 @@
       "observed_names": [
         "newsdiff"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "squidcity",
@@ -5519,7 +5517,7 @@
       "observed_names": [
         "squidcity"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tacuruses",
@@ -5531,7 +5529,7 @@
       "observed_names": [
         "Tacuruses"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "tiofomento-fedverse-bot",
@@ -5553,7 +5551,7 @@
       "observed_names": [
         "uberblogr-activitypub"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "webfinger-splitdomain-canary",
@@ -5565,7 +5563,7 @@
       "observed_names": [
         "webfinger-splitdomain-canary"
       ],
-      "last_observed_at": "2026-09-18T17:01:28Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "wx-watch",
@@ -5589,7 +5587,7 @@
       "observed_names": [
         "activitypub-firebase"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "activitypub-server",
@@ -5601,7 +5599,7 @@
       "observed_names": [
         "activitypub-server"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "almanac",
@@ -5625,7 +5623,7 @@
       "observed_names": [
         "capsule"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedbox",
@@ -5637,7 +5635,7 @@
       "observed_names": [
         "FedBOX"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "federated-activity-publisher",
@@ -5649,7 +5647,7 @@
       "observed_names": [
         "federated-activity-publisher"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedi-map",
@@ -5661,7 +5659,7 @@
       "observed_names": [
         "fedi-map"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedirouter",
@@ -5673,7 +5671,7 @@
       "observed_names": [
         "FediRouter"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "fedkit",
@@ -5685,7 +5683,7 @@
       "observed_names": [
         "fedkit"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "gargoyle",
@@ -5697,7 +5695,7 @@
       "observed_names": [
         "Gargoyle"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "hono",
@@ -5709,7 +5707,7 @@
       "observed_names": [
         "Hono"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "mention",
@@ -5721,7 +5719,7 @@
       "observed_names": [
         "mention"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "meshnet",
@@ -5733,7 +5731,7 @@
       "observed_names": [
         "meshnet"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "octofedi",
@@ -5755,7 +5753,7 @@
       "observed_names": [
         "openlink-virtuoso"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "rayven",
@@ -5767,7 +5765,7 @@
       "observed_names": [
         "Rayven"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "verces",
@@ -5779,7 +5777,7 @@
       "observed_names": [
         "verces"
       ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "activity-xsrv-win",
@@ -5823,7 +5821,7 @@
       "observed_names": [
         "chatgpt-sites"
       ],
-      "last_observed_at": "2026-09-18T21:04:50Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "chess-infinito-nexus",
@@ -5855,7 +5853,7 @@
       "observed_names": [
         "danielpetrica/activitypub-for-laravel"
       ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "dawn-social",
@@ -5941,7 +5939,7 @@
       "observed_names": [
         "krogen"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "lubargw2",
@@ -5993,7 +5991,7 @@
       "observed_names": [
         "pompe"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "private",
@@ -6027,7 +6025,7 @@
       "observed_names": [
         "Stronghold"
       ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
+      "last_observed_at": "2026-09-18T22:44:47Z"
     },
     {
       "software_id": "technai-net",
