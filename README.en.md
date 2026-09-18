@@ -19,7 +19,7 @@ The Pages URLs below are updated by the scheduled or manually dispatched deploym
 | Healthy instance statistics | <https://thanksstevenkim.github.io/the-hitchhikers-guide-to-the-fediverse/data/stats.ok.json> | Verified instances currently displayed by the site |
 | Software taxonomy | <https://thanksstevenkim.github.io/the-hitchhikers-guide-to-the-fediverse/data/software_taxonomy.json> | Maintained family and functional classifications |
 | Software registry | <https://thanksstevenkim.github.io/the-hitchhikers-guide-to-the-fediverse/data/software_registry.json> | Generated software-level observations joined to the taxonomy |
-| Discovery seeds | <https://thanksstevenkim.github.io/the-hitchhikers-guide-to-the-fediverse/data/instances.json> | Manually maintained starting points for peer discovery |
+| Discovery seeds | <https://thanksstevenkim.github.io/the-hitchhikers-guide-to-the-fediverse/data/instances.json> | Manually maintained peer-discovery starting points and ecosystem coverage anchors |
 
 These files are static JSON resources. Consumers should check `schema_version` before processing them and tolerate additive fields within the same schema version.
 
@@ -110,6 +110,29 @@ When a repository explicitly identifies itself as a fork of Mastodon, Misskey, P
 `instances.json` contains discovery seeds, while `monitored_instances.json` is the persistent canonical-host registry. The collector checks the monitored registry, writes verified records to `stats.ok.json`, and retains failures locally in `stats.bad.json` for diagnosis and recovery checks.
 
 Optional peer discovery applies an exact-host blocklist, domain-pattern heuristics, and statistical anomaly checks before manual review. A TLD alone never causes a candidate to be rejected; confirmed abusive servers should be blocked by their exact host instead.
+
+### Coverage limits and seed diversity
+
+This dataset is not a complete census of the Fediverse. It is a sample of servers that could be discovered from manually maintained seeds through public peer relationships and public APIs, and whose responses could be verified. Servers that do not publish peer lists, are not connected to the current seeds, are temporarily unavailable, or restrict access may be absent. Observed software shares and server-size distributions therefore must not be interpreted as global Fediverse market share or as the proportion of personal servers.
+
+Seeds have two roles. A `discovery` seed is a starting point for a peer path supported by the collector. A `coverage` seed ensures that a software lineage or use case is checked directly even when it does not expose a usable peer list. The table below tracks priority coverage rather than every entry in the taxonomy. Selecting a server as a seed is not an endorsement or guarantee of its moderation or operating policies.
+
+| Use case | Software or lineage | Representative seed | Role | Status |
+| --- | --- | --- | --- | --- |
+| Microblogging | Mastodon family | `mastodon.social` and 7 others | discovery | Existing |
+| Microblogging | Misskey family | `misskey.io`, `aoharu.place` | discovery | Existing |
+| Microblogging | Pleroma family (Akkoma) | `fe.disroot.org` | coverage | Added in this phase |
+| Lightweight microblogging | GoToSocial | — | coverage | Gap |
+| Forums and discussion | Lemmy | `lemmy.ml` | coverage | Existing |
+| Photos | Pixelfed | `pixelfed.social` | coverage | Added in this phase |
+| Video | PeerTube | `framatube.org` | coverage | Added in this phase |
+| Reading and reviews | BookWyrm | `bookwyrm.it` | coverage | Added in this phase |
+| Events and groups | Mobilizon | `mobilizon.fr` | coverage | Added in this phase |
+| General social networking | Friendica | `friendica.world` | coverage | Added in this phase |
+| Hubs and publishing | Hubzilla | `hub.netzgemeinde.eu` | coverage | Added in this phase |
+| Long-form blogging | WriteFreely | `write.as` | coverage | Added in this phase |
+| Audio and music | Funkwhale | — | coverage | Gap |
+| Software forges | Forgejo | — | coverage | Gap |
 
 The scheduled workflow runs daily at 21:00 UTC. It collects into an isolated staging directory, builds `software_registry.json`, validates the complete dataset, promotes validated outputs, commits changed tracked data, and deploys the public Pages artifact.
 
