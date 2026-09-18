@@ -6,7 +6,8 @@
     "search_placeholder": "이름 또는 설명 검색",
     "software_filter_heading": "소프트웨어 분류",
     "software_all": "전체 소프트웨어",
-    "software_unknown": "기타",
+    "software_unknown": "미분류",
+    "software_name_unknown": "소프트웨어명 없음",
     "locale_switcher_label": "언어 선택",
 
     "software_label_mastodon": "Mastodon",
@@ -181,7 +182,8 @@
     "search_placeholder": "Search by name or description",
     "software_filter_heading": "Software",
     "software_all": "All software",
-    "software_unknown": "Other",
+    "software_unknown": "Unclassified",
+    "software_name_unknown": "Software name unavailable",
     "locale_switcher_label": "Choose language",
 
     "software_label_mastodon": "Mastodon",

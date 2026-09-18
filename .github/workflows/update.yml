@@ -42,6 +42,7 @@ jobs:
           cp data/stats.ok.json "$staging_data/stats.ok.json"
           cp data/manual_overrides.json "$staging_data/manual_overrides.json"
           cp data/host_aliases.json "$staging_data/host_aliases.json"
+          cp data/software_taxonomy.json "$staging_data/software_taxonomy.json"
           echo "data_dir=$staging_data" >> "$GITHUB_OUTPUT"
       - name: Fetch instance statistics into staging
         run: >-
@@ -79,7 +80,7 @@ jobs:
           mkdir -p _site/data
           cp index.html styles.css _site/
           cp -R js i18n _site/
-          cp data/instances.json data/stats.ok.json _site/data/
+          cp data/instances.json data/stats.ok.json data/software_taxonomy.json _site/data/
           touch _site/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v4

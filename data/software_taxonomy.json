@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "group_order": [
+    "mastodon",
+    "misskey",
+    "pleroma",
+    "gotosocial",
+    "ghost",
+    "wordpress",
+    "social",
+    "blog",
+    "forum",
+    "video",
+    "bridge",
+    "relay",
+    "bot",
+    "unknown"
+  ],
+  "groups": {
+    "mastodon": {
+      "type": "family",
+      "members": [
+        "ecko",
+        "fedibird",
+        "hometown",
+        "kmyblue",
+        "paon",
+        "wildebeest"
+      ]
+    },
+    "misskey": {
+      "type": "family",
+      "members": [
+        "calckey",
+        "catodon",
+        "cherrypick",
+        "dolphin",
+        "firefish",
+        "foundkey",
+        "goblin",
+        "groundpolis-milkey",
+        "hickey",
+        "iceshrimp",
+        "magnetar",
+        "meisskey",
+        "nexkey",
+        "pawkey",
+        "quollkey",
+        "sharkey",
+        "tanukey",
+        "yoiyami",
+        "yojo-art"
+      ]
+    },
+    "pleroma": {
+      "type": "family",
+      "members": [
+        "akkoma",
+        "cagando",
+        "gharab-tzereq",
+        "incestoma",
+        "instance-softwarename"
+      ]
+    },
+    "gotosocial": {
+      "type": "software",
+      "members": []
+    },
+    "ghost": {
+      "type": "software",
+      "members": []
+    },
+    "wordpress": {
+      "type": "software",
+      "members": []
+    },
+    "social": {
+      "type": "category",
+      "members": [
+        "98gravity-electro",
+        "amiverse",
+        "bonfire",
+        "bonfou",
+        "bookwyrm",
+        "bovine",
+        "brighteon",
+        "cattle-grid",
+        "comal",
+        "cosmoslide",
+        "ditto",
+        "dope-network",
+        "dumpster-federation",
+        "elgg",
+        "emissary",
+        "encryptr-net",
+        "frequency",
+        "friendica",
+        "funkwhale",
+        "gancio",
+        "gnusocial",
+        "hackerspub",
+        "handle",
+        "harmony",
+        "hollo",
+        "honk",
+        "hourlyphoto",
+        "iceshrimp-net",
+        "incise",
+        "kiiteitte",
+        "ktistec",
+        "letter",
+        "mammuthus",
+        "pixelfed",
+        "plume",
+        "smithereen",
+        "snac",
+        "soapbox",
+        "socialhome",
+        "takahe",
+        "wafrn",
+        "wellesley"
+      ]
+    },
+    "blog": {
+      "type": "category",
+      "members": [
+        "blog-server",
+        "clanspub",
+        "contentnation",
+        "dch-blog",
+        "forte",
+        "goblog",
+        "hatsu",
+        "hubzilla",
+        "ma-at",
+        "microblogpub",
+        "microdotblog",
+        "monoplace-ca",
+        "nettepuoti-activitypub-limited-support",
+        "oolong",
+        "owl-blogs",
+        "paul-kinlan-me",
+        "scrapblog",
+        "writefreely"
+      ]
+    },
+    "forum": {
+      "type": "category",
+      "members": [
+        "kbin",
+        "lemmy",
+        "mbin",
+        "mobilizon",
+        "piefed"
+      ]
+    },
+    "video": {
+      "type": "category",
+      "members": [
+        "loops",
+        "open-streaming-platform",
+        "owncast",
+        "peertube"
+      ]
+    },
+    "bridge": {
+      "type": "category",
+      "members": [
+        "bird-meetup",
+        "birdsitelive",
+        "bridgy-fed",
+        "ccworld-ap-bridge",
+        "encyclia",
+        "momostr",
+        "notestock"
+      ]
+    },
+    "relay": {
+      "type": "category",
+      "members": [
+        "activity-relay",
+        "activityrelay",
+        "aoderelay",
+        "awakari",
+        "buzzrelay",
+        "pub-relay",
+        "selective-relay"
+      ]
+    },
+    "bot": {
+      "type": "category",
+      "members": [
+        "fedichatbot",
+        "movietitler",
+        "tiofomento-fedverse-bot"
+      ]
+    },
+    "unknown": {
+      "type": "fallback",
+      "members": [
+        "activity-xsrv-win",
+        "activitypods",
+        "activitypub-rails",
+        "appy",
+        "betula",
+        "bugle",
+        "capubara",
+        "careercupid",
+        "castling-club",
+        "chess-infinito-nexus",
+        "citizen4",
+        "claremontwx",
+        "codename-merp",
+        "d250g2",
+        "dailyrucks",
+        "divedb",
+        "drupal",
+        "dxnet",
+        "eliza-and-the-moneymakers",
+        "fediblock-instance",
+        "fedifolio",
+        "fedipage",
+        "fedirouter",
+        "fedsy",
+        "finalboss",
+        "flohmarkt",
+        "forgeflux",
+        "forgejo",
+        "g105b",
+        "gathio",
+        "gitea",
+        "gush",
+        "hanbitfediverse",
+        "hiddenphox",
+        "hono",
+        "ibis",
+        "itinerariummentis",
+        "lipupini",
+        "lotide",
+        "lubargw2",
+        "luon-cloud",
+        "manyfold",
+        "meshdags-site-a-dags-dk",
+        "metazine",
+        "mitra",
+        "mostr",
+        "neodb",
+        "nextcloud",
+        "nextcloud-social",
+        "nodebb",
+        "octofedi",
+        "openlink-virtuoso",
+        "orizuru",
+        "pichuchen-tw-webserver",
+        "pinka",
+        "postmarks",
+        "private",
+        "pub",
+        "simcloud",
+        "single-file-activitypub-server-in-php",
+        "squidcity",
+        "sutty-distributed-press",
+        "the-lukes-cloud",
+        "tootik",
+        "undefined",
+        "vernissage",
+        "wxwclub"
+      ]
+    }
+  }
+}
