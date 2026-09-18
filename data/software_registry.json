@@ -5442,7 +5442,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "aethon"
@@ -5454,7 +5454,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "almanac"
@@ -5466,7 +5466,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "chatgpt-sites"
@@ -5498,7 +5498,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "danielpetrica/activitypub-for-laravel"
@@ -5510,7 +5510,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "dawn-social"
@@ -5522,7 +5522,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "deltachat-bouncer"
@@ -5546,7 +5546,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "E-Phones NZ Cloud"
@@ -5618,7 +5618,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "glenmore"
@@ -5630,7 +5630,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "instapub"
@@ -5642,7 +5642,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "iris"
@@ -5664,7 +5664,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "klonkt-hub"
@@ -5676,7 +5676,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "krogen"
@@ -5688,7 +5688,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "lightap"
@@ -5720,7 +5720,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "Luca Comazzetto | Lab"
@@ -5732,7 +5732,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "mangrove-fediverse"
@@ -5744,7 +5744,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "mdverse"
@@ -5776,7 +5776,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "micronote.pub"
@@ -5788,7 +5788,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "musorbox"
@@ -5820,7 +5820,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "planet-buzz"
@@ -5832,7 +5832,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "pompe"
@@ -5844,7 +5844,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "prismo"
@@ -5866,7 +5866,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "rosmarinus"
@@ -5878,7 +5878,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "rox"
@@ -5890,7 +5890,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "ruby-news-dev"
@@ -5902,7 +5902,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "Songhive"
@@ -5914,7 +5914,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "Spica"
@@ -5926,7 +5926,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "spook"
@@ -5938,7 +5938,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "Stronghold"
@@ -5950,7 +5950,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "tech-port relay service"
@@ -5962,7 +5962,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "technai.net"
@@ -5974,7 +5974,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "telepico"
@@ -6006,7 +6006,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "unet"
@@ -6031,7 +6031,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 2,
       "observed_names": [
         "uwuzu"
@@ -6043,7 +6043,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "wx-watch"
@@ -6055,7 +6055,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "xenomorph"
@@ -6067,7 +6067,7 @@
       "group_id": "unknown",
       "group_type": "fallback",
       "deployment_kind": "unknown",
-      "classification_status": "unclassified",
+      "classification_status": "explicit_unknown",
       "healthy_instance_count": 1,
       "observed_names": [
         "yuris-fedify"

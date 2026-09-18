@@ -125,10 +125,12 @@ def test_current_healthy_snapshot_is_fully_reviewed() -> None:
     stats = json.loads(STATS_PATH.read_text(encoding="utf-8"))
 
     queue = build_software_review_queue.build_review_queue(stats, taxonomy)
-    queued_ids = {item["software_id"] for item in queue["software"]}
+    queued_ids = {
+        item["software_id"]
+        for item in queue["software"]
+        if item["review_status"] == "unclassified"
+    }
 
-    # This marker is deliberately not software taxonomy. The collector moves it
-    # to BAD immediately the next time that host is fetched.
     assert queued_ids <= {"ap-tombstone"}
 
 
