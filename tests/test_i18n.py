@@ -56,3 +56,20 @@ def test_locales_expose_the_same_language_label_keys() -> None:
             f"{locale} language label keys differ from ko; "
             f"missing={sorted(missing)}, extra={sorted(extra)}"
         )
+
+
+def test_locales_expose_the_same_translation_keys() -> None:
+    strings = load_strings()
+    assert "ko" in strings
+
+    reference_keys = set(strings["ko"])
+
+    for locale, translations in strings.items():
+        locale_keys = set(translations)
+        missing = reference_keys - locale_keys
+        extra = locale_keys - reference_keys
+
+        assert not missing and not extra, (
+            f"{locale} translation keys differ from ko; "
+            f"missing={sorted(missing)}, extra={sorted(extra)}"
+        )

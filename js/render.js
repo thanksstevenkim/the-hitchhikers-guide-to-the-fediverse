@@ -1,7 +1,10 @@
 (async function renderDirectory() {
   const assetBaseUrl = resolveAssetBaseUrl();
-  const locale = document.documentElement.lang || "ko";
-  const numberLocale = locale || "ko-KR";
+  const SUPPORTED_LOCALES = new Set(["ko", "en"]);
+  const locale = resolveLocale();
+  const numberLocale = locale === "ko" ? "ko-KR" : "en-US";
+
+  document.documentElement.lang = locale;
 
   const KNOWN_SOFTWARE_LABELS = {
     akkoma: "Akkoma",
@@ -94,8 +97,17 @@
     softwareList: document.getElementById("softwareFilter"),
     softwareHeading: document.getElementById("softwareFilterTitle"),
     filterForm: document.getElementById("filterForm"),
+    localeSwitcher: document.getElementById("localeSwitcher"),
+    localeLinks: Array.from(
+      document.querySelectorAll("#localeSwitcher [data-locale]")
+    ),
     sortableHeaders: Array.from(document.querySelectorAll("th[data-sort-key]")),
   };
+
+  const appRoot = document.getElementById("app");
+  if (appRoot) {
+    appRoot.dataset.locale = locale;
+  }
 
   if (!elements.table || !elements.tableBody) {
     console.error("필수 테이블 요소를 찾을 수 없습니다.");
@@ -1104,7 +1116,12 @@
     if (!data || typeof data !== "object") {
       return { ...fallback };
     }
-    const candidate = data[requestedLocale] || data.ko;
+    const normalizedLocale = normalizeLocale(requestedLocale);
+    const candidate =
+      data[requestedLocale] ||
+      data[normalizedLocale] ||
+      data.en ||
+      data.ko;
     if (candidate && typeof candidate === "object") {
       return { ...fallback, ...candidate };
     }
@@ -1121,6 +1138,26 @@
     if (elements.pageIntro) {
       elements.pageIntro.textContent = dict.intro;
     }
+    if (elements.localeSwitcher) {
+      elements.localeSwitcher.setAttribute(
+        "aria-label",
+        dict.locale_switcher_label
+      );
+    }
+    elements.localeLinks.forEach((link) => {
+      const linkLocale = normalizeLocale(link.dataset.locale);
+      if (!SUPPORTED_LOCALES.has(linkLocale)) return;
+
+      const targetUrl = new URL(window.location.href);
+      targetUrl.searchParams.set("lang", linkLocale);
+      link.href = targetUrl.toString();
+
+      if (linkLocale === locale) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
     if (elements.directoryTitle) {
       elements.directoryTitle.textContent = dict.table_heading;
     }
@@ -1514,6 +1551,39 @@
       .filter(Boolean)
       .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
       .join(" ");
+  }
+
+  function normalizeLocale(value) {
+    return String(value || "")
+      .trim()
+      .toLowerCase()
+      .split("-")[0];
+  }
+
+  function resolveLocale() {
+    try {
+      const requestedLocale = normalizeLocale(
+        new URL(window.location.href).searchParams.get("lang")
+      );
+      if (SUPPORTED_LOCALES.has(requestedLocale)) {
+        return requestedLocale;
+      }
+    } catch (error) {
+      console.info("URL에서 언어 설정을 읽지 못했습니다.", error);
+    }
+
+    const browserLocales = Array.isArray(navigator.languages)
+      ? navigator.languages
+      : [navigator.language];
+
+    for (const browserLocale of browserLocales) {
+      const normalizedLocale = normalizeLocale(browserLocale);
+      if (SUPPORTED_LOCALES.has(normalizedLocale)) {
+        return normalizedLocale;
+      }
+    }
+
+    return "en";
   }
 
   function resolveAssetBaseUrl() {

@@ -7,6 +7,7 @@
     "software_filter_heading": "소프트웨어 분류",
     "software_all": "전체 소프트웨어",
     "software_unknown": "기타",
+    "locale_switcher_label": "언어 선택",
 
     "software_label_mastodon": "Mastodon",
     "software_label_misskey": "Misskey",
@@ -181,6 +182,7 @@
     "software_filter_heading": "Software",
     "software_all": "All software",
     "software_unknown": "Other",
+    "locale_switcher_label": "Choose language",
 
     "software_label_mastodon": "Mastodon",
     "software_label_misskey": "Misskey",
