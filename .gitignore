@@ -9,6 +9,7 @@ _site/
 data/peer_suggestions.json
 data/filtered_peers.json
 data/spam_filtered.log.json
+data/software_review_queue.json
 data/stats.bad.json
 data/stats.json
 data/*.tmp

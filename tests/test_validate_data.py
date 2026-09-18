@@ -35,6 +35,17 @@ def prepare_data(
     aliases: Optional[Dict[str, str]] = None,
 ) -> None:
     data_dir.mkdir()
+    write_json(
+        data_dir / "software_taxonomy.json",
+        {
+            "schema_version": 1,
+            "group_order": ["mastodon", "unknown"],
+            "groups": {
+                "mastodon": {"type": "family", "members": []},
+                "unknown": {"type": "fallback", "members": []},
+            },
+        },
+    )
     write_json(data_dir / "instances.json", [{"name": "A", "url": "https://a.example"}])
     write_json(data_dir / "stats.ok.json", ok)
     write_json(data_dir / "stats.bad.json", bad)

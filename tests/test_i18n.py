@@ -9,6 +9,7 @@ from scripts import fetch_stats
 
 ROOT = Path(__file__).resolve().parents[1]
 STRINGS_PATH = ROOT / "i18n" / "strings.json"
+SOFTWARE_TAXONOMY_PATH = ROOT / "data" / "software_taxonomy.json"
 
 # These non-standard codes have been observed in real Fediverse instance data.
 # Keep display labels for them even when a standards-based equivalent exists.
@@ -72,4 +73,20 @@ def test_locales_expose_the_same_translation_keys() -> None:
         assert not missing and not extra, (
             f"{locale} translation keys differ from ko; "
             f"missing={sorted(missing)}, extra={sorted(extra)}"
+        )
+
+
+def test_software_groups_have_localized_labels() -> None:
+    strings = load_strings()
+    taxonomy = json.loads(SOFTWARE_TAXONOMY_PATH.read_text(encoding="utf-8"))
+    required_keys = {
+        f"software_label_{group_id}"
+        for group_id in taxonomy["group_order"]
+        if group_id != "unknown"
+    }
+
+    for locale, translations in strings.items():
+        missing = required_keys - translations.keys()
+        assert not missing, (
+            f"{locale} is missing software group labels: {sorted(missing)}"
         )

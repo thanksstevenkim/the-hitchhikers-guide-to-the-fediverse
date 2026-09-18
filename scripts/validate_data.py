@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -23,6 +24,8 @@ REQUIRED_STATS_FIELDS = {
     "fetched_at",
 }
 NUMERIC_FIELDS = ("users_total", "users_active_month", "statuses")
+SOFTWARE_ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+SOFTWARE_GROUP_TYPES = {"family", "software", "category", "fallback"}
 
 
 class ValidationError(ValueError):
@@ -231,6 +234,88 @@ def validate_mapping(path: Path, value_validator: type) -> dict[str, Any]:
     return mapping
 
 
+def validate_software_taxonomy(path: Path) -> dict[str, Any]:
+    taxonomy = load_json(path)
+    if not isinstance(taxonomy, dict):
+        raise ValidationError(f"{path} must be a JSON object")
+    if taxonomy.get("schema_version") != 1:
+        raise ValidationError(f"{path}.schema_version must be 1")
+
+    group_order = taxonomy.get("group_order")
+    groups = taxonomy.get("groups")
+    if not isinstance(group_order, list) or not group_order:
+        raise ValidationError(f"{path}.group_order must be a non-empty array")
+    if not isinstance(groups, dict) or not groups:
+        raise ValidationError(f"{path}.groups must be a non-empty object")
+    if not all(isinstance(group_id, str) for group_id in group_order):
+        raise ValidationError(f"{path}.group_order must contain only strings")
+    if len(group_order) != len(set(group_order)):
+        raise ValidationError(f"{path}.group_order contains duplicate groups")
+    if set(group_order) != set(groups):
+        missing_from_order = sorted(set(groups) - set(group_order))
+        missing_from_groups = sorted(set(group_order) - set(groups))
+        raise ValidationError(
+            f"{path} group_order and groups differ; "
+            f"missing_from_order={missing_from_order}, "
+            f"missing_from_groups={missing_from_groups}"
+        )
+    if group_order[-1] != "unknown":
+        raise ValidationError(f"{path}.group_order must end with unknown")
+
+    member_owners: dict[str, str] = {}
+    fallback_groups: list[str] = []
+    group_ids = set(groups)
+    for group_id, group in groups.items():
+        label = f"{path}.groups[{group_id!r}]"
+        if not SOFTWARE_ID_RE.fullmatch(group_id):
+            raise ValidationError(f"{label} has an invalid group ID")
+        if not isinstance(group, dict):
+            raise ValidationError(f"{label} must be an object")
+
+        group_type = group.get("type")
+        if group_type not in SOFTWARE_GROUP_TYPES:
+            raise ValidationError(
+                f"{label}.type must be one of: "
+                + ", ".join(sorted(SOFTWARE_GROUP_TYPES))
+            )
+        if group_type == "fallback":
+            fallback_groups.append(group_id)
+
+        members = group.get("members")
+        if not isinstance(members, list) or not all(
+            isinstance(member, str) for member in members
+        ):
+            raise ValidationError(f"{label}.members must be a string array")
+        if members != sorted(members):
+            raise ValidationError(f"{label}.members must be sorted")
+        if len(members) != len(set(members)):
+            raise ValidationError(f"{label}.members contains duplicates")
+        if group_type == "software" and members:
+            raise ValidationError(f"{label} software groups cannot have members")
+
+        for member in members:
+            if not SOFTWARE_ID_RE.fullmatch(member):
+                raise ValidationError(f"{label}.members contains invalid ID: {member}")
+            if member in group_ids:
+                raise ValidationError(
+                    f"software ID {member} cannot be both a group and a member"
+                )
+            previous_owner = member_owners.get(member)
+            if previous_owner is not None:
+                raise ValidationError(
+                    f"software ID {member} belongs to multiple groups: "
+                    f"{previous_owner}, {group_id}"
+                )
+            member_owners[member] = group_id
+
+    if fallback_groups != ["unknown"]:
+        raise ValidationError(
+            f"{path} must define unknown as its only fallback group"
+        )
+
+    return taxonomy
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -242,6 +327,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def validate_data_dir(data_dir: Path) -> None:
+    validate_software_taxonomy(data_dir / "software_taxonomy.json")
     validate_instances(data_dir / "instances.json")
     validate_mapping(data_dir / "manual_overrides.json", dict)
     raw_aliases = validate_mapping(data_dir / "host_aliases.json", str)

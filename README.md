@@ -2,9 +2,9 @@
 
 # The Hitchhiker's Guide to the Fediverse
 
-정적 HTML, CSS, JS로 구성된 한국어 페디버스 인스턴스 목록입니다.  
+정적 HTML, CSS, JS로 구성된 페디버스 인스턴스 디렉터리입니다.
 `data/instances.json`의 기본 정보와 `data/stats.ok.json`의 통계를 병합해 한 화면에서 확인할 수 있습니다.  
-GitHub Pages로 그대로 호스팅할 수 있으며, 검색·필터·정렬 기능을 기본 제공합니다.
+GitHub Pages로 그대로 호스팅할 수 있으며, 한국어·영어 UI와 검색·필터·정렬 기능을 기본 제공합니다.
 
 모든 데이터는 공개 API를 통해 자동 수집되며, 개인정보는 포함되지 않습니다.
 
@@ -12,13 +12,14 @@ GitHub Pages로 그대로 호스팅할 수 있으며, 검색·필터·정렬 기
 
 ## 📁 데이터와 Git 추적 정책
 
-웹 UI가 런타임에 읽는 파일은 정확히 두 개입니다.
+웹 UI가 런타임에 읽는 파일은 정확히 세 개입니다.
 
 | 파일 | Git | Pages | 역할 |
 | --- | --- | --- | --- |
 | `data/instances.json` | 유지 | 포함 | 피어 탐색을 시작하는 수동 seed 목록. 전체 운영 목록이 아님 |
 | `data/monitored_instances.json` | 유지 | 제외 | 상태와 무관하게 계속 health check할 전체 canonical host registry |
 | `data/stats.ok.json` | 유지 | 포함 | 검증을 통과한 공개 통계. 사이트의 유일한 통계 입력 |
+| `data/software_taxonomy.json` | 유지 | 포함 | 소프트웨어 계열·용도별 분류와 사이드바 표시 순서 |
 | `data/manual_overrides.json` | 유지 | 제외 | 특정 호스트의 수집 결과를 보정하는 수동 규칙 |
 | `data/host_aliases.json` | 유지 | 제외 | 원본 호스트와 canonical host의 검증된 매핑 |
 
@@ -30,6 +31,7 @@ GitHub Pages로 그대로 호스팅할 수 있으며, 검색·필터·정렬 기
 | `data/peer_suggestions.json` | `--discover-peers` 실행 시 발견 후보 기록 |
 | `data/filtered_peers.json` | `filter_spam.py` 실행 시 필터 통과 후보 기록 |
 | `data/spam_filtered.log.json` | `filter_spam.py` 실행 시 제외 사유 기록 |
+| `data/software_review_queue.json` | 미분류 소프트웨어를 검토 우선순위별로 집계 |
 
 이 파일들은 로컬 실행 중 필요에 따라 다시 생성됩니다. 과거 파일이 필요하면 Git 이력에서 확인할 수 있습니다.
 
@@ -50,6 +52,7 @@ seed와 monitored registry 전체의 통계를 갱신하고 결과를 검사합�
 ```bash
 python scripts/fetch_stats.py
 python scripts/validate_data.py
+python scripts/build_software_review_queue.py
 ```
 
 수집기는 기본 실행에서 `instances.json`의 seed와 `monitored_instances.json`의 전체 대상을 canonical host 기준으로 합쳐 매번 다시 처리합니다. 검증기는 registry 구조와 `stats.ok ⊆ monitored` 불변식까지 포함해 필수 필드와 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
@@ -96,6 +99,36 @@ seed → discovery → candidate review → monitored → health check → OK/BA
 - registry가 없거나 비어 있는 기존 checkout은 첫 수집 때 `instances.json ∪ stats.ok.json`으로 비파괴 bootstrap됩니다.
 - alias는 저장 전에 canonical host로 정규화되므로 같은 인스턴스가 registry에 중복되지 않습니다.
 
+### 소프트웨어 taxonomy
+
+`data/software_taxonomy.json`은 웹 UI에 있던 소프트웨어 분류를 독립된 데이터로 관리합니다. 그룹은 다음 네 유형을 사용합니다.
+
+- `family`: Mastodon·Misskey·Pleroma처럼 계보를 나타내는 그룹
+- `software`: GoToSocial·Ghost·WordPress처럼 독립 소프트웨어를 직접 표시하는 그룹
+- `category`: 블로그·포럼·동영상·브릿지처럼 용도에 따른 그룹
+- `fallback`: 아직 분류하지 못한 소프트웨어를 위한 `unknown` 그룹
+
+각 소프트웨어 ID는 최대 한 그룹에만 속할 수 있습니다. 그룹 순서, ID 형식, 멤버 중복, 유일한 fallback 여부는 `validate_data.py`가 검사합니다. taxonomy에 아직 없는 새 소프트웨어도 수집에서 제외하지 않으며 웹 UI에서는 독립 항목으로 표시합니다.
+
+### 미분류 소프트웨어 검토
+
+현재 정상 인스턴스에서 아직 분류되지 않은 소프트웨어를 집계하려면 다음 명령을 실행합니다.
+
+```bash
+python scripts/build_software_review_queue.py
+```
+
+결과는 기본적으로 Git에서 제외되는 `data/software_review_queue.json`에 저장됩니다. 동일한 소프트웨어 이름을 사용하는 호스트를 하나로 묶고, 현재 정상 인스턴스 수가 많은 순서로 대표 호스트·관측 이름·마지막 관측 시각을 기록합니다.
+
+- `explicit_unknown`: taxonomy의 `unknown`에 명시적으로 들어 있지만 아직 재분류하지 않은 항목
+- `unclassified`: taxonomy에 아직 등장하지 않은 새 항목
+
+파일을 만들지 않고 바로 확인하려면 `--output -`을 사용합니다.
+
+```bash
+python scripts/build_software_review_queue.py --output -
+```
+
 ### 상태 전환과 일시 장애 처리
 
 `stats.ok.json`과 `stats.bad.json`은 host 및 alias를 canonical host로 해석했을 때 서로 배타적입니다.
@@ -109,7 +142,7 @@ seed → discovery → candidate review → monitored → health check → OK/BA
 
 웹 UI는 `stats.ok.json`만 현재 정상 목록으로 사용합니다. 지속적으로 실패한 인스턴스는 임계값 도달 후 화면에서 제외되지만 monitored registry에는 남아 다음 실행에서도 검사되며, 복구되면 자동으로 다시 표시됩니다.
 
-다른 디렉터리에서 안전하게 시험하려면 추적 데이터 다섯 개를 복사한 뒤 `--data-dir`을 사용합니다.
+다른 디렉터리에서 안전하게 시험하려면 추적 데이터 여섯 개를 복사한 뒤 `--data-dir`을 사용합니다.
 
 ```bash
 python scripts/fetch_stats.py --data-dir /tmp/fediverse-data
@@ -149,6 +182,7 @@ python -m pytest
 | ---------------- | ------------------------------------------------------ |
 | `fetch_stats.py` | ActivityPub 노드/플랫폼별 API를 통해 통계 수집 및 검증 |
 | `filter_spam.py` | 도메인 이름 기반 스팸·광고·비정상 후보 자동 필터링     |
+| `build_software_review_queue.py` | 미분류 소프트웨어를 이름별로 집계해 검토 대기열 생성 |
 | `validate_data.py` | 배포 데이터의 JSON 형식과 필수 필드 검증 |
 | `update.yml`     | 격리된 통계 갱신, 검증, 명시적 커밋 및 Pages 배포 |
 
@@ -195,13 +229,13 @@ python -m pytest
 다음 순서로 실행됩니다.
 
 1. Python `3.12.10`과 `requirements.txt`의 고정 의존성을 설치합니다.
-2. 추적 중인 입력·상태 데이터 다섯 개를 Runner 임시 디렉터리에 복사합니다.
+2. 추적 중인 입력·상태 데이터와 소프트웨어 taxonomy를 Runner 임시 디렉터리에 복사합니다.
 3. 임시 디렉터리에서 16 workers, 100-host checkpoint로 통계를 수집하고 `validate_data.py`로 검사합니다.
 4. 검증에 성공한 `monitored_instances.json`, `stats.ok.json`, `host_aliases.json`만 작업 트리에 승격합니다.
 5. 세 파일 중 실제 변경이 있는 경우에만 Actions bot으로 커밋합니다.
 6. 변경 여부와 관계없이 현재의 정상 데이터로 `_site` 아티팩트를 만들고 Pages에 배포합니다.
 
-검증이나 수집이 실패하면 추적 중인 정상 데이터는 덮어쓰지 않으며 Pages 배포 단계도 실행되지 않습니다. Pages 아티팩트에는 `index.html`, `styles.css`, `js/`, `i18n/`, `instances.json`, `stats.ok.json`만 포함됩니다.
+검증이나 수집이 실패하면 추적 중인 정상 데이터는 덮어쓰지 않으며 Pages 배포 단계도 실행되지 않습니다. Pages 아티팩트에는 `index.html`, `styles.css`, `js/`, `i18n/`, `instances.json`, `stats.ok.json`, `software_taxonomy.json`만 포함됩니다.
 
 update job에는 `timeout-minutes: 300`을 설정합니다. 강제 timeout은 graceful shutdown 신호를 보장하지 않으므로 최대 손실 범위는 마지막 100개 미만의 미저장 observation이며, 그 이전 checkpoint는 staging 디렉터리에 보존됩니다. Workflow가 실패하면 staging 결과는 repository에 승격되지 않습니다.
 

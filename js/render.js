@@ -116,8 +116,14 @@
 
   const columnCount = elements.table.querySelectorAll("thead th").length || 7;
 
-  const stringsData = await loadStrings();
+  const [stringsData, softwareTaxonomy] = await Promise.all([
+    loadStrings(),
+    loadSoftwareTaxonomy(),
+  ]);
   const strings = resolveStrings(stringsData, locale);
+  const softwareOrder = softwareTaxonomy.group_order;
+  const softwareGroups = softwareTaxonomy.groups;
+  const softwareParentByMember = buildSoftwareParentMap(softwareGroups);
 
   const filters = {
     query: "",
@@ -131,209 +137,6 @@
   const pinnedSoftware = loadPinnedSoftware();
   let openParent = null; // 하나만 펼쳐둔다
 
-  const SOFTWARE_ORDER = [
-    "mastodon",
-    "misskey",
-    "pleroma",
-    "gotosocial",
-    "ghost",
-    "wordpress",
-    "social",
-    "blog",
-    "forum",
-    "video",
-    "bridge",
-    "relay",
-    "bot",
-    "unknown",
-  ];
-
-  const SOFTWARE_LINEAGE = {
-    mastodon: ["ecko", "fedibird", "hometown", "kmyblue", "paon", "wildebeest"],
-    misskey: [
-      "calckey",
-      "catodon",
-      "cherrypick",
-      "dolphin",
-      "firefish",
-      "foundkey",
-      "goblin",
-      "groundpolis-milkey",
-      "hickey",
-      "iceshrimp",
-      "magnetar",
-      "meisskey",
-      "nexkey",
-      "pawkey",
-      "quollkey",
-      "sharkey",
-      "tanukey",
-      "yoiyami",
-      "yojo-art",
-    ],
-    pleroma: [
-      "akkoma",
-      "cagando",
-      "gharab-tzereq",
-      "incestoma",
-      "instance-softwarename",
-    ],
-    forum: ["lemmy", "kbin", "mbin", "mobilizon", "piefed"],
-    blog: [
-      "blog-server",
-      "clanspub",
-      "contentnation",
-      "dch-blog",
-      "forte",
-      "goblog",
-      "hatsu",
-      "hubzilla",
-      "oolong",
-      "owl-blogs",
-      "ma-at",
-      "monoplace-ca",
-      "microblogpub",
-      "microdotblog",
-      "nettepuoti-activitypub-limited-support",
-      "paul-kinlan-me",
-      "scrapblog",
-      "writefreely",
-    ],
-    social: [
-      "98gravity-electro",
-      "amiverse",
-      "bonfire",
-      "bookwyrm",
-      "bovine",
-      "bonfou",
-      "brighteon",
-      "cattle-grid",
-      "comal",
-      "cosmoslide",
-      "ditto",
-      "dope-network",
-      "dumpster-federation",
-      "elgg",
-      "emissary",
-      "encryptr-net",
-      "frequency",
-      "funkwhale",
-      "gancio",
-      "gnusocial",
-      "hackerspub",
-      "handle",
-      "friendica",
-      "pixelfed",
-      "harmony",
-      "hollo",
-      "honk",
-      "hourlyphoto",
-      "iceshrimp-net",
-      "incise",
-      "kiiteitte",
-      "ktistec",
-      "letter",
-      "mammuthus",
-      "plume",
-      "snac",
-      "soapbox",
-      "socialhome",
-      "smithereen",
-      "takahe",
-      "wafrn",
-      "wellesley",
-    ],
-    relay: [
-      "activity-relay",
-      "activityrelay",
-      "aoderelay",
-      "awakari",
-      "buzzrelay",
-      "pub-relay",
-      "selective-relay",
-    ],
-    bridge: [
-      "bird-meetup",
-      "birdsitelive",
-      "bridgy-fed",
-      "ccworld-ap-bridge",
-      "encyclia",
-      "momostr",
-      "notestock",
-    ],
-    bot: ["fedichatbot", "movietitler", "tiofomento-fedverse-bot"],
-    video: ["loops", "peertube", "open-streaming-platform", "owncast"],
-    unknown: [
-      "activitypods",
-      "activity-xsrv-win",
-      "activitypub-rails",
-      "appy",
-      "betula",
-      "bugle",
-      "capubara",
-      "careercupid",
-      "castling-club",
-      "chess-infinito-nexus",
-      "claremontwx",
-      "codename-merp",
-      "d250g2",
-      "dailyrucks",
-      "divedb",
-      "drupal",
-      "dxnet",
-      "eliza-and-the-moneymakers",
-      "fediblock-instance",
-      "fedifolio",
-      "fedipage",
-      "fedirouter",
-      "fedsy",
-      "flohmarkt",
-      "finalboss",
-      "forgejo",
-      "forgeflux",
-      "gathio",
-      "g105b",
-      "gitea",
-      "gush",
-      "hanbitfediverse",
-      "hiddenphox",
-      "hono",
-      "ibis",
-      "itinerariummentis",
-      "lipupini",
-      "lotide",
-      "lubargw2",
-      "manyfold",
-      "meshdags-site-a-dags-dk",
-      "metazine",
-      "mitra",
-      "mobilizon",
-      "mostr",
-      "nextcloud-social",
-      "nextcloud",
-      "orizuru",
-      "citizen4",
-      "luon-cloud",
-      "simcloud",
-      "the-lukes-cloud",
-      "neodb",
-      "nodebb",
-      "octofedi",
-      "openlink-virtuoso",
-      "postmarks",
-      "single-file-activitypub-server-in-php",
-      "undefined",
-      "private",
-      "pub",
-      "pinka",
-      "pichuchen-tw-webserver",
-      "vernissage",
-      "squidcity",
-      "sutty-distributed-press",
-      "tootik",
-      "wxwclub",
-    ],
-  };
 
   applyStaticStrings(strings);
   setStatusMessage(strings.loading, { busy: true });
@@ -434,12 +237,7 @@
   }
 
   function findParentSoftware(key) {
-    for (const parent in SOFTWARE_LINEAGE) {
-      if (SOFTWARE_LINEAGE[parent].includes(key)) {
-        return parent;
-      }
-    }
-    return null;
+    return softwareParentByMember.get(key) ?? null;
   }
 
   function bindFilters() {
@@ -805,6 +603,67 @@
       );
       return [];
     }
+  }
+
+  async function loadSoftwareTaxonomy() {
+    try {
+      const response = await fetch(resolveAssetUrl("data/software_taxonomy.json"), {
+        cache: "no-store",
+      });
+      if (!response.ok) {
+        throw new Error(
+          `소프트웨어 분류 데이터를 불러올 수 없습니다: ${response.status}`
+        );
+      }
+      return normalizeSoftwareTaxonomy(await response.json());
+    } catch (error) {
+      console.info(
+        "소프트웨어 분류 데이터를 불러오지 못했습니다. 개별 목록으로 표시합니다.",
+        error
+      );
+      return { group_order: [], groups: {} };
+    }
+  }
+
+  function normalizeSoftwareTaxonomy(value) {
+    if (!value || typeof value !== "object") {
+      return { group_order: [], groups: {} };
+    }
+
+    const rawGroups =
+      value.groups && typeof value.groups === "object" ? value.groups : {};
+    const groups = {};
+    Object.entries(rawGroups).forEach(([rawGroupId, rawGroup]) => {
+      const groupId = normalizeSoftwareKey(rawGroupId);
+      if (!groupId || !rawGroup || typeof rawGroup !== "object") return;
+      const members = Array.isArray(rawGroup.members)
+        ? rawGroup.members.map(normalizeSoftwareKey).filter(Boolean)
+        : [];
+      groups[groupId] = {
+        type: stringOrNull(rawGroup.type) ?? "category",
+        members: Array.from(new Set(members)),
+      };
+    });
+
+    const groupOrder = Array.isArray(value.group_order)
+      ? value.group_order
+          .map(normalizeSoftwareKey)
+          .filter((groupId) => groupId && groupId in groups)
+      : [];
+
+    return {
+      group_order: Array.from(new Set(groupOrder)),
+      groups,
+    };
+  }
+
+  function buildSoftwareParentMap(groups) {
+    const parents = new Map();
+    Object.entries(groups).forEach(([groupId, group]) => {
+      const members = Array.isArray(group?.members) ? group.members : [];
+      members.forEach((member) => parents.set(member, groupId));
+    });
+    return parents;
   }
 
   function createStatsMap(stats) {
@@ -1314,8 +1173,8 @@
     const usedKeys = new Set();
 
     // 1) 미리 정의한 상위 카테고리들부터 채우기
-    SOFTWARE_ORDER.forEach((parent) => {
-      const children = SOFTWARE_LINEAGE[parent] || [];
+    softwareOrder.forEach((parent) => {
+      const children = softwareGroups[parent]?.members || [];
       const childList = [];
       let total = 0;
 
@@ -1373,7 +1232,7 @@
     allItem.appendChild(allBtn);
     list.appendChild(allItem);
 
-    // 2) SOFTWARE_LINEAGE 기반 트리 구성
+    // 2) 외부 taxonomy 기반 트리 구성
     const tree = buildSoftwareTree(rows);
 
     // 헬퍼: 부모 카테고리 하나 렌더링하는 함수
@@ -1435,7 +1294,7 @@
     }
 
     // 3) 미리 정한 순서대로 상위 카테고리 렌더
-    SOFTWARE_ORDER.forEach((parentKey) => {
+    softwareOrder.forEach((parentKey) => {
       if (tree[parentKey]) {
         renderParent(parentKey);
       }
@@ -1443,7 +1302,7 @@
 
     // 4) 카테고리에 안 들어간 소프트웨어들을 맨 아래에 알파벳 순으로 추가
     const extraKeys = Object.keys(tree).filter(
-      (key) => !SOFTWARE_ORDER.includes(key)
+      (key) => !softwareOrder.includes(key)
     );
 
     if (extraKeys.length > 0) {
