@@ -12,12 +12,6 @@ from pathlib import Path
 from typing import Tuple, List, Dict, Set
 import argparse
 
-# 알려진 스팸 TLD 목록
-SPAM_TLDS = [
-    '.tk', '.ml', '.ga', '.cf', '.gq',  # 무료 TLD
-    '.click', '.loan', '.download', '.racing', '.review',  # 스팸에 자주 사용됨
-]
-
 # 의심스러운 키워드
 SPAM_KEYWORDS = [
     'porn', 'xxx', 'adult', 'sex', 'casino', 'poker', 'betting',
@@ -56,11 +50,10 @@ def load_blocklist(blocklist_file: str = None) -> Set[str]:
 
 def check_domain_pattern(host: str) -> Tuple[bool, str]:
     """도메인 패턴이 의심스러운지 확인"""
-    
-    # 스팸 TLD 확인
-    for tld in SPAM_TLDS:
-        if host.endswith(tld):
-            return True, f"스팸 TLD: {tld}"
+
+    # A TLD alone is not evidence of abuse. Legitimate Fediverse servers use
+    # both free and inexpensive TLDs, so confirmed abusive hosts belong in the
+    # exact-match blocklist instead of a registry-wide TLD denylist.
     
     # 의심스러운 키워드
     host_lower = host.lower()

@@ -109,6 +109,8 @@ When a repository explicitly identifies itself as a fork of Mastodon, Misskey, P
 
 `instances.json` contains discovery seeds, while `monitored_instances.json` is the persistent canonical-host registry. The collector checks the monitored registry, writes verified records to `stats.ok.json`, and retains failures locally in `stats.bad.json` for diagnosis and recovery checks.
 
+Optional peer discovery applies an exact-host blocklist, domain-pattern heuristics, and statistical anomaly checks before manual review. A TLD alone never causes a candidate to be rejected; confirmed abusive servers should be blocked by their exact host instead.
+
 The scheduled workflow runs daily at 21:00 UTC. It collects into an isolated staging directory, builds `software_registry.json`, validates the complete dataset, promotes validated outputs, commits changed tracked data, and deploys the public Pages artifact.
 
 ## Local setup
@@ -150,7 +152,7 @@ python -m pytest
 | `scripts/fetch_stats.py` | Collect and normalize public Fediverse instance metadata |
 | `scripts/build_software_registry.py` | Generate the public software registry |
 | `scripts/build_software_review_queue.py` | Prioritize unknown and unclassified software for manual review |
-| `scripts/filter_spam.py` | Filter suspicious peer-discovery candidates |
+| `scripts/filter_spam.py` | Filter peer candidates using an exact blocklist, domain heuristics, and anomaly checks |
 | `scripts/validate_data.py` | Validate tracked and generated data invariants |
 
 ## Privacy and license

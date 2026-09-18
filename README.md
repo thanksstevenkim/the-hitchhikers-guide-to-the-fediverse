@@ -176,6 +176,7 @@ python scripts/validate_data.py
 - `--peer-output -`을 사용하면 후보를 파일 대신 표준 출력으로 보낼 수 있습니다.
 - `filter_spam.py --dry-run`은 필터 결과를 파일에 쓰지 않습니다.
 - `--blocklist <파일>`로 로컬 추가 차단 목록을 지정할 수 있습니다.
+- TLD 자체는 스팸 판정 근거로 사용하지 않습니다. 확인된 악성 호스트는 정확한 도메인 단위로 blocklist에 기록합니다.
 - 새 후보를 `stats.ok.json`에 합치기 전에는 결과와 진단 로그를 사람이 검토해야 합니다.
 
 `--input`으로 전달하는 피어 후보 목록에서는 monitored registry, `stats.ok.json`, `stats.bad.json`, legacy `stats.json`, aliases를 기준으로 이미 알려진 호스트를 제외합니다. 이 중복 제거는 seed/monitored health refresh에는 적용되지 않습니다. `--discover-peers`는 전체 monitored 대상을 검사하면서 peers를 모으되, 이미 알려진 호스트를 한 번 계산해 suggestion에서 제외합니다.
@@ -194,7 +195,7 @@ python -m pytest
 | 스크립트         | 역할                                                   |
 | ---------------- | ------------------------------------------------------ |
 | `fetch_stats.py` | ActivityPub 노드/플랫폼별 API를 통해 통계 수집 및 검증 |
-| `filter_spam.py` | 도메인 이름 기반 스팸·광고·비정상 후보 자동 필터링     |
+| `filter_spam.py` | 명시적 blocklist·도메인 휴리스틱·통계 이상 기반 후보 필터링 |
 | `build_software_registry.py` | 정상 관측치와 taxonomy를 결합해 공개 소프트웨어 레지스트리 생성 |
 | `build_software_review_queue.py` | 미분류 소프트웨어를 이름별로 집계해 검토 대기열 생성 |
 | `validate_data.py` | 배포 데이터의 JSON 형식과 필수 필드 검증 |
