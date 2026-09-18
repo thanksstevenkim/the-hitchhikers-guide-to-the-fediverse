@@ -33021,7 +33021,7 @@
     "host": "cloud.schmidl.dev",
     "url": "https://cloud.schmidl.dev",
     "source": "peer",
-    "platform": "nextcloud social"
+    "platform": "nextcloud-social"
   },
   {
     "host": "cloud.simon-koester.de",
@@ -80592,6 +80592,13 @@
     "platform": "wordpress"
   },
   {
+    "host": "kronk.info",
+    "url": "https://mastodon.kronk.info",
+    "source": "legacy",
+    "name": "mastodon.kronk.info",
+    "platform": "mastodon"
+  },
+  {
     "host": "kroo.co",
     "url": "https://kroo.co",
     "source": "legacy",
@@ -97836,12 +97843,6 @@
     "platform": "mastodon"
   },
   {
-    "host": "mastodon.kronk.info",
-    "url": "https://mastodon.kronk.info",
-    "source": "legacy",
-    "platform": "mastodon"
-  },
-  {
     "host": "mastodon.kroy.io",
     "url": "https://mastodon.kroy.io",
     "source": "legacy",
@@ -110901,7 +110902,7 @@
     "host": "mk.outv.im",
     "url": "https://mk.outv.im",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "misskey"
   },
   {
     "host": "mk.pars.ee",
