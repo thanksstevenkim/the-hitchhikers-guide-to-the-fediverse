@@ -196,6 +196,79 @@ def test_workers_one_still_processes_all_hosts() -> None:
     assert len(completed) == len(instances)
 
 
+def test_select_instance_range_uses_zero_based_sorted_slice() -> None:
+    instances = [make_instance(f"host-{index}.example") for index in range(6)]
+
+    selected = fetch_stats.select_instance_range(instances, 2, 3)
+
+    assert [instance.host for instance in selected] == [
+        "host-2.example",
+        "host-3.example",
+        "host-4.example",
+    ]
+
+
+def test_trace_host_logs_start_and_end(
+    monkeypatch: pytest.MonkeyPatch,
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    instance = make_instance("trace.example")
+    monkeypatch.setattr(
+        fetch_stats,
+        "process_instance",
+        lambda instance, timestamp, *, discover_peers=False: make_result(instance),
+    )
+
+    with caplog.at_level("INFO"):
+        fetch_stats.fetch_instance_observation(
+            instance,
+            TIMESTAMP,
+            trace_host=True,
+        )
+
+    assert "TRACE START trace.example" in caplog.text
+    assert "TRACE END trace.example" in caplog.text
+
+
+def test_main_applies_range_after_sorted_target_selection(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    data_dir = tmp_path / "data"
+    instances = [make_instance(f"host-{index}.example") for index in range(5)]
+    prepare_data(data_dir, instances)
+    processed: list[str] = []
+
+    def fake_process(
+        instance: fetch_stats.Instance,
+        timestamp: str,
+        *,
+        discover_peers: bool = False,
+    ):
+        processed.append(instance.host)
+        return make_result(instance)
+
+    monkeypatch.setattr(fetch_stats, "process_instance", fake_process)
+    monkeypatch.setattr(
+        "sys.argv",
+        [
+            "fetch_stats.py",
+            "--data-dir",
+            str(data_dir),
+            "--start-index",
+            "1",
+            "--limit",
+            "2",
+            "--workers",
+            "1",
+        ],
+    )
+
+    fetch_stats.main()
+
+    assert processed == ["host-1.example", "host-2.example"]
+
+
 def test_pipeline_deduplicates_duplicate_host_submissions() -> None:
     duplicate = make_instance("duplicate.example")
     calls = 0
@@ -357,9 +430,11 @@ def test_alias_result_keeps_registry_canonical_and_ok_subset_monitored() -> None
         ("--workers", str(fetch_stats.MAX_WORKERS + 1)),
         ("--checkpoint-every", "0"),
         ("--checkpoint-every", "not-a-number"),
+        ("--start-index", "-1"),
+        ("--limit", "0"),
     ],
 )
-def test_invalid_concurrency_cli_values_are_rejected(
+def test_invalid_numeric_cli_values_are_rejected(
     option: str, value: str, monkeypatch: pytest.MonkeyPatch
 ) -> None:
     monkeypatch.setattr("sys.argv", ["fetch_stats.py", option, value])

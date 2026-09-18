@@ -335,8 +335,11 @@ def fetch_instance_observation(
     timestamp: str,
     *,
     discover_peers: bool = False,
+    trace_host: bool = False,
 ) -> FetchResult:
     """Run network collection in a worker without mutating shared state."""
+    if trace_host:
+        logging.info("TRACE START %s", instance.host)
     try:
         result = process_instance(
             instance, timestamp, discover_peers=discover_peers
@@ -348,6 +351,9 @@ def fetch_instance_observation(
     except Exception as exc:
         logging.exception("FATAL while processing %s", instance.host)
         return failure_result(instance, timestamp, exc)
+    finally:
+        if trace_host:
+            logging.info("TRACE END %s", instance.host)
 
 
 def register_alias_observation(
@@ -594,6 +600,16 @@ def deduplicate_instances(
     return [unique[host] for host in sorted(unique)]
 
 
+def select_instance_range(
+    instances: Sequence[Instance],
+    start_index: int = 0,
+    limit: Optional[int] = None,
+) -> List[Instance]:
+    """Select a deterministic zero-based slice from the sorted target list."""
+    stop = None if limit is None else start_index + limit
+    return list(instances[start_index:stop])
+
+
 def main() -> None:
     args = parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -615,9 +631,28 @@ def main() -> None:
     else:
         instances = monitored_instances(monitored, aliases)
     instances = deduplicate_instances(instances, aliases)
+    available_total = len(instances)
+    instances = select_instance_range(instances, args.start_index, args.limit)
+
+    if args.start_index or args.limit is not None:
+        logging.info(
+            "Selected collection range: start_index=%d limit=%s selected=%d available=%d",
+            args.start_index,
+            args.limit if args.limit is not None else "all",
+            len(instances),
+            available_total,
+        )
 
     if not instances:
-        if args.input:
+        if args.start_index or args.limit is not None:
+            logging.error(
+                "Selected collection range is empty: start_index=%d "
+                "limit=%s available=%d",
+                args.start_index,
+                args.limit if args.limit is not None else "all",
+                available_total,
+            )
+        elif args.input:
             logging.info("No new candidate instances to process.")
         else:
             logging.error(
@@ -667,6 +702,7 @@ def main() -> None:
                 instance,
                 timestamp,
                 discover_peers=args.discover_peers,
+                trace_host=args.trace_hosts,
             ),
         )
     except KeyboardInterrupt:
@@ -710,6 +746,32 @@ def bounded_positive_int(label: str, maximum: int) -> Callable[[str], int]:
     return parse
 
 
+def nonnegative_int(label: str) -> Callable[[str], int]:
+    def parse(value: str) -> int:
+        try:
+            number = int(value)
+        except ValueError as exc:
+            raise argparse.ArgumentTypeError(f"{label} must be an integer") from exc
+        if number < 0:
+            raise argparse.ArgumentTypeError(f"{label} must be zero or greater")
+        return number
+
+    return parse
+
+
+def positive_int(label: str) -> Callable[[str], int]:
+    def parse(value: str) -> int:
+        try:
+            number = int(value)
+        except ValueError as exc:
+            raise argparse.ArgumentTypeError(f"{label} must be an integer") from exc
+        if number < 1:
+            raise argparse.ArgumentTypeError(f"{label} must be one or greater")
+        return number
+
+    return parse
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Fetch ActivityPub stats with bounded concurrency and atomic checkpoints."
@@ -747,6 +809,23 @@ def parse_args() -> argparse.Namespace:
             "Atomically save completed results after this many hosts "
             f"(default: {DEFAULT_CHECKPOINT_EVERY})."
         ),
+    )
+    parser.add_argument(
+        "--start-index",
+        type=nonnegative_int("start index"),
+        default=0,
+        help="Zero-based index of the first sorted target to process (default: 0).",
+    )
+    parser.add_argument(
+        "--limit",
+        type=positive_int("limit"),
+        default=None,
+        help="Maximum number of sorted targets to process.",
+    )
+    parser.add_argument(
+        "--trace-hosts",
+        action="store_true",
+        help="Log each host immediately before and after its network collection.",
     )
     return parser.parse_args()
 
