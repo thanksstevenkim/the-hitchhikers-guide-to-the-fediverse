@@ -2,6 +2,7 @@
 node_modules/
 *.log
 .venv/
+.venv312/
 __pycache__/
 _site/
 
