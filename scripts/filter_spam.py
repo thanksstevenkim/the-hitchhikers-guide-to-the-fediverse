@@ -8,9 +8,21 @@ peer_suggestions.json에서 의심스러운 서버를 자동으로 걸러냅니�
 import json
 import re
 import sys
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Tuple, List, Dict, Set
+from typing import Tuple, List, Dict
 import argparse
+
+
+DEFAULT_BLOCKLIST_PATH = (
+    Path(__file__).resolve().parent.parent / "data" / "spam_domain_blocklist.json"
+)
+
+
+@dataclass(frozen=True)
+class DomainBlocklist:
+    exact_hosts: frozenset[str] = frozenset()
+    domain_suffixes: frozenset[str] = frozenset()
 
 # 의심스러운 키워드
 SPAM_KEYWORDS = [
@@ -29,23 +41,71 @@ SPAM_PATTERNS = [
 ]
 
 
-def load_blocklist(blocklist_file: str = None) -> Set[str]:
-    """외부 블랙리스트 파일 로드 (선택사항)"""
+def normalize_domain_rule(value: object) -> str:
+    if not isinstance(value, str):
+        return ""
+    return value.strip().lower().rstrip(".")
+
+
+def normalize_domain_rules(values: object, label: str) -> frozenset[str]:
+    if not isinstance(values, list):
+        raise ValueError(f"{label} must be a list")
+    normalized = {normalize_domain_rule(value) for value in values}
+    normalized.discard("")
+    return frozenset(normalized)
+
+
+def load_blocklist(blocklist_file: str = None) -> DomainBlocklist:
+    """정확한 호스트와 확인된 악성 도메인 영역을 로드합니다."""
     if not blocklist_file or not Path(blocklist_file).exists():
-        return set()
+        return DomainBlocklist()
     
     try:
         with open(blocklist_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
-            # 리스트 형태 또는 도메인 키를 가진 딕셔너리 형태 모두 지원
+            # 이전 형식(리스트 또는 도메인 키 딕셔너리)은 exact host로 유지합니다.
             if isinstance(data, list):
-                return set(data)
-            elif isinstance(data, dict):
-                return set(data.keys())
+                return DomainBlocklist(
+                    exact_hosts=normalize_domain_rules(data, "blocklist")
+                )
+            if isinstance(data, dict) and (
+                "exact_hosts" in data or "domain_suffixes" in data
+            ):
+                if data.get("schema_version") != 1:
+                    raise ValueError("schema_version must be 1")
+                return DomainBlocklist(
+                    exact_hosts=normalize_domain_rules(
+                        data.get("exact_hosts", []), "exact_hosts"
+                    ),
+                    domain_suffixes=normalize_domain_rules(
+                        data.get("domain_suffixes", []), "domain_suffixes"
+                    ),
+                )
+            if isinstance(data, dict):
+                return DomainBlocklist(
+                    exact_hosts=frozenset(
+                        rule
+                        for key in data
+                        if (rule := normalize_domain_rule(key))
+                    )
+                )
+            raise ValueError("blocklist must be a list or object")
     except Exception as e:
         print(f"Warning: 블랙리스트 로드 실패: {e}", file=sys.stderr)
-    
-    return set()
+
+    return DomainBlocklist()
+
+
+def check_blocklist(host: str, blocklist: DomainBlocklist) -> Tuple[bool, str]:
+    normalized_host = normalize_domain_rule(host)
+    if normalized_host in blocklist.exact_hosts:
+        return True, f"차단된 정확한 호스트: {normalized_host}"
+
+    for suffix in sorted(blocklist.domain_suffixes):
+        if normalized_host == suffix or normalized_host.endswith(f".{suffix}"):
+            return True, f"차단된 도메인 영역: {suffix}"
+
+    return False, None
 
 
 def check_domain_pattern(host: str) -> Tuple[bool, str]:
@@ -99,7 +159,10 @@ def check_stats_anomaly(instance: Dict) -> Tuple[bool, str]:
     return False, None
 
 
-def is_spam_server(instance: Dict, blocklist: Set[str] = None) -> Tuple[bool, str]:
+def is_spam_server(
+    instance: Dict,
+    blocklist: DomainBlocklist = None,
+) -> Tuple[bool, str]:
     """
     여러 휴리스틱으로 스팸 서버 판별
     
@@ -110,8 +173,10 @@ def is_spam_server(instance: Dict, blocklist: Set[str] = None) -> Tuple[bool, st
     host = instance.get('host', '')
     
     # 1. 외부 블랙리스트 확인
-    if blocklist and host in blocklist:
-        return True, "외부 블랙리스트에 등재됨"
+    if blocklist:
+        is_blocked, reason = check_blocklist(host, blocklist)
+        if is_blocked:
+            return True, reason
     
     # 2. ActivityPub 검증 실패 (verified_activitypub 필드가 명시적으로 False인 경우만)
     # 필드가 없는 경우는 통과 (단순 도메인 목록일 수 있음)
@@ -151,11 +216,39 @@ def filter_spam(
     Returns:
         필터링 통계 딕셔너리
     """
-    
-    # 입력 파일 로드
+
+    if not dry_run:
+        input_path = Path(input_file).resolve()
+        destinations = {
+            "출력": Path(output_file).resolve(),
+            "로그": Path(log_file).resolve() if log_file else None,
+        }
+        for label, destination in destinations.items():
+            if destination == input_path:
+                print(
+                    f"Error: {label} 파일은 입력 파일과 다른 경로여야 합니다: "
+                    f"{input_file}",
+                    file=sys.stderr,
+                )
+                sys.exit(1)
+
+    # 입력 파일 로드. 과거 필터 로그도 현재 규칙으로 재검토할 수 있습니다.
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
-            peers = json.load(f)
+            input_data = json.load(f)
+        if isinstance(input_data, list):
+            peers = input_data
+        elif isinstance(input_data, dict) and isinstance(
+            input_data.get('filtered_servers'), list
+        ):
+            peers = input_data['filtered_servers']
+        else:
+            print(
+                "Error: 입력 JSON은 후보 배열 또는 filtered_servers 배열을 가진 "
+                "필터 로그여야 합니다.",
+                file=sys.stderr,
+            )
+            sys.exit(1)
     except FileNotFoundError:
         print(f"Error: 입력 파일을 찾을 수 없습니다: {input_file}", file=sys.stderr)
         sys.exit(1)
@@ -165,8 +258,12 @@ def filter_spam(
     
     # 블랙리스트 로드
     blocklist = load_blocklist(blocklist_file)
-    if blocklist:
-        print(f"외부 블랙리스트 로드: {len(blocklist)}개 도메인")
+    if blocklist.exact_hosts or blocklist.domain_suffixes:
+        print(
+            "도메인 블랙리스트 로드: "
+            f"정확한 호스트 {len(blocklist.exact_hosts)}개, "
+            f"도메인 영역 {len(blocklist.domain_suffixes)}개"
+        )
     
     # 필터링 수행
     filtered = []
@@ -268,7 +365,11 @@ def main():
     )
     parser.add_argument(
         '--blocklist',
-        help='외부 블랙리스트 JSON 파일 경로 (선택)'
+        default=str(DEFAULT_BLOCKLIST_PATH),
+        help=(
+            '도메인 블랙리스트 JSON 파일 경로 '
+            '(기본: data/spam_domain_blocklist.json)'
+        )
     )
     parser.add_argument(
         '--dry-run',

@@ -109,7 +109,19 @@ When a repository explicitly identifies itself as a fork of Mastodon, Misskey, P
 
 `instances.json` contains discovery seeds, while `monitored_instances.json` is the persistent canonical-host registry. The collector checks the monitored registry, writes verified records to `stats.ok.json`, and retains failures locally in `stats.bad.json` for diagnosis and recovery checks.
 
-Optional peer discovery applies an exact-host blocklist, domain-pattern heuristics, and statistical anomaly checks before manual review. A TLD alone never causes a candidate to be rejected; confirmed abusive servers should be blocked by their exact host instead.
+Optional peer discovery applies exact-host and confirmed domain-zone blocklist rules, domain-pattern heuristics, and statistical anomaly checks before manual review. A TLD alone never causes a candidate to be rejected. Individual abusive servers belong in `exact_hosts`; a domain known to generate abusive hosts for the same purpose belongs in `domain_suffixes`. Suffix matching respects DNS label boundaries.
+
+The tracked rules live in `data/spam_domain_blocklist.json`. `--blocklist <file>` replaces that default for a local run. A historical `spam_filtered.log.json` can be passed directly as input to re-evaluate candidates after a rule change. Use separate output paths; the script rejects attempts to overwrite its input.
+
+```bash
+python scripts/filter_spam.py \
+  --input data/spam_filtered.log.json \
+  --output /tmp/recheck_candidates.json \
+  --log /tmp/recheck_filtered.log.json
+
+# Review both files, then collect only the candidates that passed.
+python scripts/fetch_stats.py --input /tmp/recheck_candidates.json
+```
 
 ### Coverage limits and seed diversity
 
@@ -175,7 +187,7 @@ python -m pytest
 | `scripts/fetch_stats.py` | Collect and normalize public Fediverse instance metadata |
 | `scripts/build_software_registry.py` | Generate the public software registry |
 | `scripts/build_software_review_queue.py` | Prioritize unknown and unclassified software for manual review |
-| `scripts/filter_spam.py` | Filter peer candidates using an exact blocklist, domain heuristics, and anomaly checks |
+| `scripts/filter_spam.py` | Filter peer candidates using exact-host and domain-suffix rules, domain heuristics, and anomaly checks |
 | `scripts/validate_data.py` | Validate tracked and generated data invariants |
 
 ## Privacy and license
