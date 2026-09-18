@@ -26612,7 +26612,7 @@
   {
     "host": "bookwyrm.it",
     "url": "https://bookwyrm.it",
-    "source": "legacy",
+    "source": "seed",
     "platform": "bookwyrm"
   },
   {
@@ -49112,7 +49112,7 @@
   {
     "host": "fe.disroot.org",
     "url": "https://fe.disroot.org",
-    "source": "legacy",
+    "source": "seed",
     "platform": "akkoma"
   },
   {
@@ -55988,7 +55988,7 @@
   {
     "host": "framatube.org",
     "url": "https://framatube.org",
-    "source": "legacy",
+    "source": "seed",
     "platform": "peertube"
   },
   {
@@ -57470,7 +57470,7 @@
   {
     "host": "friendica.world",
     "url": "https://friendica.world",
-    "source": "legacy",
+    "source": "seed",
     "platform": "friendica"
   },
   {
@@ -70310,7 +70310,7 @@
   {
     "host": "hub.netzgemeinde.eu",
     "url": "https://hub.netzgemeinde.eu",
-    "source": "legacy",
+    "source": "seed",
     "platform": "hubzilla"
   },
   {
@@ -111416,7 +111416,7 @@
   {
     "host": "mobilizon.fr",
     "url": "https://mobilizon.fr",
-    "source": "legacy",
+    "source": "seed",
     "platform": "mobilizon"
   },
   {
@@ -134499,7 +134499,7 @@
   {
     "host": "pixelfed.social",
     "url": "https://pixelfed.social",
-    "source": "legacy",
+    "source": "seed",
     "platform": "pixelfed"
   },
   {
@@ -199334,7 +199334,7 @@
   {
     "host": "write.as",
     "url": "https://write.as",
-    "source": "peer",
+    "source": "seed",
     "platform": "writefreely"
   },
   {
