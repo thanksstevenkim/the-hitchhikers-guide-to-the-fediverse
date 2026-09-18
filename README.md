@@ -18,7 +18,7 @@ GitHub Pages로 그대로 호스팅할 수 있으며, 한국어·영어 UI와 �
 
 | 파일 | Git | Pages | 역할 |
 | --- | --- | --- | --- |
-| `data/instances.json` | 유지 | 포함 | 피어 탐색을 시작하는 수동 seed 목록. 전체 운영 목록이 아님 |
+| `data/instances.json` | 유지 | 포함 | 피어 탐색 시작점과 생태계 직접 관측을 위한 수동 seed 목록. 전체 운영 목록이 아님 |
 | `data/monitored_instances.json` | 유지 | 제외 | 상태와 무관하게 계속 health check할 전체 canonical host registry |
 | `data/stats.ok.json` | 유지 | 포함 | 검증을 통과한 공개 통계. 사이트의 유일한 통계 입력 |
 | `data/software_taxonomy.json` | 유지 | 포함 | 소프트웨어 계열·용도별 분류와 사이드바 표시 순서 |
@@ -102,6 +102,29 @@ seed → discovery → candidate review → monitored → health check → OK/BA
 - GOOD/BAD 전환은 표시 상태만 바꾸며 monitored membership은 삭제하지 않습니다.
 - registry가 없거나 비어 있는 기존 checkout은 첫 수집 때 `instances.json ∪ stats.ok.json`으로 비파괴 bootstrap됩니다.
 - alias는 저장 전에 canonical host로 정규화되므로 같은 인스턴스가 registry에 중복되지 않습니다.
+
+### 수집 범위와 seed 다양성
+
+이 프로젝트의 데이터는 Fediverse 전체에 대한 완전한 인구조사가 아닙니다. 수동 seed에서 시작해 공개된 피어 관계와 공개 API로 발견하고, 실제 응답을 검증할 수 있었던 서버의 표본입니다. 피어 목록을 공개하지 않거나 기존 seed와 연결되지 않은 서버, 일시적으로 응답하지 않은 서버, 접근이 제한된 서버는 포함되지 않을 수 있습니다. 따라서 관측된 소프트웨어 비율이나 서버 규모 분포를 Fediverse 전체의 점유율 또는 개인 서버 비율로 해석해서는 안 됩니다.
+
+seed는 두 역할을 가집니다. `discovery` seed는 수집기가 지원하는 피어 경로를 통해 새로운 후보를 찾는 출발점이고, `coverage` seed는 피어 목록 제공 여부와 관계없이 특정 소프트웨어·용도권을 매번 직접 확인하는 기준점입니다. 아래 표는 우선 관리할 대표 범위이며 전체 taxonomy를 열거한 것은 아닙니다. 특정 서버를 seed로 선택하는 것은 해당 운영 정책에 대한 보증이나 추천을 의미하지 않습니다.
+
+| 용도 | 소프트웨어·계열 | 대표 seed | 역할 | 상태 |
+| --- | --- | --- | --- | --- |
+| 마이크로블로그 | Mastodon 계열 | `mastodon.social` 외 7개 | discovery | 기존 |
+| 마이크로블로그 | Misskey 계열 | `misskey.io`, `aoharu.place` | discovery | 기존 |
+| 마이크로블로그 | Pleroma 계열(Akkoma) | `fe.disroot.org` | coverage | 이번 보강 |
+| 경량 마이크로블로그 | GoToSocial | — | coverage | 미보강 |
+| 포럼·토론 | Lemmy | `lemmy.ml` | coverage | 기존 |
+| 사진 | Pixelfed | `pixelfed.social` | coverage | 이번 보강 |
+| 동영상 | PeerTube | `framatube.org` | coverage | 이번 보강 |
+| 독서·서평 | BookWyrm | `bookwyrm.it` | coverage | 이번 보강 |
+| 행사·그룹 | Mobilizon | `mobilizon.fr` | coverage | 이번 보강 |
+| 범용 소셜 네트워크 | Friendica | `friendica.world` | coverage | 이번 보강 |
+| 허브·퍼블리싱 | Hubzilla | `hub.netzgemeinde.eu` | coverage | 이번 보강 |
+| 장문 블로그 | WriteFreely | `write.as` | coverage | 이번 보강 |
+| 오디오·음악 | Funkwhale | — | coverage | 미보강 |
+| 소프트웨어 포지 | Forgejo | — | coverage | 미보강 |
 
 ### 소프트웨어 taxonomy
 
