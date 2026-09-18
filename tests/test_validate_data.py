@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional
 
 import pytest
 
-from scripts import validate_data
+from scripts import build_software_registry, validate_data
 
 
 def make_record(host: str, *, good: bool) -> Dict[str, Any]:
@@ -35,19 +35,21 @@ def prepare_data(
     aliases: Optional[Dict[str, str]] = None,
 ) -> None:
     data_dir.mkdir()
-    write_json(
-        data_dir / "software_taxonomy.json",
-        {
-            "schema_version": 1,
-            "group_order": ["mastodon", "unknown"],
-            "groups": {
-                "mastodon": {"type": "family", "members": []},
-                "unknown": {"type": "fallback", "members": []},
-            },
+    taxonomy = {
+        "schema_version": 1,
+        "group_order": ["mastodon", "unknown"],
+        "groups": {
+            "mastodon": {"type": "family", "members": []},
+            "unknown": {"type": "fallback", "members": []},
         },
-    )
+    }
+    write_json(data_dir / "software_taxonomy.json", taxonomy)
     write_json(data_dir / "instances.json", [{"name": "A", "url": "https://a.example"}])
     write_json(data_dir / "stats.ok.json", ok)
+    write_json(
+        data_dir / "software_registry.json",
+        build_software_registry.build_software_registry(ok, taxonomy),
+    )
     write_json(data_dir / "stats.bad.json", bad)
     write_json(data_dir / "manual_overrides.json", {})
     write_json(data_dir / "host_aliases.json", aliases or {})
@@ -161,4 +163,20 @@ def test_ok_host_must_be_present_in_monitored_registry(tmp_path: Path) -> None:
     )
 
     with pytest.raises(validate_data.ValidationError, match="missing from monitored"):
+        validate_data.validate_data_dir(data_dir)
+
+
+def test_stale_software_registry_is_rejected(tmp_path: Path) -> None:
+    data_dir = tmp_path / "data"
+    prepare_data(
+        data_dir,
+        ok=[make_record("a.example", good=True)],
+        bad=[],
+    )
+    registry_path = data_dir / "software_registry.json"
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    registry["software"][0]["healthy_instance_count"] = 999
+    write_json(registry_path, registry)
+
+    with pytest.raises(validate_data.ValidationError, match="stale"):
         validate_data.validate_data_dir(data_dir)

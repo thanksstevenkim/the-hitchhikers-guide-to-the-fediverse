@@ -50,6 +50,10 @@ jobs:
           --data-dir "${{ steps.staging.outputs.data_dir }}"
           --workers 16
           --checkpoint-every 100
+      - name: Build public software registry
+        run: >-
+          python scripts/build_software_registry.py
+          --data-dir "${{ steps.staging.outputs.data_dir }}"
       - name: Validate staged site data
         run: python scripts/validate_data.py --data-dir "${{ steps.staging.outputs.data_dir }}"
       - name: Promote validated data
@@ -59,11 +63,12 @@ jobs:
           cp "$staging_data/monitored_instances.json" data/monitored_instances.json
           cp "$staging_data/stats.ok.json" data/stats.ok.json
           cp "$staging_data/host_aliases.json" data/host_aliases.json
+          cp "$staging_data/software_registry.json" data/software_registry.json
       - name: Commit updated stats
         id: commit
         shell: bash
         run: |
-          tracked_outputs=(data/monitored_instances.json data/stats.ok.json data/host_aliases.json)
+          tracked_outputs=(data/monitored_instances.json data/stats.ok.json data/host_aliases.json data/software_registry.json)
           if git diff --quiet -- "${tracked_outputs[@]}"; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -80,7 +85,7 @@ jobs:
           mkdir -p _site/data
           cp index.html styles.css _site/
           cp -R js i18n _site/
-          cp data/instances.json data/stats.ok.json data/software_taxonomy.json _site/data/
+          cp data/instances.json data/stats.ok.json data/software_taxonomy.json data/software_registry.json _site/data/
           touch _site/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v4
