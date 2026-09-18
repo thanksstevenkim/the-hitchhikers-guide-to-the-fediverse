@@ -10,6 +10,7 @@ from scripts import build_software_review_queue, validate_data
 
 ROOT = Path(__file__).resolve().parents[1]
 TAXONOMY_PATH = ROOT / "data" / "software_taxonomy.json"
+STATS_PATH = ROOT / "data" / "stats.ok.json"
 
 
 def make_taxonomy() -> dict[str, object]:
@@ -67,6 +68,46 @@ def test_reviewed_software_has_expected_groups() -> None:
     assert classification["klonkt"] == "blog"
     assert classification["concrnt-ap-bridge"] == "bridge"
     assert "ap-tombstone" not in classification
+
+
+def test_repository_declared_forks_use_their_parent_family() -> None:
+    taxonomy = json.loads(TAXONOMY_PATH.read_text(encoding="utf-8"))
+    classification = build_software_review_queue.build_classification_map(taxonomy)
+
+    for software_id in {
+        "areionskey",
+        "cluckey",
+        "corpsekey",
+        "mk-go",
+        "pulsar",
+        "shorkey",
+        "turtkey",
+    }:
+        assert classification[software_id] == "misskey"
+
+
+def test_reviewed_specialized_software_uses_functional_categories() -> None:
+    taxonomy = json.loads(TAXONOMY_PATH.read_text(encoding="utf-8"))
+    classification = build_software_review_queue.build_classification_map(taxonomy)
+
+    assert classification["funkwhale"] == "audio"
+    assert classification["mobilizon"] == "events"
+    assert classification["forgejo"] == "forge"
+    assert classification["postmarks"] == "bookmarks"
+    assert classification["badgefed"] == "credentials"
+    assert classification["activitypub-server"] == "infrastructure"
+
+
+def test_current_healthy_snapshot_is_fully_reviewed() -> None:
+    taxonomy = json.loads(TAXONOMY_PATH.read_text(encoding="utf-8"))
+    stats = json.loads(STATS_PATH.read_text(encoding="utf-8"))
+
+    queue = build_software_review_queue.build_review_queue(stats, taxonomy)
+    queued_ids = {item["software_id"] for item in queue["software"]}
+
+    # This marker is deliberately not software taxonomy. The collector moves it
+    # to BAD immediately the next time that host is fetched.
+    assert queued_ids <= {"ap-tombstone"}
 
 
 def test_duplicate_software_membership_is_rejected(tmp_path: Path) -> None:
