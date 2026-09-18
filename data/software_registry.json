@@ -1,0 +1,5156 @@
+{
+  "schema_version": 1,
+  "taxonomy_schema_version": 1,
+  "dataset_fetched_at": "2026-09-17T23:24:33Z",
+  "software_count": 475,
+  "software": [
+    {
+      "software_id": "ecko",
+      "group_id": "mastodon",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ecko"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fedibird",
+      "group_id": "mastodon",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "fedibird"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "hometown",
+      "group_id": "mastodon",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 94,
+      "observed_names": [
+        "hometown"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "kmyblue",
+      "group_id": "mastodon",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 21,
+      "observed_names": [
+        "kmyblue"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mastodon",
+      "group_id": "mastodon",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 7971,
+      "observed_names": [
+        "mastodon"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "paon",
+      "group_id": "mastodon",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "paon"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "wildebeest",
+      "group_id": "mastodon",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 16,
+      "observed_names": [
+        "wildebeest"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "areionskey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "areionskey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "calckey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "calckey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "catodon",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 10,
+      "observed_names": [
+        "catodon"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cherrypick",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 60,
+      "observed_names": [
+        "cherrypick"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cluckey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "cluckey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "corpsekey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "corpsekey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "dolphin",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "dolphin"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "firefish",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 17,
+      "observed_names": [
+        "firefish"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "foundkey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "foundkey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "goblin",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "goblin"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "groundpolis-milkey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "groundpolis-milkey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "hickey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "hickey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "iceshrimp",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 76,
+      "observed_names": [
+        "iceshrimp"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "magnetar",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "magnetar"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "meisskey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 6,
+      "observed_names": [
+        "meisskey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "misskey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1051,
+      "observed_names": [
+        "misskey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mk-go",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "mk-go"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "nexkey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "pawkey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "pawkey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pulsar",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "pulsar"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "quollkey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "sharkey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 501,
+      "observed_names": [
+        "sharkey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "shorkey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "shorkey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tanukey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "turtkey",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "turtkey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "yoiyami",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "yoiyami"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "yojo-art",
+      "group_id": "misskey",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 5,
+      "observed_names": [
+        "yojo-art"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "akkoma",
+      "group_id": "pleroma",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 495,
+      "observed_names": [
+        "akkoma"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cagando",
+      "group_id": "pleroma",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Cagando"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "gharab-tzereq",
+      "group_id": "pleroma",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "gharab-tzereq"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "incestoma",
+      "group_id": "pleroma",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 5,
+      "observed_names": [
+        "incestoma"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "instance-softwarename",
+      "group_id": "pleroma",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "pleroma",
+      "group_id": "pleroma",
+      "group_type": "family",
+      "classification_status": "classified",
+      "healthy_instance_count": 573,
+      "observed_names": [
+        "pleroma"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "gotosocial",
+      "group_id": "gotosocial",
+      "group_type": "software",
+      "classification_status": "classified",
+      "healthy_instance_count": 1808,
+      "observed_names": [
+        "gotosocial"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ghost",
+      "group_id": "ghost",
+      "group_type": "software",
+      "classification_status": "classified",
+      "healthy_instance_count": 6042,
+      "observed_names": [
+        "ghost"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "wordpress",
+      "group_id": "wordpress",
+      "group_type": "software",
+      "classification_status": "classified",
+      "healthy_instance_count": 4152,
+      "observed_names": [
+        "wordpress"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "98gravity-electro",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "activipypub",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "activipypub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activities-next",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "activities-next"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ahodon",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ahodon"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "alvanista",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "alvanista"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "amiverse",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "aniverse",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "aniverse"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "appy",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "appy"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "aurboda",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "aurboda"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "axismundi",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "axismundi"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "babil",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "babil"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "baudrate",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "baudrate"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bizzfed",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "bizzfed"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bonfire",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 28,
+      "observed_names": [
+        "bonfire"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bonfou",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "bookwyrm",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 107,
+      "observed_names": [
+        "bookwyrm"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bovine",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "bovine"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "brighteon",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "brighteon"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "broca",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "broca"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bugle",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Bugle"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bulle",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "bulle"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "calamus",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "calamus"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "careercupid",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "careercupid"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "catalyst",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "catalyst"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cattle-grid",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "cf-activitypub",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "cf-activitypub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "chara-social",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "chara-social"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "charlamos",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "charlamos"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "chat",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "CHAT"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "checkin",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "checkin"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ciu",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "Ciu",
+        "ciu"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cocoartz",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "cocoartz"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "codename-merp",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Codename Merp"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "comal",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Comal"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "commonpub",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "commonpub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cookifed",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "cookifed"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cooltopia",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "cooltopia"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "coresignal",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "coresignal"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cosmoslide",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "cyritech-community",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "CYRITECH Community"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "d250g2",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "d250g2"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "dais",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "dais"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "daism",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "daism"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "darak",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "darak"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "demokratie-plattform",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "demokratie-plattform"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "diskrot",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "diskrot"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ditto",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ditto"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "dope-network",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "dope-network"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "dumpster-federation",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "dumpster-federation"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "echo",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Echo"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "egokey",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "egokey"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "egregoros",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "egregoros"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ehlabs",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ehlabs"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "elektrine",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "elektrine"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "elgg",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "elgg"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "emissary",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 9,
+      "observed_names": [
+        "emissary"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "encryptr-net",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "enigmatick",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "enigmatick"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "eunha",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "eunha"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "famweb",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "famweb"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "federated",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "federated"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fedibook",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "fedibook"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fedihood",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "fedihood"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fediloc",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "fediloc"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fediman",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "Fediman"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "foxhole",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "foxhole"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "frequency",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "frequency"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "friendica",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 335,
+      "observed_names": [
+        "friendica"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "gibrr",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "gibrr"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "glitchcafe",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "glitchcafe"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "gnusocial",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "gnusocial"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "gothread",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "gothread"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "grilledcheese",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "grilledcheese"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "gush",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "gush"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "hackerspub",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "hackerspub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "hanbitfediverse",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "hanbitfediverse"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "handle",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "handle"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "harmony",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "harmony"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "hollo",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 29,
+      "observed_names": [
+        "hollo"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "holos",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "holos"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "honk",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "honk"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "hourlyphoto",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "HourlyPhoto"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "humhub-fediverse",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "humhub-fediverse"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "hybridsocial",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "hybridsocial"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "iceshrimp-net",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 83,
+      "observed_names": [
+        "Iceshrimp.NET"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "imp",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "imp"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "incise",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "infotograf",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "infotograf"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "inkwell",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "inkwell"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "intermix",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "intermix"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "irwin",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "irwin"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "kiiteitte",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Kiiteitte"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "known",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "known"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "kotori",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "kotori"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "kroeg",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "kroeg"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ktistec",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 13,
+      "observed_names": [
+        "ktistec"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "letter",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "letter"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "littlefedi",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "littlefedi"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mammuthus",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 12,
+      "observed_names": [
+        "mammuthus"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "microblog",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "microblog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "millbody",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "millbody"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mischief",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "mischief"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "missive",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "missive"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mitra",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 60,
+      "observed_names": [
+        "mitra"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "moimcookr",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "MoimCookr"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "monodon",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "monodon"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "murlog",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "murlog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "na-real",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "na-real"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "nekonoverse",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "nekonoverse"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "openbook",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "openbook"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "openspace",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "openspace"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "orizuru",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "orizuru"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pawfed",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "pawfed"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "peermesh-pm-module-social",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "peermesh-pm-module-social"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pelago",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "pelago"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "perch",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "perch"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "perohub",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "perohub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pinka",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "pinka"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pixelfed",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 631,
+      "observed_names": [
+        "pixelfed"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "plume",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 24,
+      "observed_names": [
+        "plume"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pods-social",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "pods-social"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ponos",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "ponos"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "psh",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "psh"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pub",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "μpub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pubby",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "pubby"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "quolibet",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "quolibet"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "roosty",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "roosty"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "rullen",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "rullen"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "s-nna774-net",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "s.nna774.net"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "sakurasato",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "sakurasato"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "samklang",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "samklang"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "seiran",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "seiran"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "sequel",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "sequel"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "shoot",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "shoot"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "sigilverse",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "sigilverse"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "siliconbeest",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "siliconbeest"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "smallhold",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "smallhold"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "smithereen",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "smithereen"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "snac",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 348,
+      "observed_names": [
+        "snac"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "snacforge",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "snacforge"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "soapbox",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "social-wud",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "social-wud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "socialhome",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 8,
+      "observed_names": [
+        "socialhome"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "soda",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "soda"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "solo-masto",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "solo-masto"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "starling",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 16,
+      "observed_names": [
+        "starling"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "stegodon",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "stegodon"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "sukhi-fedi",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "sukhi-fedi"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tafarn",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Tafarn"
+      ],
+      "last_observed_at": "2026-09-16T23:33:46Z"
+    },
+    {
+      "software_id": "takahe",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 10,
+      "observed_names": [
+        "takahe"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "thoughts",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "thoughts"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tinyap",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "tinyap"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tokoroten",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "tokoroten"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tootik",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "tootik"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "touchgrass",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "touchgrass"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "typent",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "typent"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "uanna",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "uanna"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "unfathomably-be",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "unfathomably-be"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "unspoken",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "unspoken"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "vernissage",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 7,
+      "observed_names": [
+        "Vernissage"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "vutuv",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "vutuv"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "wafrn",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 31,
+      "observed_names": [
+        "wafrn"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "waq",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "waq"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "wegif",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "wegif"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "wellesley",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "welley",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 5,
+      "observed_names": [
+        "welley"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "wxwclub",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "wxwClub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "x-log",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "x-log"
+      ],
+      "last_observed_at": "2026-09-15T23:26:32Z"
+    },
+    {
+      "software_id": "xbuddy",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "xBuddy"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "youthopia",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "youthopia"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "yplev",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "yplev"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "zap",
+      "group_id": "social",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "zap"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activitypub",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ぷよ橋ActivityPub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "backdrop",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "backdrop"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bloedsuikerbaas-activitypub",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "bloedsuikerbaas-activitypub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "blog-server",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "capubara",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "capubara"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "changkyun-kim",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "changkyun-kim"
+      ],
+      "last_observed_at": "2026-09-15T23:26:32Z"
+    },
+    {
+      "software_id": "clanspub",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ClansPub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "clipsymphony-activitypub-service",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Clipsymphony ActivityPub service"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "contentnation",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ContentNation"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "coryd-dev",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "coryd.dev"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "dailyrucks",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "dailyrucks"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "dch-blog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "drupal",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 11,
+      "observed_names": [
+        "drupal"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "eindex-blog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "eindex-blog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fedipage",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "Fedipage"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "finalboss",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "finalboss"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "forte",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 15,
+      "observed_names": [
+        "forte"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "glommer",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "glommer"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "goblog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 7,
+      "observed_names": [
+        "goblog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "grav-fediverse-publisher",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "grav-fediverse-publisher"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "grouse",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "grouse"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "hatsu",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "hatsu"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "hubzilla",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 87,
+      "observed_names": [
+        "hubzilla"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "indiekit",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "indiekit"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "indiekit-cms",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "indiekit-cms"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "jgs-me",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "jgs-me"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "johnson-fyi-blog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "johnson-fyi-blog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "kaleido",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "kaleido"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "kate-wtf-11ty",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "Kate.wtf & 11ty"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "klaxon",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "Klaxon"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "klonkt",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 10,
+      "observed_names": [
+        "klonkt"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "labas",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "labas"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "lazcorpsite",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "lazcorpsite"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "lifepress",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "lifepress"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "logink",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "logink"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ma-at",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "macroblog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "macroblog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "madblog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "madblog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "marge",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "marge"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "matters-gateway-core",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "matters-gateway-core"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "microblogpub",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 28,
+      "observed_names": [
+        "microblogpub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "microdotblog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "microdotblog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "moments",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "moments"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "monoplace-ca",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "monoplace.ca"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "nettepuoti-activitypub-limited-support",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "nettepuoti ActivityPub limited support"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "newtqnia",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "newtqnia"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "notes",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "notes"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "omicron",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "omicron"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "oolong",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "oolong"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "outpost",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "outpost"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "owl-blogs",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "owl-blogs"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pandacap",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "Pandacap"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "paul-kinlan-me",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "paul.kinlan.me"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pelican-activitypub",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "pelican-activitypub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pgm",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "pgm"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "qaperture",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "qaperture"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "reisetagebuch",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "reisetagebuch"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "robida",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "robida"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ryanw-eu",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ryanw.eu"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "scrapblog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Scrapblog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "seos",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "seos"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "single-file-activitypub-server-in-php",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 30,
+      "observed_names": [
+        "Single File ActivityPub Server in PHP"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "snapsmack",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "snapsmack"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "sneaas",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "sneaas"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "social-blog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "social-blog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "solopub",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "solopub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "sutty-distributed-press",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 44,
+      "observed_names": [
+        "sutty-distributed-press"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "sveltekit-blog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "sveltekit-blog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "takesama",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "takesama"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tens-city",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "tens-city"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "thiswasnews",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "thiswasnews"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tinypub",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "tinypub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tomh-nl",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "tomh.nl"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "trails-cool",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "trails-cool"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "typecho",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "typecho"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "wallog",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "wallog"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "webfan",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "Webfan",
+        "webfan"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "writ",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "writ"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "writefreely",
+      "group_id": "blog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 634,
+      "observed_names": [
+        "writefreely"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "apboard",
+      "group_id": "forum",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "apboard"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "enigma-bbs",
+      "group_id": "forum",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "enigma-bbs"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fediforum",
+      "group_id": "forum",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "fediforum"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "kbin",
+      "group_id": "forum",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "lemmy",
+      "group_id": "forum",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 360,
+      "observed_names": [
+        "lemmy"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "lotide",
+      "group_id": "forum",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "lotide"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mbin",
+      "group_id": "forum",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 16,
+      "observed_names": [
+        "mbin"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "neogroup",
+      "group_id": "forum",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "neogroup"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "nodebb",
+      "group_id": "forum",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 39,
+      "observed_names": [
+        "NodeBB"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "piefed",
+      "group_id": "forum",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 73,
+      "observed_names": [
+        "piefed"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "loops",
+      "group_id": "video",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 22,
+      "observed_names": [
+        "loops"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "meshtube",
+      "group_id": "video",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "meshtube"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "open-streaming-platform",
+      "group_id": "video",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Open Streaming Platform"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "owncast",
+      "group_id": "video",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 286,
+      "observed_names": [
+        "owncast",
+        "Owncast"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "peertube",
+      "group_id": "video",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1572,
+      "observed_names": [
+        "peertube"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "scenes-cloud",
+      "group_id": "video",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "scenes-cloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "yt-on-fedi",
+      "group_id": "video",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "yt-on-fedi"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "funkwhale",
+      "group_id": "audio",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 69,
+      "observed_names": [
+        "funkwhale"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "kromosynth",
+      "group_id": "audio",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "kromosynth"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mixpal",
+      "group_id": "audio",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "mixpal"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "musicsocial",
+      "group_id": "audio",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "musicsocial"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "podcast-peformance",
+      "group_id": "audio",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "podcast-peformance"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "podfriend",
+      "group_id": "audio",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "podfriend"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "soundverse",
+      "group_id": "audio",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "soundverse"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "the-crucible",
+      "group_id": "audio",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "The Crucible"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "truefans",
+      "group_id": "audio",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "truefans"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tunecamp",
+      "group_id": "audio",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "tunecamp"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "dansal",
+      "group_id": "events",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "dansal"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "everycal",
+      "group_id": "events",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "everycal"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fancio",
+      "group_id": "events",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Fancio"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "gancio",
+      "group_id": "events",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 189,
+      "observed_names": [
+        "gancio"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "gathio",
+      "group_id": "events",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 10,
+      "observed_names": [
+        "Gathio"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mobilizon",
+      "group_id": "events",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 138,
+      "observed_names": [
+        "Mobilizon",
+        "mobilizon"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tumeeto",
+      "group_id": "events",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "tumeeto"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cf-git",
+      "group_id": "forge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "cf-git"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "forgeflux",
+      "group_id": "forge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "forgeflux"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "forgejo",
+      "group_id": "forge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 50,
+      "observed_names": [
+        "forgejo"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "forkmesh",
+      "group_id": "forge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "forkmesh"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "zerocat",
+      "group_id": "forge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "zerocat"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "flohmarkt",
+      "group_id": "marketplace",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 25,
+      "observed_names": [
+        "flohmarkt"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "betula",
+      "group_id": "bookmarks",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 23,
+      "observed_names": [
+        "betula"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bowrd",
+      "group_id": "bookmarks",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "bowrd"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "commonplace",
+      "group_id": "bookmarks",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "commonplace"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "postmarks",
+      "group_id": "bookmarks",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 10,
+      "observed_names": [
+        "postmarks"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "rssfriends",
+      "group_id": "bookmarks",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "rssfriends"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "annexwyrm",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "annexwyrm"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bookshelf",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "bookshelf"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "divedb",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "divedb"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "dstore",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "dstore"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ducktrip",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ducktrip"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "dutch-beer-collective",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Dutch Beer Collective"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "manyfold",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 7,
+      "observed_names": [
+        "manyfold"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "moviebuff",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "moviebuff"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "movies-diary",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "movies-diary"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "myriad",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "myriad"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "neodb",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 15,
+      "observed_names": [
+        "neodb"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "plamenu",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "plamenu"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tvmarks",
+      "group_id": "catalog",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "tvmarks"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "agora-of-flancia",
+      "group_id": "knowledge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Agora of Flancia"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cleversets",
+      "group_id": "knowledge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "cleversets"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "development-agora-of-flancia",
+      "group_id": "knowledge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Development Agora of Flancia"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ibis",
+      "group_id": "knowledge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "ibis"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "the-foundation",
+      "group_id": "knowledge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "the-foundation"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activitypods",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "activitypods"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "anoxinon-e-v-cloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Anoxinon e.V. Cloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "clifton-cloud-storage",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Clifton Cloud Storage"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cloud-automat-direct",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "cloud.automat.direct"
+      ],
+      "last_observed_at": "2026-09-16T23:33:46Z"
+    },
+    {
+      "software_id": "dj-cloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "DJ Cloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "felix-nextcloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Felix Nextcloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "henze-online",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Henze-Online"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "kolosowscy-cloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "kolosowscy.cloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "la-tani-re-cloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "La Tanière Cloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "luon-cloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Luon Cloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "nathacloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "NathaCloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "nextcloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Nextcloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "nextcloud-social",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 17,
+      "observed_names": [
+        "Nextcloud Social",
+        "nextcloud-social"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "private-cloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Private Cloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "profed",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "profed"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "simcloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Simcloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "solid-activitypub",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "solid-activitypub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "sonney-nextcloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Sonney Nextcloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "spicy-shoggoth-nextcloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Spicy Shoggoth Nextcloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "stefans-cloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Stefans Cloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "storage-share",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Storage Share"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "teledyn-nc",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Teledyn NC"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "walzercloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Walzercloud"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "badgefed",
+      "group_id": "credentials",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "badgefed"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "castling-club",
+      "group_id": "games",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "castling.club"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "chess-game-infinito-nexus",
+      "group_id": "games",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "chess.game.infinito.nexus"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "cruciverb",
+      "group_id": "games",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "cruciverb"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "dicecho",
+      "group_id": "games",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "dicecho"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "haruspex",
+      "group_id": "games",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "haruspex"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tribal-services",
+      "group_id": "games",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Tribal Services"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "untitled-activitypub-software",
+      "group_id": "games",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "untitled activitypub software"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bird-meetup",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "bird.meetup"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "birdsitelive",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 4,
+      "observed_names": [
+        "birdsitelive"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "bridgy-fed",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "bridgy-fed"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ccworld-ap-bridge",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "ccworld-ap-bridge"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "concrnt-ap-bridge",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 9,
+      "observed_names": [
+        "concrnt-ap-bridge"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "encyclia",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "encyclia"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "feeder",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "feeder"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "feediverse",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "feediverse"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mastodon-rss",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "mastodon-rss"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mastopocket",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "mastopocket"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "momostr",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "momostr"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mostr",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "mostr"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "neodb-skybridge",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "neodb-skybridge"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "notestock",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "notestock"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "rss2pub",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "rss2pub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tidepool",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "tidepool"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "usk",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "usk"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "warpnet-fediverse-gateway",
+      "group_id": "bridge",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "warpnet-fediverse-gateway"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activity-pub-relay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "activity-pub-relay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activity-relay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 31,
+      "observed_names": [
+        "activity-relay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activityrelay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 27,
+      "observed_names": [
+        "activityrelay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "aoderelay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 59,
+      "observed_names": [
+        "aoderelay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "ap-relay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ap-relay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "awakari",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "buzzrelay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "buzzrelay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "coma",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "Coma"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "loops-relay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "loops-relay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "merprelay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "merprelay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "nanasi-apps-xyz-relay-service",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "nanasi-apps.xyz Relay Service"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "netsune-ap-relay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "netsune-ap-relay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "pub-relay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "pub-relay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "relre",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "relre"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "selective-relay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "selective-relay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "uggsrelay",
+      "group_id": "relay",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "uggsrelay"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activitypub-bot",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "activitypub-bot"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activitypub-dot-bot",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 3,
+      "observed_names": [
+        "activitypub-dot-bot"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activitypub-mcp",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "activitypub-mcp"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "claremontwx",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "claremontwx"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "drhu-activitypub-worker",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "drhu-activitypub-worker"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "emoji-ranking-v2-activitypub",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Emoji Ranking V2 ActivityPub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fedibot",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "fedibot"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fedichatbot",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "hiddenphox",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "HiddenPhox"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "menuverse-shopmenu",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "menuverse-shopmenu"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "movietitler",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "movietitler"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "newsdiff",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "newsdiff"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "squidcity",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "squidcity"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tacuruses",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Tacuruses"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "tiofomento-fedverse-bot",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "uberblogr-activitypub",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "uberblogr-activitypub"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "webfinger-splitdomain-canary",
+      "group_id": "bot",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "webfinger-splitdomain-canary"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activitypub-firebase",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "activitypub-firebase"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activitypub-server",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "activitypub-server"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "capsule",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "capsule"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fedbox",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "FedBOX"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "federated-activity-publisher",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "federated-activity-publisher"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fedi-map",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "fedi-map"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fedirouter",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "FediRouter"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "fedkit",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "fedkit"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "gargoyle",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Gargoyle"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "hono",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Hono"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "mention",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "mention"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "meshnet",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "meshnet"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "openlink-virtuoso",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "openlink-virtuoso"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "rayven",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Rayven"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "verces",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "verces"
+      ],
+      "last_observed_at": "2026-09-17T23:24:33Z"
+    },
+    {
+      "software_id": "activity-xsrv-win",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "activitypub-rails",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "chess-infinito-nexus",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "citizen4",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "dxnet",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "eliza-and-the-moneymakers",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "fediblock-instance",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "fedifolio",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "fedsy",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "g105b",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "gitea",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "itinerariummentis",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "lipupini",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "lubargw2",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "meshdags-site-a-dags-dk",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "metazine",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "octofedi",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "pichuchen-tw-webserver",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "private",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "the-lukes-cloud",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "undefined",
+      "group_id": "unknown",
+      "group_type": "fallback",
+      "classification_status": "explicit_unknown",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    }
+  ]
+}
