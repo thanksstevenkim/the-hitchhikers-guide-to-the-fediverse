@@ -34,6 +34,7 @@ REQUESTS_TIMEOUT = (REQUEST_CONNECT_TIMEOUT, REQUEST_READ_TIMEOUT)
 URLLIB_TIMEOUT = REQUEST_READ_TIMEOUT
 USER_AGENT = "fedlist-stats-fetcher/1.0"
 FAILURE_THRESHOLD = 3
+TERMINAL_SOFTWARE_NAMES = frozenset({"ap-tombstone"})
 DEFAULT_WORKERS = 16
 MAX_WORKERS = 32
 DEFAULT_CHECKPOINT_EVERY = 100
@@ -390,8 +391,13 @@ def apply_fetch_result(state: CollectionState, result: FetchResult) -> str:
                 state.registry_dirty = True
 
     apply_manual_overrides(record, state.manual_overrides)
+    terminal_name = terminal_software_name(record)
     bucket = classify_record(record, bool(errors))
-    reason = "; ".join(errors) if errors else "classified as anomalous/invalid"
+    reason = (
+        f"terminal software marker: {terminal_name}"
+        if terminal_name
+        else "; ".join(errors) if errors else "classified as anomalous/invalid"
+    )
     health_state, _, _, failure_count = apply_health_transition(
         record,
         bucket,
@@ -399,6 +405,7 @@ def apply_fetch_result(state: CollectionState, result: FetchResult) -> str:
         state.bad_map,
         state.aliases,
         failure_reason=reason,
+        failure_threshold=1 if terminal_name else FAILURE_THRESHOLD,
     )
 
     # GOOD/BAD changes display state only. Existing monitored hosts are never
@@ -1394,6 +1401,18 @@ def is_anomalous(record: Dict[str, Any]) -> bool:
         return True
     return False
 
+
+def terminal_software_name(record: Dict[str, Any]) -> Optional[str]:
+    """Return a normalized software marker that represents a retired host."""
+    software = record.get("software")
+    if not isinstance(software, dict):
+        return None
+    name = software.get("name")
+    if not isinstance(name, str):
+        return None
+    normalized = name.strip().lower()
+    return normalized if normalized in TERMINAL_SOFTWARE_NAMES else None
+
 def classify_record(record: Dict[str, Any], had_errors: bool) -> str:
    """
     정책 단순화:
@@ -1401,6 +1420,8 @@ def classify_record(record: Dict[str, Any], had_errors: bool) -> str:
       - 단, 수치가 명백히 비정상이면 BAD
       - NodeInfo 자체가 없거나 실패하면 BAD
    """
+   if terminal_software_name(record):
+       return "bad"
    if not record.get("verified_activitypub"):
        return "bad"
    if is_anomalous(record):
