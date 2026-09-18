@@ -116,6 +116,53 @@ def test_consecutive_failures_accumulate_then_move_ok_to_bad() -> None:
     assert bad_map["a.example"]["consecutive_failures"] == fetch_stats.FAILURE_THRESHOLD
 
 
+def test_terminal_software_marker_is_bad_despite_valid_nodeinfo() -> None:
+    record = make_record("retired.example", good=True)
+    record["software"] = {"name": " AP-Tombstone ", "version": "1.0.0"}
+
+    assert fetch_stats.terminal_software_name(record) == "ap-tombstone"
+    assert fetch_stats.classify_record(record, had_errors=False) == "bad"
+
+
+def test_terminal_software_marker_skips_transient_failure_grace() -> None:
+    host = "retired.example"
+    previous = make_record(host, good=True)
+    terminal = make_record(host, good=True, fetched_at="2026-08-25T00:00:00Z")
+    terminal["software"] = {"name": "ap-tombstone", "version": "1.0.0"}
+    state = fetch_stats.CollectionState(
+        ok_map={host: previous},
+        bad_map={},
+        monitored={
+            host: {
+                "host": host,
+                "url": f"https://{host}",
+                "source": "legacy",
+                "platform": "mastodon",
+            }
+        },
+        aliases={},
+        manual_overrides={},
+        candidate_mode=False,
+        discover_peers=False,
+        total=1,
+    )
+    result = fetch_stats.FetchResult(
+        instance=fetch_stats.Instance(host, host, f"https://{host}", "mastodon"),
+        record=terminal,
+        errors=[],
+        peers=set(),
+    )
+
+    health_state = fetch_stats.apply_fetch_result(state, result)
+
+    assert health_state == "bad"
+    assert state.ok_map == {}
+    assert state.bad_map[host]["consecutive_failures"] == 1
+    assert state.bad_map[host]["last_failure_reason"] == (
+        "terminal software marker: ap-tombstone"
+    )
+
+
 def test_success_resets_transient_failure_state() -> None:
     previous = make_record("a.example", good=True, consecutive_failures=2)
     previous["last_failure_at"] = "2026-08-25T00:00:00Z"

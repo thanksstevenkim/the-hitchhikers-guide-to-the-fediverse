@@ -137,6 +137,7 @@ python scripts/build_software_review_queue.py --output -
 - 이전에 정상 상태였던 인스턴스의 첫 번째와 두 번째 연속 실패는 일시 장애로 간주합니다. 마지막 정상 통계를 OK에 유지하면서 `consecutive_failures`, `last_failure_at`, `last_failure_reason`을 갱신합니다.
 - 기본 임계값 `FAILURE_THRESHOLD = 3`에 도달하면 마지막 정상 통계를 OK에서 제거하고 현재 실패 기록을 BAD로 이동합니다.
 - 이전 정상 기록이 없는 신규 실패 인스턴스는 즉시 BAD에 기록합니다.
+- `ap-tombstone`처럼 운영 종료를 명시하는 software marker는 일시 장애 유예 없이 즉시 BAD로 이동합니다.
 - 이후 정상 응답을 받으면 BAD 기록과 실패 정보를 제거하고 `consecutive_failures`를 `0`으로 초기화해 OK로 복귀합니다.
 - alias 원본과 canonical host의 이전 기록은 한 인스턴스로 합쳐져 양쪽 파일에 중복으로 남지 않습니다.
 
