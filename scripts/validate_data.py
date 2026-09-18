@@ -11,6 +11,11 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
+try:
+    from .build_software_registry import build_software_registry
+except ImportError:  # pragma: no cover - direct script execution
+    from build_software_registry import build_software_registry  # type: ignore[no-redef]
+
 
 REQUIRED_STATS_FIELDS = {
     "host",
@@ -316,6 +321,78 @@ def validate_software_taxonomy(path: Path) -> dict[str, Any]:
     return taxonomy
 
 
+def validate_software_registry(
+    path: Path,
+    stats: list[dict[str, Any]],
+    taxonomy: dict[str, Any],
+) -> dict[str, Any]:
+    registry = load_json(path)
+    if not isinstance(registry, dict):
+        raise ValidationError(f"{path} must be a JSON object")
+    if registry.get("schema_version") != 1:
+        raise ValidationError(f"{path}.schema_version must be 1")
+    if registry.get("taxonomy_schema_version") != taxonomy.get("schema_version"):
+        raise ValidationError(
+            f"{path}.taxonomy_schema_version must match software taxonomy"
+        )
+
+    software = registry.get("software")
+    if not isinstance(software, list):
+        raise ValidationError(f"{path}.software must be an array")
+    if registry.get("software_count") != len(software):
+        raise ValidationError(f"{path}.software_count must match software length")
+
+    seen_ids: set[str] = set()
+    for index, entry in enumerate(software):
+        label = f"{path}.software[{index}]"
+        if not isinstance(entry, dict):
+            raise ValidationError(f"{label} must be an object")
+        software_id = require_nonempty_string(
+            entry.get("software_id"), f"{label}.software_id"
+        )
+        if not SOFTWARE_ID_RE.fullmatch(software_id):
+            raise ValidationError(f"{label}.software_id has an invalid ID")
+        if software_id in seen_ids:
+            raise ValidationError(f"duplicate registry software ID: {software_id}")
+        seen_ids.add(software_id)
+
+        group_id = require_nonempty_string(entry.get("group_id"), f"{label}.group_id")
+        group = taxonomy["groups"].get(group_id)
+        if not isinstance(group, dict):
+            raise ValidationError(f"{label}.group_id is not in the taxonomy")
+        if entry.get("group_type") != group.get("type"):
+            raise ValidationError(f"{label}.group_type must match the taxonomy")
+        if entry.get("classification_status") not in {
+            "classified",
+            "explicit_unknown",
+            "unclassified",
+        }:
+            raise ValidationError(f"{label}.classification_status is invalid")
+        count = entry.get("healthy_instance_count")
+        if not isinstance(count, int) or isinstance(count, bool) or count < 0:
+            raise ValidationError(
+                f"{label}.healthy_instance_count must be a non-negative integer"
+            )
+        observed_names = entry.get("observed_names")
+        if not isinstance(observed_names, list) or not all(
+            isinstance(name, str) and name for name in observed_names
+        ):
+            raise ValidationError(f"{label}.observed_names must be a string array")
+        if len(observed_names) != len(set(observed_names)):
+            raise ValidationError(f"{label}.observed_names contains duplicates")
+        if entry.get("last_observed_at") is not None:
+            require_nonempty_string(
+                entry["last_observed_at"], f"{label}.last_observed_at"
+            )
+
+    expected = build_software_registry(stats, taxonomy)
+    if registry != expected:
+        raise ValidationError(
+            f"{path} is stale; regenerate it with build_software_registry.py"
+        )
+    return registry
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -327,7 +404,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def validate_data_dir(data_dir: Path) -> None:
-    validate_software_taxonomy(data_dir / "software_taxonomy.json")
+    taxonomy = validate_software_taxonomy(data_dir / "software_taxonomy.json")
     validate_instances(data_dir / "instances.json")
     validate_mapping(data_dir / "manual_overrides.json", dict)
     raw_aliases = validate_mapping(data_dir / "host_aliases.json", str)
@@ -340,6 +417,10 @@ def validate_data_dir(data_dir: Path) -> None:
     )
     ok_hosts = validate_stats(
         data_dir / "stats.ok.json", aliases, bucket="OK", required=True
+    )
+    stats = load_json(data_dir / "stats.ok.json")
+    validate_software_registry(
+        data_dir / "software_registry.json", stats, taxonomy
     )
     bad_hosts = validate_stats(
         data_dir / "stats.bad.json", aliases, bucket="BAD", required=False
