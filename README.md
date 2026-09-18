@@ -108,7 +108,7 @@ seed → discovery → candidate review → monitored → health check → OK/BA
 - `category`: 블로그·포럼·동영상·브릿지처럼 용도에 따른 그룹
 - `fallback`: 아직 분류하지 못한 소프트웨어를 위한 `unknown` 그룹
 
-각 소프트웨어 ID는 최대 한 그룹에만 속할 수 있습니다. 그룹 순서, ID 형식, 멤버 중복, 유일한 fallback 여부는 `validate_data.py`가 검사합니다. taxonomy에 아직 없는 새 소프트웨어도 수집에서 제외하지 않으며 웹 UI에서는 독립 항목으로 표시합니다.
+각 소프트웨어 ID는 최대 한 그룹에만 속할 수 있습니다. 그룹 순서, ID 형식, 멤버 중복, 유일한 fallback 여부는 `validate_data.py`가 검사합니다. taxonomy에 아직 없는 새 소프트웨어도 수집에서 제외하지 않으며 웹 UI에서는 `미분류(Unclassified)` 그룹 아래에 동적으로 표시합니다. `software.name` 자체가 없는 경우는 별도의 `소프트웨어명 없음(Software name unavailable)`으로 표시합니다.
 
 ### 미분류 소프트웨어 검토
 

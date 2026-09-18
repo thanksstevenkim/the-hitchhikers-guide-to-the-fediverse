@@ -39,7 +39,8 @@
       search_placeholder: "이름 또는 설명 검색",
       software_filter_heading: "소프트웨어 분류",
       software_all: "전체 소프트웨어",
-      software_unknown: "기타",
+      software_unknown: "미분류",
+      software_name_unknown: "소프트웨어명 없음",
       language_filter_label: "언어",
       language_all: "전체 언어",
       table_heading: "인스턴스 목록",
@@ -124,6 +125,10 @@
   const softwareOrder = softwareTaxonomy.group_order;
   const softwareGroups = softwareTaxonomy.groups;
   const softwareParentByMember = buildSoftwareParentMap(softwareGroups);
+  const softwareFallbackGroup =
+    Object.entries(softwareGroups).find(
+      ([, group]) => group?.type === "fallback"
+    )?.[0] ?? null;
 
   const filters = {
     query: "",
@@ -237,7 +242,14 @@
   }
 
   function findParentSoftware(key) {
-    return softwareParentByMember.get(key) ?? null;
+    const configuredParent = softwareParentByMember.get(key);
+    if (configuredParent) {
+      return configuredParent;
+    }
+    if (key && !(key in softwareGroups) && softwareFallbackGroup) {
+      return softwareFallbackGroup;
+    }
+    return null;
   }
 
   function bindFilters() {
@@ -1171,10 +1183,24 @@
 
     const tree = {};
     const usedKeys = new Set();
+    const configuredSoftware = new Set(Object.keys(softwareGroups));
+    Object.values(softwareGroups).forEach((group) => {
+      const members = Array.isArray(group?.members) ? group.members : [];
+      members.forEach((member) => configuredSoftware.add(member));
+    });
+    const unclassifiedChildren = Array.from(counts.keys())
+      .filter((key) => !configuredSoftware.has(key))
+      .sort();
 
     // 1) 미리 정의한 상위 카테고리들부터 채우기
     softwareOrder.forEach((parent) => {
-      const children = softwareGroups[parent]?.members || [];
+      const configuredChildren = softwareGroups[parent]?.members || [];
+      const children =
+        parent === softwareFallbackGroup
+          ? Array.from(
+              new Set([...configuredChildren, ...unclassifiedChildren])
+            ).sort()
+          : configuredChildren;
       const childList = [];
       let total = 0;
 
@@ -1202,7 +1228,7 @@
       };
     });
 
-    // 2) 어떤 카테고리에도 안 들어간 소프트웨어를 개별 상위 카테고리로 추가
+    // 2) fallback 그룹이 없을 때만 남은 소프트웨어를 개별 항목으로 표시
     counts.forEach((count, key) => {
       if (!key) return;
       if (usedKeys.has(key)) return;
@@ -1395,7 +1421,7 @@
         return formatted;
       }
     }
-    return dict.software_unknown;
+    return dict.software_name_unknown || dict.software_unknown;
   }
 
   function formatSoftwareDisplayName(value) {
