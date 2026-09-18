@@ -80593,9 +80593,8 @@
   },
   {
     "host": "kronk.info",
-    "url": "https://mastodon.kronk.info",
+    "url": "https://kronk.info",
     "source": "legacy",
-    "name": "mastodon.kronk.info",
     "platform": "mastodon"
   },
   {
