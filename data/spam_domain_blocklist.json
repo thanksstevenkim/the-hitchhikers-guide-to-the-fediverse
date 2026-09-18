@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "exact_hosts": [],
+  "domain_suffixes": [
+    "activitypub-troll.cf"
+  ]
+}
