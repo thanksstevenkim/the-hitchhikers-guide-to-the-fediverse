@@ -108,6 +108,8 @@ seed → discovery → candidate review → monitored → health check → OK/BA
 
 이 프로젝트의 데이터는 Fediverse 전체에 대한 완전한 인구조사가 아닙니다. 수동 seed에서 시작해 공개된 피어 관계와 공개 API로 발견하고, 실제 응답을 검증할 수 있었던 서버의 표본입니다. 피어 목록을 공개하지 않거나 기존 seed와 연결되지 않은 서버, 일시적으로 응답하지 않은 서버, 접근이 제한된 서버는 포함되지 않을 수 있습니다. 따라서 관측된 소프트웨어 비율이나 서버 규모 분포를 Fediverse 전체의 점유율 또는 개인 서버 비율로 해석해서는 안 됩니다.
 
+사이트의 포괄 총계는 **검증된 ActivityPub 호스트**로 표시합니다. WordPress·Ghost처럼 `activitypub_enabled_site`로 분류된 퍼블리싱 사이트는 별도 수치로 함께 보여줍니다. `users_total = 1`인 기록도 **사용자 1명을 보고한 호스트**라고만 표현합니다. 사용자 수는 각 소프트웨어의 자기 보고값이고 구현마다 제공 여부와 의미가 다르므로, 이를 개인 서버 판정이나 전체 Fediverse의 개인 서버 비율로 사용하지 않습니다. `monitored_instances.json`의 크기는 계속 검사할 수집 대상 수이며 현재 정상 호스트 수가 아닙니다.
+
 seed는 두 역할을 가집니다. `discovery` seed는 수집기가 지원하는 피어 경로를 통해 새로운 후보를 찾는 출발점이고, `coverage` seed는 피어 목록 제공 여부와 관계없이 특정 소프트웨어·용도권을 매번 직접 확인하는 기준점입니다. 아래 표는 우선 관리할 대표 범위이며 전체 taxonomy를 열거한 것은 아닙니다. 특정 서버를 seed로 선택하는 것은 해당 운영 정책에 대한 보증이나 추천을 의미하지 않습니다.
 
 | 용도 | 소프트웨어·계열 | 대표 seed | 역할 | 상태 |
@@ -138,11 +140,20 @@ seed는 두 역할을 가집니다. `discovery` seed는 수집기가 지원하�
 
 각 소프트웨어 ID는 최대 한 그룹에만 속할 수 있습니다. 그룹 순서, ID 형식, 멤버 중복, 유일한 fallback 여부는 `validate_data.py`가 검사합니다. taxonomy에 아직 없는 새 소프트웨어도 수집에서 제외하지 않으며 웹 UI에서는 `미분류(Unclassified)` 그룹 아래에 동적으로 표시합니다. `software.name` 자체가 없는 경우는 별도의 `소프트웨어명 없음(Software name unavailable)`으로 표시합니다.
 
+분류 계보·용도와 별도로 각 그룹에는 `deployment_kind`가 있습니다.
+
+- `federated_service`: 연합 서비스를 주목적으로 배포하는 소프트웨어
+- `activitypub_enabled_site`: ActivityPub으로 참여하는 범용 퍼블리싱 소프트웨어. 현재 WordPress와 Ghost
+- `federation_infrastructure`: 브릿지·릴레이·지원 인프라
+- `unknown`: 운영 성격을 아직 분류하지 못한 소프트웨어
+
+이 구분은 어느 참여자가 더 “진짜 Fediverse”인지 서열화하지 않습니다. 모든 검증된 ActivityPub 호스트를 함께 보면서도 CMS·퍼블리싱 사이트를 별도 집계할 수 있게 합니다.
+
 저장소가 Mastodon·Misskey·Pleroma 등의 포크임을 명시하면 용도 그룹보다 해당 `family`를 우선합니다. 단순 API 호환이나 다중 프로토콜 지원만으로는 계보로 보지 않고 실제 용도에 맞는 `category`로 분류합니다.
 
 ### 공개 소프트웨어 레지스트리
 
-`scripts/build_software_registry.py`는 `stats.ok.json`과 `software_taxonomy.json`을 결합해 `data/software_registry.json`을 생성합니다. 각 항목에는 정규화된 소프트웨어 ID, 분류 그룹과 유형, 분류 상태, 현재 정상 인스턴스 수, 관측 이름, 마지막 관측 시각이 포함됩니다.
+`scripts/build_software_registry.py`는 `stats.ok.json`과 `software_taxonomy.json`을 결합해 `data/software_registry.json`을 생성합니다. 각 항목에는 정규화된 소프트웨어 ID, 분류 그룹과 유형, `deployment_kind`, 분류 상태, 현재 정상 호스트 수, 관측 이름, 마지막 관측 시각이 포함됩니다.
 
 이 파일은 매일 통계 갱신 뒤 자동 재생성되며 GitHub Pages에도 공개됩니다. 전체 영문 스키마와 공개 URL은 [English README](./README.en.md#public-data-urls)에 정리되어 있습니다. `ap-tombstone`은 운영 종료 표식이고 소프트웨어명이 없는 관측은 식별 가능한 소프트웨어가 아니므로 레지스트리에서 제외합니다.
 

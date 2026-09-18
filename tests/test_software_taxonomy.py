@@ -18,10 +18,19 @@ def make_taxonomy() -> dict[str, object]:
         "schema_version": 1,
         "group_order": ["mastodon", "social", "unknown"],
         "groups": {
-            "mastodon": {"type": "family", "members": ["hometown"]},
-            "social": {"type": "category", "members": ["hollo"]},
+            "mastodon": {
+                "type": "family",
+                "deployment_kind": "federated_service",
+                "members": ["hometown"],
+            },
+            "social": {
+                "type": "category",
+                "deployment_kind": "federated_service",
+                "members": ["hollo"],
+            },
             "unknown": {
                 "type": "fallback",
+                "deployment_kind": "unknown",
                 "members": ["mystery-software"],
             },
         },
@@ -98,6 +107,19 @@ def test_reviewed_specialized_software_uses_functional_categories() -> None:
     assert classification["activitypub-server"] == "infrastructure"
 
 
+def test_deployment_kinds_separate_enabled_sites_and_infrastructure() -> None:
+    taxonomy = json.loads(TAXONOMY_PATH.read_text(encoding="utf-8"))
+    groups = taxonomy["groups"]
+
+    assert groups["mastodon"]["deployment_kind"] == "federated_service"
+    assert groups["wordpress"]["deployment_kind"] == (
+        "activitypub_enabled_site"
+    )
+    assert groups["ghost"]["deployment_kind"] == "activitypub_enabled_site"
+    assert groups["relay"]["deployment_kind"] == "federation_infrastructure"
+    assert groups["unknown"]["deployment_kind"] == "unknown"
+
+
 def test_current_healthy_snapshot_is_fully_reviewed() -> None:
     taxonomy = json.loads(TAXONOMY_PATH.read_text(encoding="utf-8"))
     stats = json.loads(STATS_PATH.read_text(encoding="utf-8"))
@@ -127,6 +149,16 @@ def test_group_order_must_cover_every_group(tmp_path: Path) -> None:
     write_json(path, taxonomy)
 
     with pytest.raises(validate_data.ValidationError, match="group_order and groups differ"):
+        validate_data.validate_software_taxonomy(path)
+
+
+def test_invalid_deployment_kind_is_rejected(tmp_path: Path) -> None:
+    taxonomy = make_taxonomy()
+    taxonomy["groups"]["social"]["deployment_kind"] = "proper_instance"  # type: ignore[index]
+    path = tmp_path / "software_taxonomy.json"
+    write_json(path, taxonomy)
+
+    with pytest.raises(validate_data.ValidationError, match="deployment_kind"):
         validate_data.validate_software_taxonomy(path)
 
 

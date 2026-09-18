@@ -116,6 +116,9 @@ def build_software_registry(
                 "software_id": software_id,
                 "group_id": group_id,
                 "group_type": taxonomy["groups"][group_id]["type"],
+                "deployment_kind": taxonomy["groups"][group_id][
+                    "deployment_kind"
+                ],
                 "classification_status": classification_status,
                 "healthy_instance_count": (
                     len(observation["hosts"]) if observation else 0

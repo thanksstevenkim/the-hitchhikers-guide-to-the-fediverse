@@ -31,6 +31,12 @@ REQUIRED_STATS_FIELDS = {
 NUMERIC_FIELDS = ("users_total", "users_active_month", "statuses")
 SOFTWARE_ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 SOFTWARE_GROUP_TYPES = {"family", "software", "category", "fallback"}
+DEPLOYMENT_KINDS = {
+    "federated_service",
+    "activitypub_enabled_site",
+    "federation_infrastructure",
+    "unknown",
+}
 
 
 class ValidationError(ValueError):
@@ -286,6 +292,21 @@ def validate_software_taxonomy(path: Path) -> dict[str, Any]:
         if group_type == "fallback":
             fallback_groups.append(group_id)
 
+        deployment_kind = group.get("deployment_kind")
+        if deployment_kind not in DEPLOYMENT_KINDS:
+            raise ValidationError(
+                f"{label}.deployment_kind must be one of: "
+                + ", ".join(sorted(DEPLOYMENT_KINDS))
+            )
+        if group_type == "fallback" and deployment_kind != "unknown":
+            raise ValidationError(
+                f"{label}.deployment_kind must be unknown for a fallback group"
+            )
+        if group_type != "fallback" and deployment_kind == "unknown":
+            raise ValidationError(
+                f"{label}.deployment_kind can only be unknown for a fallback group"
+            )
+
         members = group.get("members")
         if not isinstance(members, list) or not all(
             isinstance(member, str) for member in members
@@ -362,6 +383,10 @@ def validate_software_registry(
             raise ValidationError(f"{label}.group_id is not in the taxonomy")
         if entry.get("group_type") != group.get("type"):
             raise ValidationError(f"{label}.group_type must match the taxonomy")
+        if entry.get("deployment_kind") != group.get("deployment_kind"):
+            raise ValidationError(
+                f"{label}.deployment_kind must match the taxonomy"
+            )
         if entry.get("classification_status") not in {
             "classified",
             "explicit_unknown",

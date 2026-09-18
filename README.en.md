@@ -40,6 +40,7 @@ The same tracked files are also available directly from the default branch under
       "software_id": "hometown",
       "group_id": "mastodon",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 94,
       "observed_names": ["hometown"],
@@ -66,6 +67,7 @@ The same tracked files are also available directly from the default branch under
 | `software_id` | string | Lowercase, hyphen-normalized software identifier |
 | `group_id` | string | Taxonomy group assigned to the software |
 | `group_type` | string | `family`, `software`, `category`, or `fallback` |
+| `deployment_kind` | string | Operational role: `federated_service`, `activitypub_enabled_site`, `federation_infrastructure`, or `unknown` |
 | `classification_status` | string | `classified`, `explicit_unknown`, or `unclassified` |
 | `healthy_instance_count` | integer | Unique healthy hosts currently reporting this software ID |
 | `observed_names` | array of strings | Reported names ordered by frequency, then case-insensitively |
@@ -86,10 +88,12 @@ The registry excludes observations without a software name. It also excludes `ap
   "groups": {
     "mastodon": {
       "type": "family",
+      "deployment_kind": "federated_service",
       "members": ["hometown"]
     },
     "unknown": {
       "type": "fallback",
+      "deployment_kind": "unknown",
       "members": []
     }
   }
@@ -103,11 +107,20 @@ Group types have the following meanings:
 - `category`: a functional grouping such as blogs, forums, video, bridges, or relays
 - `fallback`: the single `unknown` review group
 
+`deployment_kind` answers a different question from software lineage or function:
+
+- `federated_service`: software deployed primarily as a federated service
+- `activitypub_enabled_site`: general publishing software participating through ActivityPub, currently WordPress and Ghost
+- `federation_infrastructure`: bridges, relays, and supporting infrastructure
+- `unknown`: software whose operational role has not been classified
+
+This distinction does not rank one participant as more "proper" than another. It allows consumers to include all verified ActivityPub hosts or report publishing/CMS deployments separately.
+
 When a repository explicitly identifies itself as a fork of Mastodon, Misskey, Pleroma, or another maintained lineage, that family takes precedence over a functional category. API compatibility or multi-protocol support alone does not establish lineage.
 
 ## Data lifecycle
 
-`instances.json` contains discovery seeds, while `monitored_instances.json` is the persistent canonical-host registry. The collector checks the monitored registry, writes verified records to `stats.ok.json`, and retains failures locally in `stats.bad.json` for diagnosis and recovery checks.
+`instances.json` contains discovery seeds, while `monitored_instances.json` is the persistent canonical-host registry. The size of the monitored registry is a count of collection targets, not a count of currently healthy hosts. The collector checks that registry, writes verified records to `stats.ok.json`, and retains failures locally in `stats.bad.json` for diagnosis and recovery checks.
 
 Optional peer discovery applies exact-host and confirmed domain-zone blocklist rules, domain-pattern heuristics, and statistical anomaly checks before manual review. A TLD alone never causes a candidate to be rejected. Individual abusive servers belong in `exact_hosts`; a domain known to generate abusive hosts for the same purpose belongs in `domain_suffixes`. Suffix matching respects DNS label boundaries.
 
@@ -126,6 +139,8 @@ python scripts/fetch_stats.py --input /tmp/recheck_candidates.json
 ### Coverage limits and seed diversity
 
 This dataset is not a complete census of the Fediverse. It is a sample of servers that could be discovered from manually maintained seeds through public peer relationships and public APIs, and whose responses could be verified. Servers that do not publish peer lists, are not connected to the current seeds, are temporarily unavailable, or restrict access may be absent. Observed software shares and server-size distributions therefore must not be interpreted as global Fediverse market share or as the proportion of personal servers.
+
+The site labels the broad count as **verified ActivityPub hosts**. It separately reports hosts classified as `activitypub_enabled_site`, so WordPress and Ghost publishing sites are not silently presented as conventional dedicated Fediverse services. A host with `users_total = 1` is described only as a **host reporting exactly one user**. User totals are software-reported, are not available or comparable for every implementation, and do not prove that a host is a personal server.
 
 Seeds have two roles. A `discovery` seed is a starting point for a peer path supported by the collector. A `coverage` seed ensures that a software lineage or use case is checked directly even when it does not expose a usable peer list. The table below tracks priority coverage rather than every entry in the taxonomy. Selecting a server as a seed is not an endorsement or guarantee of its moderation or operating policies.
 

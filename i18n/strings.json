@@ -1,7 +1,13 @@
 {
   "ko": {
     "title": "연합우주를 여행하는 히치하이커를 위한 안내서",
-    "intro": "정상적으로 검증된 페디버스 인스턴스(NodeInfo 기반)를 자동 수집한 목록입니다.",
+    "intro": "공개 API와 NodeInfo로 정상 응답을 검증한 ActivityPub 호스트 표본입니다.",
+    "summary_heading": "데이터셋 범위 요약",
+    "summary_verified_hosts": "검증된 ActivityPub 호스트",
+    "summary_activitypub_enabled_sites": "ActivityPub 사용 퍼블리싱 사이트",
+    "summary_one_user_hosts": "사용자 1명을 보고한 호스트",
+    "summary_reporting_user_totals": "총 사용자 수를 보고한 호스트",
+    "summary_note": "이 수치는 현재 표본의 자기 보고 관측값이며, Fediverse 전체 규모나 개인 서버 비율의 추정치가 아닙니다.",
     "search_label": "검색어",
     "search_placeholder": "이름 또는 설명 검색",
     "software_filter_heading": "소프트웨어 분류",
@@ -151,9 +157,9 @@
     "language_name_my": "미얀마어",
     "language_name_uz": "우즈베크어",
 
-    "table_heading": "인스턴스 목록",
-    "table_caption": "Fediverse 인스턴스 목록",
-    "table_aria": "Fediverse 인스턴스 목록",
+    "table_heading": "ActivityPub 호스트 목록",
+    "table_caption": "검증된 ActivityPub 호스트 목록",
+    "table_aria": "검증된 ActivityPub 호스트 목록",
 
     "name": "이름",
     "url": "주소",
@@ -183,12 +189,18 @@
     "sort_users_total": "총 사용자 수로 정렬",
     "sort_users_active": "월간 활성 사용자 수로 정렬",
 
-    "footer_note": "인스턴스 정보와 통계는 공개된 Fediverse API 및 NodeInfo에서 수집됩니다."
+    "footer_note": "호스트 정보와 통계는 공개된 Fediverse API 및 NodeInfo에서 수집됩니다."
   },
 
   "en": {
     "title": "The Hitchhiker's Guide to the Fediverse",
-    "intro": "A directory of verified Fediverse instances automatically collected using public instance metadata, including NodeInfo.",
+    "intro": "A sample of ActivityPub hosts currently verified through public APIs and NodeInfo.",
+    "summary_heading": "Dataset scope summary",
+    "summary_verified_hosts": "Verified ActivityPub hosts",
+    "summary_activitypub_enabled_sites": "ActivityPub-enabled publishing sites",
+    "summary_one_user_hosts": "Hosts reporting exactly one user",
+    "summary_reporting_user_totals": "Hosts reporting total users",
+    "summary_note": "These are self-reported observations within the current sample, not estimates of the total Fediverse or the share of personal servers.",
     "search_label": "Search",
     "search_placeholder": "Search by name or description",
     "software_filter_heading": "Software",
@@ -338,9 +350,9 @@
     "language_name_my": "Burmese",
     "language_name_uz": "Uzbek",
 
-    "table_heading": "Instance Directory",
-    "table_caption": "Fediverse instance directory",
-    "table_aria": "Fediverse instance directory",
+    "table_heading": "ActivityPub Host Directory",
+    "table_caption": "Verified ActivityPub host directory",
+    "table_aria": "Verified ActivityPub host directory",
 
     "name": "Name",
     "url": "Address",
@@ -370,6 +382,6 @@
     "sort_users_total": "Sort by total users",
     "sort_users_active": "Sort by monthly active users",
 
-    "footer_note": "Instance information and statistics are collected from public Fediverse APIs and NodeInfo."
+    "footer_note": "Host information and statistics are collected from public Fediverse APIs and NodeInfo."
   }
 }
