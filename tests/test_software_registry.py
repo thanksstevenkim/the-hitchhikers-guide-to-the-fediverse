@@ -15,9 +15,21 @@ def make_taxonomy() -> dict[str, object]:
         "schema_version": 1,
         "group_order": ["mastodon", "social", "unknown"],
         "groups": {
-            "mastodon": {"type": "family", "members": ["hometown"]},
-            "social": {"type": "category", "members": ["hollo"]},
-            "unknown": {"type": "fallback", "members": ["mystery"]},
+            "mastodon": {
+                "type": "family",
+                "deployment_kind": "federated_service",
+                "members": ["hometown"],
+            },
+            "social": {
+                "type": "category",
+                "deployment_kind": "federated_service",
+                "members": ["hollo"],
+            },
+            "unknown": {
+                "type": "fallback",
+                "deployment_kind": "unknown",
+                "members": ["mystery"],
+            },
         },
     }
 
@@ -51,6 +63,7 @@ def test_registry_combines_taxonomy_and_healthy_observations() -> None:
         "software_id": "mastodon",
         "group_id": "mastodon",
         "group_type": "family",
+        "deployment_kind": "federated_service",
         "classification_status": "classified",
         "healthy_instance_count": 2,
         "observed_names": ["Mastodon", "mastodon"],
