@@ -30,6 +30,7 @@
   "groups": {
     "mastodon": {
       "type": "family",
+      "deployment_kind": "federated_service",
       "members": [
         "ecko",
         "fedibird",
@@ -41,6 +42,7 @@
     },
     "misskey": {
       "type": "family",
+      "deployment_kind": "federated_service",
       "members": [
         "areionskey",
         "calckey",
@@ -72,6 +74,7 @@
     },
     "pleroma": {
       "type": "family",
+      "deployment_kind": "federated_service",
       "members": [
         "akkoma",
         "cagando",
@@ -82,18 +85,22 @@
     },
     "gotosocial": {
       "type": "software",
+      "deployment_kind": "federated_service",
       "members": []
     },
     "ghost": {
       "type": "software",
+      "deployment_kind": "activitypub_enabled_site",
       "members": []
     },
     "wordpress": {
       "type": "software",
+      "deployment_kind": "activitypub_enabled_site",
       "members": []
     },
     "social": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "98gravity-electro",
         "activipypub",
@@ -271,6 +278,7 @@
     },
     "blog": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "activitypub",
         "backdrop",
@@ -355,6 +363,7 @@
     },
     "forum": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "apboard",
         "enigma-bbs",
@@ -370,6 +379,7 @@
     },
     "video": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "loops",
         "meshtube",
@@ -382,6 +392,7 @@
     },
     "audio": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "funkwhale",
         "kromosynth",
@@ -397,6 +408,7 @@
     },
     "events": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "dansal",
         "everycal",
@@ -409,6 +421,7 @@
     },
     "forge": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "cf-git",
         "forgeflux",
@@ -419,12 +432,14 @@
     },
     "marketplace": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "flohmarkt"
       ]
     },
     "bookmarks": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "betula",
         "bowrd",
@@ -435,6 +450,7 @@
     },
     "catalog": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "annexwyrm",
         "bookshelf",
@@ -453,6 +469,7 @@
     },
     "knowledge": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "agora-of-flancia",
         "cleversets",
@@ -463,6 +480,7 @@
     },
     "cloud": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "activitypods",
         "anoxinon-e-v-cloud",
@@ -491,12 +509,14 @@
     },
     "credentials": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "badgefed"
       ]
     },
     "games": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "castling-club",
         "chess-game-infinito-nexus",
@@ -509,6 +529,7 @@
     },
     "bridge": {
       "type": "category",
+      "deployment_kind": "federation_infrastructure",
       "members": [
         "bird-meetup",
         "birdsitelive",
@@ -532,6 +553,7 @@
     },
     "relay": {
       "type": "category",
+      "deployment_kind": "federation_infrastructure",
       "members": [
         "activity-pub-relay",
         "activity-relay",
@@ -553,6 +575,7 @@
     },
     "bot": {
       "type": "category",
+      "deployment_kind": "federated_service",
       "members": [
         "activitypub-bot",
         "activitypub-dot-bot",
@@ -575,6 +598,7 @@
     },
     "infrastructure": {
       "type": "category",
+      "deployment_kind": "federation_infrastructure",
       "members": [
         "activitypub-firebase",
         "activitypub-server",
@@ -595,6 +619,7 @@
     },
     "unknown": {
       "type": "fallback",
+      "deployment_kind": "unknown",
       "members": [
         "activity-xsrv-win",
         "activitypub-rails",
