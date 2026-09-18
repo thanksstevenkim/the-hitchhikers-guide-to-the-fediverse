@@ -182,6 +182,20 @@ python scripts/validate_data.py
 python scripts/build_software_review_queue.py
 ```
 
+To reproduce a network failure or a local security-tool block without scanning the full registry, select a zero-based slice after canonical sorting and deduplication. `--trace-hosts` logs `TRACE START` and `TRACE END` around each target; use one worker when the final started host must be unambiguous.
+
+```bash
+python -u scripts/fetch_stats.py \
+  --discover-peers \
+  --start-index 1000 \
+  --limit 50 \
+  --workers 1 \
+  --trace-hosts \
+  2>&1 | tee fetch-trace.log
+```
+
+Range and trace runs write ordinary collection results and checkpoints. Use `--data-dir` with an isolated copy when the tracked data must remain unchanged. With `--input`, range selection happens after known hosts are excluded and the remaining canonical hosts are sorted and deduplicated.
+
 Generate the registry from another data directory or print it to standard output:
 
 ```bash

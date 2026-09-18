@@ -77,6 +77,20 @@ python scripts/fetch_stats.py --workers 16 --checkpoint-every 100
 - 진행 로그는 checkpoint마다 처리량, GOOD/transient/BAD 수, 경과 시간, 평균 처리율과 대략적인 ETA를 표시합니다.
 - connect timeout은 요청당 `3.05초`, read timeout은 요청당 `5초`입니다. 한 인스턴스가 여러 endpoint를 호출할 수 있으므로 인스턴스 전체 시간은 이보다 길 수 있지만, 제한된 worker 중 하나만 점유하며 전체 수집을 순차적으로 막지는 않습니다.
 
+특정 구간의 네트워크 문제나 로컬 보안 도구의 차단을 재현할 때는 정렬·중복 제거가 끝난 대상 목록을 zero-based index로 잘라 실행할 수 있습니다. `--trace-hosts`는 각 대상의 수집 직전과 직후에 `TRACE START`/`TRACE END` 로그를 남깁니다. 정확한 마지막 요청을 확인하려면 worker 하나로 실행합니다.
+
+```bash
+python -u scripts/fetch_stats.py \
+  --discover-peers \
+  --start-index 1000 \
+  --limit 50 \
+  --workers 1 \
+  --trace-hosts \
+  2>&1 | tee fetch-trace.log
+```
+
+`--start-index`와 `--limit`은 `--input`을 사용한 경우에도 이미 알려진 호스트를 제외하고 canonical host 기준으로 정렬·중복 제거한 뒤 적용됩니다. 추적 실행도 일반 수집과 마찬가지로 결과와 checkpoint를 지정된 `--data-dir`에 기록하므로, 원본 데이터를 보존하려면 별도의 시험 디렉터리를 사용해야 합니다.
+
 약 27,000개 registry는 환경과 원격 서버 상태에 따라 여전히 오래 걸릴 수 있습니다. 현재는 매일 full scan을 유지합니다. 향후 실행 시간이 계속 길다면 healthy host는 2~3일 간격, 최근 실패/BAD host는 매일 검사하는 staggered scheduling을 별도 변경으로 검토합니다.
 
 ### 데이터 수명주기
