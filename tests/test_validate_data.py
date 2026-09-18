@@ -39,8 +39,16 @@ def prepare_data(
         "schema_version": 1,
         "group_order": ["mastodon", "unknown"],
         "groups": {
-            "mastodon": {"type": "family", "members": []},
-            "unknown": {"type": "fallback", "members": []},
+            "mastodon": {
+                "type": "family",
+                "deployment_kind": "federated_service",
+                "members": [],
+            },
+            "unknown": {
+                "type": "fallback",
+                "deployment_kind": "unknown",
+                "members": [],
+            },
         },
     }
     write_json(data_dir / "software_taxonomy.json", taxonomy)
