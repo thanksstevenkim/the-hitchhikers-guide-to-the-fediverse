@@ -1332,6 +1332,18 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "glenmore",
+      "group_id": "social",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "glenmore"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
+    },
+    {
       "software_id": "glitchcafe",
       "group_id": "social",
       "group_type": "category",
@@ -1572,6 +1584,18 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "instapub",
+      "group_id": "social",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "instapub"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
+    },
+    {
       "software_id": "intermix",
       "group_id": "social",
       "group_type": "category",
@@ -1582,6 +1606,18 @@
         "intermix"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "iris",
+      "group_id": "social",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "iris"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
       "software_id": "irwin",
@@ -1666,6 +1702,18 @@
         "letter"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "lightap",
+      "group_id": "social",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "lightap"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
       "software_id": "littlefedi",
@@ -2028,6 +2076,30 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "rosmarinus",
+      "group_id": "social",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "rosmarinus"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
+    },
+    {
+      "software_id": "rox",
+      "group_id": "social",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "rox"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
+    },
+    {
       "software_id": "rullen",
       "group_id": "social",
       "group_type": "category",
@@ -2242,6 +2314,18 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "spica",
+      "group_id": "social",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Spica"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
+    },
+    {
       "software_id": "starling",
       "group_id": "social",
       "group_type": "category",
@@ -2386,6 +2470,18 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "unet",
+      "group_id": "social",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "unet"
+      ],
+      "last_observed_at": "2026-09-18T21:52:06Z"
+    },
+    {
       "software_id": "unfathomably-be",
       "group_id": "social",
       "group_type": "category",
@@ -2406,6 +2502,18 @@
       "healthy_instance_count": 1,
       "observed_names": [
         "unspoken"
+      ],
+      "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "uwuzu",
+      "group_id": "social",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 2,
+      "observed_names": [
+        "uwuzu"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
@@ -2524,6 +2632,18 @@
         "xBuddy"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "xenomorph",
+      "group_id": "social",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "xenomorph"
+      ],
+      "last_observed_at": "2026-09-18T21:52:06Z"
     },
     {
       "software_id": "youthopia",
@@ -3036,6 +3156,18 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "mdverse",
+      "group_id": "blog",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "mdverse"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
+    },
+    {
       "software_id": "microblogpub",
       "group_id": "blog",
       "group_type": "category",
@@ -3058,6 +3190,18 @@
         "microdotblog"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "micronote-pub",
+      "group_id": "blog",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "micronote.pub"
+      ],
+      "last_observed_at": "2026-09-18T21:52:06Z"
     },
     {
       "software_id": "moments",
@@ -3252,6 +3396,18 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "ruby-news-dev",
+      "group_id": "blog",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "ruby-news-dev"
+      ],
+      "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
       "software_id": "ryanw-eu",
       "group_id": "blog",
       "group_type": "category",
@@ -3380,6 +3536,18 @@
       "healthy_instance_count": 1,
       "observed_names": [
         "takesama"
+      ],
+      "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "telepico",
+      "group_id": "blog",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "telepico"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
@@ -3587,6 +3755,18 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "musorbox",
+      "group_id": "forum",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "musorbox"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
+    },
+    {
       "software_id": "neogroup",
       "group_id": "forum",
       "group_type": "category",
@@ -3621,6 +3801,30 @@
         "piefed"
       ],
       "last_observed_at": "2026-09-18T21:13:01Z"
+    },
+    {
+      "software_id": "planet-buzz",
+      "group_id": "forum",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "planet-buzz"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
+    },
+    {
+      "software_id": "prismo",
+      "group_id": "forum",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "prismo"
+      ],
+      "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
       "software_id": "loops",
@@ -3720,6 +3924,18 @@
       "last_observed_at": "2026-09-18T21:52:06Z"
     },
     {
+      "software_id": "klonkt-hub",
+      "group_id": "audio",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "klonkt-hub"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
+    },
+    {
       "software_id": "kromosynth",
       "group_id": "audio",
       "group_type": "category",
@@ -3778,6 +3994,18 @@
         "podfriend"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "songhive",
+      "group_id": "audio",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Songhive"
+      ],
+      "last_observed_at": "2026-09-18T21:52:06Z"
     },
     {
       "software_id": "soundverse",
@@ -3961,6 +4189,16 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "gitea",
+      "group_id": "forge",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
       "software_id": "zerocat",
       "group_id": "forge",
       "group_type": "category",
@@ -3971,6 +4209,16 @@
         "zerocat"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "fedsy",
+      "group_id": "marketplace",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
     },
     {
       "software_id": "flohmarkt",
@@ -4115,6 +4363,28 @@
         "Dutch Beer Collective"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "lipupini",
+      "group_id": "catalog",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
+      "software_id": "mangrove-fediverse",
+      "group_id": "catalog",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "mangrove-fediverse"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
       "software_id": "manyfold",
@@ -4319,6 +4589,18 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "e-phones-nz-cloud",
+      "group_id": "cloud",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "E-Phones NZ Cloud"
+      ],
+      "last_observed_at": "2026-09-18T20:53:11Z"
+    },
+    {
       "software_id": "felix-nextcloud",
       "group_id": "cloud",
       "group_type": "category",
@@ -4365,6 +4647,18 @@
         "La Tanière Cloud"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "luca-comazzetto-lab",
+      "group_id": "cloud",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "Luca Comazzetto | Lab"
+      ],
+      "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
       "software_id": "luon-cloud",
@@ -4692,6 +4986,18 @@
       "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
+      "software_id": "deltachat-bouncer",
+      "group_id": "bridge",
+      "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "deltachat-bouncer"
+      ],
+      "last_observed_at": "2026-09-18T20:53:11Z"
+    },
+    {
       "software_id": "encyclia",
       "group_id": "bridge",
       "group_type": "category",
@@ -4844,6 +5150,18 @@
       "healthy_instance_count": 1,
       "observed_names": [
         "warpnet-fediverse-gateway"
+      ],
+      "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "yuris-fedify",
+      "group_id": "bridge",
+      "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "yuris-fedify"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
@@ -5022,6 +5340,18 @@
       "healthy_instance_count": 1,
       "observed_names": [
         "selective-relay"
+      ],
+      "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "tech-port-relay-service",
+      "group_id": "relay",
+      "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "tech-port relay service"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
@@ -5238,6 +5568,18 @@
       "last_observed_at": "2026-09-18T17:01:28Z"
     },
     {
+      "software_id": "wx-watch",
+      "group_id": "bot",
+      "group_type": "category",
+      "deployment_kind": "federated_service",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "wx-watch"
+      ],
+      "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
       "software_id": "activitypub-firebase",
       "group_id": "infrastructure",
       "group_type": "category",
@@ -5258,6 +5600,18 @@
       "healthy_instance_count": 1,
       "observed_names": [
         "activitypub-server"
+      ],
+      "last_observed_at": "2026-09-18T18:52:17Z"
+    },
+    {
+      "software_id": "almanac",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
+      "classification_status": "classified",
+      "healthy_instance_count": 1,
+      "observed_names": [
+        "almanac"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
@@ -5382,6 +5736,16 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
+      "software_id": "octofedi",
+      "group_id": "infrastructure",
+      "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
+      "classification_status": "classified",
+      "healthy_instance_count": 0,
+      "observed_names": [],
+      "last_observed_at": null
+    },
+    {
       "software_id": "openlink-virtuoso",
       "group_id": "infrastructure",
       "group_type": "category",
@@ -5450,18 +5814,6 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
-      "software_id": "almanac",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "almanac"
-      ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
-    },
-    {
       "software_id": "chatgpt-sites",
       "group_id": "unknown",
       "group_type": "fallback",
@@ -5518,18 +5870,6 @@
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
     {
-      "software_id": "deltachat-bouncer",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "deltachat-bouncer"
-      ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
-    },
-    {
       "software_id": "dxnet",
       "group_id": "unknown",
       "group_type": "fallback",
@@ -5540,18 +5880,6 @@
         "DXNET"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
-    },
-    {
-      "software_id": "e-phones-nz-cloud",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "E-Phones NZ Cloud"
-      ],
-      "last_observed_at": "2026-09-18T20:53:11Z"
     },
     {
       "software_id": "eliza-and-the-moneymakers",
@@ -5584,16 +5912,6 @@
       "last_observed_at": null
     },
     {
-      "software_id": "fedsy",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 0,
-      "observed_names": [],
-      "last_observed_at": null
-    },
-    {
       "software_id": "g105b",
       "group_id": "unknown",
       "group_type": "fallback",
@@ -5604,52 +5922,6 @@
       "last_observed_at": null
     },
     {
-      "software_id": "gitea",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 0,
-      "observed_names": [],
-      "last_observed_at": null
-    },
-    {
-      "software_id": "glenmore",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "glenmore"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
-    },
-    {
-      "software_id": "instapub",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "instapub"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
-    },
-    {
-      "software_id": "iris",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "iris"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
-    },
-    {
       "software_id": "itinerariummentis",
       "group_id": "unknown",
       "group_type": "fallback",
@@ -5658,18 +5930,6 @@
       "healthy_instance_count": 0,
       "observed_names": [],
       "last_observed_at": null
-    },
-    {
-      "software_id": "klonkt-hub",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "klonkt-hub"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
       "software_id": "krogen",
@@ -5684,28 +5944,6 @@
       "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
-      "software_id": "lightap",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "lightap"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
-    },
-    {
-      "software_id": "lipupini",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 0,
-      "observed_names": [],
-      "last_observed_at": null
-    },
-    {
       "software_id": "lubargw2",
       "group_id": "unknown",
       "group_type": "fallback",
@@ -5714,42 +5952,6 @@
       "healthy_instance_count": 0,
       "observed_names": [],
       "last_observed_at": null
-    },
-    {
-      "software_id": "luca-comazzetto-lab",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "Luca Comazzetto | Lab"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
-    },
-    {
-      "software_id": "mangrove-fediverse",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "mangrove-fediverse"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
-    },
-    {
-      "software_id": "mdverse",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "mdverse"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
       "software_id": "meshdags-site-a-dags-dk",
@@ -5772,40 +5974,6 @@
       "last_observed_at": null
     },
     {
-      "software_id": "micronote-pub",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "micronote.pub"
-      ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
-    },
-    {
-      "software_id": "musorbox",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "musorbox"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
-    },
-    {
-      "software_id": "octofedi",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 0,
-      "observed_names": [],
-      "last_observed_at": null
-    },
-    {
       "software_id": "pichuchen-tw-webserver",
       "group_id": "unknown",
       "group_type": "fallback",
@@ -5814,18 +5982,6 @@
       "healthy_instance_count": 0,
       "observed_names": [],
       "last_observed_at": null
-    },
-    {
-      "software_id": "planet-buzz",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "planet-buzz"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
       "software_id": "pompe",
@@ -5840,18 +5996,6 @@
       "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
-      "software_id": "prismo",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "prismo"
-      ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
-    },
-    {
       "software_id": "private",
       "group_id": "unknown",
       "group_type": "fallback",
@@ -5860,66 +6004,6 @@
       "healthy_instance_count": 0,
       "observed_names": [],
       "last_observed_at": null
-    },
-    {
-      "software_id": "rosmarinus",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "rosmarinus"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
-    },
-    {
-      "software_id": "rox",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "rox"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
-    },
-    {
-      "software_id": "ruby-news-dev",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "ruby-news-dev"
-      ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
-    },
-    {
-      "software_id": "songhive",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "Songhive"
-      ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
-    },
-    {
-      "software_id": "spica",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "Spica"
-      ],
-      "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
       "software_id": "spook",
@@ -5946,18 +6030,6 @@
       "last_observed_at": "2026-09-18T21:13:01Z"
     },
     {
-      "software_id": "tech-port-relay-service",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "tech-port relay service"
-      ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
-    },
-    {
       "software_id": "technai-net",
       "group_id": "unknown",
       "group_type": "fallback",
@@ -5966,18 +6038,6 @@
       "healthy_instance_count": 1,
       "observed_names": [
         "technai.net"
-      ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
-    },
-    {
-      "software_id": "telepico",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "telepico"
       ],
       "last_observed_at": "2026-09-18T18:52:17Z"
     },
@@ -6002,18 +6062,6 @@
       "last_observed_at": null
     },
     {
-      "software_id": "unet",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "unet"
-      ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
-    },
-    {
       "software_id": "unknown",
       "group_id": "unknown",
       "group_type": "fallback",
@@ -6025,54 +6073,6 @@
         "創掘祭制作委員会"
       ],
       "last_observed_at": "2026-09-18T20:53:11Z"
-    },
-    {
-      "software_id": "uwuzu",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 2,
-      "observed_names": [
-        "uwuzu"
-      ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
-    },
-    {
-      "software_id": "wx-watch",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "wx-watch"
-      ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
-    },
-    {
-      "software_id": "xenomorph",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "xenomorph"
-      ],
-      "last_observed_at": "2026-09-18T21:52:06Z"
-    },
-    {
-      "software_id": "yuris-fedify",
-      "group_id": "unknown",
-      "group_type": "fallback",
-      "deployment_kind": "unknown",
-      "classification_status": "explicit_unknown",
-      "healthy_instance_count": 1,
-      "observed_names": [
-        "yuris-fedify"
-      ],
-      "last_observed_at": "2026-09-18T18:52:17Z"
     }
   ]
 }
