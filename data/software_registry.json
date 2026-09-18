@@ -8,6 +8,7 @@
       "software_id": "ecko",
       "group_id": "mastodon",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -19,6 +20,7 @@
       "software_id": "fedibird",
       "group_id": "mastodon",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -30,6 +32,7 @@
       "software_id": "hometown",
       "group_id": "mastodon",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 94,
       "observed_names": [
@@ -41,6 +44,7 @@
       "software_id": "kmyblue",
       "group_id": "mastodon",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 21,
       "observed_names": [
@@ -52,6 +56,7 @@
       "software_id": "mastodon",
       "group_id": "mastodon",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 7954,
       "observed_names": [
@@ -63,6 +68,7 @@
       "software_id": "paon",
       "group_id": "mastodon",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -74,6 +80,7 @@
       "software_id": "wildebeest",
       "group_id": "mastodon",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 16,
       "observed_names": [
@@ -85,6 +92,7 @@
       "software_id": "areionskey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -96,6 +104,7 @@
       "software_id": "calckey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -107,6 +116,7 @@
       "software_id": "catodon",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 10,
       "observed_names": [
@@ -118,6 +128,7 @@
       "software_id": "cherrypick",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 60,
       "observed_names": [
@@ -129,6 +140,7 @@
       "software_id": "cluckey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -140,6 +152,7 @@
       "software_id": "corpsekey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -151,6 +164,7 @@
       "software_id": "dolphin",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -162,6 +176,7 @@
       "software_id": "firefish",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 17,
       "observed_names": [
@@ -173,6 +188,7 @@
       "software_id": "foundkey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -184,6 +200,7 @@
       "software_id": "goblin",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -195,6 +212,7 @@
       "software_id": "groundpolis-milkey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -206,6 +224,7 @@
       "software_id": "hickey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -217,6 +236,7 @@
       "software_id": "iceshrimp",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 76,
       "observed_names": [
@@ -228,6 +248,7 @@
       "software_id": "magnetar",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -239,6 +260,7 @@
       "software_id": "meisskey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 6,
       "observed_names": [
@@ -250,6 +272,7 @@
       "software_id": "misskey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1051,
       "observed_names": [
@@ -261,6 +284,7 @@
       "software_id": "mk-go",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -272,6 +296,7 @@
       "software_id": "nexkey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -281,6 +306,7 @@
       "software_id": "pawkey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -292,6 +318,7 @@
       "software_id": "pulsar",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -303,6 +330,7 @@
       "software_id": "quollkey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -312,6 +340,7 @@
       "software_id": "sharkey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 499,
       "observed_names": [
@@ -323,6 +352,7 @@
       "software_id": "shorkey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -334,6 +364,7 @@
       "software_id": "tanukey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -343,6 +374,7 @@
       "software_id": "turtkey",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -354,6 +386,7 @@
       "software_id": "yoiyami",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -365,6 +398,7 @@
       "software_id": "yojo-art",
       "group_id": "misskey",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 5,
       "observed_names": [
@@ -376,6 +410,7 @@
       "software_id": "akkoma",
       "group_id": "pleroma",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 494,
       "observed_names": [
@@ -387,6 +422,7 @@
       "software_id": "cagando",
       "group_id": "pleroma",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -398,6 +434,7 @@
       "software_id": "gharab-tzereq",
       "group_id": "pleroma",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -409,6 +446,7 @@
       "software_id": "incestoma",
       "group_id": "pleroma",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 5,
       "observed_names": [
@@ -420,6 +458,7 @@
       "software_id": "instance-softwarename",
       "group_id": "pleroma",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -429,6 +468,7 @@
       "software_id": "pleroma",
       "group_id": "pleroma",
       "group_type": "family",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 572,
       "observed_names": [
@@ -440,6 +480,7 @@
       "software_id": "gotosocial",
       "group_id": "gotosocial",
       "group_type": "software",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1809,
       "observed_names": [
@@ -451,6 +492,7 @@
       "software_id": "ghost",
       "group_id": "ghost",
       "group_type": "software",
+      "deployment_kind": "activitypub_enabled_site",
       "classification_status": "classified",
       "healthy_instance_count": 6036,
       "observed_names": [
@@ -462,6 +504,7 @@
       "software_id": "wordpress",
       "group_id": "wordpress",
       "group_type": "software",
+      "deployment_kind": "activitypub_enabled_site",
       "classification_status": "classified",
       "healthy_instance_count": 4151,
       "observed_names": [
@@ -473,6 +516,7 @@
       "software_id": "98gravity-electro",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -482,6 +526,7 @@
       "software_id": "activipypub",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -493,6 +538,7 @@
       "software_id": "activities-next",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -504,6 +550,7 @@
       "software_id": "ahodon",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -515,6 +562,7 @@
       "software_id": "alvanista",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -526,6 +574,7 @@
       "software_id": "amiverse",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -535,6 +584,7 @@
       "software_id": "aniverse",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -546,6 +596,7 @@
       "software_id": "appy",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -557,6 +608,7 @@
       "software_id": "aurboda",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -568,6 +620,7 @@
       "software_id": "axismundi",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -579,6 +632,7 @@
       "software_id": "babil",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -590,6 +644,7 @@
       "software_id": "baudrate",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -601,6 +656,7 @@
       "software_id": "bizzfed",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -612,6 +668,7 @@
       "software_id": "bonfire",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 28,
       "observed_names": [
@@ -623,6 +680,7 @@
       "software_id": "bonfou",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -632,6 +690,7 @@
       "software_id": "bookwyrm",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 107,
       "observed_names": [
@@ -643,6 +702,7 @@
       "software_id": "bovine",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -654,6 +714,7 @@
       "software_id": "brighteon",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -665,6 +726,7 @@
       "software_id": "broca",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -676,6 +738,7 @@
       "software_id": "bugle",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -687,6 +750,7 @@
       "software_id": "bulle",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -698,6 +762,7 @@
       "software_id": "calamus",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -709,6 +774,7 @@
       "software_id": "careercupid",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -720,6 +786,7 @@
       "software_id": "catalyst",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -731,6 +798,7 @@
       "software_id": "cattle-grid",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -740,6 +808,7 @@
       "software_id": "cf-activitypub",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -751,6 +820,7 @@
       "software_id": "chara-social",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -762,6 +832,7 @@
       "software_id": "charlamos",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -773,6 +844,7 @@
       "software_id": "chat",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -784,6 +856,7 @@
       "software_id": "checkin",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -795,6 +868,7 @@
       "software_id": "ciu",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -807,6 +881,7 @@
       "software_id": "cocoartz",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -818,6 +893,7 @@
       "software_id": "codename-merp",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -829,6 +905,7 @@
       "software_id": "comal",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -840,6 +917,7 @@
       "software_id": "commonpub",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -851,6 +929,7 @@
       "software_id": "cookifed",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -862,6 +941,7 @@
       "software_id": "cooltopia",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -873,6 +953,7 @@
       "software_id": "coresignal",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -884,6 +965,7 @@
       "software_id": "cosmoslide",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -893,6 +975,7 @@
       "software_id": "cyritech-community",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -904,6 +987,7 @@
       "software_id": "d250g2",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -915,6 +999,7 @@
       "software_id": "dais",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -926,6 +1011,7 @@
       "software_id": "daism",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -937,6 +1023,7 @@
       "software_id": "darak",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -948,6 +1035,7 @@
       "software_id": "demokratie-plattform",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -959,6 +1047,7 @@
       "software_id": "diskrot",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -970,6 +1059,7 @@
       "software_id": "ditto",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -981,6 +1071,7 @@
       "software_id": "dope-network",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -992,6 +1083,7 @@
       "software_id": "dumpster-federation",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1003,6 +1095,7 @@
       "software_id": "echo",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1014,6 +1107,7 @@
       "software_id": "egokey",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1025,6 +1119,7 @@
       "software_id": "egregoros",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1036,6 +1131,7 @@
       "software_id": "ehlabs",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1047,6 +1143,7 @@
       "software_id": "elektrine",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1058,6 +1155,7 @@
       "software_id": "elgg",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1069,6 +1167,7 @@
       "software_id": "emissary",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 9,
       "observed_names": [
@@ -1080,6 +1179,7 @@
       "software_id": "encryptr-net",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -1089,6 +1189,7 @@
       "software_id": "enigmatick",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1100,6 +1201,7 @@
       "software_id": "eunha",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1111,6 +1213,7 @@
       "software_id": "famweb",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1122,6 +1225,7 @@
       "software_id": "federated",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1133,6 +1237,7 @@
       "software_id": "fedibook",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1144,6 +1249,7 @@
       "software_id": "fedihood",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1155,6 +1261,7 @@
       "software_id": "fediloc",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1166,6 +1273,7 @@
       "software_id": "fediman",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1177,6 +1285,7 @@
       "software_id": "foxhole",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1188,6 +1297,7 @@
       "software_id": "frequency",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1199,6 +1309,7 @@
       "software_id": "friendica",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 338,
       "observed_names": [
@@ -1210,6 +1321,7 @@
       "software_id": "gibrr",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1221,6 +1333,7 @@
       "software_id": "glitchcafe",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1232,6 +1345,7 @@
       "software_id": "gnusocial",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -1243,6 +1357,7 @@
       "software_id": "gothread",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1254,6 +1369,7 @@
       "software_id": "grilledcheese",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1265,6 +1381,7 @@
       "software_id": "gush",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1276,6 +1393,7 @@
       "software_id": "hackerspub",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1287,6 +1405,7 @@
       "software_id": "hanbitfediverse",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1298,6 +1417,7 @@
       "software_id": "handle",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1309,6 +1429,7 @@
       "software_id": "harmony",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1320,6 +1441,7 @@
       "software_id": "hollo",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 29,
       "observed_names": [
@@ -1331,6 +1453,7 @@
       "software_id": "holos",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -1342,6 +1465,7 @@
       "software_id": "honk",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1353,6 +1477,7 @@
       "software_id": "hourlyphoto",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1364,6 +1489,7 @@
       "software_id": "humhub-fediverse",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1375,6 +1501,7 @@
       "software_id": "hybridsocial",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1386,6 +1513,7 @@
       "software_id": "iceshrimp-net",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 84,
       "observed_names": [
@@ -1397,6 +1525,7 @@
       "software_id": "imp",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1408,6 +1537,7 @@
       "software_id": "incise",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -1417,6 +1547,7 @@
       "software_id": "infotograf",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1428,6 +1559,7 @@
       "software_id": "inkwell",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1439,6 +1571,7 @@
       "software_id": "intermix",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1450,6 +1583,7 @@
       "software_id": "irwin",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1461,6 +1595,7 @@
       "software_id": "kiiteitte",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1472,6 +1607,7 @@
       "software_id": "known",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1483,6 +1619,7 @@
       "software_id": "kotori",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1494,6 +1631,7 @@
       "software_id": "kroeg",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1505,6 +1643,7 @@
       "software_id": "ktistec",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 13,
       "observed_names": [
@@ -1516,6 +1655,7 @@
       "software_id": "letter",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1527,6 +1667,7 @@
       "software_id": "littlefedi",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -1538,6 +1679,7 @@
       "software_id": "mammuthus",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 12,
       "observed_names": [
@@ -1549,6 +1691,7 @@
       "software_id": "microblog",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1560,6 +1703,7 @@
       "software_id": "millbody",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1571,6 +1715,7 @@
       "software_id": "mischief",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1582,6 +1727,7 @@
       "software_id": "missive",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1593,6 +1739,7 @@
       "software_id": "mitra",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 59,
       "observed_names": [
@@ -1604,6 +1751,7 @@
       "software_id": "moimcookr",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1615,6 +1763,7 @@
       "software_id": "monodon",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1626,6 +1775,7 @@
       "software_id": "murlog",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -1637,6 +1787,7 @@
       "software_id": "na-real",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1648,6 +1799,7 @@
       "software_id": "nekonoverse",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1659,6 +1811,7 @@
       "software_id": "openbook",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -1670,6 +1823,7 @@
       "software_id": "openspace",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1681,6 +1835,7 @@
       "software_id": "orizuru",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1692,6 +1847,7 @@
       "software_id": "pawfed",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1703,6 +1859,7 @@
       "software_id": "peermesh-pm-module-social",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1714,6 +1871,7 @@
       "software_id": "pelago",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1725,6 +1883,7 @@
       "software_id": "perch",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1736,6 +1895,7 @@
       "software_id": "perohub",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1747,6 +1907,7 @@
       "software_id": "pinka",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1758,6 +1919,7 @@
       "software_id": "pixelfed",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 627,
       "observed_names": [
@@ -1769,6 +1931,7 @@
       "software_id": "plume",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 24,
       "observed_names": [
@@ -1780,6 +1943,7 @@
       "software_id": "pods-social",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1791,6 +1955,7 @@
       "software_id": "ponos",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1802,6 +1967,7 @@
       "software_id": "psh",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1813,6 +1979,7 @@
       "software_id": "pub",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1824,6 +1991,7 @@
       "software_id": "pubby",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1835,6 +2003,7 @@
       "software_id": "quolibet",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1846,6 +2015,7 @@
       "software_id": "roosty",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1857,6 +2027,7 @@
       "software_id": "rullen",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1868,6 +2039,7 @@
       "software_id": "s-nna774-net",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1879,6 +2051,7 @@
       "software_id": "sakurasato",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1890,6 +2063,7 @@
       "software_id": "samklang",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1901,6 +2075,7 @@
       "software_id": "seiran",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1912,6 +2087,7 @@
       "software_id": "sequel",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1923,6 +2099,7 @@
       "software_id": "shoot",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1934,6 +2111,7 @@
       "software_id": "sigilverse",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1945,6 +2123,7 @@
       "software_id": "siliconbeest",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -1956,6 +2135,7 @@
       "software_id": "smallhold",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -1967,6 +2147,7 @@
       "software_id": "smithereen",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -1978,6 +2159,7 @@
       "software_id": "snac",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 348,
       "observed_names": [
@@ -1989,6 +2171,7 @@
       "software_id": "snacforge",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2000,6 +2183,7 @@
       "software_id": "soapbox",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -2009,6 +2193,7 @@
       "software_id": "social-wud",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2020,6 +2205,7 @@
       "software_id": "socialhome",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 8,
       "observed_names": [
@@ -2031,6 +2217,7 @@
       "software_id": "soda",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2042,6 +2229,7 @@
       "software_id": "solo-masto",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2053,6 +2241,7 @@
       "software_id": "starling",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 16,
       "observed_names": [
@@ -2064,6 +2253,7 @@
       "software_id": "stegodon",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -2075,6 +2265,7 @@
       "software_id": "sukhi-fedi",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2086,6 +2277,7 @@
       "software_id": "tafarn",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2097,6 +2289,7 @@
       "software_id": "takahe",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 10,
       "observed_names": [
@@ -2108,6 +2301,7 @@
       "software_id": "thoughts",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2119,6 +2313,7 @@
       "software_id": "tinyap",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -2130,6 +2325,7 @@
       "software_id": "tokoroten",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2141,6 +2337,7 @@
       "software_id": "tootik",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -2152,6 +2349,7 @@
       "software_id": "touchgrass",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2163,6 +2361,7 @@
       "software_id": "typent",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -2174,6 +2373,7 @@
       "software_id": "uanna",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2185,6 +2385,7 @@
       "software_id": "unfathomably-be",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2196,6 +2397,7 @@
       "software_id": "unspoken",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2207,6 +2409,7 @@
       "software_id": "vernissage",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 7,
       "observed_names": [
@@ -2218,6 +2421,7 @@
       "software_id": "vutuv",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2229,6 +2433,7 @@
       "software_id": "wafrn",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 31,
       "observed_names": [
@@ -2240,6 +2445,7 @@
       "software_id": "waq",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2251,6 +2457,7 @@
       "software_id": "wegif",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2262,6 +2469,7 @@
       "software_id": "wellesley",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -2271,6 +2479,7 @@
       "software_id": "welley",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 5,
       "observed_names": [
@@ -2282,6 +2491,7 @@
       "software_id": "wxwclub",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -2293,6 +2503,7 @@
       "software_id": "x-log",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -2302,6 +2513,7 @@
       "software_id": "xbuddy",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2313,6 +2525,7 @@
       "software_id": "youthopia",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2324,6 +2537,7 @@
       "software_id": "yplev",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -2335,6 +2549,7 @@
       "software_id": "zap",
       "group_id": "social",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2346,6 +2561,7 @@
       "software_id": "activitypub",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2357,6 +2573,7 @@
       "software_id": "backdrop",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2368,6 +2585,7 @@
       "software_id": "bloedsuikerbaas-activitypub",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2379,6 +2597,7 @@
       "software_id": "blog-server",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -2388,6 +2607,7 @@
       "software_id": "capubara",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -2399,6 +2619,7 @@
       "software_id": "changkyun-kim",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -2408,6 +2629,7 @@
       "software_id": "clanspub",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2419,6 +2641,7 @@
       "software_id": "clipsymphony-activitypub-service",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -2430,6 +2653,7 @@
       "software_id": "contentnation",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2441,6 +2665,7 @@
       "software_id": "coryd-dev",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2452,6 +2677,7 @@
       "software_id": "dailyrucks",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2463,6 +2689,7 @@
       "software_id": "dch-blog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -2472,6 +2699,7 @@
       "software_id": "drupal",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 11,
       "observed_names": [
@@ -2483,6 +2711,7 @@
       "software_id": "eindex-blog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2494,6 +2723,7 @@
       "software_id": "fedipage",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -2505,6 +2735,7 @@
       "software_id": "finalboss",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2516,6 +2747,7 @@
       "software_id": "forte",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 15,
       "observed_names": [
@@ -2527,6 +2759,7 @@
       "software_id": "glommer",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2538,6 +2771,7 @@
       "software_id": "goblog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 7,
       "observed_names": [
@@ -2549,6 +2783,7 @@
       "software_id": "grav-fediverse-publisher",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2560,6 +2795,7 @@
       "software_id": "grouse",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2571,6 +2807,7 @@
       "software_id": "hatsu",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -2582,6 +2819,7 @@
       "software_id": "hubzilla",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 87,
       "observed_names": [
@@ -2593,6 +2831,7 @@
       "software_id": "indiekit",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2604,6 +2843,7 @@
       "software_id": "indiekit-cms",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2615,6 +2855,7 @@
       "software_id": "jgs-me",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2626,6 +2867,7 @@
       "software_id": "johnson-fyi-blog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2637,6 +2879,7 @@
       "software_id": "kaleido",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2648,6 +2891,7 @@
       "software_id": "kate-wtf-11ty",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -2659,6 +2903,7 @@
       "software_id": "klaxon",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -2670,6 +2915,7 @@
       "software_id": "klonkt",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 10,
       "observed_names": [
@@ -2681,6 +2927,7 @@
       "software_id": "labas",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2692,6 +2939,7 @@
       "software_id": "lazcorpsite",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2703,6 +2951,7 @@
       "software_id": "lifepress",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2714,6 +2963,7 @@
       "software_id": "logink",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2725,6 +2975,7 @@
       "software_id": "ma-at",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -2734,6 +2985,7 @@
       "software_id": "macroblog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2745,6 +2997,7 @@
       "software_id": "madblog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -2756,6 +3009,7 @@
       "software_id": "marge",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2767,6 +3021,7 @@
       "software_id": "matters-gateway-core",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -2778,6 +3033,7 @@
       "software_id": "microblogpub",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 27,
       "observed_names": [
@@ -2789,6 +3045,7 @@
       "software_id": "microdotblog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2800,6 +3057,7 @@
       "software_id": "moments",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2811,6 +3069,7 @@
       "software_id": "monoplace-ca",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2822,6 +3081,7 @@
       "software_id": "nettepuoti-activitypub-limited-support",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2833,6 +3093,7 @@
       "software_id": "newtqnia",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2844,6 +3105,7 @@
       "software_id": "notes",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2855,6 +3117,7 @@
       "software_id": "omicron",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2866,6 +3129,7 @@
       "software_id": "oolong",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2877,6 +3141,7 @@
       "software_id": "outpost",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2888,6 +3153,7 @@
       "software_id": "owl-blogs",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2899,6 +3165,7 @@
       "software_id": "pandacap",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -2910,6 +3177,7 @@
       "software_id": "paul-kinlan-me",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2921,6 +3189,7 @@
       "software_id": "pelican-activitypub",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2932,6 +3201,7 @@
       "software_id": "pgm",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2943,6 +3213,7 @@
       "software_id": "qaperture",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2954,6 +3225,7 @@
       "software_id": "reisetagebuch",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -2965,6 +3237,7 @@
       "software_id": "robida",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2976,6 +3249,7 @@
       "software_id": "ryanw-eu",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2987,6 +3261,7 @@
       "software_id": "scrapblog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -2998,6 +3273,7 @@
       "software_id": "seos",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3009,6 +3285,7 @@
       "software_id": "single-file-activitypub-server-in-php",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 30,
       "observed_names": [
@@ -3020,6 +3297,7 @@
       "software_id": "snapsmack",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -3031,6 +3309,7 @@
       "software_id": "sneaas",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3042,6 +3321,7 @@
       "software_id": "social-blog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -3053,6 +3333,7 @@
       "software_id": "solopub",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -3064,6 +3345,7 @@
       "software_id": "sutty-distributed-press",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 44,
       "observed_names": [
@@ -3075,6 +3357,7 @@
       "software_id": "sveltekit-blog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3086,6 +3369,7 @@
       "software_id": "takesama",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3097,6 +3381,7 @@
       "software_id": "tens-city",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3108,6 +3393,7 @@
       "software_id": "thiswasnews",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3119,6 +3405,7 @@
       "software_id": "tinypub",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3130,6 +3417,7 @@
       "software_id": "tomh-nl",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3141,6 +3429,7 @@
       "software_id": "trails-cool",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3152,6 +3441,7 @@
       "software_id": "typecho",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3163,6 +3453,7 @@
       "software_id": "wallog",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3174,6 +3465,7 @@
       "software_id": "webfan",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -3186,6 +3478,7 @@
       "software_id": "writ",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3197,6 +3490,7 @@
       "software_id": "writefreely",
       "group_id": "blog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 634,
       "observed_names": [
@@ -3208,6 +3502,7 @@
       "software_id": "apboard",
       "group_id": "forum",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3219,6 +3514,7 @@
       "software_id": "enigma-bbs",
       "group_id": "forum",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -3230,6 +3526,7 @@
       "software_id": "fediforum",
       "group_id": "forum",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3241,6 +3538,7 @@
       "software_id": "kbin",
       "group_id": "forum",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -3250,6 +3548,7 @@
       "software_id": "lemmy",
       "group_id": "forum",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 360,
       "observed_names": [
@@ -3261,6 +3560,7 @@
       "software_id": "lotide",
       "group_id": "forum",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -3272,6 +3572,7 @@
       "software_id": "mbin",
       "group_id": "forum",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 16,
       "observed_names": [
@@ -3283,6 +3584,7 @@
       "software_id": "neogroup",
       "group_id": "forum",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3294,6 +3596,7 @@
       "software_id": "nodebb",
       "group_id": "forum",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 39,
       "observed_names": [
@@ -3305,6 +3608,7 @@
       "software_id": "piefed",
       "group_id": "forum",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 73,
       "observed_names": [
@@ -3316,6 +3620,7 @@
       "software_id": "loops",
       "group_id": "video",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 22,
       "observed_names": [
@@ -3327,6 +3632,7 @@
       "software_id": "meshtube",
       "group_id": "video",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3338,6 +3644,7 @@
       "software_id": "open-streaming-platform",
       "group_id": "video",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3349,6 +3656,7 @@
       "software_id": "owncast",
       "group_id": "video",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 286,
       "observed_names": [
@@ -3361,6 +3669,7 @@
       "software_id": "peertube",
       "group_id": "video",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1566,
       "observed_names": [
@@ -3372,6 +3681,7 @@
       "software_id": "scenes-cloud",
       "group_id": "video",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3383,6 +3693,7 @@
       "software_id": "yt-on-fedi",
       "group_id": "video",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3394,6 +3705,7 @@
       "software_id": "funkwhale",
       "group_id": "audio",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 69,
       "observed_names": [
@@ -3405,6 +3717,7 @@
       "software_id": "kromosynth",
       "group_id": "audio",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3416,6 +3729,7 @@
       "software_id": "mixpal",
       "group_id": "audio",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3427,6 +3741,7 @@
       "software_id": "musicsocial",
       "group_id": "audio",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3438,6 +3753,7 @@
       "software_id": "podcast-peformance",
       "group_id": "audio",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3449,6 +3765,7 @@
       "software_id": "podfriend",
       "group_id": "audio",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3460,6 +3777,7 @@
       "software_id": "soundverse",
       "group_id": "audio",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3471,6 +3789,7 @@
       "software_id": "the-crucible",
       "group_id": "audio",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3482,6 +3801,7 @@
       "software_id": "truefans",
       "group_id": "audio",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -3493,6 +3813,7 @@
       "software_id": "tunecamp",
       "group_id": "audio",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3504,6 +3825,7 @@
       "software_id": "dansal",
       "group_id": "events",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -3515,6 +3837,7 @@
       "software_id": "everycal",
       "group_id": "events",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3526,6 +3849,7 @@
       "software_id": "fancio",
       "group_id": "events",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3537,6 +3861,7 @@
       "software_id": "gancio",
       "group_id": "events",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 188,
       "observed_names": [
@@ -3548,6 +3873,7 @@
       "software_id": "gathio",
       "group_id": "events",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 10,
       "observed_names": [
@@ -3559,6 +3885,7 @@
       "software_id": "mobilizon",
       "group_id": "events",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 137,
       "observed_names": [
@@ -3571,6 +3898,7 @@
       "software_id": "tumeeto",
       "group_id": "events",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3582,6 +3910,7 @@
       "software_id": "cf-git",
       "group_id": "forge",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3593,6 +3922,7 @@
       "software_id": "forgeflux",
       "group_id": "forge",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3604,6 +3934,7 @@
       "software_id": "forgejo",
       "group_id": "forge",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 50,
       "observed_names": [
@@ -3615,6 +3946,7 @@
       "software_id": "forkmesh",
       "group_id": "forge",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3626,6 +3958,7 @@
       "software_id": "zerocat",
       "group_id": "forge",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3637,6 +3970,7 @@
       "software_id": "flohmarkt",
       "group_id": "marketplace",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 25,
       "observed_names": [
@@ -3648,6 +3982,7 @@
       "software_id": "betula",
       "group_id": "bookmarks",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 23,
       "observed_names": [
@@ -3659,6 +3994,7 @@
       "software_id": "bowrd",
       "group_id": "bookmarks",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3670,6 +4006,7 @@
       "software_id": "commonplace",
       "group_id": "bookmarks",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3681,6 +4018,7 @@
       "software_id": "postmarks",
       "group_id": "bookmarks",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 10,
       "observed_names": [
@@ -3692,6 +4030,7 @@
       "software_id": "rssfriends",
       "group_id": "bookmarks",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3703,6 +4042,7 @@
       "software_id": "annexwyrm",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3714,6 +4054,7 @@
       "software_id": "bookshelf",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3725,6 +4066,7 @@
       "software_id": "divedb",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3736,6 +4078,7 @@
       "software_id": "dstore",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3747,6 +4090,7 @@
       "software_id": "ducktrip",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3758,6 +4102,7 @@
       "software_id": "dutch-beer-collective",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3769,6 +4114,7 @@
       "software_id": "manyfold",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 7,
       "observed_names": [
@@ -3780,6 +4126,7 @@
       "software_id": "moviebuff",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -3791,6 +4138,7 @@
       "software_id": "movies-diary",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3802,6 +4150,7 @@
       "software_id": "myriad",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3813,6 +4162,7 @@
       "software_id": "neodb",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 15,
       "observed_names": [
@@ -3824,6 +4174,7 @@
       "software_id": "plamenu",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3835,6 +4186,7 @@
       "software_id": "tvmarks",
       "group_id": "catalog",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3846,6 +4198,7 @@
       "software_id": "agora-of-flancia",
       "group_id": "knowledge",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3857,6 +4210,7 @@
       "software_id": "cleversets",
       "group_id": "knowledge",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -3868,6 +4222,7 @@
       "software_id": "development-agora-of-flancia",
       "group_id": "knowledge",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3879,6 +4234,7 @@
       "software_id": "ibis",
       "group_id": "knowledge",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -3890,6 +4246,7 @@
       "software_id": "the-foundation",
       "group_id": "knowledge",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3901,6 +4258,7 @@
       "software_id": "activitypods",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -3912,6 +4270,7 @@
       "software_id": "anoxinon-e-v-cloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3923,6 +4282,7 @@
       "software_id": "clifton-cloud-storage",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3934,6 +4294,7 @@
       "software_id": "cloud-automat-direct",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3945,6 +4306,7 @@
       "software_id": "dj-cloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3956,6 +4318,7 @@
       "software_id": "felix-nextcloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3967,6 +4330,7 @@
       "software_id": "henze-online",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3978,6 +4342,7 @@
       "software_id": "kolosowscy-cloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -3989,6 +4354,7 @@
       "software_id": "la-tani-re-cloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4000,6 +4366,7 @@
       "software_id": "luon-cloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4011,6 +4378,7 @@
       "software_id": "nathacloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4022,6 +4390,7 @@
       "software_id": "nextcloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4033,6 +4402,7 @@
       "software_id": "nextcloud-social",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 17,
       "observed_names": [
@@ -4045,6 +4415,7 @@
       "software_id": "private-cloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4056,6 +4427,7 @@
       "software_id": "profed",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4067,6 +4439,7 @@
       "software_id": "simcloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4078,6 +4451,7 @@
       "software_id": "solid-activitypub",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4089,6 +4463,7 @@
       "software_id": "sonney-nextcloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4100,6 +4475,7 @@
       "software_id": "spicy-shoggoth-nextcloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4111,6 +4487,7 @@
       "software_id": "stefans-cloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4122,6 +4499,7 @@
       "software_id": "storage-share",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4133,6 +4511,7 @@
       "software_id": "teledyn-nc",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4144,6 +4523,7 @@
       "software_id": "walzercloud",
       "group_id": "cloud",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4155,6 +4535,7 @@
       "software_id": "badgefed",
       "group_id": "credentials",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -4166,6 +4547,7 @@
       "software_id": "castling-club",
       "group_id": "games",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4177,6 +4559,7 @@
       "software_id": "chess-game-infinito-nexus",
       "group_id": "games",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4188,6 +4571,7 @@
       "software_id": "cruciverb",
       "group_id": "games",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4199,6 +4583,7 @@
       "software_id": "dicecho",
       "group_id": "games",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4210,6 +4595,7 @@
       "software_id": "haruspex",
       "group_id": "games",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4221,6 +4607,7 @@
       "software_id": "tribal-services",
       "group_id": "games",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4232,6 +4619,7 @@
       "software_id": "untitled-activitypub-software",
       "group_id": "games",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4243,6 +4631,7 @@
       "software_id": "bird-meetup",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4254,6 +4643,7 @@
       "software_id": "birdsitelive",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 4,
       "observed_names": [
@@ -4265,6 +4655,7 @@
       "software_id": "bridgy-fed",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4276,6 +4667,7 @@
       "software_id": "ccworld-ap-bridge",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -4287,6 +4679,7 @@
       "software_id": "concrnt-ap-bridge",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 9,
       "observed_names": [
@@ -4298,6 +4691,7 @@
       "software_id": "encyclia",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4309,6 +4703,7 @@
       "software_id": "feeder",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4320,6 +4715,7 @@
       "software_id": "feediverse",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4331,6 +4727,7 @@
       "software_id": "mastodon-rss",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4342,6 +4739,7 @@
       "software_id": "mastopocket",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4353,6 +4751,7 @@
       "software_id": "momostr",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4364,6 +4763,7 @@
       "software_id": "mostr",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -4375,6 +4775,7 @@
       "software_id": "neodb-skybridge",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4386,6 +4787,7 @@
       "software_id": "notestock",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4397,6 +4799,7 @@
       "software_id": "rss2pub",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4408,6 +4811,7 @@
       "software_id": "tidepool",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4419,6 +4823,7 @@
       "software_id": "usk",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4430,6 +4835,7 @@
       "software_id": "warpnet-fediverse-gateway",
       "group_id": "bridge",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4441,6 +4847,7 @@
       "software_id": "activity-pub-relay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -4452,6 +4859,7 @@
       "software_id": "activity-relay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 31,
       "observed_names": [
@@ -4463,6 +4871,7 @@
       "software_id": "activityrelay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 27,
       "observed_names": [
@@ -4474,6 +4883,7 @@
       "software_id": "aoderelay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 59,
       "observed_names": [
@@ -4485,6 +4895,7 @@
       "software_id": "ap-relay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4496,6 +4907,7 @@
       "software_id": "awakari",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -4505,6 +4917,7 @@
       "software_id": "buzzrelay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -4516,6 +4929,7 @@
       "software_id": "coma",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -4527,6 +4941,7 @@
       "software_id": "loops-relay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4538,6 +4953,7 @@
       "software_id": "merprelay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4549,6 +4965,7 @@
       "software_id": "nanasi-apps-xyz-relay-service",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4560,6 +4977,7 @@
       "software_id": "netsune-ap-relay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4571,6 +4989,7 @@
       "software_id": "pub-relay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -4582,6 +5001,7 @@
       "software_id": "relre",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4593,6 +5013,7 @@
       "software_id": "selective-relay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4604,6 +5025,7 @@
       "software_id": "uggsrelay",
       "group_id": "relay",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4615,6 +5037,7 @@
       "software_id": "activitypub-bot",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -4626,6 +5049,7 @@
       "software_id": "activitypub-dot-bot",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 3,
       "observed_names": [
@@ -4637,6 +5061,7 @@
       "software_id": "activitypub-mcp",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4648,6 +5073,7 @@
       "software_id": "claremontwx",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4659,6 +5085,7 @@
       "software_id": "drhu-activitypub-worker",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4670,6 +5097,7 @@
       "software_id": "emoji-ranking-v2-activitypub",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4681,6 +5109,7 @@
       "software_id": "fedibot",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4692,6 +5121,7 @@
       "software_id": "fedichatbot",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -4701,6 +5131,7 @@
       "software_id": "hiddenphox",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4712,6 +5143,7 @@
       "software_id": "menuverse-shopmenu",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4723,6 +5155,7 @@
       "software_id": "movietitler",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4734,6 +5167,7 @@
       "software_id": "newsdiff",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4745,6 +5179,7 @@
       "software_id": "squidcity",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4756,6 +5191,7 @@
       "software_id": "tacuruses",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4767,6 +5203,7 @@
       "software_id": "tiofomento-fedverse-bot",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -4776,6 +5213,7 @@
       "software_id": "uberblogr-activitypub",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4787,6 +5225,7 @@
       "software_id": "webfinger-splitdomain-canary",
       "group_id": "bot",
       "group_type": "category",
+      "deployment_kind": "federated_service",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4798,6 +5237,7 @@
       "software_id": "activitypub-firebase",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -4809,6 +5249,7 @@
       "software_id": "activitypub-server",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4820,6 +5261,7 @@
       "software_id": "capsule",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4831,6 +5273,7 @@
       "software_id": "fedbox",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4842,6 +5285,7 @@
       "software_id": "federated-activity-publisher",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4853,6 +5297,7 @@
       "software_id": "fedi-map",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4864,6 +5309,7 @@
       "software_id": "fedirouter",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4875,6 +5321,7 @@
       "software_id": "fedkit",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4886,6 +5333,7 @@
       "software_id": "gargoyle",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4897,6 +5345,7 @@
       "software_id": "hono",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4908,6 +5357,7 @@
       "software_id": "mention",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4919,6 +5369,7 @@
       "software_id": "meshnet",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4930,6 +5381,7 @@
       "software_id": "openlink-virtuoso",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 2,
       "observed_names": [
@@ -4941,6 +5393,7 @@
       "software_id": "rayven",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4952,6 +5405,7 @@
       "software_id": "verces",
       "group_id": "infrastructure",
       "group_type": "category",
+      "deployment_kind": "federation_infrastructure",
       "classification_status": "classified",
       "healthy_instance_count": 1,
       "observed_names": [
@@ -4963,6 +5417,7 @@
       "software_id": "activity-xsrv-win",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -4972,6 +5427,7 @@
       "software_id": "activitypub-rails",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -4981,6 +5437,7 @@
       "software_id": "chess-infinito-nexus",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -4990,6 +5447,7 @@
       "software_id": "citizen4",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -4999,6 +5457,7 @@
       "software_id": "dxnet",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5008,6 +5467,7 @@
       "software_id": "eliza-and-the-moneymakers",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5017,6 +5477,7 @@
       "software_id": "fediblock-instance",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5026,6 +5487,7 @@
       "software_id": "fedifolio",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5035,6 +5497,7 @@
       "software_id": "fedsy",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5044,6 +5507,7 @@
       "software_id": "g105b",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5053,6 +5517,7 @@
       "software_id": "gitea",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5062,6 +5527,7 @@
       "software_id": "itinerariummentis",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5071,6 +5537,7 @@
       "software_id": "lipupini",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5080,6 +5547,7 @@
       "software_id": "lubargw2",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5089,6 +5557,7 @@
       "software_id": "meshdags-site-a-dags-dk",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5098,6 +5567,7 @@
       "software_id": "metazine",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5107,6 +5577,7 @@
       "software_id": "octofedi",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5116,6 +5587,7 @@
       "software_id": "pichuchen-tw-webserver",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5125,6 +5597,7 @@
       "software_id": "private",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5134,6 +5607,7 @@
       "software_id": "the-lukes-cloud",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
@@ -5143,6 +5617,7 @@
       "software_id": "undefined",
       "group_id": "unknown",
       "group_type": "fallback",
+      "deployment_kind": "unknown",
       "classification_status": "explicit_unknown",
       "healthy_instance_count": 0,
       "observed_names": [],
