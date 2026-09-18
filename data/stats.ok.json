@@ -1117,23 +1117,6 @@
     "consecutive_failures": 0
   },
   {
-    "host": "3rdwall.net",
-    "verified_activitypub": true,
-    "software": {
-      "name": "mastodon",
-      "version": "4.7.1"
-    },
-    "open_registrations": false,
-    "users_total": 6,
-    "users_active_month": 1,
-    "statuses": 52,
-    "languages_detected": [],
-    "fetched_at": "2026-09-17T23:24:33Z",
-    "consecutive_failures": 2,
-    "last_failure_at": "2026-09-18T17:01:28Z",
-    "last_failure_reason": "nodeinfo: HTTP 525 from http://3rdwall.net/.well-known/nodeinfo; mastodon: HTTP 525 from https://3rdwall.net/api/v2/instance; HTTP 525 from https://3rdwall.net/api/v1/instance"
-  },
-  {
     "host": "3reate.com",
     "verified_activitypub": true,
     "software": {
@@ -6019,7 +6002,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:35:09Z",
     "nodeinfo_description": "Personal blog and homepage of Ahmet Alphan Sabancı.",
     "consecutive_failures": 0
   },
@@ -6033,9 +6016,46 @@
     "open_registrations": true,
     "users_total": 2,
     "users_active_month": null,
-    "statuses": 5242,
+    "statuses": 5245,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:35:09Z",
+    "consecutive_failures": 0
+  },
+  {
+    "host": "ahsocial.ar",
+    "verified_activitypub": true,
+    "software": {
+      "name": "mastodon",
+      "version": "4.4.2"
+    },
+    "open_registrations": true,
+    "users_total": 35,
+    "users_active_month": 16,
+    "statuses": 1838,
+    "languages_detected": [
+      "es"
+    ],
+    "fetched_at": "2026-09-18T18:35:09Z",
+    "nodeinfo_description": "Servidor argentino de Mastodon, para construir comunidad organizada, con soberanía tecnológica, libre de monopolios comerciales que direcciones los contenidos.",
+    "consecutive_failures": 0
+  },
+  {
+    "host": "ai-ethics.kr",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": 1,
+    "statuses": 13,
+    "languages_detected": [
+      "en",
+      "ko"
+    ],
+    "fetched_at": "2026-09-18T18:35:09Z",
+    "nodeinfo_description": "인공지능 윤리를 함께 고민하는 뉴스레터 AI Ethics Newsletter Korea",
     "consecutive_failures": 0
   },
   {
@@ -6052,7 +6072,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:35:09Z",
     "nodeinfo_description": "A single strategic imperative that the market doesn't understand about AI this week.",
     "consecutive_failures": 0
   },
@@ -6071,7 +6091,7 @@
       "en",
       "pl"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:35:09Z",
     "nodeinfo_description": "Niezależny katalog modeli AI, dostawców i kosztów API.",
     "consecutive_failures": 0
   },
@@ -6089,7 +6109,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:35:09Z",
     "nodeinfo_description": "Designing smarter with AI, one experiment at a time.",
     "consecutive_failures": 0
   },
@@ -6103,11 +6123,11 @@
     "open_registrations": false,
     "users_total": 17,
     "users_active_month": 6,
-    "statuses": 13907,
+    "statuses": 13908,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:35:09Z",
     "nodeinfo_description": "Welcome to AI Gallery: Where Art Meets Innovation",
     "consecutive_failures": 0
   },
@@ -6125,7 +6145,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:35:09Z",
     "nodeinfo_description": "AI has exploded in popularity of late. This brill makes the case that this is a good thing.",
     "consecutive_failures": 0
   },
@@ -14520,26 +14540,6 @@
     "consecutive_failures": 0
   },
   {
-    "host": "antisocial.cobryce.com",
-    "verified_activitypub": true,
-    "software": {
-      "name": "snac",
-      "version": "2.95"
-    },
-    "open_registrations": false,
-    "users_total": 1,
-    "users_active_month": 0,
-    "statuses": 2,
-    "languages_detected": [
-      "en"
-    ],
-    "fetched_at": "2026-09-17T23:24:33Z",
-    "nodeinfo_description": "A test instance",
-    "consecutive_failures": 2,
-    "last_failure_at": "2026-09-18T17:01:28Z",
-    "last_failure_reason": "nodeinfo: HTTP 502 from http://antisocial.cobryce.com/.well-known/nodeinfo"
-  },
-  {
     "host": "antisocial.punks.cc",
     "verified_activitypub": true,
     "software": {
@@ -21892,23 +21892,6 @@
     "fetched_at": "2026-09-18T17:01:28Z",
     "nodeinfo_description": "Creatures and posts.",
     "consecutive_failures": 0
-  },
-  {
-    "host": "b.koa.im",
-    "verified_activitypub": true,
-    "software": {
-      "name": "misskey",
-      "version": "2026.5.0"
-    },
-    "open_registrations": false,
-    "users_total": null,
-    "users_active_month": null,
-    "statuses": null,
-    "languages_detected": [],
-    "fetched_at": "2026-09-17T23:24:33Z",
-    "consecutive_failures": 2,
-    "last_failure_at": "2026-09-18T17:01:28Z",
-    "last_failure_reason": "nodeinfo: HTTPSConnectionPool(host='b.koa.im', port=443): Read timed out. (read timeout=5.0); misskey: HTTPSConnectionPool(host='b.koa.im', port=443): Read timed out. (read timeout=5.0)"
   },
   {
     "host": "b.lair.moe",
@@ -29934,26 +29917,6 @@
     "last_failure_reason": "nodeinfo: HTTPSConnectionPool(host='blog-ph.finn-app.com', port=443): Read timed out. (read timeout=5.0)"
   },
   {
-    "host": "blog.0xso.dev",
-    "verified_activitypub": true,
-    "software": {
-      "name": "ghost",
-      "version": "0.1.0"
-    },
-    "open_registrations": false,
-    "users_total": 1,
-    "users_active_month": 0,
-    "statuses": 5,
-    "languages_detected": [
-      "en"
-    ],
-    "fetched_at": "2026-09-17T23:24:33Z",
-    "nodeinfo_description": "Thoughts, stories and ideas",
-    "consecutive_failures": 2,
-    "last_failure_at": "2026-09-18T17:01:28Z",
-    "last_failure_reason": "nodeinfo: HTTPConnectionPool(host='blog.0xso.dev', port=80): Max retries exceeded with url: /.well-known/nodeinfo (Caused by NameResolutionError(\"HTTPConnection(host='blog.0xso.dev', port=80): Failed to resolve 'blog.0xso.dev' ([Errno -2] Name or service not known)\"))"
-  },
-  {
     "host": "blog.1296000.xyz",
     "verified_activitypub": true,
     "software": {
@@ -35914,26 +35877,6 @@
     "fetched_at": "2026-09-18T17:01:28Z",
     "nodeinfo_description": "EarlyNetherlandish.com is a publication dedicated to research and insights on Early Netherlandish art — primarily from the 15th century, and also the early 16th century.",
     "consecutive_failures": 0
-  },
-  {
-    "host": "blog.easy.fun",
-    "verified_activitypub": true,
-    "software": {
-      "name": "ghost",
-      "version": "0.1.0"
-    },
-    "open_registrations": false,
-    "users_total": 1,
-    "users_active_month": 0,
-    "statuses": 33,
-    "languages_detected": [
-      "en"
-    ],
-    "fetched_at": "2026-09-17T23:24:33Z",
-    "nodeinfo_description": "The open on-chain trading arena built on Hyperliquid, where you battle for rank, glory, and profit.\n\nEasy Trades, Fun Wins.",
-    "consecutive_failures": 2,
-    "last_failure_at": "2026-09-18T17:01:28Z",
-    "last_failure_reason": "nodeinfo: HTTP 404 from http://blog.easy.fun/.well-known/nodeinfo"
   },
   {
     "host": "blog.echoingfrog.ca",
@@ -49366,23 +49309,6 @@
     "consecutive_failures": 0
   },
   {
-    "host": "blog.smithandtech.space",
-    "verified_activitypub": true,
-    "software": {
-      "name": "wordpress",
-      "version": "7.1"
-    },
-    "open_registrations": false,
-    "users_total": 2,
-    "users_active_month": 2,
-    "statuses": 58,
-    "languages_detected": [],
-    "fetched_at": "2026-09-17T23:24:33Z",
-    "consecutive_failures": 2,
-    "last_failure_at": "2026-09-18T17:01:28Z",
-    "last_failure_reason": "nodeinfo: HTTP 530 from http://blog.smithandtech.space/.well-known/nodeinfo"
-  },
-  {
     "host": "blog.smk.dk",
     "verified_activitypub": true,
     "software": {
@@ -57998,23 +57924,6 @@
     "consecutive_failures": 0
   },
   {
-    "host": "bookwyrm.morgclaw.uk",
-    "verified_activitypub": true,
-    "software": {
-      "name": "bookwyrm",
-      "version": "0.9.2"
-    },
-    "open_registrations": false,
-    "users_total": 2,
-    "users_active_month": 2,
-    "statuses": 0,
-    "languages_detected": [],
-    "fetched_at": "2026-09-17T23:24:33Z",
-    "consecutive_failures": 2,
-    "last_failure_at": "2026-09-18T17:01:28Z",
-    "last_failure_reason": "nodeinfo: HTTP 530 from http://bookwyrm.morgclaw.uk/.well-known/nodeinfo"
-  },
-  {
     "host": "bookwyrm.myrmidex.net",
     "verified_activitypub": true,
     "software": {
@@ -59401,7 +59310,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Local News in 60 Seconds",
     "consecutive_failures": 0
   },
@@ -59417,7 +59326,26 @@
     "users_active_month": 30,
     "statuses": 6713,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
+    "consecutive_failures": 0
+  },
+  {
+    "host": "bovedainversion.com",
+    "verified_activitypub": true,
+    "software": {
+      "name": "ghost",
+      "version": "0.1.0"
+    },
+    "open_registrations": false,
+    "users_total": 1,
+    "users_active_month": null,
+    "statuses": 0,
+    "languages_detected": [
+      "es",
+      "en"
+    ],
+    "fetched_at": "2026-09-18T18:38:12Z",
+    "nodeinfo_description": "Inversiones personales. Cartera ecléctica: DGI, growth, value. Me gustan las empresas sólidas con resultados. Uso opciones para generar ingresos recurrentes.",
     "consecutive_failures": 0
   },
   {
@@ -59434,7 +59362,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "This is a private instance for Daniel Bovensiepen",
     "consecutive_failures": 0
   },
@@ -59450,7 +59378,7 @@
     "users_active_month": 3,
     "statuses": null,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "consecutive_failures": 0
   },
   {
@@ -59467,7 +59395,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "In which I try, after 25 years of blogging, to drop the ironic stance a bit.",
     "consecutive_failures": 0
   },
@@ -59485,7 +59413,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Falling along a sperm whale.",
     "consecutive_failures": 0
   },
@@ -59503,7 +59431,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Bowrd is a free, open-source visual bookmarking tool. Save images into boards, browse in a masonry gallery, and share your collections — no algorithm, no ads.",
     "consecutive_failures": 0
   },
@@ -59522,7 +59450,7 @@
       "en",
       "pt"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Benefício para todas pessoas | Benefícios para todos profissionais | App para Personal Trainer",
     "consecutive_failures": 0
   },
@@ -59540,7 +59468,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Welcome To Storyconnections Blog",
     "consecutive_failures": 0
   },
@@ -59558,7 +59486,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "a small little misskey instance for me and my silly friendsss",
     "consecutive_failures": 0
   },
@@ -59572,9 +59500,9 @@
     "open_registrations": true,
     "users_total": 75,
     "users_active_month": 46,
-    "statuses": 3739,
+    "statuses": 3741,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "consecutive_failures": 0
   },
   {
@@ -59591,7 +59519,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Akkoma: The worst fediverse server",
     "consecutive_failures": 0
   },
@@ -59607,10 +59535,10 @@
     "users_active_month": 0,
     "statuses": 157,
     "languages_detected": [
-      "en",
-      "ja"
+      "ja",
+      "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "BL丼は、BLと乙女ゲーをこよなく愛する腐女子軍団(＆腐男子)による、Boys Love NETメンバー専用Mastodonです。\r\nBoys Love NET ： http://boys-love.net",
     "consecutive_failures": 0
   },
@@ -59628,7 +59556,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "This Iceshrimp.NET instance does not appear to have a description",
     "consecutive_failures": 0
   },
@@ -59642,12 +59570,12 @@
     "open_registrations": false,
     "users_total": 77,
     "users_active_month": 76,
-    "statuses": 4560,
+    "statuses": 4636,
     "languages_detected": [
       "en",
       "pt"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "FediMeteo - O Tempo no Fediverse",
     "consecutive_failures": 0
   },
@@ -59665,7 +59593,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Portfolio and writings of Brad Thomas. Product design, visual design, UX design; Topics include Artificial Intelligence, technology, and all things design.",
     "consecutive_failures": 0
   },
@@ -59679,11 +59607,11 @@
     "open_registrations": true,
     "users_total": 330,
     "users_active_month": 86,
-    "statuses": 189553,
+    "statuses": 189580,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "a site for wormheads",
     "consecutive_failures": 0
   },
@@ -59699,7 +59627,7 @@
     "users_active_month": null,
     "statuses": null,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "consecutive_failures": 0
   },
   {
@@ -59714,7 +59642,7 @@
     "users_active_month": 1,
     "statuses": 4274,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "consecutive_failures": 0
   },
   {
@@ -59731,7 +59659,7 @@
       "en",
       "de"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "👋 Willkommen in meinen Kopf, hier werde ich immer mal wieder schreiben, was gerade in meinem Kopf vor sich geht. Zu finden auf @herrstoeckchen@mastodon.social",
     "consecutive_failures": 0
   },
@@ -59749,7 +59677,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Building a Digital Brain with Tana",
     "consecutive_failures": 0
   },
@@ -59767,7 +59695,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "The world's smartest social media",
     "consecutive_failures": 0
   },
@@ -59785,7 +59713,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "the original british internet company",
     "consecutive_failures": 0
   },
@@ -59804,7 +59732,7 @@
       "en",
       "fr"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Strange questions about media.",
     "consecutive_failures": 0
   },
@@ -59820,7 +59748,7 @@
     "users_active_month": 0,
     "statuses": 159,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "consecutive_failures": 0
   },
   {
@@ -59838,7 +59766,7 @@
       "en",
       "ca"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Això és el servidor experimental i en català de loar.",
     "consecutive_failures": 0
   },
@@ -59856,7 +59784,7 @@
     "languages_detected": [
       "de"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Alles rund um, über, aus & für das Land Brandenburg",
     "consecutive_failures": 0
   },
@@ -59874,7 +59802,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Writing about God and money.",
     "consecutive_failures": 0
   },
@@ -59892,7 +59820,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Thoughts on media, the curiosities of our world, and things that may make us smile. I made this cup just for you.",
     "consecutive_failures": 0
   },
@@ -59910,7 +59838,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Thoughts, stories and ideas.",
     "consecutive_failures": 0
   },
@@ -59926,7 +59854,7 @@
     "users_active_month": 0,
     "statuses": 18,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "consecutive_failures": 0
   },
   {
@@ -59943,7 +59871,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Brands Town is the first ever Mastodon Instance dedicated solely to corporate brand promotion.",
     "consecutive_failures": 0
   },
@@ -59962,7 +59890,7 @@
       "pt",
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Site de anúncios para o dWebcamp Brasil",
     "consecutive_failures": 0
   },
@@ -59981,7 +59909,7 @@
       "en",
       "pt"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Agregador do patrimônio histórico cultural brasileiro",
     "consecutive_failures": 0
   },
@@ -60000,7 +59928,7 @@
       "en",
       "de"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Watchblog zur AfD im Kreis Steinfurt",
     "consecutive_failures": 0
   },
@@ -60018,7 +59946,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "BrawnyAi - Digital Hunks: AI-generated, irresistible hunks in everyday scenarios. Dive into our world of sexy, inclusive fantasies with a touch of humor!",
     "consecutive_failures": 0
   },
@@ -60034,7 +59962,7 @@
     "users_active_month": 1,
     "statuses": 18,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "consecutive_failures": 0
   },
   {
@@ -60051,7 +59979,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Websites and Digital Marketing For Small and Medium Businesses",
     "consecutive_failures": 0
   },
@@ -60069,7 +59997,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:38:12Z",
     "nodeinfo_description": "Thoughts, stories and ideas.",
     "consecutive_failures": 0
   },
@@ -60087,7 +60015,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "The Official Break3 & VEX.blue LTD Fediverse Instance.\n\nWe host our staff, friends and family on this instance. Our \"General\" role is used for those that have no part in our business, and are just friends / family.",
     "consecutive_failures": 0
   },
@@ -60103,7 +60031,7 @@
     "users_active_month": 1,
     "statuses": 3,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "consecutive_failures": 0
   },
   {
@@ -60120,7 +60048,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Advanced Financial Strategies for Canadian Homeowners and Investors",
     "consecutive_failures": 0
   },
@@ -60139,7 +60067,7 @@
       "en",
       "da"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "A small server for friends to mingle.",
     "consecutive_failures": 0
   },
@@ -60155,7 +60083,7 @@
     "users_active_month": null,
     "statuses": 185,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "consecutive_failures": 0
   },
   {
@@ -60170,7 +60098,7 @@
     "users_active_month": 1,
     "statuses": 31,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "consecutive_failures": 0
   },
   {
@@ -60187,7 +60115,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Breeze Pictures is an image sharing platform, an ethical alternative to centralized platforms.",
     "consecutive_failures": 0
   },
@@ -60205,7 +60133,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Welcome to BreezeTown — a friendly corner of the fediverse where ideas flow, creativity thrives, and every voice matters.",
     "consecutive_failures": 0
   },
@@ -60223,7 +60151,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "PeerTube, an ActivityPub-federated video streaming platform using P2P directly in your web browser.",
     "consecutive_failures": 0
   },
@@ -60239,10 +60167,9 @@
     "users_active_month": 0,
     "statuses": 14,
     "languages_detected": [
-      "en",
-      "tl"
+      "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Photographs, Paintings, Writing",
     "consecutive_failures": 0
   },
@@ -60258,7 +60185,7 @@
     "users_active_month": 3,
     "statuses": 995,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "consecutive_failures": 0
   },
   {
@@ -60275,7 +60202,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Bremothra: a bloated and rigid Fediverse server (but it won't serve you!)",
     "consecutive_failures": 0
   },
@@ -60294,7 +60221,7 @@
       "en",
       "de"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Für Bremen. Privat betrieben von bastian.\r\nAlt-Bremer:innen, Neu-Bremer:innen, Buten-Bremer:innen und andere Stadtmusikanten willkommen.",
     "consecutive_failures": 0
   },
@@ -60312,7 +60239,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Probably not what you were looking for.",
     "consecutive_failures": 0
   },
@@ -60328,7 +60255,7 @@
     "users_active_month": null,
     "statuses": 228,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "consecutive_failures": 0
   },
   {
@@ -60345,8 +60272,26 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Cloud Engineering, Software Engineering & Leadership",
+    "consecutive_failures": 0
+  },
+  {
+    "host": "breowanthorpe.beer",
+    "verified_activitypub": true,
+    "software": {
+      "name": "wordpress",
+      "version": "7.1"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 2,
+    "statuses": 195,
+    "languages_detected": [
+      "en"
+    ],
+    "fetched_at": "2026-09-18T18:43:08Z",
+    "nodeinfo_description": "The Homestead of Beer",
     "consecutive_failures": 0
   },
   {
@@ -60363,7 +60308,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Home of the chaos",
     "consecutive_failures": 0
   },
@@ -60379,7 +60324,7 @@
     "users_active_month": 3,
     "statuses": 4079,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "consecutive_failures": 0
   },
   {
@@ -60396,7 +60341,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Project management that feels like leadership—not logistics.",
     "consecutive_failures": 0
   },
@@ -60415,7 +60360,7 @@
       "en",
       "no"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Brett stuff",
     "consecutive_failures": 0
   },
@@ -60429,12 +60374,31 @@
     "open_registrations": false,
     "users_total": 369,
     "users_active_month": 132,
-    "statuses": 94599,
+    "statuses": 94602,
     "languages_detected": [
       "de"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Von Brettspielern für Brettspieler.",
+    "consecutive_failures": 0
+  },
+  {
+    "host": "brettvormkopf.de",
+    "verified_activitypub": true,
+    "software": {
+      "name": "akkoma",
+      "version": "3.20.0"
+    },
+    "open_registrations": false,
+    "users_total": 4,
+    "users_active_month": 2,
+    "statuses": 110,
+    "languages_detected": [
+      "en",
+      "de"
+    ],
+    "fetched_at": "2026-09-18T18:43:08Z",
+    "nodeinfo_description": "Das Brett vorm Kopf",
     "consecutive_failures": 0
   },
   {
@@ -60451,7 +60415,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Real talk. Real strategy. Real results in digital transformation.",
     "consecutive_failures": 0
   },
@@ -60467,7 +60431,7 @@
     "users_active_month": 1,
     "statuses": 0,
     "languages_detected": [],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "consecutive_failures": 0
   },
   {
@@ -60484,7 +60448,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Brexit has failed. There&#039;s no hiding from that truth.",
     "consecutive_failures": 0
   },
@@ -60503,7 +60467,7 @@
       "en",
       "fr"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Blog et ressources sur l&#039;improvisation théâtrale",
     "consecutive_failures": 0
   },
@@ -60521,7 +60485,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "I Build Products, Share Ideas, and crash Mountain Bikes",
     "consecutive_failures": 0
   },
@@ -60539,7 +60503,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Short stories from the road, hitchhiking, freight hopping, and wandering around.",
     "consecutive_failures": 0
   },
@@ -60557,7 +60521,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "sharing thoughts",
     "consecutive_failures": 0
   },
@@ -60576,7 +60540,7 @@
       "en",
       "it"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "since 1998",
     "consecutive_failures": 0
   },
@@ -60594,7 +60558,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Thoughts, stories and ideas.",
     "consecutive_failures": 0
   },
@@ -60612,7 +60576,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "I&#x27;m a software developer, writer, and knowledge-consumer.",
     "consecutive_failures": 0
   },
@@ -60630,7 +60594,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Brian’s personal shop, gallery, and blog",
     "consecutive_failures": 0
   },
@@ -60644,11 +60608,11 @@
     "open_registrations": false,
     "users_total": 4,
     "users_active_month": null,
-    "statuses": 925,
+    "statuses": 926,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "<p>A single-user instance for <span class=\"h-card\"><a href=\"https://bribstodon.xyz/@brib\" class=\"u-url mention\" rel=\"nofollow noreferrer noopener\" target=\"_blank\">@<span>brib</span></a></span> . I don't think there's much else to say about it. It's just an instance of me. And possibly my headmates too.</p><p>Instance avatar source: <a href=\"https://commons.wikimedia.org/wiki/File:Ploceus_velatus_beak_open.jpg\" rel=\"nofollow noreferrer noopener\" target=\"_blank\">Wikipedia</a>, edits by me. Licensed under CC-BY-SA</p>",
     "consecutive_failures": 0
   },
@@ -60661,12 +60625,12 @@
     },
     "open_registrations": false,
     "users_total": 2143,
-    "users_active_month": 1915,
+    "users_active_month": 1912,
     "statuses": 265859,
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Skybridge mirrors activities from Atmosphere (e.g. popfeed, bookhive, teal.fm) to the Fediverse in NeoDB-compatible format.",
     "consecutive_failures": 0
   },
@@ -60684,7 +60648,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Bridport.TV a new video sharing site for the people of Bridport, provided by Bridport.Media, a project of United Diversity Bridport.",
     "consecutive_failures": 0
   },
@@ -60703,7 +60667,7 @@
       "en",
       "da"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "✨ by me, for me ✨",
     "consecutive_failures": 0
   },
@@ -60721,7 +60685,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Essential brief of AI strategy insights from leading consulting firms for executives shaping the future",
     "consecutive_failures": 0
   },
@@ -60739,7 +60703,7 @@
     "languages_detected": [
       "en"
     ],
-    "fetched_at": "2026-09-18T17:01:28Z",
+    "fetched_at": "2026-09-18T18:43:08Z",
     "nodeinfo_description": "Pixelfed is an image sharing platform, an ethical alternative to centralized platforms.",
     "consecutive_failures": 0
   },
