@@ -51,11 +51,14 @@ def review_reasons(
     if declared and inferred and declared.isdisjoint(inferred):
         reasons.append("declared_inferred_conflict")
 
-    if _is_han_only_cjk(description):
-        if fetch_stats._has_strong_chinese_signal(description) and "zh" not in detected:
-            reasons.append("strong_chinese_signal_missing")
-        elif not inferred and "zh" not in declared:
-            reasons.append("ambiguous_han_only")
+    if fetch_stats.has_actionable_chinese_signal(description) and "zh" not in detected:
+        reasons.append("strong_chinese_signal_missing")
+    elif _is_han_only_cjk(description) and not inferred and "zh" not in declared:
+        reasons.append("ambiguous_han_only")
+
+    distinctive = set(fetch_stats.detect_scripts(description)) - {"ja", "ko"}
+    if distinctive - detected:
+        reasons.append("distinctive_script_missing")
 
     return reasons
 
