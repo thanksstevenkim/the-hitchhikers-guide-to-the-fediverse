@@ -95,3 +95,34 @@ def test_manual_override_removes_host_from_review_queue() -> None:
     )
 
     assert queue["instance_count"] == 0
+
+
+def test_review_queue_flags_mixed_chinese_and_distinctive_script_gaps() -> None:
+    stats = [
+        make_record(
+            "mixed.example",
+            status="current",
+            detected=["ja"],
+            declared=[],
+            inferred=["ja"],
+            description="欢迎来到しいなカフェ！推荐语言：中文、日本語。",
+        ),
+        make_record(
+            "armenian.example",
+            status="current",
+            detected=["et"],
+            declared=[],
+            inferred=["et"],
+            description="Լիլիթ Սյունեցիի անկապ մտքերը",
+        ),
+    ]
+
+    queue = build_language_review_queue.build_review_queue(stats, {})
+
+    by_host = {item["host"]: item for item in queue["instances"]}
+    assert by_host["mixed.example"]["reasons"] == [
+        "strong_chinese_signal_missing"
+    ]
+    assert by_host["armenian.example"]["reasons"] == [
+        "distinctive_script_missing"
+    ]

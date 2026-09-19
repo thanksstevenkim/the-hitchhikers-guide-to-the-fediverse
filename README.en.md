@@ -40,6 +40,8 @@ The same tracked files are also available directly from the default branch under
 
 When the inference rules change, the collector reclassifies saved `nodeinfo_description` text once without requiring another successful request to the instance. An old label that cannot be reconstructed confidently is retained with `legacy_fallback` status.
 
+The detector evaluates Chinese evidence independently when Chinese and Japanese or Korean appear together. It also prioritizes distinctive Armenian, Greek, Georgian, and Thai scripts, and requires extra lexical evidence before accepting noisy minority Latin-language guesses from short text. Complete detection of multilingual text written in the same script remains limited.
+
 The reproducible review queue contains only declared/inferred conflicts and ambiguous Han-only descriptions by default:
 
 ```bash

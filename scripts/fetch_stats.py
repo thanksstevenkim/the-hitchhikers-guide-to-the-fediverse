@@ -100,7 +100,8 @@ LANG_CANON = {
     "dk": "da",
     "spanish": "es",
     "sp": "es",
-    "cs": "cz",
+    "cs": "cs",
+    "cz": "cs",
     "mm": "my",
     "rs": "sr",
 }
@@ -157,7 +158,9 @@ MIN_SINGLE_TOKEN_LETTERS = 20
 MIN_LANGUAGE_PROBABILITY = 0.85
 MIN_CJK_IDEOGRAPHS = 10
 MIN_STRONG_SCRIPT_CHARS = 2
-LANGUAGE_DETECTION_VERSION = 2
+MIN_DISTINCTIVE_SCRIPT_CHARS = 5
+MIN_AMBIGUOUS_LATIN_STOPWORDS = 2
+LANGUAGE_DETECTION_VERSION = 3
 LANGUAGE_DETECTION_STATUSES = frozenset(
     {"current", "reclassified", "legacy_fallback", "manual_override"}
 )
@@ -219,6 +222,79 @@ CHINESE_DISTINCTIVE_CHARS = frozenset(
     "这们个为么吗呢欢让从还进过网联务汉龙边应经"
     "這們麼嗎呢歡讓從還聯邊應經錄裡"
 )
+
+# These markers remain high-confidence evidence even when Kana or Hangul is
+# also present. Broader markers such as 中国 and 聯邦宇宙 are deliberately
+# excluded because they can occur naturally in Japanese text.
+MIXED_CHINESE_MARKERS = (
+    "中文",
+    "简体",
+    "簡體",
+    "繁体",
+    "繁體",
+    "华人",
+    "華人",
+    "长毛象",
+    "長毛象",
+    "服务器",
+    "服務器",
+    "伺服器",
+    "实例",
+    "實例",
+    "欢迎",
+    "歡迎",
+)
+
+# langdetect can be overconfident on short names and slogans. For the small
+# Latin-script languages that are noisy in the current dataset, require
+# multiple language-specific words before accepting its guess.
+AMBIGUOUS_SHORT_LATIN_STOPWORDS = {
+    "af": frozenset(
+        {
+            "die",
+            "dit",
+            "en",
+            "is",
+            "kan",
+            "mens",
+            "met",
+            "net",
+            "nie",
+            "om",
+            "op",
+            "van",
+            "vir",
+            "waar",
+        }
+    ),
+    "et": frozenset(
+        {
+            "ei",
+            "eesti",
+            "eestis",
+            "et",
+            "ja",
+            "jaoks",
+            "kui",
+            "minu",
+            "mõeldud",
+            "ning",
+            "oma",
+            "on",
+            "see",
+            "serveriks",
+        }
+    ),
+    "so": frozenset(
+        {"ah", "ayaa", "ee", "iyo", "ka", "kani", "ku", "la", "oo", "waa"}
+    ),
+    "sw": frozenset(
+        {"hii", "hiyo", "katika", "kwa", "na", "ni", "wa", "ya"}
+    ),
+    "tl": frozenset(
+        {"ang", "at", "ay", "hindi", "isang", "ito", "mga", "ng", "para", "sa"}
+    ),
+}
 
 
 @dataclass
@@ -2615,6 +2691,34 @@ def _is_han(ch: str) -> bool:
     )
 
 
+def _is_armenian(ch: str) -> bool:
+    return "\u0530" <= ch <= "\u058f"
+
+
+def _is_georgian(ch: str) -> bool:
+    return (
+        "\u10a0" <= ch <= "\u10ff"
+        or "\u1c90" <= ch <= "\u1cbf"
+        or "\u2d00" <= ch <= "\u2d2f"
+    )
+
+
+def _is_greek(ch: str) -> bool:
+    return "\u0370" <= ch <= "\u03ff" or "\u1f00" <= ch <= "\u1fff"
+
+
+def _is_thai(ch: str) -> bool:
+    return "\u0e00" <= ch <= "\u0e7f"
+
+
+DISTINCTIVE_SCRIPT_LANGUAGES = (
+    ("hy", _is_armenian),
+    ("ka", _is_georgian),
+    ("el", _is_greek),
+    ("th", _is_thai),
+)
+
+
 def detect_scripts(text: str) -> List[str]:
     """Return only languages with distinctive scripts.
 
@@ -2628,6 +2732,9 @@ def detect_scripts(text: str) -> List[str]:
         langs.append("ko")
     if sum(_is_kana(ch) for ch in value) >= MIN_STRONG_SCRIPT_CHARS:
         langs.append("ja")
+    for language, predicate in DISTINCTIVE_SCRIPT_LANGUAGES:
+        if sum(predicate(ch) for ch in value) >= MIN_DISTINCTIVE_SCRIPT_CHARS:
+            langs.append(language)
 
     return langs
 
@@ -2636,6 +2743,52 @@ def _has_strong_chinese_signal(text: str) -> bool:
     return any(marker in text for marker in CHINESE_MARKERS) or any(
         ch in CHINESE_DISTINCTIVE_CHARS for ch in text
     )
+
+
+def _has_mixed_chinese_signal(text: str) -> bool:
+    return any(marker in text for marker in MIXED_CHINESE_MARKERS) or sum(
+        ch in CHINESE_DISTINCTIVE_CHARS for ch in text
+    ) >= 2
+
+
+def has_actionable_chinese_signal(text: str) -> bool:
+    value = clean_language_detection_text(text)
+    if not any(_is_han(ch) for ch in value):
+        return False
+    has_other_cjk = any(_is_kana(ch) or _is_hangul(ch) for ch in value)
+    if has_other_cjk:
+        return _has_mixed_chinese_signal(value)
+    return _has_strong_chinese_signal(value)
+
+
+def _is_direct_script_char(ch: str) -> bool:
+    return (
+        _is_han(ch)
+        or _is_kana(ch)
+        or _is_hangul(ch)
+        or any(predicate(ch) for _, predicate in DISTINCTIVE_SCRIPT_LANGUAGES)
+    )
+
+
+def _is_latin_letter(ch: str) -> bool:
+    codepoint = ord(ch)
+    return (
+        "A" <= ch <= "Z"
+        or "a" <= ch <= "z"
+        or 0x00C0 <= codepoint <= 0x024F
+        or 0x1E00 <= codepoint <= 0x1EFF
+    )
+
+
+def _has_low_information_words(words: Sequence[str]) -> bool:
+    folded = [word.casefold() for word in words]
+    if not folded:
+        return True
+    if any(len(word) >= 24 and len(set(word)) <= 5 for word in folded):
+        return True
+    if len(folded) >= 4 and len(set(folded)) / len(folded) < 0.5:
+        return True
+    return False
 
 
 def _detect_top_language(text: str) -> Optional[Tuple[str, float]]:
@@ -2690,7 +2843,18 @@ def _detect_statistical_language(
     detected = _detect_top_language(value)
     if not detected or detected[1] < min_prob:
         return None
-    return detected[0]
+    language = detected[0]
+    stopwords = AMBIGUOUS_SHORT_LATIN_STOPWORDS.get(language)
+    if stopwords:
+        latin_letters = sum(_is_latin_letter(ch) for ch in value)
+        if letters and latin_letters / letters < 0.8:
+            return None
+        if _has_low_information_words(words):
+            return None
+        word_set = {word.casefold() for word in words}
+        if len(word_set & stopwords) < MIN_AMBIGUOUS_LATIN_STOPWORDS:
+            return None
+    return language
 
 
 def detect_languages_from_text(
@@ -2713,11 +2877,16 @@ def detect_languages_from_text(
     langs = detect_scripts(value)
     has_han = any(_is_han(ch) for ch in value)
 
-    # Interpret Chinese markers only when Kana/Hangul have not already given
-    # us stronger evidence. A Japanese sentence may legitimately mention
-    # China, and that mention must not turn the whole description bilingual.
-    if has_han and not langs and _has_strong_chinese_signal(value):
-        langs.append("zh")
+    # Broad markers are used for Han-only text. In mixed CJK descriptions we
+    # require stricter evidence, so an ordinary Japanese mention of 中国 does
+    # not become bilingual while genuinely Chinese/Japanese text keeps both.
+    if has_han:
+        has_other_cjk = "ja" in langs or "ko" in langs
+        if (
+            (has_other_cjk and _has_mixed_chinese_signal(value))
+            or (not has_other_cjk and _has_strong_chinese_signal(value))
+        ):
+            langs.append("zh")
 
     if has_han and not langs:
         han_text = "".join(ch for ch in value if _is_han(ch))
@@ -2729,14 +2898,14 @@ def detect_languages_from_text(
     # Detect the non-CJK fragment independently. This retains English (or any
     # other sufficiently strong language) in genuinely bilingual descriptions
     # without treating product names inside CJK prose as English evidence.
-    non_cjk_text = "".join(
-        " " if (_is_han(ch) or _is_kana(ch) or _is_hangul(ch)) else ch
-        for ch in value
+    statistical_text = "".join(
+        " " if _is_direct_script_char(ch) else ch for ch in value
     )
+    statistical_min_letters = max(min_letters, 25) if langs else min_letters
     statistical = _detect_statistical_language(
-        non_cjk_text,
+        statistical_text,
         min_prob=min_prob,
-        min_letters=min_letters,
+        min_letters=statistical_min_letters,
     )
     if statistical and statistical not in langs:
         langs.append(statistical)

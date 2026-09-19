@@ -61,6 +61,46 @@ from scripts import fetch_stats
             "Nothing happened. 2026年9月13日 ActivityPub Test 2026年9月13日",
             ["en"],
         ),
+        (
+            "欢迎来到しいなカフェ！推荐语言：中文、日本語。",
+            ["ja", "zh"],
+        ),
+        (
+            "Լիլիթ Սյունեցիի անկապ մտքերը",
+            ["hy"],
+        ),
+        (
+            "ეს არის ქართული სოციალური სერვერი",
+            ["ka"],
+        ),
+        (
+            "Ἑλληνική κοινότητα για όλους",
+            ["el"],
+        ),
+        (
+            "Δρομογράφος και φίλοι. A community for independent reporting.",
+            ["el", "en"],
+        ),
+        (
+            "Δρομογράφος and friends server",
+            ["el"],
+        ),
+        (
+            "Masakit sa ulo ang mag-isip",
+            ["tl"],
+        ),
+        (
+            "See on Eestis mõeldud üldkasutatav server.",
+            ["et"],
+        ),
+        (
+            "'n Bediener waar mens net lekker kan gesels.",
+            ["af"],
+        ),
+        (
+            "Kani waa adeeg bulsho oo xor ah.",
+            ["so"],
+        ),
     ],
 )
 def test_detect_languages_from_description(
@@ -77,6 +117,9 @@ def test_detect_languages_from_description(
         "A solo mastodon server.",
         "private queer instance",
         "人文 · 科技 · 生活",
+        "Green Web Hosting",
+        "A minimalist ActivityPub server",
+        "woxwoxwoxwoxwoxwoxwoxwoxwoxwoxwoxwox",
     ],
 )
 def test_short_or_ambiguous_descriptions_are_not_guessed(
@@ -109,10 +152,27 @@ def test_japanese_text_that_mentions_china_is_not_marked_chinese() -> None:
     assert fetch_stats.detect_languages_from_text(description) == ["ja"]
 
 
+def test_japanese_old_orthography_is_not_treated_as_mixed_chinese() -> None:
+    description = "聯合宇宙の片隅ひそり、嵐離れし星のあらはれ。"
+
+    assert fetch_stats.detect_languages_from_text(description) == ["ja"]
+
+
+def test_korean_hanja_definition_is_not_treated_as_mixed_chinese() -> None:
+    description = "錄音은 소리를 기록하는 것을 뜻하는 한국어 설명입니다."
+
+    assert fetch_stats.detect_languages_from_text(description) == ["ko"]
+
+
 def test_fediverse_product_names_do_not_create_english_evidence() -> None:
     description = "这里是Iceshrimp实例，支持ActivityPub并与Mastodon和Misskey站点往来。"
 
     assert fetch_stats.detect_languages_from_text(description) == ["zh"]
+
+
+@pytest.mark.parametrize("value", ["cs", "cz", "cs-CZ"])
+def test_czech_language_codes_use_the_iso_639_1_code(value: str) -> None:
+    assert fetch_stats.normalize_language_code(value) == "cs"
 
 
 def test_conflicting_html_language_is_ignored_when_description_is_clear(
