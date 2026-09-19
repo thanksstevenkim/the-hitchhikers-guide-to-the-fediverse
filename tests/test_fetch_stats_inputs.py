@@ -171,3 +171,27 @@ def test_empty_curated_list_is_the_no_instances_case(
         fetch_stats.main()
 
     assert "No instances to process" in caplog.text
+
+
+def test_html_meta_charset_prevents_utf8_mojibake() -> None:
+    description = "Concrntはあなたの世界をちょっとだけより豊かにする、新しい時代のSNSです"
+    document = (
+        '<!doctype html><html lang="en"><head>'
+        '<meta charset="UTF-8">'
+        f'<meta name="description" content="{description}">'
+        '</head></html>'
+    ).encode("utf-8")
+
+    html = fetch_stats.decode_html_content(
+        document,
+        "text/html",
+        "ISO-8859-1",
+    )
+    metadata = fetch_stats.extract_metadata_from_html(html, "concrnt.example")
+
+    assert metadata["description"] == description
+    assert "ã" not in metadata["description"]
+    assert "ja" in fetch_stats.detect_scripts(metadata["description"])
+    assert "pt" not in fetch_stats.detect_languages_from_text(
+        metadata["description"]
+    )

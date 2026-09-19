@@ -1846,6 +1846,58 @@ def extract_metadata_from_html(html: str, host: str) -> Dict[str, Any]:
         logging.warning("failed to parse HTML metadata for %s: %r", host, e)
         return {"description": None, "languages": []}
 
+
+def decode_html_content(
+    content: bytes,
+    content_type: str = "",
+    fallback_encoding: Optional[str] = None,
+) -> str:
+    """Decode HTML without trusting requests' ISO-8859-1 default.
+
+    ``requests`` defaults bare ``text/html`` responses to ISO-8859-1. Modern
+    sites frequently omit the HTTP charset while declaring UTF-8 in a meta
+    tag, which otherwise turns Japanese text into mojibake such as ``ã...``.
+    """
+    if content.startswith(codecs.BOM_UTF8):
+        return content.decode("utf-8-sig", errors="replace")
+
+    encodings: List[str] = []
+
+    header_match = re.search(
+        r"charset\s*=\s*[\"']?\s*([a-zA-Z0-9._:-]+)",
+        content_type,
+        re.IGNORECASE,
+    )
+    if header_match:
+        encodings.append(header_match.group(1))
+
+    prefix = content[:4096].decode("ascii", errors="ignore")
+    meta_match = re.search(
+        r"<meta\b[^>]*\bcharset\s*=\s*[\"']?\s*([a-zA-Z0-9._:-]+)",
+        prefix,
+        re.IGNORECASE,
+    )
+    if meta_match:
+        encodings.append(meta_match.group(1))
+
+    encodings.append("utf-8")
+    if fallback_encoding:
+        encodings.append(fallback_encoding)
+
+    tried = set()
+    for encoding in encodings:
+        normalized = _sanitize_charset(encoding)
+        if normalized in tried:
+            continue
+        tried.add(normalized)
+        try:
+            return content.decode(normalized)
+        except UnicodeDecodeError:
+            continue
+
+    return content.decode("utf-8", errors="replace")
+
+
 def fetch_site_metadata(base_url: str, host: str, include_description: bool = True) -> Optional[Dict[str, Any]]:
     """
     사이트 메타데이터에서 설명과 언어 정보 추출
@@ -1879,7 +1931,12 @@ def fetch_site_metadata(base_url: str, host: str, include_description: bool = Tr
                     if 'text/html' not in content_type:
                         return None
 
-                    return extract_metadata_from_html(resp.text, host)
+                    html = decode_html_content(
+                        resp.content,
+                        content_type,
+                        getattr(resp, "apparent_encoding", None),
+                    )
+                    return extract_metadata_from_html(html, host)
             except _req.exceptions.RequestException:
                 return None
         
