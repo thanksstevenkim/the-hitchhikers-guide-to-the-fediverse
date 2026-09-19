@@ -36,6 +36,7 @@ GitHub Pages로 그대로 호스팅할 수 있으며, 한국어·영어 UI와 �
 | `data/filtered_peers.json` | `filter_spam.py` 실행 시 필터 통과 후보 기록 |
 | `data/spam_filtered.log.json` | `filter_spam.py` 실행 시 제외 사유 기록 |
 | `data/software_review_queue.json` | 미분류 소프트웨어를 검토 우선순위별로 집계 |
+| `data/language_review_queue.json` | 선언값·추론값 충돌과 모호한 한자 설명을 검토 대상으로 집계 |
 
 이 파일들은 로컬 실행 중 필요에 따라 다시 생성됩니다. 과거 파일이 필요하면 Git 이력에서 확인할 수 있습니다.
 
@@ -58,9 +59,31 @@ python scripts/fetch_stats.py
 python scripts/build_software_registry.py
 python scripts/validate_data.py
 python scripts/build_software_review_queue.py
+python scripts/build_language_review_queue.py
 ```
 
 수집기는 기본 실행에서 `instances.json`의 seed와 `monitored_instances.json`의 전체 대상을 canonical host 기준으로 합쳐 매번 다시 처리합니다. 검증기는 registry 구조와 `stats.ok ⊆ monitored` 불변식까지 포함해 필수 필드와 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
+
+### 언어 판정과 검토 큐
+
+`languages_detected`는 기존 UI와 소비자를 위한 최종 언어 목록입니다. 추가 필드는 판정 근거를 분리합니다.
+
+| 필드 | 의미 |
+| --- | --- |
+| `languages_declared` | NodeInfo 또는 플랫폼 API가 명시한 언어 |
+| `languages_inferred` | 정제된 서버 설명에서 높은 신뢰도로 추론한 언어 |
+| `languages_document` | 사이트 HTML의 `lang` 등 문서 단서. 다른 근거가 없을 때만 최종값에 사용 |
+| `languages_overridden` | `manual_overrides.json`에서 확정한 언어 |
+| `language_detection_version` | 저장된 추론값을 만든 감지 규칙 버전 |
+| `language_detection_status` | `current`, `reclassified`, `legacy_fallback`, `manual_override` 중 하나 |
+
+감지 규칙이 바뀌면 수집기는 저장된 `nodeinfo_description`을 이용해 기존 레코드를 네트워크 재접속 없이 한 번 재분류합니다. 새 규칙으로도 판정할 수 없는 기존 값은 `legacy_fallback`으로 보존합니다.
+
+기본 언어 검토 큐에는 선언값과 추론값이 충돌하거나, 사람의 확인이 필요한 모호한 한자 설명만 포함됩니다. 모든 `legacy_fallback` 항목까지 진단하려면 다음 옵션을 사용합니다.
+
+```bash
+python scripts/build_language_review_queue.py --include-legacy
+```
 
 ### 대규모 수집 성능과 checkpoint
 

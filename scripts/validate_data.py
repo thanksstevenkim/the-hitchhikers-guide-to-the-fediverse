@@ -37,6 +37,23 @@ DEPLOYMENT_KINDS = {
     "federation_infrastructure",
     "unknown",
 }
+LANGUAGE_LIST_FIELDS = {
+    "languages_detected",
+    "languages_declared",
+    "languages_inferred",
+    "languages_document",
+    "languages_overridden",
+}
+LANGUAGE_PROVENANCE_FIELDS = LANGUAGE_LIST_FIELDS - {"languages_detected"} | {
+    "language_detection_version",
+    "language_detection_status",
+}
+LANGUAGE_DETECTION_STATUSES = {
+    "current",
+    "reclassified",
+    "legacy_fallback",
+    "manual_override",
+}
 
 
 class ValidationError(ValueError):
@@ -165,11 +182,31 @@ def validate_stats(
                 or value < 0
             ):
                 raise ValidationError(f"{label}.{field} must be non-negative or null")
-        languages = row["languages_detected"]
-        if not isinstance(languages, list) or not all(
-            isinstance(language, str) and language for language in languages
-        ):
-            raise ValidationError(f"{label}.languages_detected must be a string array")
+        present_language_fields = LANGUAGE_PROVENANCE_FIELDS & row.keys()
+        if present_language_fields and not LANGUAGE_PROVENANCE_FIELDS <= row.keys():
+            missing_language_fields = LANGUAGE_PROVENANCE_FIELDS - row.keys()
+            raise ValidationError(
+                f"{label} has partial language provenance; missing fields: "
+                f"{', '.join(sorted(missing_language_fields))}"
+            )
+        for field in LANGUAGE_LIST_FIELDS & row.keys():
+            languages = row[field]
+            if not isinstance(languages, list) or not all(
+                isinstance(language, str) and language for language in languages
+            ):
+                raise ValidationError(f"{label}.{field} must be a string array")
+            if len(languages) != len(set(languages)):
+                raise ValidationError(f"{label}.{field} must not contain duplicates")
+        if present_language_fields:
+            version = row["language_detection_version"]
+            if not isinstance(version, int) or isinstance(version, bool) or version < 1:
+                raise ValidationError(
+                    f"{label}.language_detection_version must be a positive integer"
+                )
+            if row["language_detection_status"] not in LANGUAGE_DETECTION_STATUSES:
+                raise ValidationError(
+                    f"{label}.language_detection_status is unsupported"
+                )
         require_nonempty_string(row["fetched_at"], f"{label}.fetched_at")
         failures = row.get("consecutive_failures")
         if failures is not None and (
