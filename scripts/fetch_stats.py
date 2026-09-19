@@ -151,12 +151,41 @@ LANGDETECT_LOCK = threading.Lock()
 # snapshots and tests stable across otherwise identical runs.
 DetectorFactory.seed = 0
 
-MIN_LANGUAGE_LETTERS = 10
+MIN_LANGUAGE_LETTERS = 15
 MIN_TWO_WORD_LETTERS = 15
 MIN_SINGLE_TOKEN_LETTERS = 20
 MIN_LANGUAGE_PROBABILITY = 0.85
 MIN_CJK_IDEOGRAPHS = 10
 MIN_STRONG_SCRIPT_CHARS = 2
+LANGUAGE_DETECTION_VERSION = 2
+LANGUAGE_DETECTION_STATUSES = frozenset(
+    {"current", "reclassified", "legacy_fallback", "manual_override"}
+)
+
+# Product and protocol names are useful metadata but weak language evidence.
+# Removing them from mixed-script fragments prevents a Chinese description
+# that lists several Fediverse projects from being mislabeled as English.
+LANGUAGE_NEUTRAL_TERMS = frozenset(
+    {
+        "activitypub",
+        "akkoma",
+        "fediverse",
+        "firefish",
+        "friendica",
+        "gotosocial",
+        "hubzilla",
+        "iceshrimp",
+        "lemmy",
+        "mastodon",
+        "microblogpub",
+        "misskey",
+        "peertube",
+        "pixelfed",
+        "pleroma",
+        "sharkey",
+        "wordpress",
+    }
+)
 
 # Han characters alone do not distinguish Chinese from Japanese. These words
 # and character forms are useful high-precision signals in short instance
@@ -367,6 +396,12 @@ def failure_result(instance: Instance, timestamp: str, exc: BaseException) -> Fe
             "users_active_month": None,
             "statuses": None,
             "languages_detected": [],
+            "languages_declared": [],
+            "languages_inferred": [],
+            "languages_document": [],
+            "languages_overridden": [],
+            "language_detection_version": LANGUAGE_DETECTION_VERSION,
+            "language_detection_status": "current",
             "fetched_at": timestamp,
         },
         errors=[f"fatal: {exc!r}"],
@@ -662,6 +697,11 @@ def main() -> None:
     aliases = load_aliases()
     seed_instances = list(load_instances(INSTANCES_PATH))
     ok_map, bad_map = load_existing_stats_maps()
+    manual_overrides = load_manual_overrides()
+    upgrade_language_metadata_maps(
+        (ok_map, bad_map),
+        manual_overrides,
+    )
     # One O(n) canonicalization makes every per-host health transition O(1).
     reconcile_health_maps(ok_map, bad_map, aliases)
     monitored, registry_changed = prepare_monitored_registry(
@@ -716,7 +756,7 @@ def main() -> None:
         bad_map=bad_map,
         monitored=monitored,
         aliases=aliases,
-        manual_overrides=load_manual_overrides(),
+        manual_overrides=manual_overrides,
         candidate_mode=bool(args.input),
         discover_peers=args.discover_peers,
         total=len(instances),
@@ -1492,10 +1532,126 @@ def apply_manual_overrides(record: Dict[str, Any],
                 seen.add(code)
                 langs.append(code)
             record["languages_detected"] = langs
+            record["languages_overridden"] = langs
+            record["language_detection_version"] = LANGUAGE_DETECTION_VERSION
+            record["language_detection_status"] = "manual_override"
 
         else:
             # 그 외 필드는 그대로 덮어씀 (open_registrations, users_total 등)
             record[field] = value
+
+
+def normalized_language_list(values: Any) -> List[str]:
+    languages: List[str] = []
+    append_languages(languages, set(), values)
+    return languages
+
+
+def set_language_metadata(
+    record: Dict[str, Any],
+    *,
+    declared: Any = (),
+    inferred: Any = (),
+    document: Any = (),
+    status: str = "current",
+    legacy: Any = (),
+) -> None:
+    """Store language evidence separately and derive the public merged list."""
+    if status not in LANGUAGE_DETECTION_STATUSES:
+        raise ValueError(f"unsupported language detection status: {status}")
+
+    declared_languages = normalized_language_list(declared)
+    inferred_languages = normalized_language_list(inferred)
+    document_languages = normalized_language_list(document)
+    legacy_languages = normalized_language_list(legacy)
+
+    detected: List[str] = []
+    detected_seen: Set[str] = set()
+    # Description evidence comes first because it describes this instance's
+    # actual public text. Explicit API declarations remain preserved after it.
+    append_languages(detected, detected_seen, inferred_languages)
+    append_languages(detected, detected_seen, declared_languages)
+    if not detected:
+        append_languages(detected, detected_seen, document_languages)
+    if not detected and status == "legacy_fallback":
+        append_languages(detected, detected_seen, legacy_languages)
+
+    record["languages_declared"] = declared_languages
+    record["languages_inferred"] = inferred_languages
+    record["languages_document"] = document_languages
+    record["languages_overridden"] = []
+    record["languages_detected"] = detected
+    record["language_detection_version"] = LANGUAGE_DETECTION_VERSION
+    record["language_detection_status"] = status
+
+
+def upgrade_language_metadata(
+    record: Dict[str, Any],
+    override: Optional[Dict[str, Any]] = None,
+) -> bool:
+    """Reclassify legacy records from their stored description, without I/O."""
+    required_fields = {
+        "languages_declared",
+        "languages_inferred",
+        "languages_document",
+        "language_detection_version",
+        "language_detection_status",
+    }
+    if (
+        record.get("language_detection_version") == LANGUAGE_DETECTION_VERSION
+        and required_fields <= record.keys()
+    ):
+        return False
+
+    before = dict(record)
+    legacy_languages = normalized_language_list(record.get("languages_detected"))
+    declared = normalized_language_list(record.get("languages_declared"))
+    document = normalized_language_list(record.get("languages_document"))
+    description = str(record.get("nodeinfo_description") or "").strip()
+    inferred = detect_languages_from_text(description) if description else []
+    status = (
+        "reclassified"
+        if inferred or declared or document
+        else "legacy_fallback"
+    )
+    set_language_metadata(
+        record,
+        declared=declared,
+        inferred=inferred,
+        document=document,
+        legacy=legacy_languages,
+        status=status,
+    )
+
+    if override:
+        apply_manual_overrides(
+            record,
+            {_normalize_host(str(record.get("host", ""))): override},
+        )
+    return record != before
+
+
+def upgrade_language_metadata_maps(
+    maps: Sequence[Dict[str, Dict[str, Any]]],
+    overrides: Dict[str, Dict[str, Any]],
+) -> int:
+    changed = 0
+    examined = 0
+    for records in maps:
+        for record in records.values():
+            host = _normalize_host(str(record.get("host", "")))
+            if upgrade_language_metadata(record, overrides.get(host)):
+                changed += 1
+            examined += 1
+            if examined % 5_000 == 0:
+                logging.info(
+                    "Language metadata migration: examined=%d changed=%d",
+                    examined,
+                    changed,
+                )
+    if changed:
+        logging.info("Upgraded language metadata for %d records", changed)
+    return changed
 
 # -------------------------------
 # Classification (good vs bad)
@@ -1715,11 +1871,17 @@ def process_instance(
         "users_active_month": None,
         "statuses": None,
         "languages_detected": [],
+        "languages_declared": [],
+        "languages_inferred": [],
+        "languages_document": [],
+        "languages_overridden": [],
+        "language_detection_version": LANGUAGE_DETECTION_VERSION,
+        "language_detection_status": "current",
         "fetched_at": timestamp,
     }
     errors: List[str] = []
-    languages: List[str] = []
-    languages_seen = set()
+    declared_languages: List[str] = []
+    declared_languages_seen: Set[str] = set()
     peers: Set[str] = set()
 
     canonical_base: Optional[str] = None
@@ -1743,7 +1905,11 @@ def process_instance(
 
         # ✅ NodeInfo 안에 있는 언어 필드를 싹 긁어서 붙이기
         ni_langs = extract_languages_from_nodeinfo(nodeinfo)
-        append_languages(languages, languages_seen, ni_langs)
+        append_languages(
+            declared_languages,
+            declared_languages_seen,
+            ni_langs,
+        )
 
         # peers
         if discover_peers:
@@ -1803,7 +1969,11 @@ def process_instance(
         update_numeric(record, "users_total", platform_data.get("users_total"))
         update_numeric(record, "users_active_month", platform_data.get("users_active_month"))
         update_numeric(record, "statuses", platform_data.get("statuses"))
-        append_languages(languages, languages_seen, platform_data.get("languages"))
+        append_languages(
+            declared_languages,
+            declared_languages_seen,
+            platform_data.get("languages"),
+        )
         if discover_peers:
             peers.update(normalize_peer_list(platform_data.get("peers")))
     
@@ -1831,19 +2001,18 @@ def process_instance(
             site_langs = site_details.get("languages", [])
 
     
+    inferred_languages: List[str] = []
     if desc:
         logging.debug("detecting languages from description for host %s", instance.host)
-        guessed_langs = detect_languages_from_text(desc)
-        append_languages(languages, languages_seen, guessed_langs)
-
-        # An HTML lang attribute often reflects the interface default rather
-        # than the description or community language. Use it only when the
-        # description itself is too weak to classify.
-        if not guessed_langs:
-            append_languages(languages, languages_seen, site_langs)
+        inferred_languages = detect_languages_from_text(desc)
 
     # 최종 언어 리스트 저장
-    record["languages_detected"] = languages
+    set_language_metadata(
+        record,
+        declared=declared_languages,
+        inferred=inferred_languages,
+        document=site_langs,
+    )
     return record, errors, peers
 
 def extract_metadata_from_html(html: str, host: str) -> Dict[str, Any]:
@@ -2490,9 +2659,43 @@ def _detect_top_language(text: str) -> Optional[Tuple[str, float]]:
     return code, top.prob
 
 
+def _remove_language_neutral_terms(text: str) -> str:
+    terms = "|".join(
+        re.escape(term) for term in sorted(LANGUAGE_NEUTRAL_TERMS, key=len, reverse=True)
+    )
+    return re.sub(
+        rf"(?<![\w-])(?:{terms})(?![\w-])",
+        " ",
+        text,
+        flags=re.IGNORECASE,
+    )
+
+
+def _detect_statistical_language(
+    text: str,
+    *,
+    min_prob: float,
+    min_letters: int,
+) -> Optional[str]:
+    value = re.sub(r"\s+", " ", _remove_language_neutral_terms(text)).strip()
+    letters = sum(ch.isalpha() for ch in value)
+    words = re.findall(r"[^\W\d_]+", value, flags=re.UNICODE)
+    if letters < min_letters:
+        return None
+    if len(words) < 2 and letters < MIN_SINGLE_TOKEN_LETTERS:
+        return None
+    if len(words) < 3 and letters < MIN_TWO_WORD_LETTERS:
+        return None
+
+    detected = _detect_top_language(value)
+    if not detected or detected[1] < min_prob:
+        return None
+    return detected[0]
+
+
 def detect_languages_from_text(
     text: str,
-    max_langs: int = 1,
+    max_langs: int = 3,
     min_prob: float = MIN_LANGUAGE_PROBABILITY,
     min_letters: int = MIN_LANGUAGE_LETTERS,
 ) -> List[str]:
@@ -2516,33 +2719,29 @@ def detect_languages_from_text(
     if has_han and not langs and _has_strong_chinese_signal(value):
         langs.append("zh")
 
-    # Kana and Hangul are much stronger evidence than a statistical guess over
-    # the same short text. Avoid adding unrelated Latin-script false positives.
-    if langs:
-        return langs
-
-    if has_han:
+    if has_han and not langs:
         han_text = "".join(ch for ch in value if _is_han(ch))
-        if len(han_text) < MIN_CJK_IDEOGRAPHS:
-            return []
-        detected = _detect_top_language(han_text)
-        if detected and detected[0] == "zh" and detected[1] >= min_prob:
-            return ["zh"]
-        return []
+        if len(han_text) >= MIN_CJK_IDEOGRAPHS:
+            detected = _detect_top_language(han_text)
+            if detected and detected[0] == "zh" and detected[1] >= min_prob:
+                langs.append("zh")
 
-    letters = sum(ch.isalpha() for ch in value)
-    words = re.findall(r"[^\W\d_]+", value, flags=re.UNICODE)
-    if letters < min_letters:
-        return []
-    if len(words) < 2 and letters < MIN_SINGLE_TOKEN_LETTERS:
-        return []
-    if len(words) < 3 and letters < MIN_TWO_WORD_LETTERS:
-        return []
+    # Detect the non-CJK fragment independently. This retains English (or any
+    # other sufficiently strong language) in genuinely bilingual descriptions
+    # without treating product names inside CJK prose as English evidence.
+    non_cjk_text = "".join(
+        " " if (_is_han(ch) or _is_kana(ch) or _is_hangul(ch)) else ch
+        for ch in value
+    )
+    statistical = _detect_statistical_language(
+        non_cjk_text,
+        min_prob=min_prob,
+        min_letters=min_letters,
+    )
+    if statistical and statistical not in langs:
+        langs.append(statistical)
 
-    detected = _detect_top_language(value)
-    if not detected or detected[1] < min_prob:
-        return []
-    return [detected[0]]
+    return langs[:max_langs]
 
 def append_languages(target: List[str], seen: set, values: Any) -> None:
     if isinstance(values, dict):

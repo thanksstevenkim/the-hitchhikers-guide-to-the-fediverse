@@ -53,6 +53,14 @@ from scripts import fetch_stats
             "นี่คือเซิร์ฟเวอร์มาสโตดอนที่เป็นมิตรสำหรับชุมชนท้องถิ่นและการสนทนาทั่วไป",
             ["th"],
         ),
+        (
+            "一个安静的毛象花园。 A quiet garden where everyone can rest and relax.",
+            ["zh", "en"],
+        ),
+        (
+            "Nothing happened. 2026年9月13日 ActivityPub Test 2026年9月13日",
+            ["en"],
+        ),
     ],
 )
 def test_detect_languages_from_description(
@@ -101,6 +109,12 @@ def test_japanese_text_that_mentions_china_is_not_marked_chinese() -> None:
     assert fetch_stats.detect_languages_from_text(description) == ["ja"]
 
 
+def test_fediverse_product_names_do_not_create_english_evidence() -> None:
+    description = "这里是Iceshrimp实例，支持ActivityPub并与Mastodon和Misskey站点往来。"
+
+    assert fetch_stats.detect_languages_from_text(description) == ["zh"]
+
+
 def test_conflicting_html_language_is_ignored_when_description_is_clear(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
@@ -126,6 +140,10 @@ def test_conflicting_html_language_is_ignored_when_description_is_clear(
 
     assert errors == []
     assert record["languages_detected"] == ["ja"]
+    assert record["languages_declared"] == []
+    assert record["languages_inferred"] == ["ja"]
+    assert record["languages_document"] == ["en"]
+    assert record["language_detection_status"] == "current"
 
 
 def test_html_language_is_fallback_for_an_ambiguous_description(
@@ -153,3 +171,67 @@ def test_html_language_is_fallback_for_an_ambiguous_description(
 
     assert errors == []
     assert record["languages_detected"] == ["zh"]
+    assert record["languages_declared"] == []
+    assert record["languages_inferred"] == []
+    assert record["languages_document"] == ["zh"]
+
+
+def test_legacy_record_is_reclassified_from_stored_description() -> None:
+    record = {
+        "host": "catpost.example",
+        "languages_detected": ["ja", "en", "ca", "it"],
+        "nodeinfo_description": "这里是catpost，玩得愉快！",
+    }
+
+    assert fetch_stats.upgrade_language_metadata(record)
+    assert record["languages_detected"] == ["zh"]
+    assert record["languages_declared"] == []
+    assert record["languages_inferred"] == ["zh"]
+    assert record["language_detection_status"] == "reclassified"
+
+
+def test_ambiguous_legacy_record_preserves_old_value_for_review() -> None:
+    record = {
+        "host": "ambiguous.example",
+        "languages_detected": ["ja", "ko"],
+        "nodeinfo_description": "人文 · 科技 · 生活",
+    }
+
+    assert fetch_stats.upgrade_language_metadata(record)
+    assert record["languages_detected"] == ["ja", "ko"]
+    assert record["languages_inferred"] == []
+    assert record["language_detection_status"] == "legacy_fallback"
+
+
+def test_manual_language_override_wins_during_legacy_upgrade() -> None:
+    record = {
+        "host": "override.example",
+        "languages_detected": ["ja"],
+        "nodeinfo_description": "人文 · 科技 · 生活",
+    }
+
+    assert fetch_stats.upgrade_language_metadata(
+        record,
+        {"languages_detected": ["zh-TW"]},
+    )
+    assert record["languages_detected"] == ["zh"]
+    assert record["languages_overridden"] == ["zh"]
+    assert record["language_detection_status"] == "manual_override"
+
+
+def test_version_upgrade_preserves_declared_language_evidence() -> None:
+    record = {
+        "host": "declared.example",
+        "languages_detected": ["fr"],
+        "languages_declared": ["fr"],
+        "languages_inferred": [],
+        "languages_document": [],
+        "languages_overridden": [],
+        "language_detection_version": 1,
+        "language_detection_status": "current",
+    }
+
+    assert fetch_stats.upgrade_language_metadata(record)
+    assert record["languages_detected"] == ["fr"]
+    assert record["languages_declared"] == ["fr"]
+    assert record["language_detection_status"] == "reclassified"

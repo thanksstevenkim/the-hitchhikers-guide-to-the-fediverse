@@ -25,6 +25,29 @@ These files are static JSON resources. Consumers should check `schema_version` b
 
 The same tracked files are also available directly from the default branch under `https://raw.githubusercontent.com/thanksstevenkim/the-hitchhikers-guide-to-the-fediverse/main/data/`.
 
+## Language detection provenance
+
+`languages_detected` remains the final language list consumed by the site. Additive fields separate the evidence used to produce it:
+
+| Field | Meaning |
+| --- | --- |
+| `languages_declared` | Languages declared by NodeInfo or a platform API |
+| `languages_inferred` | High-confidence languages inferred from the cleaned instance description |
+| `languages_document` | Document hints such as HTML `lang`; used in the final list only when stronger evidence is unavailable |
+| `languages_overridden` | Languages explicitly set in the operator-only manual overrides file |
+| `language_detection_version` | Version of the inference rules used for the stored result |
+| `language_detection_status` | `current`, `reclassified`, `legacy_fallback`, or `manual_override` |
+
+When the inference rules change, the collector reclassifies saved `nodeinfo_description` text once without requiring another successful request to the instance. An old label that cannot be reconstructed confidently is retained with `legacy_fallback` status.
+
+The reproducible review queue contains only declared/inferred conflicts and ambiguous Han-only descriptions by default:
+
+```bash
+python scripts/build_language_review_queue.py
+```
+
+Pass `--include-legacy` for a broader diagnostic queue containing every preserved legacy label. The generated `data/language_review_queue.json` file is local diagnostic output and is not published.
+
 ## Software registry
 
 `software_registry.json` is generated from the current healthy-instance snapshot and `software_taxonomy.json`. It contains taxonomy entries even when they have no currently healthy instance, along with newly observed software that has not yet been classified.

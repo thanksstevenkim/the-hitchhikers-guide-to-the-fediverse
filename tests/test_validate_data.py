@@ -188,3 +188,36 @@ def test_stale_software_registry_is_rejected(tmp_path: Path) -> None:
 
     with pytest.raises(validate_data.ValidationError, match="stale"):
         validate_data.validate_data_dir(data_dir)
+
+
+def test_complete_language_provenance_is_accepted(tmp_path: Path) -> None:
+    path = tmp_path / "stats.json"
+    record = make_record("a.example", good=True)
+    record.update(
+        {
+            "languages_declared": ["ja"],
+            "languages_inferred": ["zh"],
+            "languages_document": [],
+            "languages_overridden": [],
+            "language_detection_version": 2,
+            "language_detection_status": "current",
+        }
+    )
+    write_json(path, [record])
+
+    assert validate_data.validate_stats(
+        path,
+        {},
+        bucket="OK",
+        required=True,
+    ) == {"a.example"}
+
+
+def test_partial_language_provenance_is_rejected(tmp_path: Path) -> None:
+    path = tmp_path / "stats.json"
+    record = make_record("a.example", good=True)
+    record["languages_inferred"] = ["en"]
+    write_json(path, [record])
+
+    with pytest.raises(validate_data.ValidationError, match="partial language"):
+        validate_data.validate_stats(path, {}, bucket="OK", required=True)
