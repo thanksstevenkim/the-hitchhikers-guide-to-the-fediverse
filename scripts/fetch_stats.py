@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 from concurrent.futures import FIRST_COMPLETED, Future, ThreadPoolExecutor, wait
+from html import unescape
 import json
 import logging
 import sys
@@ -25,7 +26,7 @@ from pathlib import Path
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Set, Tuple
 from urllib.parse import urlparse, urljoin
 import codecs
-from langdetect import detect_langs, LangDetectException
+from langdetect import DetectorFactory, detect_langs, LangDetectException
 from html.parser import HTMLParser
 
 REQUEST_CONNECT_TIMEOUT = 3.05
@@ -146,6 +147,49 @@ except Exception:  # pragma: no cover - optional import guard
 
 
 LANGDETECT_LOCK = threading.Lock()
+# langdetect uses random sampling internally. Fixing the seed keeps generated
+# snapshots and tests stable across otherwise identical runs.
+DetectorFactory.seed = 0
+
+MIN_LANGUAGE_LETTERS = 10
+MIN_TWO_WORD_LETTERS = 15
+MIN_SINGLE_TOKEN_LETTERS = 20
+MIN_LANGUAGE_PROBABILITY = 0.85
+MIN_CJK_IDEOGRAPHS = 10
+MIN_STRONG_SCRIPT_CHARS = 2
+
+# Han characters alone do not distinguish Chinese from Japanese. These words
+# and character forms are useful high-precision signals in short instance
+# descriptions, while longer ambiguous text is still checked by langdetect.
+CHINESE_MARKERS = (
+    "中文",
+    "简体",
+    "簡體",
+    "繁体",
+    "繁體",
+    "中国",
+    "中國",
+    "台湾",
+    "台灣",
+    "华人",
+    "華人",
+    "联邦宇宙",
+    "聯邦宇宙",
+    "长毛象",
+    "長毛象",
+    "服务器",
+    "服務器",
+    "伺服器",
+    "实例",
+    "實例",
+    "社群",
+    "欢迎",
+    "歡迎",
+)
+CHINESE_DISTINCTIVE_CHARS = frozenset(
+    "这们个为么吗呢欢让从还进过网联务汉龙边应经"
+    "這們麼嗎呢歡讓從還聯邊應經錄裡"
+)
 
 
 @dataclass
@@ -1771,6 +1815,7 @@ def process_instance(
             record["nodeinfo_description"] = desc
     
     # NodeInfo에서 설명을 가져오지 못했을 때 사이트 메타데이터에서 시도
+    site_langs: List[str] = []
     if not desc:
         # NodeInfo에서 Content-Type 관련 에러가 난 경우,
         # 사이트 자체가 뭔가 이상한 경우일 가능성이 크니까 HTML 메타데이터는 스킵.
@@ -1784,18 +1829,18 @@ def process_instance(
             record["nodeinfo_description"] = desc
 
             site_langs = site_details.get("languages", [])
-            append_languages(languages, languages_seen, site_langs)
 
     
     if desc:
         logging.debug("detecting languages from description for host %s", instance.host)
-        # 1) 스크립트(문자 범위) 기반으로 ko/ja/en 강제 포함
-        script_langs = list(detect_scripts(desc))
-        append_languages(languages, languages_seen, script_langs)
-        
-        # 2) langdetect 결과도 참고 (있으면 추가)
         guessed_langs = detect_languages_from_text(desc)
         append_languages(languages, languages_seen, guessed_langs)
+
+        # An HTML lang attribute often reflects the interface default rather
+        # than the description or community language. Use it only when the
+        # description itself is too weak to classify.
+        if not guessed_langs:
+            append_languages(languages, languages_seen, site_langs)
 
     # 최종 언어 리스트 저장
     record["languages_detected"] = languages
@@ -2339,62 +2384,165 @@ def extract_languages_from_nodeinfo(nodeinfo: Dict[str, Any]) -> List[str]:
 
     return langs
 
-def detect_scripts(text: str) -> set[str]:
-    langs = set()
+class _VisibleTextExtractor(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.parts: List[str] = []
 
-    # 한글 (가~힣)
-    if any("\uac00" <= ch <= "\ud7a3" for ch in text):
-        langs.add("ko")
+    def handle_data(self, data: str) -> None:
+        self.parts.append(data)
 
-    # 일본어: 히라가나, 가타카나, 한자 (중국어와 공유하지만, 섞여 있으면 ja로 치는 정도)
-    if any(
-        ("\u3040" <= ch <= "\u309f") or  # 히라가나
-        ("\u30a0" <= ch <= "\u30ff") or  # 가타카나
-        ("\u4e00" <= ch <= "\u9fff")     # CJK 통합 한자
-        for ch in text
-    ):
-        langs.add("ja")
 
-    # 라틴 알파벳
-    if any(("A" <= ch <= "Z") or ("a" <= ch <= "z") for ch in text):
-        langs.add("en")
+def clean_language_detection_text(text: str) -> str:
+    """Remove markup and machine-readable tokens before language detection."""
+    value = unescape(str(text or ""))
+
+    if "<" in value and ">" in value:
+        parser = _VisibleTextExtractor()
+        try:
+            parser.feed(value)
+            parser.close()
+            value = " ".join(parser.parts)
+        except Exception:
+            value = re.sub(r"<[^>]*>", " ", value)
+
+    # Keep Markdown link labels but remove their destinations. URLs, domains,
+    # email addresses, and Fediverse handles otherwise bias short descriptions
+    # toward whichever language happens to resemble the machine-readable text.
+    value = re.sub(r"!?\[([^\]]*)\]\([^)]*\)", r" \1 ", value)
+    value = re.sub(r"\b(?:https?://|www\.)\S+", " ", value, flags=re.IGNORECASE)
+    value = re.sub(r"(?<!\w)@[\w.-]+(?:@[\w.-]+)?", " ", value)
+    value = re.sub(r"\b[^\s@]+@(?:[^\s@]+\.)+[^\s@]+\b", " ", value)
+    value = re.sub(
+        r"\b(?:[a-z0-9-]+\.)+[a-z]{2,}(?:/\S*)?\b",
+        " ",
+        value,
+        flags=re.IGNORECASE,
+    )
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def _is_hangul(ch: str) -> bool:
+    return (
+        "\u1100" <= ch <= "\u11ff"
+        or "\u3130" <= ch <= "\u318f"
+        or "\uac00" <= ch <= "\ud7af"
+    )
+
+
+def _is_kana(ch: str) -> bool:
+    return (
+        "\u3040" <= ch <= "\u30ff"
+        or "\u31f0" <= ch <= "\u31ff"
+        or "\uff66" <= ch <= "\uff9f"
+    )
+
+
+def _is_han(ch: str) -> bool:
+    return (
+        "\u3400" <= ch <= "\u4dbf"
+        or "\u4e00" <= ch <= "\u9fff"
+        or "\uf900" <= ch <= "\ufaff"
+    )
+
+
+def detect_scripts(text: str) -> List[str]:
+    """Return only languages with distinctive scripts.
+
+    Latin is shared by many languages and Han is shared by Chinese and
+    Japanese, so neither is sufficient evidence by itself.
+    """
+    value = clean_language_detection_text(text)
+    langs: List[str] = []
+
+    if sum(_is_hangul(ch) for ch in value) >= MIN_STRONG_SCRIPT_CHARS:
+        langs.append("ko")
+    if sum(_is_kana(ch) for ch in value) >= MIN_STRONG_SCRIPT_CHARS:
+        langs.append("ja")
 
     return langs
 
-def detect_languages_from_text(text: str,
-                               max_langs: int = 5,
-                               min_prob: float = 0.2) -> List[str]:
-    text = (text or "").strip()
-    if not text:
-        return []
 
-    # 입력이 과도하게 긴 경우 잘라버리기 (예: 1000자)
-    if len(text) > 1000:
-        text = text[:1000]
+def _has_strong_chinese_signal(text: str) -> bool:
+    return any(marker in text for marker in CHINESE_MARKERS) or any(
+        ch in CHINESE_DISTINCTIVE_CHARS for ch in text
+    )
 
+
+def _detect_top_language(text: str) -> Optional[Tuple[str, float]]:
     try:
         # langdetect lazily initializes shared profiles; serialize this small
         # CPU-only section while network collection remains concurrent.
         with LANGDETECT_LOCK:
             candidates = detect_langs(text)
     except LangDetectException:
-        return []
+        return None
     except Exception as e:
-        # 여기에 로그를 잠깐 넣어두면 어느 서버에서 터지는지 바로 알 수 있음
         logging.warning("langdetect failed with unexpected error: %r", e)
+        return None
+
+    if not candidates:
+        return None
+    top = candidates[0]
+    code = normalize_language_code(top.lang)
+    if not code:
+        return None
+    return code, top.prob
+
+
+def detect_languages_from_text(
+    text: str,
+    max_langs: int = 1,
+    min_prob: float = MIN_LANGUAGE_PROBABILITY,
+    min_letters: int = MIN_LANGUAGE_LETTERS,
+) -> List[str]:
+    """Infer a small, high-confidence language set from a description.
+
+    Explicit NodeInfo/API language fields are collected separately. This
+    fallback deliberately prefers no guess over several low-confidence labels.
+    """
+    value = clean_language_detection_text(text)
+    if not value or max_langs < 1:
+        return []
+    if len(value) > 1000:
+        value = value[:1000]
+
+    langs = detect_scripts(value)
+    has_han = any(_is_han(ch) for ch in value)
+
+    # Interpret Chinese markers only when Kana/Hangul have not already given
+    # us stronger evidence. A Japanese sentence may legitimately mention
+    # China, and that mention must not turn the whole description bilingual.
+    if has_han and not langs and _has_strong_chinese_signal(value):
+        langs.append("zh")
+
+    # Kana and Hangul are much stronger evidence than a statistical guess over
+    # the same short text. Avoid adding unrelated Latin-script false positives.
+    if langs:
+        return langs
+
+    if has_han:
+        han_text = "".join(ch for ch in value if _is_han(ch))
+        if len(han_text) < MIN_CJK_IDEOGRAPHS:
+            return []
+        detected = _detect_top_language(han_text)
+        if detected and detected[0] == "zh" and detected[1] >= min_prob:
+            return ["zh"]
         return []
 
-    langs: List[str] = []
-    for cand in candidates:
-        if cand.prob < min_prob:
-            continue
-        code = normalize_language_code(cand.lang)
-        if code and code not in langs:
-            langs.append(code)
-        if len(langs) >= max_langs:
-            break
+    letters = sum(ch.isalpha() for ch in value)
+    words = re.findall(r"[^\W\d_]+", value, flags=re.UNICODE)
+    if letters < min_letters:
+        return []
+    if len(words) < 2 and letters < MIN_SINGLE_TOKEN_LETTERS:
+        return []
+    if len(words) < 3 and letters < MIN_TWO_WORD_LETTERS:
+        return []
 
-    return langs
+    detected = _detect_top_language(value)
+    if not detected or detected[1] < min_prob:
+        return []
+    return [detected[0]]
 
 def append_languages(target: List[str], seen: set, values: Any) -> None:
     if isinstance(values, dict):
