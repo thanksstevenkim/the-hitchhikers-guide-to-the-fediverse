@@ -13197,7 +13197,7 @@
     "host": "blackbirb.dev",
     "url": "https://blackbirb.dev",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "blackbirb"
   },
   {
     "host": "blackcat.vip",
@@ -84339,7 +84339,7 @@
     "host": "lc.diverso.life",
     "url": "https://lc.diverso.life",
     "source": "peer",
-    "platform": "luca comazzetto | lab"
+    "platform": "nextcloud-social"
   },
   {
     "host": "ldwg.ca",
@@ -111315,7 +111315,7 @@
     "host": "misskey.caligula-sea.net",
     "url": "https://misskey.caligula-sea.net",
     "source": "legacy",
-    "platform": "misskey"
+    "platform": "mk-go"
   },
   {
     "host": "misskey.cannorin.net",
