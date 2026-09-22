@@ -31459,9 +31459,8 @@
   },
   {
     "host": "cedric.fm",
-    "url": "https://www.cedric.fm",
+    "url": "https://cedric.fm",
     "source": "legacy",
-    "name": "www.cedric.fm",
     "platform": "ghost"
   },
   {
@@ -46660,7 +46659,7 @@
     "host": "encryptr.net",
     "url": "https://encryptr.net",
     "source": "legacy",
-    "platform": "gotosocial"
+    "platform": "mastodon"
   },
   {
     "host": "encyclia.pub",
@@ -119044,7 +119043,7 @@
     "host": "mutualaidspace.org",
     "url": "https://mutualaidspace.org",
     "source": "peer",
-    "platform": "wordpress"
+    "platform": "mastodon"
   },
   {
     "host": "mux.akanet.fr",
