@@ -48753,7 +48753,7 @@
     "host": "evil.social",
     "url": "https://evil.social",
     "source": "legacy",
-    "platform": "catodon"
+    "platform": "misskey"
   },
   {
     "host": "evilfoundry.net",
@@ -106617,7 +106617,7 @@
     "host": "mcseekeri.com",
     "url": "https://mcseekeri.com",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "misskey"
   },
   {
     "host": "mcyt.cc",
@@ -111321,7 +111321,7 @@
     "host": "misskey.caligula-sea.net",
     "url": "https://misskey.caligula-sea.net",
     "source": "legacy",
-    "platform": "mk-go"
+    "platform": "misskey"
   },
   {
     "host": "misskey.cannorin.net",
