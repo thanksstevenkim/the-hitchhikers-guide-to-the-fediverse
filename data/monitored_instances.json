@@ -39687,7 +39687,7 @@
     "host": "deadrobots.social",
     "url": "https://deadrobots.social",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "mastodon"
   },
   {
     "host": "deadsuperhero.com",
@@ -141504,12 +141504,6 @@
     "platform": "misskey"
   },
   {
-    "host": "postabdn.com",
-    "url": "https://postabdn.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "postb.org",
     "url": "https://postb.org",
     "source": "legacy",
@@ -141537,7 +141531,7 @@
     "host": "poster.place",
     "url": "https://poster.place",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "posterchan"
   },
   {
     "host": "posters.qaz.wtf",
@@ -215974,6 +215968,13 @@
     "host": "www.possibilities.news",
     "url": "https://www.possibilities.news",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.postabdn.com",
+    "url": "https://postabdn.com",
+    "source": "legacy",
+    "name": "postabdn.com",
     "platform": "ghost"
   },
   {
