@@ -40885,8 +40885,9 @@
   },
   {
     "host": "dev.displayeurope.social",
-    "url": "https://dev.displayeurope.social",
+    "url": "https://displayeurope.social",
     "source": "peer",
+    "name": "displayeurope.social",
     "platform": "mastodon"
   },
   {
@@ -42352,12 +42353,6 @@
     "url": "https://dispatches.amalara.com",
     "source": "legacy",
     "platform": "ghost"
-  },
-  {
-    "host": "displayeurope.social",
-    "url": "https://displayeurope.social",
-    "source": "legacy",
-    "platform": "mastodon"
   },
   {
     "host": "displayeurope.video",
@@ -215972,9 +215967,8 @@
   },
   {
     "host": "www.postabdn.com",
-    "url": "https://postabdn.com",
+    "url": "https://www.postabdn.com",
     "source": "legacy",
-    "name": "postabdn.com",
     "platform": "ghost"
   },
   {
