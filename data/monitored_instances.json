@@ -40885,9 +40885,8 @@
   },
   {
     "host": "dev.displayeurope.social",
-    "url": "https://displayeurope.social",
+    "url": "https://dev.displayeurope.social",
     "source": "peer",
-    "name": "displayeurope.social",
     "platform": "mastodon"
   },
   {
