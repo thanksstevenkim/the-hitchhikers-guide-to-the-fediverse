@@ -98593,9 +98593,8 @@
   },
   {
     "host": "mastodon.fediworld.social",
-    "url": "https://fediworld.social",
+    "url": "https://mastodon.fediworld.social",
     "source": "legacy",
-    "name": "fediworld.social",
     "platform": "mastodon"
   },
   {
