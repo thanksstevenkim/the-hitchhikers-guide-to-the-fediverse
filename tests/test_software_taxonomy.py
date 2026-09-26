@@ -74,6 +74,10 @@ def test_reviewed_software_has_expected_groups() -> None:
 
     assert classification["starling"] == "social"
     assert classification["welley"] == "social"
+    assert classification["cyclone"] == "social"
+    assert classification["plattform-activitypub"] == "social"
+    assert classification["posterchan"] == "social"
+    assert classification["blackbirb"] == "blog"
     assert classification["klonkt"] == "blog"
     assert classification["concrnt-ap-bridge"] == "bridge"
     assert "ap-tombstone" not in classification
