@@ -1,6 +1,7 @@
 (async function renderDirectory() {
   const assetBaseUrl = resolveAssetBaseUrl();
   const SUPPORTED_LOCALES = new Set(["ko", "en"]);
+  const THEME_STORAGE_KEY = "hitchhiker-theme";
   const locale = resolveLocale();
   const numberLocale = locale === "ko" ? "ko-KR" : "en-US";
 
@@ -79,6 +80,12 @@
       sort_users_active: "월간 활성 사용자 수로 정렬",
       footer_note:
         "데이터는 data/instances.json과 data/stats.ok.json 파일을 수정해 갱신할 수 있습니다.",
+      repository_link: "GitHub",
+      footer_source_link: "소스 코드",
+      footer_issue_link: "오류 제보",
+      project_links_label: "프로젝트 링크",
+      theme_switch_to_light: "라이트 모드로 전환",
+      theme_switch_to_dark: "다크 모드로 전환",
       ...Object.fromEntries(
         Object.entries(KNOWN_SOFTWARE_LABELS).map(([key, label]) => [
           `software_label_${key}`,
@@ -96,6 +103,13 @@
     pageIntro: document.getElementById("page-intro"),
     directoryTitle: document.getElementById("directory-title"),
     footerNote: document.getElementById("footer-note"),
+    repositoryLinkLabel: document.getElementById("repository-link-label"),
+    footerSourceLink: document.getElementById("footer-source-link"),
+    footerIssueLink: document.getElementById("footer-issue-link"),
+    footerLinks: document.querySelector(".page-footer__links"),
+    themeToggle: document.getElementById("theme-toggle"),
+    themeLightIcon: document.getElementById("theme-light-icon"),
+    themeDarkIcon: document.getElementById("theme-dark-icon"),
     searchInput: document.getElementById("q"),
     searchLabel: document.getElementById("searchLabel"),
     languageSelect: document.getElementById("languageFilter"),
@@ -165,6 +179,7 @@
 
 
   applyStaticStrings(strings);
+  bindThemeToggle();
   setStatusMessage(strings.loading, { busy: true });
 
   bindFilters();
@@ -358,6 +373,69 @@
 
         updateDisplay();
       });
+    }
+  }
+
+  function bindThemeToggle() {
+    if (!elements.themeToggle) return;
+
+    updateThemeToggle();
+    elements.themeToggle.addEventListener("click", () => {
+      const nextTheme = getActiveTheme() === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = nextTheme;
+      document.documentElement.dataset.themeSource = "user";
+      try {
+        localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+      } catch (error) {
+        console.info("테마 설정을 저장하지 못했습니다.", error);
+      }
+      updateThemeToggle();
+    });
+
+    const systemTheme = window.matchMedia?.("(prefers-color-scheme: dark)");
+    systemTheme?.addEventListener?.("change", (event) => {
+      if (document.documentElement.dataset.themeSource === "system") {
+        document.documentElement.dataset.theme = event.matches
+          ? "dark"
+          : "light";
+        updateThemeToggle();
+      }
+    });
+  }
+
+  function getActiveTheme() {
+    const selectedTheme = document.documentElement.dataset.theme;
+    if (selectedTheme === "light" || selectedTheme === "dark") {
+      return selectedTheme;
+    }
+    return window.matchMedia?.("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  }
+
+  function updateThemeToggle() {
+    if (!elements.themeToggle) return;
+
+    const activeTheme = getActiveTheme();
+    const nextTheme = activeTheme === "dark" ? "light" : "dark";
+    const label =
+      nextTheme === "light"
+        ? strings.theme_switch_to_light
+        : strings.theme_switch_to_dark;
+
+    elements.themeToggle.setAttribute("aria-label", label);
+    elements.themeToggle.setAttribute("title", label);
+    elements.themeToggle.setAttribute(
+      "aria-pressed",
+      activeTheme === "dark" ? "true" : "false"
+    );
+    elements.themeToggle.dataset.nextTheme = nextTheme;
+
+    if (elements.themeLightIcon) {
+      elements.themeLightIcon.hidden = nextTheme !== "light";
+    }
+    if (elements.themeDarkIcon) {
+      elements.themeDarkIcon.hidden = nextTheme !== "dark";
     }
   }
 
@@ -1128,6 +1206,18 @@
     }
     if (elements.footerNote) {
       elements.footerNote.textContent = dict.footer_note;
+    }
+    if (elements.repositoryLinkLabel) {
+      elements.repositoryLinkLabel.textContent = dict.repository_link;
+    }
+    if (elements.footerSourceLink) {
+      elements.footerSourceLink.textContent = dict.footer_source_link;
+    }
+    if (elements.footerIssueLink) {
+      elements.footerIssueLink.textContent = dict.footer_issue_link;
+    }
+    if (elements.footerLinks) {
+      elements.footerLinks.setAttribute("aria-label", dict.project_links_label);
     }
     if (elements.searchLabel) {
       elements.searchLabel.textContent = dict.search_label;

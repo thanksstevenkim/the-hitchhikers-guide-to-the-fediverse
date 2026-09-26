@@ -4,15 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title></title>
+  <script>
+    try {
+      const savedTheme = localStorage.getItem("hitchhiker-theme");
+      const hasSavedTheme = savedTheme === "light" || savedTheme === "dark";
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      document.documentElement.dataset.theme = hasSavedTheme
+        ? savedTheme
+        : systemTheme;
+      document.documentElement.dataset.themeSource = hasSavedTheme
+        ? "user"
+        : "system";
+    } catch (error) {
+      // Keep following the operating-system theme when storage is unavailable.
+    }
+  </script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div id="app" data-locale="ko">
     <header class="page-header">
-      <nav id="localeSwitcher" class="locale-switcher" aria-label="Language">
-        <a class="locale-switcher__link" data-locale="ko" href="?lang=ko" hreflang="ko" lang="ko">한국어</a>
-        <a class="locale-switcher__link" data-locale="en" href="?lang=en" hreflang="en" lang="en">English</a>
-      </nav>
+      <div class="page-header__tools">
+        <nav id="localeSwitcher" class="locale-switcher" aria-label="Language">
+          <a class="locale-switcher__link" data-locale="ko" href="?lang=ko" hreflang="ko" lang="ko">한국어</a>
+          <a class="locale-switcher__link" data-locale="en" href="?lang=en" hreflang="en" lang="en">English</a>
+        </nav>
+        <div class="page-header__actions">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="다크 모드로 전환" title="다크 모드로 전환" aria-pressed="false">
+            <svg id="theme-light-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" hidden>
+              <path fill="currentColor" d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0-6a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 16a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1ZM4.22 4.22a1 1 0 0 1 1.42 0l1.41 1.42a1 1 0 0 1-1.41 1.41L4.22 5.64a1 1 0 0 1 0-1.42Zm12.73 12.73a1 1 0 0 1 1.41 0l1.42 1.41a1 1 0 0 1-1.42 1.42l-1.41-1.42a1 1 0 0 1 0-1.41ZM2 12a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Zm16 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM4.22 19.78a1 1 0 0 1 0-1.42l1.42-1.41a1 1 0 0 1 1.41 1.41l-1.41 1.42a1 1 0 0 1-1.42 0ZM16.95 7.05a1 1 0 0 1 0-1.41l1.41-1.42a1 1 0 1 1 1.42 1.42l-1.42 1.41a1 1 0 0 1-1.41 0Z"/>
+            </svg>
+            <svg id="theme-dark-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M20.3 15.7A9 9 0 0 1 8.3 3.7 9 9 0 1 0 20.3 15.7Z"/>
+            </svg>
+          </button>
+          <a class="repository-link" href="https://github.com/thanksstevenkim/the-hitchhikers-guide-to-the-fediverse">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+              <path fill="currentColor" d="M12 .7A11.5 11.5 0 0 0 8.36 23.1c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.74-1.56-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.96 10.96 0 0 1 5.75 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.28 5.68.42.36.78 1.06.78 2.14v3.17c0 .31.21.67.79.56A11.5 11.5 0 0 0 12 .7Z"/>
+            </svg>
+            <span id="repository-link-label">GitHub</span>
+          </a>
+        </div>
+      </div>
       <h1 id="page-title"></h1>
       <p id="page-intro"></p>
     </header>
@@ -90,6 +125,11 @@
     </main>
     <footer class="page-footer">
       <p id="footer-note"></p>
+      <nav class="page-footer__links" aria-label="Project links">
+        <a id="footer-source-link" href="https://github.com/thanksstevenkim/the-hitchhikers-guide-to-the-fediverse"></a>
+        <span aria-hidden="true">·</span>
+        <a id="footer-issue-link" href="https://github.com/thanksstevenkim/the-hitchhikers-guide-to-the-fediverse/issues/new"></a>
+      </nav>
     </footer>
   </div>
   <script src="js/render.js" defer></script>
