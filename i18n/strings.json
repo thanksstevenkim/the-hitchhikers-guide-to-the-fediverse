@@ -189,7 +189,13 @@
     "sort_users_total": "총 사용자 수로 정렬",
     "sort_users_active": "월간 활성 사용자 수로 정렬",
 
-    "footer_note": "호스트 정보와 통계는 공개된 Fediverse API 및 NodeInfo에서 수집됩니다."
+    "footer_note": "호스트 정보와 통계는 공개된 Fediverse API 및 NodeInfo에서 수집됩니다.",
+    "repository_link": "GitHub",
+    "footer_source_link": "소스 코드",
+    "footer_issue_link": "오류 제보",
+    "project_links_label": "프로젝트 링크",
+    "theme_switch_to_light": "라이트 모드로 전환",
+    "theme_switch_to_dark": "다크 모드로 전환"
   },
 
   "en": {
@@ -382,6 +388,12 @@
     "sort_users_total": "Sort by total users",
     "sort_users_active": "Sort by monthly active users",
 
-    "footer_note": "Host information and statistics are collected from public Fediverse APIs and NodeInfo."
+    "footer_note": "Host information and statistics are collected from public Fediverse APIs and NodeInfo.",
+    "repository_link": "GitHub",
+    "footer_source_link": "Source code",
+    "footer_issue_link": "Report an issue",
+    "project_links_label": "Project links",
+    "theme_switch_to_light": "Switch to light mode",
+    "theme_switch_to_dark": "Switch to dark mode"
   }
 }
