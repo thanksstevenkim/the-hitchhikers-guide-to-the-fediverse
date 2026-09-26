@@ -227,8 +227,11 @@
         strings
       );
 
+      const manualName = stringOrNull(manualEntry?.name);
+      const displayHost = resolveDisplayHost(host);
       const instance = {
-        name: stringOrNull(manualEntry?.name) ?? host,
+        name: manualName ?? displayHost,
+        nameUsesHost: manualName === null,
         url:
           stringOrNull(manualEntry?.url) ?? (host ? `https://${host}` : null),
         platform: softwareLabel,
@@ -629,6 +632,10 @@
         nameLink.rel = "noopener";
       }
       nameLink.textContent = nameText;
+      if (instance.nameUsesHost && nameText !== host) {
+        nameLink.title = host;
+        nameLink.setAttribute("aria-label", `${nameText} (${host})`);
+      }
 
       nameHeading.appendChild(nameLink);
 
@@ -900,6 +907,11 @@
       .split("/")[0]
       .replace(/\s+/g, "")
       .toLowerCase();
+  }
+
+  function resolveDisplayHost(host) {
+    const converter = globalThis.hitchhikerIdn?.toUnicodeHostname;
+    return typeof converter === "function" ? converter(host) : host;
   }
 
   function getNumericValue(value) {
