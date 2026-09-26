@@ -54252,12 +54252,6 @@
     "platform": "sharkey"
   },
   {
-    "host": "fediworld.social",
-    "url": "https://fediworld.social",
-    "source": "legacy",
-    "platform": "mastodon"
-  },
-  {
     "host": "fedora.ghost.io",
     "url": "https://fedora.ghost.io",
     "source": "legacy",
@@ -69753,7 +69747,7 @@
     "host": "hellel.world",
     "url": "https://hellel.world",
     "source": "peer",
-    "platform": "egokey"
+    "platform": "misskey"
   },
   {
     "host": "hellewelle.de",
@@ -98595,6 +98589,13 @@
     "host": "mastodon.fedivienne.org",
     "url": "https://mastodon.fedivienne.org",
     "source": "legacy",
+    "platform": "mastodon"
+  },
+  {
+    "host": "mastodon.fediworld.social",
+    "url": "https://fediworld.social",
+    "source": "legacy",
+    "name": "fediworld.social",
     "platform": "mastodon"
   },
   {
