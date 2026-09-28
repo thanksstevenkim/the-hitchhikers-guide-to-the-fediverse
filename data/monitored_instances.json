@@ -104395,8 +104395,9 @@
   },
   {
     "host": "mastodon.tfq.social",
-    "url": "https://mastodon.tfq.social",
+    "url": "https://tfq.social",
     "source": "peer",
+    "name": "tfq.social",
     "platform": "mastodon"
   },
   {
@@ -186826,7 +186827,7 @@
     "host": "tether.monster",
     "url": "https://tether.monster",
     "source": "peer",
-    "platform": "sharkey"
+    "platform": "tetherkey"
   },
   {
     "host": "tetrahedron.trisec.se",
@@ -186905,12 +186906,6 @@
     "url": "https://tfnb.ca",
     "source": "peer",
     "platform": "gancio"
-  },
-  {
-    "host": "tfq.social",
-    "url": "https://tfq.social",
-    "source": "legacy",
-    "platform": "mastodon"
   },
   {
     "host": "tgirl.sh",
