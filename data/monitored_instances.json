@@ -97809,7 +97809,7 @@
     "host": "mastodon.denike.io",
     "url": "https://mastodon.denike.io",
     "source": "peer",
-    "platform": "gotosocial"
+    "platform": "mastodon"
   },
   {
     "host": "mastodon.dennispeterjene.de",
@@ -104395,9 +104395,8 @@
   },
   {
     "host": "mastodon.tfq.social",
-    "url": "https://tfq.social",
+    "url": "https://mastodon.tfq.social",
     "source": "peer",
-    "name": "tfq.social",
     "platform": "mastodon"
   },
   {
