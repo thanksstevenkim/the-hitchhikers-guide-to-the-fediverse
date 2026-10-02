@@ -47178,6 +47178,13 @@
     "platform": "mastodon"
   },
   {
+    "host": "epsilon.social",
+    "url": "https://preprod.epsilon.social",
+    "source": "peer",
+    "name": "preprod.epsilon.social",
+    "platform": "mastodon"
+  },
+  {
     "host": "epsom.social",
     "url": "https://epsom.social",
     "source": "legacy",
@@ -142308,12 +142315,6 @@
     "platform": "mastodon"
   },
   {
-    "host": "preprod.epsilon.social",
-    "url": "https://preprod.epsilon.social",
-    "source": "peer",
-    "platform": "mastodon"
-  },
-  {
     "host": "prertik.com",
     "url": "https://prertik.com",
     "source": "peer",
@@ -167763,7 +167764,7 @@
     "host": "social.jorijn.com",
     "url": "https://social.jorijn.com",
     "source": "peer",
-    "platform": "gotosocial"
+    "platform": "littlefedi"
   },
   {
     "host": "social.jorquera.net",

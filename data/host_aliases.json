@@ -6442,5 +6442,6 @@
   "displayeurope.social": "dev.displayeurope.social",
   "dev.displayeurope.social": "displayeurope.social",
   "fediworld.social": "mastodon.fediworld.social",
-  "tfq.social": "mastodon.tfq.social"
+  "tfq.social": "mastodon.tfq.social",
+  "preprod.epsilon.social": "epsilon.social"
 }
