@@ -47179,9 +47179,8 @@
   },
   {
     "host": "epsilon.social",
-    "url": "https://preprod.epsilon.social",
+    "url": "https://epsilon.social",
     "source": "peer",
-    "name": "preprod.epsilon.social",
     "platform": "mastodon"
   },
   {
@@ -90598,7 +90597,7 @@
     "host": "luxzen.eu",
     "url": "https://luxzen.eu",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "ghost"
   },
   {
     "host": "luzeed.org",
@@ -157912,7 +157911,7 @@
     "host": "sludder.vildt.net",
     "url": "https://sludder.vildt.net",
     "source": "peer",
-    "platform": "gotosocial"
+    "platform": "littlefedi"
   },
   {
     "host": "slut.town",
