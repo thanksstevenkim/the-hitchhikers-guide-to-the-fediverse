@@ -32643,7 +32643,7 @@
     "host": "chpk.tomadoi.com",
     "url": "https://chpk.tomadoi.com",
     "source": "peer",
-    "platform": "yojo-art"
+    "platform": "cheripia"
   },
   {
     "host": "chrichri.ween.de",
@@ -112443,7 +112443,7 @@
     "host": "misskey.pm",
     "url": "https://misskey.pm",
     "source": "legacy",
-    "platform": "iceshrimp"
+    "platform": "misskey"
   },
   {
     "host": "misskey.pokete.dev",
