@@ -160092,6 +160092,13 @@
     "platform": "mastodon"
   },
   {
+    "host": "soc.synduckate.yachts",
+    "url": "https://synduckate.yachts",
+    "source": "peer",
+    "name": "synduckate.yachts",
+    "platform": "akkoma"
+  },
+  {
     "host": "soc.t3ou4.com",
     "url": "https://soc.t3ou4.com",
     "source": "peer",
@@ -184141,12 +184148,6 @@
     "platform": "wordpress"
   },
   {
-    "host": "synduckate.yachts",
-    "url": "https://synduckate.yachts",
-    "source": "peer",
-    "platform": "akkoma"
-  },
-  {
     "host": "syngevity.hosted.spacebear.ee",
     "url": "https://syngevity.hosted.spacebear.ee",
     "source": "legacy",
@@ -185188,7 +185189,7 @@
     "host": "tar.agor.ai",
     "url": "https://tar.agor.ai",
     "source": "peer",
-    "platform": "development agora of flancia"
+    "platform": "development agora"
   },
   {
     "host": "tarakiyee.com",
