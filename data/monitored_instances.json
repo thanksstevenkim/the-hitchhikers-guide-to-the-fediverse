@@ -63189,7 +63189,7 @@
     "host": "go.k7a.org",
     "url": "https://go.k7a.org",
     "source": "peer",
-    "platform": "mk-go"
+    "platform": "elythia"
   },
   {
     "host": "go.lema.org",
@@ -160093,9 +160093,8 @@
   },
   {
     "host": "soc.synduckate.yachts",
-    "url": "https://synduckate.yachts",
+    "url": "https://soc.synduckate.yachts",
     "source": "peer",
-    "name": "synduckate.yachts",
     "platform": "akkoma"
   },
   {
@@ -172024,7 +172023,7 @@
     "host": "social.outpost10.uk",
     "url": "https://social.outpost10.uk",
     "source": "peer",
-    "platform": "gotosocial"
+    "platform": "mastodon"
   },
   {
     "host": "social.ovegard.se",
