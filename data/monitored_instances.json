@@ -33645,13 +33645,13 @@
     "host": "cloud.alternativnet.de",
     "url": "https://cloud.alternativnet.de",
     "source": "peer",
-    "platform": "nextcloud social"
+    "platform": "nextcloud-social"
   },
   {
     "host": "cloud.apps.dj",
     "url": "https://cloud.apps.dj",
     "source": "peer",
-    "platform": "dj cloud"
+    "platform": "nextcloud-social"
   },
   {
     "host": "cloud.automat.direct",
@@ -113733,7 +113733,7 @@
     "host": "mk.eth0.jp",
     "url": "https://mk.eth0.jp",
     "source": "peer",
-    "platform": "mk-go"
+    "platform": "elythia"
   },
   {
     "host": "mk.f72u.net",
@@ -141502,6 +141502,13 @@
     "url": "https://post.yourein.net",
     "source": "legacy",
     "platform": "misskey"
+  },
+  {
+    "host": "postabdn.com",
+    "url": "https://www.postabdn.com",
+    "source": "legacy",
+    "name": "www.postabdn.com",
+    "platform": "ghost"
   },
   {
     "host": "postb.org",
@@ -185188,7 +185195,7 @@
     "host": "tar.agor.ai",
     "url": "https://tar.agor.ai",
     "source": "peer",
-    "platform": "development agora"
+    "platform": "development agora of flancia"
   },
   {
     "host": "tarakiyee.com",
@@ -215955,12 +215962,6 @@
   {
     "host": "www.possibilities.news",
     "url": "https://www.possibilities.news",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
-    "host": "www.postabdn.com",
-    "url": "https://www.postabdn.com",
     "source": "legacy",
     "platform": "ghost"
   },
