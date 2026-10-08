@@ -53667,7 +53667,7 @@
     "host": "fedihub.space",
     "url": "https://fedihub.space",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "misskey"
   },
   {
     "host": "fedihum.org",
@@ -77379,7 +77379,7 @@
     "host": "jcm.social",
     "url": "https://jcm.social",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "scute"
   },
   {
     "host": "jcp.im",
@@ -110781,7 +110781,7 @@
     "host": "misaki-chan.world",
     "url": "https://misaki-chan.world",
     "source": "legacy",
-    "platform": "mk-go"
+    "platform": "elythia"
   },
   {
     "host": "misaligned.markets",
@@ -141505,9 +141505,8 @@
   },
   {
     "host": "postabdn.com",
-    "url": "https://www.postabdn.com",
+    "url": "https://postabdn.com",
     "source": "legacy",
-    "name": "www.postabdn.com",
     "platform": "ghost"
   },
   {
