@@ -84606,12 +84606,6 @@
     "platform": "ghost"
   },
   {
-    "host": "lecturealeatoire.ca",
-    "url": "https://lecturealeatoire.ca",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "lediva.masto.host",
     "url": "https://lediva.masto.host",
     "source": "legacy",
@@ -112293,7 +112287,7 @@
     "host": "misskey.njy17.kr",
     "url": "https://misskey.njy17.kr",
     "source": "legacy",
-    "platform": "misskey"
+    "platform": "cherrypick"
   },
   {
     "host": "misskey.noellabo.jp",
@@ -209488,6 +209482,13 @@
     "host": "www.leafyfield.au",
     "url": "https://www.leafyfield.au",
     "source": "peer",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.lecturealeatoire.ca",
+    "url": "https://lecturealeatoire.ca",
+    "source": "legacy",
+    "name": "lecturealeatoire.ca",
     "platform": "ghost"
   },
   {
