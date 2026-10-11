@@ -138573,7 +138573,7 @@
     "host": "pixfed.com",
     "url": "https://pixfed.com",
     "source": "peer",
-    "platform": "loops"
+    "platform": "pixelfed"
   },
   {
     "host": "pixfed.dead-brain.fr",
@@ -209486,9 +209486,8 @@
   },
   {
     "host": "www.lecturealeatoire.ca",
-    "url": "https://lecturealeatoire.ca",
+    "url": "https://www.lecturealeatoire.ca",
     "source": "legacy",
-    "name": "lecturealeatoire.ca",
     "platform": "ghost"
   },
   {
