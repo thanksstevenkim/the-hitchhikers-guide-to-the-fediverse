@@ -35373,7 +35373,7 @@
     "host": "concrnt.lalafell.org",
     "url": "https://concrnt.lalafell.org",
     "source": "peer",
-    "platform": "ccworld-ap-bridge"
+    "platform": "concrnt-ap-bridge"
   },
   {
     "host": "condukt.app",
@@ -177351,7 +177351,7 @@
     "host": "social.vr-chat.kr",
     "url": "https://social.vr-chat.kr",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "misskey"
   },
   {
     "host": "social.vroon.network",
@@ -226714,7 +226714,7 @@
     "host": "xenon.social",
     "url": "https://xenon.social",
     "source": "peer",
-    "platform": "hollo"
+    "platform": "mastodon"
   },
   {
     "host": "xhais.love",
