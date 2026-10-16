@@ -34707,7 +34707,7 @@
     "host": "colours.bots.edent.tel",
     "url": "https://colours.bots.edent.tel",
     "source": "legacy",
-    "platform": "single file activitypub server in php"
+    "platform": "activitybot"
   },
   {
     "host": "colovo.com",
@@ -40323,7 +40323,7 @@
     "host": "den.shuymn.me",
     "url": "https://den.shuymn.me",
     "source": "legacy",
-    "platform": "wildebeest"
+    "platform": "kopje"
   },
   {
     "host": "den.wtf",
@@ -50835,7 +50835,7 @@
     "host": "federation.carnivalsociety.com",
     "url": "https://federation.carnivalsociety.com",
     "source": "peer",
-    "platform": "youthopia"
+    "platform": "utopolis"
   },
   {
     "host": "federation.info.today",
@@ -52605,7 +52605,7 @@
     "host": "fedi.python-podcast.de",
     "url": "https://fedi.python-podcast.de",
     "source": "legacy",
-    "platform": "takahe"
+    "platform": "gotosocial"
   },
   {
     "host": "fedi.queercomputerclub.ca",
@@ -178497,7 +178497,7 @@
     "host": "socialnetworks.rodeo",
     "url": "https://socialnetworks.rodeo",
     "source": "legacy",
-    "platform": "mbin"
+    "platform": "lemmy"
   },
   {
     "host": "socialnotwork.net",
@@ -182774,12 +182774,6 @@
   {
     "host": "stuartbreckenridge.net",
     "url": "https://stuartbreckenridge.net",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
-    "host": "stuartcameron.org",
-    "url": "https://stuartcameron.org",
     "source": "legacy",
     "platform": "ghost"
   },
@@ -221560,6 +221554,13 @@
     "host": "www.structural.art",
     "url": "https://www.structural.art",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.stuartcameron.org",
+    "url": "https://stuartcameron.org",
+    "source": "legacy",
+    "name": "stuartcameron.org",
     "platform": "ghost"
   },
   {
