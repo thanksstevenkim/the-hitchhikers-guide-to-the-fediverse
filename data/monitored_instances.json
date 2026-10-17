@@ -113499,7 +113499,7 @@
     "host": "mitra.xwyqi.org",
     "url": "https://mitra.xwyqi.org",
     "source": "legacy",
-    "platform": "mitra"
+    "platform": "mastodon"
   },
   {
     "host": "mitra.yanma.dev",
@@ -129915,7 +129915,7 @@
     "host": "passoids.net",
     "url": "https://passoids.net",
     "source": "peer",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "pastafaristes.fr",
@@ -221558,9 +221558,8 @@
   },
   {
     "host": "www.stuartcameron.org",
-    "url": "https://stuartcameron.org",
+    "url": "https://www.stuartcameron.org",
     "source": "legacy",
-    "name": "stuartcameron.org",
     "platform": "ghost"
   },
   {
