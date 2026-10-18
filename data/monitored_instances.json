@@ -33747,7 +33747,7 @@
     "host": "cloud.simon-koester.de",
     "url": "https://cloud.simon-koester.de",
     "source": "legacy",
-    "platform": "simcloud"
+    "platform": "nextcloud-social"
   },
   {
     "host": "cloud.thelukes.org",
@@ -65019,7 +65019,7 @@
     "host": "grilledcheese.app",
     "url": "https://grilledcheese.app",
     "source": "peer",
-    "platform": "grilledcheese"
+    "platform": "dissipate"
   },
   {
     "host": "grimoire.eu.org",
@@ -72801,7 +72801,7 @@
     "host": "hyungoon.com",
     "url": "https://hyungoon.com",
     "source": "legacy",
-    "platform": "ghost"
+    "platform": "wordpress"
   },
   {
     "host": "hz.cats-home.net",
@@ -138741,7 +138741,7 @@
     "host": "pl.eragon.re",
     "url": "https://pl.eragon.re",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "pl.evilmuff.in",
