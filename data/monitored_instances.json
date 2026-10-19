@@ -27513,7 +27513,7 @@
     "host": "bot.openbenches.org",
     "url": "https://bot.openbenches.org",
     "source": "legacy",
-    "platform": "single file activitypub server in php"
+    "platform": "activitybot"
   },
   {
     "host": "bot.pnpde.social",
@@ -70473,7 +70473,7 @@
     "host": "hikk.se",
     "url": "https://hikk.se",
     "source": "peer",
-    "platform": "smithereen"
+    "platform": "gotosocial"
   },
   {
     "host": "hilariouschaos.com",
