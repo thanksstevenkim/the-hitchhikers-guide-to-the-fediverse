@@ -5799,7 +5799,7 @@
     "host": "andrewshell.org",
     "url": "https://andrewshell.org",
     "source": "peer",
-    "platform": "wordpress"
+    "platform": "geekity-cms"
   },
   {
     "host": "androiddev.social",
@@ -72799,8 +72799,9 @@
   },
   {
     "host": "hyungoon.com",
-    "url": "https://hyungoon.com",
+    "url": "https://jp.hyungoon.com",
     "source": "legacy",
+    "name": "jp.hyungoon.com",
     "platform": "wordpress"
   },
   {
@@ -78898,12 +78899,6 @@
     "url": "https://jp.fedimeteo.com",
     "source": "legacy",
     "platform": "snac"
-  },
-  {
-    "host": "jp.hyungoon.com",
-    "url": "https://jp.hyungoon.com",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "jp.mmth2.com",
@@ -120417,7 +120412,7 @@
     "host": "nc.xn--stefan-hhn-lcb.de",
     "url": "https://nc.xn--stefan-hhn-lcb.de",
     "source": "peer",
-    "platform": "stefans cloud"
+    "platform": "nextcloud-social"
   },
   {
     "host": "ncbt.space",
@@ -122661,7 +122656,7 @@
     "host": "nextcloud.henze-online.de",
     "url": "https://nextcloud.henze-online.de",
     "source": "peer",
-    "platform": "henze-online"
+    "platform": "nextcloud-social"
   },
   {
     "host": "nextcloud.mplabs.cloud",
@@ -176079,7 +176074,7 @@
     "host": "social.thinkroot.xyz",
     "url": "https://social.thinkroot.xyz",
     "source": "peer",
-    "platform": "mastodon"
+    "platform": "starling"
   },
   {
     "host": "social.thirdculture.top",
