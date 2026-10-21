@@ -22974,6 +22974,13 @@
     "platform": "ghost"
   },
   {
+    "host": "blog.sinofool.net",
+    "url": "https://sinofool.net",
+    "source": "peer",
+    "name": "sinofool.net",
+    "platform": "wordpress"
+  },
+  {
     "host": "blog.sionahuxley.com",
     "url": "https://blog.sionahuxley.com",
     "source": "legacy",
@@ -72799,9 +72806,8 @@
   },
   {
     "host": "hyungoon.com",
-    "url": "https://jp.hyungoon.com",
+    "url": "https://hyungoon.com",
     "source": "legacy",
-    "name": "jp.hyungoon.com",
     "platform": "wordpress"
   },
   {
@@ -93557,6 +93563,13 @@
     "url": "https://manolo.macchetta.com",
     "source": "legacy",
     "platform": "ghost"
+  },
+  {
+    "host": "manufakturmarton.ch",
+    "url": "https://www.manufakturmarton.ch",
+    "source": "peer",
+    "name": "www.manufakturmarton.ch",
+    "platform": "wordpress"
   },
   {
     "host": "manuviciano.com",
@@ -140284,7 +140297,7 @@
     "host": "plusbrothers.net",
     "url": "https://plusbrothers.net",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "writefreely"
   },
   {
     "host": "plush.city",
@@ -156935,12 +156948,6 @@
     "url": "https://sinners.heavendivided.net",
     "source": "peer",
     "platform": "gotosocial"
-  },
-  {
-    "host": "sinofool.net",
-    "url": "https://sinofool.net",
-    "source": "peer",
-    "platform": "wordpress"
   },
   {
     "host": "sinophone.world",
@@ -210104,12 +210111,6 @@
     "platform": "ghost"
   },
   {
-    "host": "www.manufakturmarton.ch",
-    "url": "https://www.manufakturmarton.ch",
-    "source": "peer",
-    "platform": "wordpress"
-  },
-  {
     "host": "www.manyhatstheatre.com",
     "url": "https://www.manyhatstheatre.com",
     "source": "legacy",
@@ -226583,7 +226584,7 @@
     "host": "x.y05.eu",
     "url": "https://x.y05.eu",
     "source": "peer",
-    "platform": "xenomorph"
+    "platform": "stabbypossum"
   },
   {
     "host": "x.zyi.io",
