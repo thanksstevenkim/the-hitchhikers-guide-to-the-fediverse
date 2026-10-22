@@ -22975,9 +22975,8 @@
   },
   {
     "host": "blog.sinofool.net",
-    "url": "https://sinofool.net",
+    "url": "https://blog.sinofool.net",
     "source": "peer",
-    "name": "sinofool.net",
     "platform": "wordpress"
   },
   {
@@ -93566,9 +93565,8 @@
   },
   {
     "host": "manufakturmarton.ch",
-    "url": "https://www.manufakturmarton.ch",
+    "url": "https://manufakturmarton.ch",
     "source": "peer",
-    "name": "www.manufakturmarton.ch",
     "platform": "wordpress"
   },
   {
@@ -179591,7 +179589,7 @@
     "host": "spacetraveler.work",
     "url": "https://spacetraveler.work",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "misskey"
   },
   {
     "host": "spaceup.city",
