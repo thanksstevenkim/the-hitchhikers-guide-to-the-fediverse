@@ -10773,7 +10773,7 @@
     "host": "bastis-blog.de",
     "url": "https://bastis-blog.de",
     "source": "peer",
-    "platform": "wordpress"
+    "platform": "bastis-blog"
   },
   {
     "host": "bastodon.bida.im",
@@ -62499,7 +62499,7 @@
     "host": "girllich.link",
     "url": "https://girllich.link",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "girllich"
   },
   {
     "host": "girls-band.sskey.jp",
@@ -63339,7 +63339,7 @@
     "host": "gock.virag.top",
     "url": "https://gock.virag.top",
     "source": "peer",
-    "platform": "pleroma"
+    "platform": "akkoma"
   },
   {
     "host": "godforsaken.website",
@@ -116403,7 +116403,7 @@
     "host": "mspsocial.net",
     "url": "https://mspsocial.net",
     "source": "legacy",
-    "platform": "hometown"
+    "platform": "mastodon"
   },
   {
     "host": "msrocket.com",
@@ -122673,7 +122673,7 @@
     "host": "nextcloud.mplabs.cloud",
     "url": "https://nextcloud.mplabs.cloud",
     "source": "peer",
-    "platform": "felix nextcloud"
+    "platform": "nextcloud-social"
   },
   {
     "host": "nextcloud.sonney.com",
@@ -190204,7 +190204,7 @@
     "host": "toast.best",
     "url": "https://toast.best",
     "source": "peer",
-    "platform": "misskey"
+    "platform": "cherrypick"
   },
   {
     "host": "toast.dragon2611.net",
