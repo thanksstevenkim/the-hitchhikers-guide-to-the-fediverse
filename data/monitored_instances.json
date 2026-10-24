@@ -29451,7 +29451,7 @@
     "host": "byongari.com",
     "url": "https://byongari.com",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "misskey"
   },
   {
     "host": "bytearray.eu",
@@ -116403,7 +116403,7 @@
     "host": "mspsocial.net",
     "url": "https://mspsocial.net",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "hometown"
   },
   {
     "host": "msrocket.com",
