@@ -29583,7 +29583,7 @@
     "host": "c.koliosky.com",
     "url": "https://c.koliosky.com",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "engawa"
   },
   {
     "host": "c.lightsdark.com",
@@ -92823,7 +92823,7 @@
     "host": "maid.lat",
     "url": "https://maid.lat",
     "source": "legacy",
-    "platform": "misskey"
+    "platform": "community"
   },
   {
     "host": "maidan.cz",
