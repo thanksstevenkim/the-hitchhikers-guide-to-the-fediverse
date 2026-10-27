@@ -2313,7 +2313,7 @@
     "host": "after1ife.rip",
     "url": "https://after1ife.rip",
     "source": "peer",
-    "platform": "cherrypick"
+    "platform": "misskey"
   },
   {
     "host": "afterlife.thesprawl.online",
@@ -11970,12 +11970,6 @@
     "platform": "misskey"
   },
   {
-    "host": "beta.nofan.xyz",
-    "url": "https://beta.nofan.xyz",
-    "source": "peer",
-    "platform": "mastodon"
-  },
-  {
     "host": "beta.puzzlesskey.com",
     "url": "https://beta.puzzlesskey.com",
     "source": "legacy",
@@ -18201,7 +18195,7 @@
     "host": "blog.hostpath.de",
     "url": "https://blog.hostpath.de",
     "source": "legacy",
-    "platform": "ghost"
+    "platform": "wordpress"
   },
   {
     "host": "blog.hotelogix.com",
@@ -36297,7 +36291,7 @@
     "host": "coves.social",
     "url": "https://coves.social",
     "source": "peer",
-    "platform": "tidepool"
+    "platform": "coves"
   },
   {
     "host": "coveted-words.ghost.io",
@@ -93063,7 +93057,7 @@
     "host": "makibisskey.work",
     "url": "https://makibisskey.work",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "misskey"
   },
   {
     "host": "making.awful.systems",
@@ -123740,7 +123734,7 @@
   {
     "host": "nofan.xyz",
     "url": "https://nofan.xyz",
-    "source": "legacy",
+    "source": "peer",
     "platform": "mastodon"
   },
   {
@@ -179283,7 +179277,7 @@
     "host": "soundfury.net",
     "url": "https://soundfury.net",
     "source": "legacy",
-    "platform": "gotosocial"
+    "platform": "writefreely"
   },
   {
     "host": "soundhunte.rs",
