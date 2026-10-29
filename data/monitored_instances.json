@@ -17001,7 +17001,7 @@
     "host": "blog.eza.link",
     "url": "https://blog.eza.link",
     "source": "legacy",
-    "platform": "writefreely"
+    "platform": "ghost"
   },
   {
     "host": "blog.f5nodes.com",
@@ -124557,7 +124557,7 @@
     "host": "nothing-ever.works",
     "url": "https://nothing-ever.works",
     "source": "legacy",
-    "platform": "firefish"
+    "platform": "iceshrimp"
   },
   {
     "host": "nothinggoodgetsaway.com",
