@@ -33765,7 +33765,7 @@
     "host": "cloud.xn--schchner-2za.de",
     "url": "https://cloud.xn--schchner-2za.de",
     "source": "peer",
-    "platform": "nextcloud-social"
+    "platform": "aloha-social"
   },
   {
     "host": "cloudaiapp.dev",
@@ -198388,7 +198388,7 @@
     "host": "velez.top",
     "url": "https://velez.top",
     "source": "peer",
-    "platform": "ghost"
+    "platform": "wordpress"
   },
   {
     "host": "velhaestante.com.br",
