@@ -31065,7 +31065,7 @@
     "host": "catgirls.party",
     "url": "https://catgirls.party",
     "source": "legacy",
-    "platform": "akkoma"
+    "platform": "gotosocial"
   },
   {
     "host": "catgirls.technology",
@@ -109017,7 +109017,7 @@
     "host": "mi.okin-jp.net",
     "url": "https://mi.okin-jp.net",
     "source": "legacy",
-    "platform": "yojo-art"
+    "platform": "cheripia"
   },
   {
     "host": "mi.osamu-storage.info",
