@@ -6981,7 +6981,7 @@
     "host": "apha.dk",
     "url": "https://apha.dk",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "ansico-fediverse"
   },
   {
     "host": "aphelie.cx",
@@ -7426,6 +7426,13 @@
     "url": "https://archive.hitness.club",
     "source": "legacy",
     "platform": "peertube"
+  },
+  {
+    "host": "archive.mbohlen.de",
+    "url": "https://mbohlen.de",
+    "source": "legacy",
+    "name": "mbohlen.de",
+    "platform": "ghost"
   },
   {
     "host": "archive.nocopyrightintended.tv",
@@ -63039,7 +63046,7 @@
     "host": "gludio.org",
     "url": "https://gludio.org",
     "source": "peer",
-    "platform": "mastodon"
+    "platform": "akkoma"
   },
   {
     "host": "glue.io",
@@ -106512,12 +106519,6 @@
     "platform": "gotosocial"
   },
   {
-    "host": "mbohlen.de",
-    "url": "https://mbohlen.de",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "mbz.xyz",
     "url": "https://mbz.xyz",
     "source": "legacy",
@@ -113499,7 +113500,7 @@
     "host": "mitra.xwyqi.org",
     "url": "https://mitra.xwyqi.org",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "mitra"
   },
   {
     "host": "mitra.yanma.dev",
@@ -177639,7 +177640,7 @@
     "host": "social.wildsky.cc",
     "url": "https://social.wildsky.cc",
     "source": "peer",
-    "platform": "gotosocial"
+    "platform": "snac"
   },
   {
     "host": "social.wildsumac.eu",
