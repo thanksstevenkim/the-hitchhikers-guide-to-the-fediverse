@@ -6981,7 +6981,7 @@
     "host": "apha.dk",
     "url": "https://apha.dk",
     "source": "legacy",
-    "platform": "ansico-fediverse"
+    "platform": "fedipress"
   },
   {
     "host": "aphelie.cx",
@@ -7429,9 +7429,8 @@
   },
   {
     "host": "archive.mbohlen.de",
-    "url": "https://mbohlen.de",
+    "url": "https://archive.mbohlen.de",
     "source": "legacy",
-    "name": "mbohlen.de",
     "platform": "ghost"
   },
   {
@@ -82048,7 +82047,7 @@
     "host": "kolosowscy.cloud",
     "url": "https://kolosowscy.cloud",
     "source": "peer",
-    "platform": "kolosowscy.cloud"
+    "platform": "aloha-social"
   },
   {
     "host": "kolotipy.cz",
@@ -170122,7 +170121,7 @@
     "host": "social.mickkc.dev",
     "url": "https://social.mickkc.dev",
     "source": "peer",
-    "platform": "gotosocial"
+    "platform": "iceshrimp.net"
   },
   {
     "host": "social.microblog.at",
