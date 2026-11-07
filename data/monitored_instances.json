@@ -77466,12 +77466,6 @@
     "platform": "mastodon"
   },
   {
-    "host": "jefffinley.org",
-    "url": "https://jefffinley.org",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "jeffmcneill.com",
     "url": "https://jeffmcneill.com",
     "source": "legacy",
@@ -89373,7 +89367,7 @@
     "host": "lolcathost.org",
     "url": "https://lolcathost.org",
     "source": "legacy",
-    "platform": "snac"
+    "platform": "nyap"
   },
   {
     "host": "lolcircle.de",
@@ -208990,6 +208984,13 @@
     "host": "www.jeffcobeacon.com",
     "url": "https://www.jeffcobeacon.com",
     "source": "peer",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.jefffinley.org",
+    "url": "https://jefffinley.org",
+    "source": "legacy",
+    "name": "jefffinley.org",
     "platform": "ghost"
   },
   {
