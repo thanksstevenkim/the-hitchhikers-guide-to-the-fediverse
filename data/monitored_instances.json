@@ -38547,7 +38547,7 @@
     "host": "danielpetrica.com",
     "url": "https://danielpetrica.com",
     "source": "peer",
-    "platform": "danielpetrica/activitypub-for-laravel"
+    "platform": "activitypub-for-laravel"
   },
   {
     "host": "danielsfotoblogg.se",
@@ -40665,7 +40665,7 @@
     "host": "designbusan.ai.kr",
     "url": "https://designbusan.ai.kr",
     "source": "legacy",
-    "platform": "axismundi"
+    "platform": "wordpress"
   },
   {
     "host": "designsystems.wtf",
@@ -186247,6 +186247,13 @@
     "platform": "mastodon"
   },
   {
+    "host": "terawatttimes.org",
+    "url": "https://www.terawatttimes.org",
+    "source": "legacy",
+    "name": "www.terawatttimes.org",
+    "platform": "ghost"
+  },
+  {
     "host": "terberlo.dog",
     "url": "https://terberlo.dog",
     "source": "legacy",
@@ -222515,12 +222522,6 @@
     "url": "https://www.terapeut.nu",
     "source": "peer",
     "platform": "wordpress"
-  },
-  {
-    "host": "www.terawatttimes.org",
-    "url": "https://www.terawatttimes.org",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "www.terrapeneornata.com",
