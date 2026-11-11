@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 300
     environment:
       name: github-pages
