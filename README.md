@@ -267,6 +267,16 @@ python scripts/filter_spam.py \
 python scripts/fetch_stats.py --input /tmp/recheck_candidates.json
 ```
 
+### 주간 새 서버 후보 발견 (GitHub Actions)
+
+`.github/workflows/discover-peers.yml`은 **매주 일요일 21:23 (JST/KST, UTC 일요일 12:23)**에 별도 작업으로 실행됩니다. 워크플로 파일이 `main`에 추가·변경되면 한 번 실행하며, Actions의 `workflow_dispatch`로 수동 실행할 수도 있습니다.
+
+- 현재 `monitored_instances.json`의 호스트를 격리된 임시 디렉터리에서 조사하며, `--discover-peers`로 아직 등록되지 않은 새 피어 후보를 찾습니다.
+- `filter_spam.py`와 추적 중인 도메인 차단 목록으로 후보를 1차 필터링합니다. 필터 통과는 **ActivityPub 검증 완료나 안전성 보증을 뜻하지 않습니다**.
+- 실행 결과는 GitHub Actions의 `peer-discovery-<run_id>` 아티팩트(`peer_suggestions.json`, `filtered_peers.json`, `spam_filtered.log.json`, `discovery_summary.md`)로 **30일간 보관**됩니다.
+- 새 서버는 자동으로 `monitored_instances.json` 또는 `stats.ok.json`에 편입되지 않습니다. 아티팩트의 후보를 검토하고, 별도로 `fetch_stats.py --input`으로 검사한 뒤 `validate_data.py` 검증을 통과한 결과만 반영합니다.
+- 기존 매일 통계 갱신과 Pages 배포에는 영향을 주지 않습니다. GitHub 스케줄 실행은 지연될 수 있으며, 대규모 수집은 시간 제한에 걸릴 수 있습니다.
+
 ### 테스트
 
 ```bash
