@@ -1,0 +1,118 @@
+name: Discover new Fediverse peers
+
+on:
+  # Sundays at 21:23 JST (12:23 UTC), before the Monday monitoring review.
+  schedule:
+    - cron: "23 12 * * 0"
+  # Run once when this workflow is added or changed on main.
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/discover-peers.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fediverse-peer-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12.10"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Prepare isolated discovery data
+        id: staging
+        shell: bash
+        run: |
+          set -euo pipefail
+          staging_data="${RUNNER_TEMP}/fediverse-peer-discovery"
+          mkdir -p "$staging_data"
+          for filename in instances.json monitored_instances.json stats.ok.json manual_overrides.json host_aliases.json software_taxonomy.json; do
+            cp "data/$filename" "$staging_data/$filename"
+          done
+          echo "data_dir=$staging_data" >> "$GITHUB_OUTPUT"
+
+      - name: Discover peers from monitored instances
+        run: >-
+          python scripts/fetch_stats.py
+          --data-dir "${{ steps.staging.outputs.data_dir }}"
+          --discover-peers
+          --workers 16
+          --checkpoint-every 100
+
+      - name: Ensure empty discoveries are represented
+        shell: bash
+        run: |
+          candidates="${{ steps.staging.outputs.data_dir }}/peer_suggestions.json"
+          if [[ ! -f "$candidates" ]]; then
+            printf '[]\n' > "$candidates"
+          fi
+
+      - name: Filter discovered peer candidates
+        run: >-
+          python scripts/filter_spam.py
+          --input "${{ steps.staging.outputs.data_dir }}/peer_suggestions.json"
+          --output "${{ steps.staging.outputs.data_dir }}/filtered_peers.json"
+          --log "${{ steps.staging.outputs.data_dir }}/spam_filtered.log.json"
+          --blocklist data/spam_domain_blocklist.json
+
+      - name: Write discovery summary
+        env:
+          DATA_DIR: ${{ steps.staging.outputs.data_dir }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          data_dir = Path(os.environ["DATA_DIR"])
+          discovered = json.loads((data_dir / "peer_suggestions.json").read_text(encoding="utf-8"))
+          passed = json.loads((data_dir / "filtered_peers.json").read_text(encoding="utf-8"))
+          filtered_log = json.loads((data_dir / "spam_filtered.log.json").read_text(encoding="utf-8"))
+          excluded = filtered_log["summary"]["filtered"]
+
+          report = (
+              "## Weekly Fediverse peer discovery\n\n"
+              f"- New peer host candidates: **{len(discovered)}**\n"
+              f"- Passed heuristic/domain filtering: **{len(passed)}**\n"
+              f"- Excluded by filtering: **{excluded}**\n\n"
+              "Candidates have **not** been individually verified or added to the monitored registry. "
+              "Download the artifact, review candidates, then separately run candidate ingestion and data validation.\n"
+          )
+          print(report)
+          (data_dir / "discovery_summary.md").write_text(report, encoding="utf-8")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write(report)
+          PY
+
+      - name: Ensure tracked files stay unchanged
+        run: git diff --exit-code
+
+      - name: Upload peer candidates for review
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: peer-discovery-${{ github.run_id }}
+          path: |
+            ${{ steps.staging.outputs.data_dir }}/peer_suggestions.json
+            ${{ steps.staging.outputs.data_dir }}/filtered_peers.json
+            ${{ steps.staging.outputs.data_dir }}/spam_filtered.log.json
+            ${{ steps.staging.outputs.data_dir }}/discovery_summary.md
+          if-no-files-found: warn
+          retention-days: 30
