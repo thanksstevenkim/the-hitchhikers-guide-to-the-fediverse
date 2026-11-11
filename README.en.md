@@ -244,6 +244,12 @@ python -m pytest
 - This independent workflow does not commit data or deploy Pages. Scheduled runs can start late or time out during a large scan.
 
 ## Main scripts
+## Automatic software classification review
+
+The daily `.github/workflows/update.yml` run builds `software_review_queue.json` after collecting and validating statistics. It publishes unclassified and explicitly-unknown software counts in the GitHub Actions job summary and uploads the queue plus `software_review_summary.md` as a `software-review-<run_id>` artifact retained for 30 days.
+
+Known software IDs are classified by the curated taxonomy. New, unrecognized software stays in the public registry's `unknown` group and is added to the review queue; its presence alone does not fail CI. The workflow **does not automatically change `software_taxonomy.json`**, because a software name alone does not reliably establish its family or purpose.
+
 
 | Script | Purpose |
 | --- | --- |
