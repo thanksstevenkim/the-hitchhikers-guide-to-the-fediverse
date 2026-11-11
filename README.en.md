@@ -234,6 +234,15 @@ Run the test suite:
 python -m pytest
 ```
 
+## Weekly peer discovery (GitHub Actions)
+
+`.github/workflows/discover-peers.yml` runs separately **every Sunday at 21:23 JST/KST (12:23 UTC)**. It also runs when that workflow file is added or changed on `main` and supports manual `workflow_dispatch` runs.
+
+- The workflow scans existing monitored hosts in an isolated temporary data directory with `--discover-peers`, then applies `filter_spam.py` and the tracked domain blocklist to new candidates.
+- It uploads `peer_suggestions.json`, `filtered_peers.json`, `spam_filtered.log.json`, and `discovery_summary.md` as a `peer-discovery-<run_id>` Actions artifact retained for **30 days**.
+- Candidates are **not individually verified or automatically added** to `monitored_instances.json` or `stats.ok.json`. Review candidates, use `fetch_stats.py --input` for ingestion, and run `validate_data.py` before accepting updates. Passing heuristic filtering is not a safety guarantee.
+- This independent workflow does not commit data or deploy Pages. Scheduled runs can start late or time out during a large scan.
+
 ## Main scripts
 
 | Script | Purpose |
