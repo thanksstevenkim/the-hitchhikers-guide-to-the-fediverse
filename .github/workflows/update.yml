@@ -90,7 +90,7 @@ jobs:
               lines.extend(["### Most widely observed unclassified software", ""])
               for entry in unclassified[:20]:
                   lines.append(
-                      f"- \`{entry['software_id']}\`: "
+                      f"- `{entry['software_id']}`: "
                       f"{entry['healthy_instance_count']} healthy host(s)"
                   )
           report = "\n".join(lines) + "\n"
