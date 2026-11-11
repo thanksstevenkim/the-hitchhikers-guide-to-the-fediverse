@@ -56,6 +56,59 @@ jobs:
           --data-dir "${{ steps.staging.outputs.data_dir }}"
       - name: Validate staged site data
         run: python scripts/validate_data.py --data-dir "${{ steps.staging.outputs.data_dir }}"
+      - name: Build software review queue
+        run: >-
+          python scripts/build_software_review_queue.py
+          --data-dir "${{ steps.staging.outputs.data_dir }}"
+          --output "${{ steps.staging.outputs.data_dir }}/software_review_queue.json"
+      - name: Summarize unclassified software
+        env:
+          DATA_DIR: ${{ steps.staging.outputs.data_dir }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          data_dir = Path(os.environ["DATA_DIR"])
+          queue = json.loads((data_dir / "software_review_queue.json").read_text(encoding="utf-8"))
+          entries = queue["software"]
+          unclassified = [e for e in entries if e["review_status"] == "unclassified"]
+          explicitly_unknown = [e for e in entries if e["review_status"] == "explicit_unknown"]
+          lines = [
+              "## Software classification review",
+              "",
+              f"- Unclassified software IDs: **{len(unclassified)}**",
+              f"- Explicitly unknown software IDs: **{len(explicitly_unknown)}**",
+              "",
+              "Unclassified software is retained in the public registry's unknown group.",
+              "No taxonomy classifications are created or changed automatically.",
+              "Download the review queue artifact for the full list and representative hosts.",
+              "",
+          ]
+          if unclassified:
+              lines.extend(["### Most widely observed unclassified software", ""])
+              for entry in unclassified[:20]:
+                  lines.append(
+                      f"- \`{entry['software_id']}\`: "
+                      f"{entry['healthy_instance_count']} healthy host(s)"
+                  )
+          report = "\n".join(lines) + "\n"
+          print(report)
+          (data_dir / "software_review_summary.md").write_text(report, encoding="utf-8")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as output:
+              output.write(report)
+          PY
+      - name: Upload software review queue
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: software-review-${{ github.run_id }}
+          path: |
+            ${{ steps.staging.outputs.data_dir }}/software_review_queue.json
+            ${{ steps.staging.outputs.data_dir }}/software_review_summary.md
+          if-no-files-found: warn
+          retention-days: 30
       - name: Promote validated data
         shell: bash
         run: |
