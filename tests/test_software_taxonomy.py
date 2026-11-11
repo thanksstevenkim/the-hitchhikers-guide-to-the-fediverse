@@ -124,18 +124,29 @@ def test_deployment_kinds_separate_enabled_sites_and_infrastructure() -> None:
     assert groups["unknown"]["deployment_kind"] == "unknown"
 
 
-def test_current_healthy_snapshot_is_fully_reviewed() -> None:
+def test_current_healthy_snapshot_unclassified_software_is_queued() -> None:
+    """New observations should be reviewable without requiring manual taxonomy edits."""
     taxonomy = json.loads(TAXONOMY_PATH.read_text(encoding="utf-8"))
     stats = json.loads(STATS_PATH.read_text(encoding="utf-8"))
+    classification = build_software_review_queue.build_classification_map(taxonomy)
 
-    queue = build_software_review_queue.build_review_queue(stats, taxonomy)
-    queued_ids = {
-        item["software_id"]
-        for item in queue["software"]
-        if item["review_status"] == "unclassified"
+    expected_ids = {
+        build_software_review_queue.normalize_software_id(row["software"].get("name"))
+        for row in stats
+        if isinstance(row, dict) and isinstance(row.get("software"), dict)
+        and build_software_review_queue.normalize_software_id(
+            row["software"].get("name")
+        ) not in classification
     }
+    queue = build_software_review_queue.build_review_queue(stats, taxonomy)
+    unclassified = [
+        item for item in queue["software"]
+        if item["review_status"] == "unclassified"
+    ]
 
-    assert queued_ids <= {"ap-tombstone"}
+    assert {item["software_id"] for item in unclassified} == expected_ids
+    assert all(item["healthy_instance_count"] > 0 for item in unclassified)
+    assert all(item["sample_hosts"] for item in unclassified)
 
 
 def test_duplicate_software_membership_is_rejected(tmp_path: Path) -> None:
