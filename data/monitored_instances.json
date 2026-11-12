@@ -24354,12 +24354,6 @@
     "platform": "writefreely"
   },
   {
-    "host": "blog.tyrol.social",
-    "url": "https://blog.tyrol.social",
-    "source": "legacy",
-    "platform": "writefreely"
-  },
-  {
     "host": "blog.tyrondao.org",
     "url": "https://blog.tyrondao.org",
     "source": "legacy",
@@ -40665,7 +40659,7 @@
     "host": "designbusan.ai.kr",
     "url": "https://designbusan.ai.kr",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "axismundi"
   },
   {
     "host": "designsystems.wtf",
@@ -103611,7 +103605,7 @@
     "host": "mastodon.sebbo.net",
     "url": "https://mastodon.sebbo.net",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "littlefedi"
   },
   {
     "host": "mastodon.sebfox.net",
@@ -117891,7 +117885,7 @@
     "host": "mstdn.tharyrok.eu",
     "url": "https://mstdn.tharyrok.eu",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "gotosocial"
   },
   {
     "host": "mstdn.thms.uk",
@@ -171231,7 +171225,7 @@
     "host": "social.nixfox.ca",
     "url": "https://social.nixfox.ca",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "akkoma"
   },
   {
     "host": "social.niyawe.de",
@@ -186248,9 +186242,8 @@
   },
   {
     "host": "terawatttimes.org",
-    "url": "https://www.terawatttimes.org",
+    "url": "https://terawatttimes.org",
     "source": "legacy",
-    "name": "www.terawatttimes.org",
     "platform": "ghost"
   },
   {
@@ -205535,7 +205528,7 @@
     "host": "wrzky.com",
     "url": "https://wrzky.com",
     "source": "peer",
-    "platform": "mastodon"
+    "platform": "yonder"
   },
   {
     "host": "wsmdh.de",
