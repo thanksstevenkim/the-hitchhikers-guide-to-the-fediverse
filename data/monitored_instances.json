@@ -40659,7 +40659,7 @@
     "host": "designbusan.ai.kr",
     "url": "https://designbusan.ai.kr",
     "source": "legacy",
-    "platform": "axismundi"
+    "platform": "wordpress"
   },
   {
     "host": "designsystems.wtf",
@@ -47772,12 +47772,6 @@
     "platform": "ghost"
   },
   {
-    "host": "etherionconsulting.com",
-    "url": "https://etherionconsulting.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "ethicalrevolution.co.uk",
     "url": "https://ethicalrevolution.co.uk",
     "source": "legacy",
@@ -50667,7 +50661,7 @@
     "host": "feddit.com",
     "url": "https://feddit.com",
     "source": "peer",
-    "platform": "piefed"
+    "platform": "peblish"
   },
   {
     "host": "feddit.dk",
@@ -207671,6 +207665,13 @@
     "url": "https://www.eskimo.com",
     "source": "peer",
     "platform": "wordpress"
+  },
+  {
+    "host": "www.etherionconsulting.com",
+    "url": "https://etherionconsulting.com",
+    "source": "legacy",
+    "name": "etherionconsulting.com",
+    "platform": "ghost"
   },
   {
     "host": "www.euromarketingstack.eu",
