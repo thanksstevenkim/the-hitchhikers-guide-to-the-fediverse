@@ -16215,7 +16215,7 @@
     "host": "blog.dev-das.com",
     "url": "https://blog.dev-das.com",
     "source": "legacy",
-    "platform": "ghost"
+    "platform": "writefreely"
   },
   {
     "host": "blog.devcycle.com",
@@ -40659,7 +40659,7 @@
     "host": "designbusan.ai.kr",
     "url": "https://designbusan.ai.kr",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "axismundi"
   },
   {
     "host": "designsystems.wtf",
@@ -80025,7 +80025,7 @@
     "host": "karli.cloud",
     "url": "https://karli.cloud",
     "source": "peer",
-    "platform": "nextcloud-social"
+    "platform": "aloha-social"
   },
   {
     "host": "karlsoderstrom.social",
@@ -119332,12 +119332,6 @@
     "url": "https://myf.one",
     "source": "legacy",
     "platform": "mastodon"
-  },
-  {
-    "host": "myfaith.online",
-    "url": "https://myfaith.online",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "myfilm.camera",
@@ -185164,7 +185158,7 @@
     "host": "tarakiyee.com",
     "url": "https://tarakiyee.com",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "ghost"
   },
   {
     "host": "tarale.fedipress.au",
@@ -207668,9 +207662,8 @@
   },
   {
     "host": "www.etherionconsulting.com",
-    "url": "https://etherionconsulting.com",
+    "url": "https://www.etherionconsulting.com",
     "source": "legacy",
-    "name": "etherionconsulting.com",
     "platform": "ghost"
   },
   {
@@ -212345,6 +212338,13 @@
     "host": "www.mycomiccrate.com",
     "url": "https://www.mycomiccrate.com",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.myfaith.online",
+    "url": "https://myfaith.online",
+    "source": "legacy",
+    "name": "myfaith.online",
     "platform": "ghost"
   },
   {
