@@ -259,7 +259,7 @@ def main() -> int:
             args.data_dir, previous, datetime.now(timezone.utc).isoformat(timespec="seconds")
         )
         outputs = (
-            (args.snapshot_out, json.dumps(current, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n"),
+            (args.snapshot_out, json.dumps(current, ensure_ascii=False, sort_keys=True, indent=2) + "\n"),
             (args.report_out, json.dumps(report, ensure_ascii=False, indent=2) + "\n"),
             (args.summary_out, render_markdown(report)),
         )
