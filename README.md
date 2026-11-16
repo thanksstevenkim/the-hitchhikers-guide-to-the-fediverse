@@ -84,6 +84,7 @@ python scripts/build_language_review_queue.py
 기존 공개 사이트와 GOOD/WARN/BAD 판정 로직, 요청·재시도 정책은 변경하지 않습니다.
 BAD 원문 파일은 계속 Git 추적 및 Pages 공개 대상에서 제외합니다.
 
+### 언어 판정과 검토 큐
 
 `languages_detected`는 기존 UI와 소비자를 위한 최종 언어 목록입니다. 추가 필드는 판정 근거를 분리합니다.
 
