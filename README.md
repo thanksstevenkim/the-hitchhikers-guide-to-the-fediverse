@@ -25,6 +25,8 @@ GitHub Pages로 그대로 호스팅할 수 있으며, 한국어·영어 UI와 �
 | `data/software_registry.json` | 유지 | 포함 | taxonomy와 정상 관측치를 결합한 공개 소프트웨어 레지스트리 |
 | `data/manual_overrides.json` | 유지 | 제외 | 특정 호스트의 수집 결과를 보정하는 수동 규칙 |
 | `data/host_aliases.json` | 유지 | 제외 | 원본 호스트와 canonical host의 검증된 매핑 |
+| `data/host_health_snapshot.json` | 유지(첫 실행부터 자동 생성) | 제외 | 매일 관측한 호스트의 GOOD/WARN/BAD/MISSING 상태 및 이력 |
+| `data/host_health_report.json` | 유지(첫 실행부터 자동 생성) | 제외 | 전일 대비 상태 전환·수집 실패 유형·seed 상태 집계 |
 | `data/spam_domain_blocklist.json` | 유지 | 제외 | 확인된 악성 exact host·domain suffix 규칙 |
 
 다음 파일은 조사·진단 과정의 재생성 가능한 중간 산출물이므로 `.gitignore`에 포함하며 Pages에도 올리지 않습니다.
@@ -63,6 +65,24 @@ python scripts/build_language_review_queue.py
 ```
 
 수집기는 기본 실행에서 `instances.json`의 seed와 `monitored_instances.json`의 전체 대상을 canonical host 기준으로 합쳐 매번 다시 처리합니다. 검증기는 registry 구조와 `stats.ok ⊆ monitored` 불변식까지 포함해 필수 필드와 중복 호스트를 검사합니다. Git에 반영하기 전에는 반드시 검증을 통과해야 합니다.
+
+### 수집 상태 이력과 일일 품질 보고서
+
+정기 `Update stats and deploy` 워크플로는 수집·기존 데이터 검증이 통과한 뒤
+`scripts/build_health_report.py`를 실행합니다. 이 스크립트는 이번 실행의
+`stats.ok.json`, **스테이징 전용** `stats.bad.json`, 전체 모니터링 목록과
+지난 실행의 `host_health_snapshot.json`을 비교해 아래 자료를 생성합니다.
+
+- `data/host_health_snapshot.json`: 각 호스트의 관측 상태, 상태 시작 시점 및 실패 연속 관측 횟수
+- `data/host_health_report.json`: 상태별/실패 원인별 수, GOOD↔WARN↔BAD 전환, seed 상태, 신규·제외 호스트 수
+- GitHub Actions **Job summary**: 집계 결과를 읽기 쉬운 Markdown으로 표시
+
+**최초 실행은 기준선**이므로 과거 상태 전환과 과거부터 누적된 실패 횟수를 추측하지 않습니다.
+이력의 연속 실패 횟수는 이 기능이 도입된 뒤 연속으로 관측한 횟수이며,
+수집기 내부의 `consecutive_failures`와 동일한 수치가 아닐 수 있습니다.
+실패 원인 코드는 오류 문자열을 분류한 참고값으로, 실제 원격 서버의 장애를 확정하지 않습니다.
+기존 공개 사이트와 GOOD/WARN/BAD 판정 로직, 요청·재시도 정책은 변경하지 않습니다.
+BAD 원문 파일은 계속 Git 추적 및 Pages 공개 대상에서 제외합니다.
 
 ### 언어 판정과 검토 큐
 

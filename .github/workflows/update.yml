@@ -56,6 +56,16 @@ jobs:
           --data-dir "${{ steps.staging.outputs.data_dir }}"
       - name: Validate staged site data
         run: python scripts/validate_data.py --data-dir "${{ steps.staging.outputs.data_dir }}"
+      - name: Build host health snapshot and report
+        run: >-
+          python scripts/build_health_report.py
+          --data-dir "${{ steps.staging.outputs.data_dir }}"
+          --previous-snapshot data/host_health_snapshot.json
+          --snapshot-out "${{ steps.staging.outputs.data_dir }}/host_health_snapshot.json"
+          --report-out "${{ steps.staging.outputs.data_dir }}/host_health_report.json"
+          --summary-out "${{ steps.staging.outputs.data_dir }}/host_health_report.md"
+      - name: Publish health report to job summary
+        run: cat "${{ steps.staging.outputs.data_dir }}/host_health_report.md" >> "$GITHUB_STEP_SUMMARY"
       - name: Build software review queue
         run: >-
           python scripts/build_software_review_queue.py
@@ -117,17 +127,19 @@ jobs:
           cp "$staging_data/stats.ok.json" data/stats.ok.json
           cp "$staging_data/host_aliases.json" data/host_aliases.json
           cp "$staging_data/software_registry.json" data/software_registry.json
+          cp "$staging_data/host_health_snapshot.json" data/host_health_snapshot.json
+          cp "$staging_data/host_health_report.json" data/host_health_report.json
       - name: Commit updated stats
         id: commit
         shell: bash
         run: |
-          tracked_outputs=(data/monitored_instances.json data/stats.ok.json data/host_aliases.json data/software_registry.json)
-          if git diff --quiet -- "${tracked_outputs[@]}"; then
+          tracked_outputs=(data/monitored_instances.json data/stats.ok.json data/host_aliases.json data/software_registry.json data/host_health_snapshot.json data/host_health_report.json)
+          git add -- "${tracked_outputs[@]}"
+          if git diff --cached --quiet -- "${tracked_outputs[@]}"; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -- "${tracked_outputs[@]}"
             git commit -m "chore: refresh stats"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
