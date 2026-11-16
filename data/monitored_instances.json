@@ -108522,6 +108522,13 @@
     "platform": "mastodon"
   },
   {
+    "host": "mhm.kr",
+    "url": "https://www.mhm.kr",
+    "source": "legacy",
+    "name": "www.mhm.kr",
+    "platform": "ghost"
+  },
+  {
     "host": "mhz.social",
     "url": "https://mhz.social",
     "source": "legacy",
@@ -149584,12 +149591,6 @@
     "url": "https://riveraerica.com",
     "source": "peer",
     "platform": "writefreely"
-  },
-  {
-    "host": "riverzombies.com",
-    "url": "https://riverzombies.com",
-    "source": "legacy",
-    "platform": "ghost"
   },
   {
     "host": "rizomatica.noblogs.org",
@@ -211111,12 +211112,6 @@
     "platform": "ghost"
   },
   {
-    "host": "www.mhm.kr",
-    "url": "https://www.mhm.kr",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "www.miamihotelguide.com",
     "url": "https://www.miamihotelguide.com",
     "source": "legacy",
@@ -212342,9 +212337,8 @@
   },
   {
     "host": "www.myfaith.online",
-    "url": "https://myfaith.online",
+    "url": "https://www.myfaith.online",
     "source": "legacy",
-    "name": "myfaith.online",
     "platform": "ghost"
   },
   {
@@ -217967,6 +217961,13 @@
     "host": "www.rivertownsdispatch.com",
     "url": "https://www.rivertownsdispatch.com",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.riverzombies.com",
+    "url": "https://riverzombies.com",
+    "source": "legacy",
+    "name": "riverzombies.com",
     "platform": "ghost"
   },
   {
