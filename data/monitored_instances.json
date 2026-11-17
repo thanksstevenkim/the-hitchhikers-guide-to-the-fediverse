@@ -108523,9 +108523,8 @@
   },
   {
     "host": "mhm.kr",
-    "url": "https://www.mhm.kr",
+    "url": "https://mhm.kr",
     "source": "legacy",
-    "name": "www.mhm.kr",
     "platform": "ghost"
   },
   {
@@ -169114,7 +169113,7 @@
     "host": "social.luap42.de",
     "url": "https://social.luap42.de",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "akkoma"
   },
   {
     "host": "social.luca-cazzulo.me",
@@ -201950,6 +201949,13 @@
     "platform": "wordpress"
   },
   {
+    "host": "vivoweb.org",
+    "url": "https://www.vivoweb.org",
+    "source": "peer",
+    "name": "www.vivoweb.org",
+    "platform": "wordpress"
+  },
+  {
     "host": "vixen.zone",
     "url": "https://vixen.zone",
     "source": "peer",
@@ -217965,9 +217971,8 @@
   },
   {
     "host": "www.riverzombies.com",
-    "url": "https://riverzombies.com",
+    "url": "https://www.riverzombies.com",
     "source": "legacy",
-    "name": "riverzombies.com",
     "platform": "ghost"
   },
   {
@@ -225853,12 +225858,6 @@
     "url": "https://www.vitalungo.com",
     "source": "peer",
     "platform": "ghost"
-  },
-  {
-    "host": "www.vivoweb.org",
-    "url": "https://www.vivoweb.org",
-    "source": "peer",
-    "platform": "wordpress"
   },
   {
     "host": "www.vizney.com",
