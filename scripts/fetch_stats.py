@@ -3199,7 +3199,7 @@ def _request_json_once(
                 message = f"HTTP {status or 'unknown'} from {url}"
                 retry_after = (
                     resp.headers.get("Retry-After")
-                    if status in {429, 503} else None
+                    if status in RETRYABLE_HTTP_STATUSES else None
                 )
                 resp.close()
                 if method.upper() == "GET" and status in RETRYABLE_HTTP_STATUSES:
@@ -3208,6 +3208,7 @@ def _request_json_once(
                 # Content-Type 확인
             ct = (resp.headers.get("Content-Type") or "")
             if not _is_json_ct(ct):
+                resp.close()
                 raise FetchError(f"unexpected Content-Type: {ct or 'unknown'}")
 
             # Content-Length 선검사
@@ -3215,6 +3216,7 @@ def _request_json_once(
             if clen is not None:
                 try:
                     if int(clen) > MAX_JSON_BYTES:
+                        resp.close()
                         raise FetchError(f"payload too large: {clen} bytes")
                 except ValueError:
                     pass
@@ -3228,7 +3230,7 @@ def _request_json_once(
                         if len(buf) > MAX_JSON_BYTES:
                             raise FetchError(f"payload exceeded {MAX_JSON_BYTES} bytes limit")
             except _req.exceptions.RequestException as e:
-                if isinstance(e, _req.exceptions.Timeout) or "Read timed out" in str(e):
+                if isinstance(e, _req.exceptions.Timeout) or "read timed out" in str(e).lower():
                     raise RetryableFetchError(str(e)) from e
                 raise FetchError(str(e)) from e
             finally:
@@ -3284,7 +3286,7 @@ def _request_json_once(
                         raise RetryableFetchError(
                             message,
                             retry_after=resp.headers.get("Retry-After")
-                            if resp.status in {429, 503} else None,
+                            if resp.status in RETRYABLE_HTTP_STATUSES else None,
                         )
                     raise FetchError(message)
 
@@ -3320,7 +3322,7 @@ def _request_json_once(
                 raise RetryableFetchError(
                     message,
                     retry_after=exc.headers.get("Retry-After")
-                    if exc.code in {429, 503} and exc.headers else None,
+                    if exc.code in RETRYABLE_HTTP_STATUSES and exc.headers else None,
                 ) from exc
             raise FetchError(message) from exc
         except urllib.error.URLError as exc:
