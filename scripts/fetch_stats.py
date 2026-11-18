@@ -14,8 +14,11 @@ from __future__ import annotations
 import argparse
 from concurrent.futures import FIRST_COMPLETED, Future, ThreadPoolExecutor, wait
 from html import unescape
+from email.utils import parsedate_to_datetime
 import json
 import logging
+import math
+import random
 import sys
 import re
 import threading
@@ -32,6 +35,14 @@ from html.parser import HTMLParser
 REQUEST_CONNECT_TIMEOUT = 3.05
 REQUEST_READ_TIMEOUT = 5.0
 REQUESTS_TIMEOUT = (REQUEST_CONNECT_TIMEOUT, REQUEST_READ_TIMEOUT)
+# A run-wide cap protects large scheduled collections from retry amplification.
+RETRYABLE_HTTP_STATUSES = frozenset({429, 500, 502, 503, 504})
+MAX_GET_RETRIES_PER_RUN = 512
+RETRY_BASE_DELAY_SECONDS = 0.5
+RETRY_JITTER_SECONDS = 0.25
+MAX_RETRY_DELAY_SECONDS = 2.0
+_retry_lock = threading.Lock()
+_retry_used = 0
 URLLIB_TIMEOUT = REQUEST_READ_TIMEOUT
 USER_AGENT = "fedlist-stats-fetcher/1.0"
 FAILURE_THRESHOLD = 3
@@ -340,6 +351,50 @@ class CollectionState:
 
 class FetchError(RuntimeError):
     """Raised when a remote fetch fails."""
+
+
+class RetryableFetchError(FetchError):
+    """Transient GET error. Preserve the original diagnostic message."""
+
+    def __init__(self, message: str, *, retry_after: Optional[str] = None) -> None:
+        super().__init__(message)
+        self.retry_after = retry_after
+
+
+def _reset_retry_budget() -> None:
+    global _retry_used
+    with _retry_lock:
+        _retry_used = 0
+
+
+def _reserve_retry() -> bool:
+    """Reserve a retry atomically across all collector workers."""
+    global _retry_used
+    with _retry_lock:
+        if _retry_used >= MAX_GET_RETRIES_PER_RUN:
+            return False
+        _retry_used += 1
+        return True
+
+
+def _bounded_retry_delay(retry_after: Optional[str]) -> Optional[float]:
+    """Skip retries when a server requires waiting beyond our cap."""
+    delay = RETRY_BASE_DELAY_SECONDS + random.uniform(0, RETRY_JITTER_SECONDS)
+    if retry_after:
+        try:
+            wait = float(retry_after.strip())
+        except ValueError:
+            try:
+                retry_date = parsedate_to_datetime(retry_after)
+                if retry_date.tzinfo is None:
+                    retry_date = retry_date.replace(tzinfo=timezone.utc)
+                wait = (retry_date - datetime.now(timezone.utc)).total_seconds()
+            except (TypeError, ValueError, OverflowError, IndexError):
+                wait = 0.0
+        if not math.isfinite(wait) or wait > MAX_RETRY_DELAY_SECONDS:
+            return None
+        delay = max(delay, max(wait, 0.0))
+    return min(delay, MAX_RETRY_DELAY_SECONDS)
 
 
 def _same_host(url: str, host: str) -> bool:
@@ -769,6 +824,7 @@ def main() -> None:
     args = parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     configure_data_dir(Path(args.data_dir))
+    _reset_retry_budget()
 
     aliases = load_aliases()
     seed_instances = list(load_instances(INSTANCES_PATH))
@@ -880,6 +936,8 @@ def main() -> None:
         raise
     else:
         checkpoint_collection(state, force=True)
+
+    logging.info("Bounded GET retries used: %d/%d", _retry_used, MAX_GET_RETRIES_PER_RUN)
 
     if args.discover_peers:
         checked_hosts = load_checked_hosts()
@@ -3064,6 +3122,26 @@ def request_json(
     json_body: Optional[Dict[str, Any]] = None,
     expected_host: Optional[str] = None,
 ) -> Any:
+    """Retry one transient GET failure, within a shared collection budget."""
+    if method.upper() != "GET":
+        return _request_json_once(url, method, json_body, expected_host)
+    try:
+        return _request_json_once(url, method, json_body, expected_host)
+    except RetryableFetchError as exc:
+        delay = _bounded_retry_delay(exc.retry_after)
+        if delay is None or not _reserve_retry():
+            raise
+        logging.debug("Retrying GET %s once after %.2fs: %s", url, delay, exc)
+        time.sleep(delay)
+        return _request_json_once(url, method, json_body, expected_host)
+
+
+def _request_json_once(
+    url: str,
+    method: str = "GET",
+    json_body: Optional[Dict[str, Any]] = None,
+    expected_host: Optional[str] = None,
+) -> Any:
     """
     안전한 JSON 페치:
       - Content-Type 검증 (application/*json)
@@ -3112,13 +3190,21 @@ def request_json(
                     stream=True,        # 스트리밍
                     allow_redirects=True,
                 )
+            except _req.exceptions.Timeout as e:
+                raise RetryableFetchError(str(e)) from e
             except _req.exceptions.RequestException as e:
-                # ✅ DNS 실패/연결 실패/타임아웃 등 모든 네트워크 예외를 FetchError로 변환
-                raise FetchError(str(e))
-                # 🔐 상태코드 직접 검사 (HTTPError로 터지지 않게)
+                raise FetchError(str(e)) from e
             status = getattr(resp, "status_code", None)
             if status is None or status >= 400:
-                raise FetchError(f"HTTP {status or 'unknown'} from {url}")
+                message = f"HTTP {status or 'unknown'} from {url}"
+                retry_after = (
+                    resp.headers.get("Retry-After")
+                    if status in {429, 503} else None
+                )
+                resp.close()
+                if method.upper() == "GET" and status in RETRYABLE_HTTP_STATUSES:
+                    raise RetryableFetchError(message, retry_after=retry_after)
+                raise FetchError(message)
                 # Content-Type 확인
             ct = (resp.headers.get("Content-Type") or "")
             if not _is_json_ct(ct):
@@ -3135,11 +3221,18 @@ def request_json(
 
                 # 본문 제한 읽기
             buf = bytearray()
-            for chunk in resp.iter_content(chunk_size=65536):
-                if chunk:
-                    buf.extend(chunk)
-                    if len(buf) > MAX_JSON_BYTES:
-                        raise FetchError(f"payload exceeded {MAX_JSON_BYTES} bytes limit")
+            try:
+                for chunk in resp.iter_content(chunk_size=65536):
+                    if chunk:
+                        buf.extend(chunk)
+                        if len(buf) > MAX_JSON_BYTES:
+                            raise FetchError(f"payload exceeded {MAX_JSON_BYTES} bytes limit")
+            except _req.exceptions.RequestException as e:
+                if isinstance(e, _req.exceptions.Timeout) or "Read timed out" in str(e):
+                    raise RetryableFetchError(str(e)) from e
+                raise FetchError(str(e)) from e
+            finally:
+                resp.close()
             enc = _sanitize_charset(getattr(resp, "encoding", None))
             text = buf.decode(enc, errors="replace")
 
@@ -3186,7 +3279,14 @@ def request_json(
 
                 # 🔐 상태코드 검사
                 if resp.status >= 400:
-                    raise FetchError(f"HTTP {resp.status} from {current_url}")
+                    message = f"HTTP {resp.status} from {current_url}"
+                    if method.upper() == "GET" and resp.status in RETRYABLE_HTTP_STATUSES:
+                        raise RetryableFetchError(
+                            message,
+                            retry_after=resp.headers.get("Retry-After")
+                            if resp.status in {429, 503} else None,
+                        )
+                    raise FetchError(message)
 
                 # Content-Type 검사
                 ct = resp.headers.get("Content-Type") or ""
@@ -3214,8 +3314,23 @@ def request_json(
                 enc = _sanitize_charset(resp.headers.get_content_charset())
                 text = buf.decode(enc, errors="replace")
 
+        except urllib.error.HTTPError as exc:
+            message = f"HTTP {exc.code} from {current_url}"
+            if method.upper() == "GET" and exc.code in RETRYABLE_HTTP_STATUSES:
+                raise RetryableFetchError(
+                    message,
+                    retry_after=exc.headers.get("Retry-After")
+                    if exc.code in {429, 503} and exc.headers else None,
+                ) from exc
+            raise FetchError(message) from exc
         except urllib.error.URLError as exc:
-            raise FetchError(str(exc))
+            if method.upper() == "GET" and isinstance(exc.reason, TimeoutError):
+                raise RetryableFetchError(str(exc)) from exc
+            raise FetchError(str(exc)) from exc
+        except TimeoutError as exc:
+            if method.upper() == "GET":
+                raise RetryableFetchError(str(exc)) from exc
+            raise FetchError(str(exc)) from exc
 
         try:
             return json.loads(text)
