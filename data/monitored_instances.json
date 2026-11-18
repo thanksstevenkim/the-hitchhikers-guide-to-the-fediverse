@@ -73485,7 +73485,7 @@
     "host": "idallas.com",
     "url": "https://idallas.com",
     "source": "peer",
-    "platform": "wordpress"
+    "platform": "stoop"
   },
   {
     "host": "idar.pro",
@@ -155937,7 +155937,7 @@
     "host": "shota.house",
     "url": "https://shota.house",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "yojo-art"
   },
   {
     "host": "shotakey.everythingyaoi.com",
@@ -201950,9 +201950,8 @@
   },
   {
     "host": "vivoweb.org",
-    "url": "https://www.vivoweb.org",
+    "url": "https://vivoweb.org",
     "source": "peer",
-    "name": "www.vivoweb.org",
     "platform": "wordpress"
   },
   {
