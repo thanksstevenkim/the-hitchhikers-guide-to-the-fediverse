@@ -274,3 +274,80 @@ def test_urllib_fallback_retries_http_error_with_cap(clear_retry_budget, monkeyp
     }
     assert len(calls) == 2
     assert clear_retry_budget == [1.0]
+
+
+def test_502_retry_after_long_delay_skips_retry(clear_retry_budget, monkeypatch):
+    refused = FakeResponse(502, retry_after="10")
+    session = FakeSession([refused])
+    monkeypatch.setattr(requests, "Session", lambda: session)
+
+    with pytest.raises(fetch_stats.FetchError, match="HTTP 502"):
+        fetch_stats.request_json("https://a.example/info", expected_host="a.example")
+
+    assert session.calls == [("GET", "https://a.example/info")]
+    assert refused.closed
+    assert clear_retry_budget == []
+    assert fetch_stats._retry_used == 0
+
+
+@pytest.mark.parametrize("failure_type", ["mime", "oversized"])
+def test_invalid_response_is_closed_without_retry(clear_retry_budget, monkeypatch, failure_type):
+    rejected = FakeResponse(200)
+    if failure_type == "mime":
+        rejected.headers["Content-Type"] = "text/html"
+    else:
+        rejected.headers["Content-Length"] = str(fetch_stats.MAX_JSON_BYTES + 1)
+    session = FakeSession([rejected])
+    monkeypatch.setattr(requests, "Session", lambda: session)
+
+    with pytest.raises(fetch_stats.FetchError):
+        fetch_stats.request_json("https://a.example/info", expected_host="a.example")
+
+    assert len(session.calls) == 1
+    assert rejected.closed
+    assert clear_retry_budget == []
+
+
+def test_lowercase_stream_read_timeout_retries(clear_retry_budget, monkeypatch):
+    session = FakeSession([
+        FakeResponse(200, stream_failure=requests.exceptions.ConnectionError("read timed out")),
+        FakeResponse(200),
+    ])
+    monkeypatch.setattr(requests, "Session", lambda: session)
+
+    assert fetch_stats.request_json("https://a.example/info", expected_host="a.example") == {
+        "ok": True
+    }
+    assert len(session.calls) == 2
+
+
+def test_retry_budget_is_thread_safe(clear_retry_budget, monkeypatch):
+    from concurrent.futures import ThreadPoolExecutor
+    from threading import Lock
+
+    monkeypatch.setattr(fetch_stats, "MAX_GET_RETRIES_PER_RUN", 8)
+    fetch_stats._reset_retry_budget()
+    count = 0
+    guard = Lock()
+
+    def attempt(*_args):
+        nonlocal count
+        with guard:
+            count += 1
+        raise fetch_stats.RetryableFetchError("HTTP 503 from test")
+
+    monkeypatch.setattr(fetch_stats, "_request_json_once", attempt)
+
+    def invoke(index):
+        try:
+            fetch_stats.request_json(f"https://host-{index}.example/info")
+        except fetch_stats.FetchError:
+            return
+        pytest.fail("Expected a transient fetch error")
+
+    with ThreadPoolExecutor(max_workers=16) as pool:
+        list(pool.map(invoke, range(64)))
+
+    assert fetch_stats._retry_used == 8
+    assert count == 64 + 8
+    assert len(clear_retry_budget) == 8
