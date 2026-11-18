@@ -122,6 +122,16 @@ python scripts/fetch_stats.py --workers 16 --checkpoint-every 100
 - 진행 로그는 checkpoint마다 처리량, GOOD/transient/BAD 수, 경과 시간, 평균 처리율과 대략적인 ETA를 표시합니다.
 - connect timeout은 요청당 `3.05초`, read timeout은 요청당 `5초`입니다. 한 인스턴스가 여러 endpoint를 호출할 수 있으므로 인스턴스 전체 시간은 이보다 길 수 있지만, 제한된 worker 중 하나만 점유하며 전체 수집을 순차적으로 막지는 않습니다.
 
+
+### 제한적 HTTP 재시도(P1-A/B)
+
+일시적인 GET 오류(HTTP 429, 500/502/503/504 및 연결·읽기 Timeout)에 한해 **요청당 1회만** 추가 시도합니다. 재시도 전에 기본 0.5~0.75초의 지터 대기를 적용하며, HTTP 429/503의 `Retry-After`가 최대 2초이면 그 대기 시간을 존중합니다. 2초보다 긴 대기 요구는 즉시 재시도하지 않고 기존 실패로 처리합니다.
+
+- 모든 worker가 공유하는 **실행당 최대 512회** 재시도 예산을 적용합니다. 예산 소진 뒤에는 기존 오류 처리로 돌아갑니다.
+- POST, 영구적 HTTP 4xx(429 제외), DNS, TLS 인증서 오류, 리다이렉트 안전 검사 실패, JSON 검증 오류는 재시도하지 않습니다. POST 기반 Misskey API의 동작은 유지합니다.
+- 기존 단일 요청의 connect/read timeout, bounded worker, checkpoint, GOOD/WARN/BAD 판정, 사이트 데이터 검증·배포 절차는 변경하지 않습니다.
+- 수집 종료 로그의 `Bounded GET retries used`로 실제 추가 요청량을 확인합니다. 정책의 실효성·실행 시간 증가는 정기 실행 이후에 별도로 판단합니다.
+
 특정 구간의 네트워크 문제나 로컬 보안 도구의 차단을 재현할 때는 정렬·중복 제거가 끝난 대상 목록을 zero-based index로 잘라 실행할 수 있습니다. `--trace-hosts`는 각 대상의 수집 직전과 직후에 `TRACE START`/`TRACE END` 로그를 남깁니다. 정확한 마지막 요청을 확인하려면 worker 하나로 실행합니다.
 
 ```bash
