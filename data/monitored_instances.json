@@ -115539,7 +115539,7 @@
     "host": "morphnet.de",
     "url": "https://morphnet.de",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "mitra"
   },
   {
     "host": "morphtown.de",
@@ -162207,7 +162207,7 @@
     "host": "social.brendans-bits.com",
     "url": "https://social.brendans-bits.com",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "littlefedi"
   },
   {
     "host": "social.brennan.cafe",
@@ -193336,7 +193336,7 @@
     "host": "tribal.services",
     "url": "https://tribal.services",
     "source": "peer",
-    "platform": "tribal services"
+    "platform": "nextcloud-social"
   },
   {
     "host": "tribe.net",
