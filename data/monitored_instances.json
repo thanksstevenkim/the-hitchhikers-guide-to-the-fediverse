@@ -46743,7 +46743,7 @@
     "host": "engawa.esurio1673.net",
     "url": "https://engawa.esurio1673.net",
     "source": "legacy",
-    "platform": "cherrypick"
+    "platform": "engawa"
   },
   {
     "host": "engenetics.org",
@@ -84621,7 +84621,7 @@
     "host": "leesturgis.nz",
     "url": "https://leesturgis.nz",
     "source": "peer",
-    "platform": "mastodon"
+    "platform": "littlefedi"
   },
   {
     "host": "leetjesus.dev",
