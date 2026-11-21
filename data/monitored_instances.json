@@ -65106,12 +65106,6 @@
     "platform": "gotosocial"
   },
   {
-    "host": "groundtruth.app",
-    "url": "https://groundtruth.app",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "group.lt",
     "url": "https://group.lt",
     "source": "legacy",
@@ -121749,6 +121743,13 @@
     "host": "news.gregjeanneau.com",
     "url": "https://news.gregjeanneau.com",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "news.groundtruth.app",
+    "url": "https://groundtruth.app",
+    "source": "legacy",
+    "name": "groundtruth.app",
     "platform": "ghost"
   },
   {
@@ -202900,7 +202901,7 @@
     "host": "warpnet-gw.curlew-lenok.ts.net",
     "url": "https://warpnet-gw.curlew-lenok.ts.net",
     "source": "peer",
-    "platform": "warpnet-fediverse-gateway"
+    "platform": "bridge-gateway"
   },
   {
     "host": "warpstonepile.com",
