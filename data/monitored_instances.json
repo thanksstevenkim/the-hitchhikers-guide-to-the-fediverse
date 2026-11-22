@@ -6249,7 +6249,7 @@
     "host": "ansico.dk",
     "url": "https://ansico.dk",
     "source": "legacy",
-    "platform": "forgejo"
+    "platform": "fedipress"
   },
   {
     "host": "ansole.org",
@@ -9493,8 +9493,9 @@
   },
   {
     "host": "awadwatt.com",
-    "url": "https://awadwatt.com",
+    "url": "https://tunez.awadwatt.com",
     "source": "peer",
+    "name": "tunez.awadwatt.com",
     "platform": "writefreely"
   },
   {
@@ -121747,9 +121748,8 @@
   },
   {
     "host": "news.groundtruth.app",
-    "url": "https://groundtruth.app",
+    "url": "https://news.groundtruth.app",
     "source": "legacy",
-    "name": "groundtruth.app",
     "platform": "ghost"
   },
   {
@@ -151714,7 +151714,7 @@
     "host": "saha.nz",
     "url": "https://saha.nz",
     "source": "peer",
-    "platform": "mastodon"
+    "platform": "littlefedi"
   },
   {
     "host": "sahilkapoor.com",
@@ -172672,7 +172672,7 @@
     "host": "social.pomatron.com",
     "url": "https://social.pomatron.com",
     "source": "legacy",
-    "platform": "sharkey"
+    "platform": "misskey"
   },
   {
     "host": "social.popcoding.com",
@@ -175210,6 +175210,13 @@
     "host": "social.stuffandthings.lol",
     "url": "https://social.stuffandthings.lol",
     "source": "peer",
+    "platform": "gotosocial"
+  },
+  {
+    "host": "social.stuxie.dev",
+    "url": "https://stuxie.dev",
+    "source": "peer",
+    "name": "stuxie.dev",
     "platform": "gotosocial"
   },
   {
@@ -182896,12 +182903,6 @@
   {
     "host": "stuve-bamberg.de",
     "url": "https://stuve-bamberg.de",
-    "source": "peer",
-    "platform": "wordpress"
-  },
-  {
-    "host": "stuxie.dev",
-    "url": "https://stuxie.dev",
     "source": "peer",
     "platform": "wordpress"
   },
@@ -196014,12 +196015,6 @@
     "url": "https://tunecamp.subterralabel.com",
     "source": "peer",
     "platform": "tunecamp"
-  },
-  {
-    "host": "tunez.awadwatt.com",
-    "url": "https://tunez.awadwatt.com",
-    "source": "legacy",
-    "platform": "funkwhale"
   },
   {
     "host": "tungsten-basilisk.pikapod.net",
