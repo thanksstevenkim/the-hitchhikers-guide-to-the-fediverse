@@ -9493,9 +9493,8 @@
   },
   {
     "host": "awadwatt.com",
-    "url": "https://tunez.awadwatt.com",
+    "url": "https://awadwatt.com",
     "source": "peer",
-    "name": "tunez.awadwatt.com",
     "platform": "writefreely"
   },
   {
@@ -144496,7 +144495,7 @@
     "host": "pylova-test.anarchistflotilla.org",
     "url": "https://pylova-test.anarchistflotilla.org",
     "source": "peer",
-    "platform": "piefed"
+    "platform": "pylova"
   },
   {
     "host": "pynews.com.br",
@@ -157378,7 +157377,7 @@
     "host": "skinheads.social",
     "url": "https://skinheads.social",
     "source": "legacy",
-    "platform": "pleroma"
+    "platform": "kult"
   },
   {
     "host": "skinly.life",
@@ -175214,9 +175213,8 @@
   },
   {
     "host": "social.stuxie.dev",
-    "url": "https://stuxie.dev",
+    "url": "https://social.stuxie.dev",
     "source": "peer",
-    "name": "stuxie.dev",
     "platform": "gotosocial"
   },
   {
