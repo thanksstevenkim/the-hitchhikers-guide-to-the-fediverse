@@ -20949,7 +20949,7 @@
     "host": "blog.okashi.ceo",
     "url": "https://blog.okashi.ceo",
     "source": "peer",
-    "platform": "mitra"
+    "platform": "misskey"
   },
   {
     "host": "blog.olilo.co.uk",
@@ -37167,7 +37167,7 @@
     "host": "cthulhuallspark.com",
     "url": "https://cthulhuallspark.com",
     "source": "peer",
-    "platform": "akkoma"
+    "platform": "pleroma"
   },
   {
     "host": "ctl.goadrs.com",
