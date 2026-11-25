@@ -7242,12 +7242,6 @@
     "platform": "mastodon"
   },
   {
-    "host": "apropos.cool",
-    "url": "https://apropos.cool",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "apstar.asia",
     "url": "https://apstar.asia",
     "source": "legacy",
@@ -189040,7 +189034,7 @@
     "host": "thisisnotaserver.com",
     "url": "https://thisisnotaserver.com",
     "source": "legacy",
-    "platform": "mastodon"
+    "platform": "gotosocial"
   },
   {
     "host": "thismightnotmatter.com",
@@ -206056,6 +206050,13 @@
     "host": "www.apprenticeshiptolove.com",
     "url": "https://www.apprenticeshiptolove.com",
     "source": "peer",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.apropos.cool",
+    "url": "https://apropos.cool",
+    "source": "legacy",
+    "name": "apropos.cool",
     "platform": "ghost"
   },
   {
