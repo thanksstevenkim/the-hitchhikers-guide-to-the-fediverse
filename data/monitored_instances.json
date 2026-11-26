@@ -73509,7 +73509,7 @@
     "host": "idealists.su",
     "url": "https://idealists.su",
     "source": "legacy",
-    "platform": "akkoma"
+    "platform": "littlefedi"
   },
   {
     "host": "ideally.us",
@@ -206054,9 +206054,8 @@
   },
   {
     "host": "www.apropos.cool",
-    "url": "https://apropos.cool",
+    "url": "https://www.apropos.cool",
     "source": "legacy",
-    "name": "apropos.cool",
     "platform": "ghost"
   },
   {
