@@ -92154,12 +92154,6 @@
     "platform": "mastodon"
   },
   {
-    "host": "maaku-creative.com",
-    "url": "https://maaku-creative.com",
-    "source": "legacy",
-    "platform": "ghost"
-  },
-  {
     "host": "mabe.space",
     "url": "https://mabe.space",
     "source": "legacy",
@@ -144471,7 +144465,7 @@
     "host": "pyfed.mitchelltribe.social",
     "url": "https://pyfed.mitchelltribe.social",
     "source": "peer",
-    "platform": "piefed"
+    "platform": "pylova"
   },
   {
     "host": "pyfedi.deep-rose.org",
@@ -209740,6 +209734,13 @@
     "host": "www.maaikebrinkhof.nl",
     "url": "https://www.maaikebrinkhof.nl",
     "source": "legacy",
+    "platform": "ghost"
+  },
+  {
+    "host": "www.maaku-creative.com",
+    "url": "https://maaku-creative.com",
+    "source": "legacy",
+    "name": "maaku-creative.com",
     "platform": "ghost"
   },
   {
