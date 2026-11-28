@@ -39465,7 +39465,7 @@
     "host": "davidpeach.me",
     "url": "https://davidpeach.me",
     "source": "legacy",
-    "platform": "wordpress"
+    "platform": "davidpeach-me"
   },
   {
     "host": "davidturgeon.net",
@@ -149469,7 +149469,7 @@
     "host": "rindo.garden",
     "url": "https://rindo.garden",
     "source": "legacy",
-    "platform": "iceshrimp"
+    "platform": "catodon"
   },
   {
     "host": "ringed.space",
@@ -202036,7 +202036,7 @@
     "host": "vo.cab",
     "url": "https://vo.cab",
     "source": "peer",
-    "platform": "meshnet"
+    "platform": "vocab"
   },
   {
     "host": "vocalodon.net",
@@ -209738,9 +209738,8 @@
   },
   {
     "host": "www.maaku-creative.com",
-    "url": "https://maaku-creative.com",
+    "url": "https://www.maaku-creative.com",
     "source": "legacy",
-    "name": "maaku-creative.com",
     "platform": "ghost"
   },
   {
